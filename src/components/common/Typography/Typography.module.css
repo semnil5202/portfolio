@@ -1,0 +1,31 @@
+.size-small {
+  font-size: 14px;
+}
+
+.size-default {
+  font-size: 16px;
+}
+
+.size-medium {
+  font-size: 20px;
+}
+
+.size-large {
+  font-size: 48px;
+}
+
+.weight-default {
+  font-weight: 400;
+}
+
+.weight-bold {
+  font-weight: 700;
+}
+
+.color-default {
+  color: var(--color-black);
+}
+
+.color-primary {
+  color: var(--color-primary);
+}
