@@ -1,0 +1,32 @@
+.tabLayout {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+}
+
+.tabSection {
+  display: flex;
+  transition: 0.3s ease transform;
+}
+
+.tabSection > * {
+  width: var(--tab-width);
+}
+
+.tabBoxesContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.tabBoxes {
+  display: flex;
+  cursor: pointer;
+}
+
+.tabBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
