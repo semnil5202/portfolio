@@ -1,0 +1,17 @@
+.style {
+  width: max-content;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.type-primary {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+.type-secondary {
+  background-color: #fff;
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+}
