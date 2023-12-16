@@ -3,8 +3,6 @@ interface Props {
   children?: React.ReactNode;
 }
 
-function Tab({ label, children }: Props) {
+export default function Tab({ label, children }: Props) {
   return <div data-label={label}>{children}</div>;
 }
-
-export default Tab;

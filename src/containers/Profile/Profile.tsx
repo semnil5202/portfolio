@@ -4,7 +4,7 @@ import { Typography } from '../../components/common/Typography';
 import profileImage from '../../public/assets/profile.png';
 import styles from './Profile.module.css';
 
-function Profile() {
+export default function Profile() {
   return (
     <>
       <section className={styles.profile}>
@@ -42,5 +42,3 @@ function Profile() {
     </>
   );
 }
-
-export default Profile;

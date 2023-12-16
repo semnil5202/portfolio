@@ -16,7 +16,7 @@ interface TabLayoutProps {
   children: ReactNode;
 }
 
-function TabLayout({
+export default function TabLayout({
   width = 400,
   height = 400,
   tabBoxesWidth = width,
@@ -82,5 +82,3 @@ function TabLayout({
     </section>
   );
 }
-
-export default TabLayout;

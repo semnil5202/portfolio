@@ -13,7 +13,7 @@ type Props<T extends ElementType> = {
   children: ReactNode;
 } & ComponentPropsWithoutRef<T>;
 
-function Typography<T extends ElementType>({
+export default function Typography<T extends ElementType>({
   tag,
   size = 'default',
   weight = 'default',
@@ -34,5 +34,3 @@ function Typography<T extends ElementType>({
     </Tag>
   );
 }
-
-export default Typography;

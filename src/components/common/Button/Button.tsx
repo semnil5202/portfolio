@@ -10,7 +10,7 @@ type Props<T extends ElementType> = {
   children: ReactNode;
 } & ComponentPropsWithoutRef<T>;
 
-function Button<T extends ElementType>({
+export default function Button<T extends ElementType>({
   tag,
   type = 'primary',
   children,
@@ -27,5 +27,3 @@ function Button<T extends ElementType>({
     </Tag>
   );
 }
-
-export default Button;
