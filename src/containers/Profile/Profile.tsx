@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import { Button } from '../common/Button';
-import { Typography } from '../common/Typography';
+import { Button } from '../../components/common/Button';
+import { Typography } from '../../components/common/Typography';
 import profileImage from '../../public/assets/profile.png';
 import styles from './Profile.module.css';
 
