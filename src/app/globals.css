@@ -2,3 +2,22 @@
   --color-primary: #3483ec;
   --color-black: #454545;
 }
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+textarea,
+a,
+ul,
+button {
+  all: unset;
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
