@@ -19,7 +19,10 @@ function Button<T extends ElementType>({
   const Tag = tag || 'button';
 
   return (
-    <Tag className={`${styles.style} ${styles[`type-${type}`]}`} {...attribute}>
+    <Tag
+      className={`${styles.default} ${styles[`type-${type}`]}`}
+      {...attribute}
+    >
       {children}
     </Tag>
   );

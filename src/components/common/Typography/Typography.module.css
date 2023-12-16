@@ -1,3 +1,7 @@
+.default {
+  display: block;
+}
+
 .size-small {
   font-size: 14px;
 }

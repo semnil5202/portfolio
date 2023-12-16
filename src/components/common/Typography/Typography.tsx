@@ -25,9 +25,9 @@ function Typography<T extends ElementType>({
 
   return (
     <Tag
-      className={`${styles[`size-${size}`]} ${styles[`weight-${weight}`]} ${
-        styles[`color-${color}`]
-      }`}
+      className={`${styles.default} ${styles[`size-${size}`]} ${
+        styles[`weight-${weight}`]
+      } ${styles[`color-${color}`]}`}
       {...attributes}
     >
       {children}
