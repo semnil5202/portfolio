@@ -1,6 +1,7 @@
 :root {
   --color-primary: #3483ec;
   --color-black: #454545;
+  --width-page: 1140px;
 }
 
 html,
