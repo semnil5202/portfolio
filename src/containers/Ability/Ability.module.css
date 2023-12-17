@@ -1,0 +1,16 @@
+.skillsWrapper {
+  width: 100%;
+}
+
+.skillWrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.strengthWrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
