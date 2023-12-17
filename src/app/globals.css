@@ -17,7 +17,8 @@ h4,
 textarea,
 a,
 ul,
-button {
+button,
+p {
   all: unset;
 }
 
