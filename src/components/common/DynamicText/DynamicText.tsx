@@ -13,8 +13,8 @@ interface DigitProps {
   one: number;
 }
 
-const TYPING_TIME = 100;
-const CHANGING_TEXT_DELAY_TIME = 2200;
+const TYPING_TIME = 80;
+const CHANGING_TEXT_DELAY_TIME = 2400;
 
 const convertTexts = (texts: string[]) => texts.map((text) => text.split(''));
 
@@ -22,9 +22,8 @@ export default function DynamicText({ texts }: Props) {
   const [isTyping, setIsTyping] = useState<boolean>(true);
   const [isEnd, setIsEnd] = useState<boolean>(false);
   const [currentText, setCurrentText] = useState('');
-  const [dynamicTexts, setDynamicTexts] = useState<string[][]>(
-    convertTexts(texts)
-  );
+  const [dynamicTexts, _] = useState<string[][]>(convertTexts(texts));
+
   const timerId = useRef<NodeJS.Timeout | null>(null);
   const delayTime = useRef<number>(TYPING_TIME);
   const digit = useRef<DigitProps>({ ten: 0, one: 0 });

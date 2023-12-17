@@ -3,6 +3,7 @@ import { Button } from '../../components/common/Button';
 import { Typography } from '../../components/common/Typography';
 import profileImage from '../../../public/assets/profile.png';
 import styles from './Profile.module.css';
+import { DynamicText } from '@/components/common/DynamicText';
 
 export default function Profile() {
   return (
@@ -22,9 +23,13 @@ export default function Profile() {
             <Typography tag="h2" size="large" weight="bold" color="default">
               안녕하세요.
             </Typography>
-            <Typography tag="h2" size="large" weight="bold" color="default">
-              000하는
-            </Typography>
+            <DynamicText
+              texts={[
+                '사용자 경험을 중시하는',
+                '기록과 공유를 좋아하는',
+                '좋은 코드를 고민하는',
+              ]}
+            />
             <Typography tag="h2" size="large" weight="bold" color="default">
               FE 개발자 이세민입니다.
             </Typography>
