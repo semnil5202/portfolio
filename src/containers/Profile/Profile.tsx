@@ -26,7 +26,7 @@ export default function Profile() {
               000하는
             </Typography>
             <Typography tag="h2" size="large" weight="bold" color="default">
-              프론트엔드 개발자 이세민입니다.
+              FE 개발자 이세민입니다.
             </Typography>
           </div>
           <div className={styles.buttonContainer}>
