@@ -1,0 +1,24 @@
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.sidebarWrapper {
+  width: 200px;
+  height: max-content;
+}
+
+.sidebarWrapper > * {
+  padding: 4px;
+}
+
+.contentWrapper {
+  width: 940px;
+  height: max-content;
+}
+
+.descriptionWrapper {
+  margin-top: 12px;
+}
