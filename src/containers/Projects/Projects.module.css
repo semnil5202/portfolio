@@ -1,0 +1,6 @@
+.wrapper {
+  width: var(--width-page);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
