@@ -28,8 +28,6 @@ export default function TabLayout({
   ) as React.ReactElement<TabPropsProps>[];
   const [position, setPosition] = useState<number>(0);
 
-  console.log(tabs);
-
   const tabLayoutStyle = {
     width: `${width}px`,
     height: `${height}px`,
