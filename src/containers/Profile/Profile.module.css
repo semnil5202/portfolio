@@ -1,6 +1,4 @@
 .profile {
-  width: var(--width-page);
-  margin: 0 auto;
   display: flex;
   justify-content: space-between;
 }

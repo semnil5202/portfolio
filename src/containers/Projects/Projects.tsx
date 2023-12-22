@@ -24,6 +24,13 @@ const PROJECT_DATA = [
     personnel: 'BE: 4명, FE: 3명',
     slug: 'mapbefine',
   },
+  {
+    imageSrc: mapBeFineImage,
+    title: '괜찮을지도',
+    description: '개인의 관심사를 다양한 지도로 만들고 공유할 수 있는 서비스',
+    personnel: 'BE: 4명, FE: 3명',
+    slug: 'mapbefine',
+  },
 ];
 
 export default function Projects() {

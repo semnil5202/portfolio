@@ -3,18 +3,18 @@
   height: max-content;
   display: flex;
   flex-direction: column;
-  margin: 12px;
+  margin: 10px;
 }
 
 .imageWrapper {
-  width: 340px;
-  height: 340px;
+  width: 265px;
+  height: 265px;
   overflow: hidden;
   border-radius: 4px;
 }
 
 .contentWrapper {
-  width: 340px;
+  width: 265px;
   height: min-content;
 }
 
