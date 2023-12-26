@@ -16,7 +16,7 @@ export default function Home() {
         <h2 className={styles.projects}>Projects</h2>
         <div className={styles.projectsLine}></div>
       </div>
-      <Space size={72} />
+      <Space size={40} />
       <Projects />
     </main>
   );

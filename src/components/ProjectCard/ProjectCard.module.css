@@ -3,8 +3,7 @@
   height: max-content;
   display: flex;
   flex-direction: column;
-  margin: 10px;
-  margin-bottom: 40px;
+  margin: 20px 10px;
 }
 
 .imageWrapper {
