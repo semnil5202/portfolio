@@ -14,7 +14,7 @@ interface DigitProps {
 }
 
 const TYPING_TIME = 80;
-const CHANGING_TEXT_DELAY_TIME = 2400;
+const CHANGING_TEXT_DELAY_TIME = 2200;
 
 const convertTexts = (texts: string[]) => texts.map((text) => text.split(''));
 

@@ -1,0 +1,4 @@
+.main {
+  width: var(--width-page);
+  margin: 0 auto;
+}

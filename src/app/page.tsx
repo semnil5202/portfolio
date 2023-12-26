@@ -9,11 +9,11 @@ export default function Home() {
     <main className={styles.main}>
       <Space id="about" size={72} />
       <Profile />
-      <Space size={48} />
+      <Space size={60} />
       <Ability />
       <Space id="projects" size={72} />
       <div className={styles.projectsWrapper}>
-        <h3 className={styles.projects}>Projects</h3>
+        <h2 className={styles.projects}>Projects</h2>
         <div className={styles.projectsLine}></div>
       </div>
       <Space size={72} />
