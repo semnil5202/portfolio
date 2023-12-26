@@ -1,0 +1,22 @@
+.wrapper {
+  line-height: 200%;
+  margin-top: 100px;
+}
+
+.wrapper:first-of-type {
+  margin-top: 20px;
+}
+
+.listWrapper {
+  display: block;
+  margin-top: 12px;
+}
+
+.listItem {
+  display: flex;
+  align-items: start;
+}
+
+.sidebar {
+  margin-right: 12px;
+}

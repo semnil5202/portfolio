@@ -16,7 +16,10 @@ export interface ProjectDetails {
       title: string;
       problems: string[];
       solves: string[];
-      result?: { description?: string; imageSrc?: StaticImageData };
+      result?: {
+        description?: { name: string; link?: string };
+        imageSrc?: StaticImageData;
+      };
     }[];
   };
 }

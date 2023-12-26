@@ -161,7 +161,10 @@ export const PROJECT_DETAILS: ProjectDetails = {
           '스크린 사이즈에 해당하는 마커들만 동적으로 렌더링함으로써 렌더링 프레임을 48 FPS에서 71 FPS로 개선하였습니다.',
         ],
         result: {
-          description: 'Pull Request',
+          description: {
+            name: 'Pull Request',
+            link: 'https://github.com/woowacourse-teams/2023-map-befine/pull/615',
+          },
           imageSrc: mapBeFineImage,
         },
       },
@@ -189,7 +192,10 @@ export const PROJECT_DETAILS: ProjectDetails = {
           '프로젝트에서 공용으로 사용할 수 있는 Swiper를 구현함으로써, 사용자에게 노출하고자 하는 콘텐츠를 우선적으로 배치할 수 있었습니다. 또한 Swiper는 NPM에 배포하였습니다.',
         ],
         result: {
-          description: 'Blog Post',
+          description: {
+            name: 'Blog Post',
+            link: 'https://velog.io/@semnil5202/Swiper%EB%A5%BC-%EB%A7%8C%EB%93%A0-%EC%9D%B4%EC%9C%A0-u6qi4df8',
+          },
           imageSrc: mapBeFineImage,
         },
       },
@@ -203,8 +209,9 @@ export const PROJECT_DETAILS: ProjectDetails = {
           'Page 컴포넌트 단위로 Dynamic Import 방식과 React.lazy, Suspense를 사용하여 Code Splitting을 진행하였습니다.',
         ],
         result: {
-          description:
-            '메인 페이지 LCP를 2.9초에서 1.5초로 약 1.4초 개선하고, 번들 사이즈를 609KB에서 455KB로 약 34% 축소시켰습니다.',
+          description: {
+            name: '메인 페이지 LCP를 2.9초에서 1.5초로 약 1.4초 개선하고, 번들 사이즈를 609KB에서 455KB로 약 34% 축소시켰습니다.',
+          },
         },
       },
       {
@@ -226,7 +233,10 @@ export const PROJECT_DETAILS: ProjectDetails = {
           'CSS의 Media Query 등을 사용하여 PC, 태블릿, 모바일 환경에서 동일한 사용자 경험을 제공할 수 있도록 하였습니다.',
         ],
         result: {
-          description: 'Pull Request',
+          description: {
+            name: 'Pull Request',
+            link: 'https://github.com/woowacourse-teams/2023-map-befine/pull/387',
+          },
           imageSrc: mapBeFineImage,
         },
       },
