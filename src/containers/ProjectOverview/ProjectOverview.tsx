@@ -1,7 +1,7 @@
 import Image, { StaticImageData } from 'next/image';
-import { Typography } from '../common/Typography';
+import { Typography } from '../../components/common/Typography';
 import styles from './ProjectOverview.module.css';
-import { Button } from '../common/Button';
+import { Button } from '../../components/common/Button';
 
 interface Props {
   imageSrc: StaticImageData;

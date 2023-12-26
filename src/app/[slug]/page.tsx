@@ -1,8 +1,8 @@
 import { Space } from '@/components/common/Space';
 import { PROJECT_DETAILS } from '@/constants/data';
 import styles from './page.module.css';
-import { ProjectOverview } from '@/components/ProjectOverview';
-import { ProjectDetail } from '@/components/ProjectDetail';
+import { ProjectOverview } from '@/containers/ProjectOverview';
+import { ProjectDetail } from '@/containers/ProjectDetail';
 
 export default function Detail({ params }: { params: { slug: string } }) {
   const { overview, details } = PROJECT_DETAILS[params.slug];

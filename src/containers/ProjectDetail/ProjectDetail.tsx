@@ -1,5 +1,5 @@
 import Image, { StaticImageData } from 'next/image';
-import { Typography } from '../common/Typography';
+import { Typography } from '../../components/common/Typography';
 import styles from './ProjectDetail.module.css';
 
 interface Props {

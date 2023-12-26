@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import styles from './NavBar.module.css';
-import { Typography } from '../common/Typography';
+import { Typography } from '../../components/common/Typography';
 
 export default function NavBar() {
   return (
