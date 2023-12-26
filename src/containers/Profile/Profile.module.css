@@ -1,18 +1,24 @@
 .profile {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
 }
 
 .imageContainer {
-  width: 400px;
-  height: 400px;
+  width: 352px;
+  height: 352px;
   border-radius: 50%;
   overflow: hidden;
 }
 
+.typographyContainer {
+  width: 620px;
+  height: min-content;
+}
+
 .buttonContainer {
-  width: 200px;
+  width: 620px;
   height: min-content;
   display: flex;
-  justify-content: space-between;
 }

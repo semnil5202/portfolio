@@ -6,11 +6,15 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  margin: 12px 0;
 }
 
 .strengthWrapper {
   width: 100%;
+  height: 480px;
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
-  justify-content: space-between;
+  align-content: start;
+  margin-top: 40px;
 }

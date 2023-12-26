@@ -63,7 +63,9 @@ export default function TabLayout({
               key={`${tab.props['data-label']}-${idx}`}
               className={styles.tabBox}
               style={{
-                borderBottom: idx === position ? '1px solid #3483ec' : '',
+                borderBottom:
+                  idx === position ? '1px solid var(--color-primary)' : '',
+                color: idx == position ? 'var(--color-primary)' : '',
                 ...tabBoxStyle,
               }}
               onClick={() => switchClickedTab(idx)}

@@ -8,7 +8,6 @@ interface Props {
   imageSrc: StaticImageData;
   title: string;
   description: string;
-  personnel: string;
   slug: string;
 }
 
@@ -16,7 +15,6 @@ export default function ProjectCard({
   imageSrc,
   title,
   description,
-  personnel,
   slug,
 }: Props) {
   return (
@@ -25,13 +23,14 @@ export default function ProjectCard({
         <Image src={imageSrc} alt="프로젝트 이미지" width={265} height={265} />
       </div>
       <div className={styles.contentWrapper}>
-        <Typography size="medium">{title}</Typography>
+        <Typography size="medium" weight="bold">
+          {title}
+        </Typography>
         <Typography>{description}</Typography>
-        <Typography color="gray">{personnel}</Typography>
       </div>
       <div className={styles.buttonWrapper}>
         <Link href={`/${slug}`}>
-          <Button>자세히 보기</Button>
+          <Button type="active">자세히 보기</Button>
         </Link>
       </div>
     </article>

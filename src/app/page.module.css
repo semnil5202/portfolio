@@ -2,3 +2,33 @@
   width: var(--width-page);
   margin: 0 auto;
 }
+
+.projectsWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.projects {
+  font-size: 80px;
+  font-weight: 700;
+  color: var(--color-primary);
+  position: relative;
+}
+
+.projects::after {
+  content: 'Projects';
+  position: absolute;
+  color: transparent;
+  -webkit-text-stroke: 2px rgb(0, 26, 255);
+  top: -3px;
+  left: -3px;
+}
+
+.projectsLine {
+  width: 40px;
+  height: 20px;
+  border-bottom: 2px solid var(--color-primary);
+}

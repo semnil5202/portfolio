@@ -1,17 +1,22 @@
 .default {
   width: max-content;
-  padding: 8px 16px;
+  padding: 10px 20px;
   cursor: pointer;
   border-radius: 4px;
 }
 
-.type-primary {
+.type-fixed {
   background-color: var(--color-primary);
-  color: #fff;
+  color: var(--color-white);
 }
 
-.type-secondary {
-  background-color: #fff;
+.type-active {
+  background-color: var(--color-white);
   border: 1px solid var(--color-primary);
   color: var(--color-primary);
+}
+
+.type-active:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
 }

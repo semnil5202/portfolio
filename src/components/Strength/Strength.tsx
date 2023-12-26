@@ -1,4 +1,3 @@
-import { Typography } from '../common/Typography';
 import styles from './Strength.module.css';
 
 interface Props {
@@ -9,14 +8,10 @@ interface Props {
 export default function Strength({ title, descriptions }: Props) {
   return (
     <div className={styles.wrapper}>
-      <div className={styles.titleWrapper}>
-        <Typography size="medium">{title}</Typography>
-      </div>
+      <div className={styles.titleWrapper}>{title}</div>
       <ul className={styles.descriptionWrapper}>
         {descriptions.map((description, idx) => (
-          <Typography key={`${description}-${idx}`} tag="li">
-            {description}
-          </Typography>
+          <li key={`${description}-${idx}`}>{description}</li>
         ))}
       </ul>
     </div>

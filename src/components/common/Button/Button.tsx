@@ -7,7 +7,7 @@ import {
 import styles from './Button.module.css';
 
 type TagType = 'button' | 'a';
-type ButtonType = 'primary' | 'secondary';
+type ButtonType = 'fixed' | 'active';
 
 type Props<T extends ElementType> = {
   tag?: T extends TagType ? T : never;
@@ -18,7 +18,7 @@ type Props<T extends ElementType> = {
 
 export default function Button<T extends ElementType>({
   tag,
-  type = 'primary',
+  type = 'fixed',
   customStyle = {},
   children,
   ...attribute

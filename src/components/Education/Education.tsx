@@ -25,7 +25,9 @@ export default function Education({ organization, content }: Props) {
   return (
     <div className={styles.wrapper}>
       <div className={styles.sidebarWrapper}>
-        <Typography>{school}</Typography>
+        <Typography size="medium" weight="bold">
+          {school}
+        </Typography>
         <Typography>{date}</Typography>
         {motherSchool && <Typography color="gray">{motherSchool}</Typography>}
         {link && (
@@ -37,7 +39,7 @@ export default function Education({ organization, content }: Props) {
             customStyle={{
               width: 'min-content',
               cursor: 'pointer',
-              borderBottom: '1px solid var(--color-gray)',
+              textDecoration: 'underline',
             }}
           >
             {link}
@@ -45,7 +47,9 @@ export default function Education({ organization, content }: Props) {
         )}
       </div>
       <div className={styles.contentWrapper}>
-        <Typography>{title}</Typography>
+        <Typography size="medium" weight="bold">
+          {title}
+        </Typography>
         <ul className={styles.descriptionWrapper}>
           {descriptions.map((description, idx) => (
             <Typography key={`${description}-${idx}`} tag="li">

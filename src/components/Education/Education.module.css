@@ -1,24 +1,27 @@
 .wrapper {
   width: 100%;
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 40px;
+  justify-content: end;
+  margin: 40px 0;
 }
 
 .sidebarWrapper {
-  width: 200px;
+  width: 240px;
   height: max-content;
 }
 
 .sidebarWrapper > * {
-  padding: 4px;
+  padding: 8px;
 }
 
 .contentWrapper {
-  width: 940px;
+  width: 780px;
   height: max-content;
+  padding: 8px;
 }
 
 .descriptionWrapper {
-  margin-top: 12px;
+  display: block;
+  margin-top: 8px;
+  line-height: 220%;
 }
