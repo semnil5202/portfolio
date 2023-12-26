@@ -1,7 +1,13 @@
 interface Props {
   size: number;
+  id?: string;
 }
 
-export default function Space({ size }: Props) {
-  return <div style={{ minWidth: `${size}px`, minHeight: `${size}px` }}></div>;
+export default function Space({ id, size }: Props) {
+  return (
+    <div
+      id={id}
+      style={{ minWidth: `${size}px`, minHeight: `${size}px` }}
+    ></div>
+  );
 }

@@ -7,15 +7,16 @@ import { Space } from '@/components/common/Space';
 export default function Home() {
   return (
     <main className={styles.main}>
+      <Space id="about" size={72} />
       <Profile />
-      <Space size={80} />
+      <Space size={48} />
       <Ability />
-      <Space size={100} />
+      <Space id="projects" size={72} />
       <div className={styles.projectsWrapper}>
         <h3 className={styles.projects}>Projects</h3>
         <div className={styles.projectsLine}></div>
       </div>
-      <Space size={40} />
+      <Space size={72} />
       <Projects />
     </main>
   );
