@@ -26,9 +26,6 @@ export default function ProjectOverview({
 }: Props) {
   return (
     <section className={styles.main}>
-      <div className={styles.typographyWrapper}>
-        <h2 className={styles.typography}>Overview.</h2>
-      </div>
       <div className={styles.overviewWrapper}>
         <div className={styles.imageWrapper}>
           <Image
@@ -45,26 +42,32 @@ export default function ProjectOverview({
           <ul className={styles.listWrapper}>
             {intros.map((intro) => (
               <li key={intro} className={styles.listItem}>
-                <span>•</span>
+                <span style={{ marginRight: '12px' }}>•</span>
                 <Typography>{intro}</Typography>
               </li>
             ))}
             <li className={styles.listItem} style={{ marginTop: '16px' }}>
-              <Typography weight="bold">기간 :</Typography>
+              <Typography weight="bold" customStyle={{ marginRight: '12px' }}>
+                기간 :
+              </Typography>
               <Typography>{period}</Typography>
             </li>
             <li className={styles.listItem}>
-              <Typography weight="bold">인원 :</Typography>
+              <Typography weight="bold" customStyle={{ marginRight: '12px' }}>
+                인원 :
+              </Typography>
               <Typography>{personnel}</Typography>
             </li>
             <li className={styles.listItem}>
-              <Typography weight="bold">수행 역할 :</Typography>
+              <Typography weight="bold" customStyle={{ marginRight: '12px' }}>
+                수행 역할 :
+              </Typography>
               <Typography>{role}</Typography>
             </li>
             <li className={styles.listItem}>
               <Typography
                 weight="bold"
-                customStyle={{ minWidth: 'max-content' }}
+                customStyle={{ minWidth: 'max-content', marginRight: '12px' }}
               >
                 기술 스택 :
               </Typography>
@@ -78,6 +81,7 @@ export default function ProjectOverview({
                 tag="a"
                 href={link}
                 type="active"
+                target="_blank"
                 customStyle={{ marginRight: '16px' }}
               >
                 {name}

@@ -12,6 +12,9 @@ export default function Detail({ params }: { params: { slug: string } }) {
   return (
     <main className={styles.main}>
       <Space size={72} />
+      <div className={styles.typographyWrapper}>
+        <h2 className={styles.overview}>Overview.</h2>
+      </div>
       <ProjectOverview
         imageSrc={imageSrc}
         name={name}
@@ -24,7 +27,7 @@ export default function Detail({ params }: { params: { slug: string } }) {
       />
       <Space size={120} />
       <div className={styles.typographyWrapper}>
-        <h2 className={styles.typography}>Activity.</h2>
+        <h2 className={styles.activity}>Activity.</h2>
       </div>
       {details.map(({ title, problems, solves, result }) => (
         <ProjectDetail
