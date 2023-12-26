@@ -22,7 +22,7 @@
   content: 'Projects';
   position: absolute;
   color: transparent;
-  -webkit-text-stroke: 2px rgb(0, 26, 255);
+  -webkit-text-stroke: 2px var(--color-primary-deep);
   top: -3px;
   left: -3px;
 }
