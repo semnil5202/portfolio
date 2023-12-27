@@ -42,7 +42,7 @@ export default function Profile() {
             <Button
               tag="a"
               href="https://github.com/semnil5202"
-              target="blank"
+              target="_blank"
               type="active"
               customStyle={{ fontSize: '18px', marginRight: '16px' }}
             >
@@ -51,7 +51,7 @@ export default function Profile() {
             <Button
               tag="a"
               href="https://velog.io/@semnil5202"
-              target="blank"
+              target="_blank"
               type="active"
               customStyle={{ fontSize: '18px', marginRight: '16px' }}
             >

@@ -50,7 +50,7 @@ export default function ProjectDetail({
               <Typography
                 tag="a"
                 href={result.description.link}
-                target="blank"
+                target="_blank"
                 customStyle={{ cursor: 'pointer', textDecoration: 'underline' }}
               >
                 {result.description?.name}

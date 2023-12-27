@@ -34,7 +34,7 @@ export default function Education({ organization, content }: Props) {
           <Typography
             tag="a"
             href="https://github.com/semnil5202/woowacourse-archive"
-            target="blank"
+            target="_blank"
             color="gray"
             customStyle={{
               width: 'min-content',
