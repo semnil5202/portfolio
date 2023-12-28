@@ -26,18 +26,24 @@ export default function Detail({ params }: { params: { slug: string } }) {
         role={role}
       />
       <Space size={120} />
-      <div className={styles.typographyWrapper}>
-        <h2 className={styles.activity}>Activity.</h2>
-      </div>
-      {details.map(({ title, problems, solves, result }) => (
-        <ProjectDetail
-          key={title}
-          title={title}
-          problems={problems}
-          solves={solves}
-          result={result}
-        />
-      ))}
+      {details.length === 0 ? (
+        ''
+      ) : (
+        <>
+          <div className={styles.typographyWrapper}>
+            <h2 className={styles.activity}>Activity.</h2>
+          </div>
+          {details.map(({ title, problems, solves, result }) => (
+            <ProjectDetail
+              key={title}
+              title={title}
+              problems={problems}
+              solves={solves}
+              result={result}
+            />
+          ))}
+        </>
+      )}
     </main>
   );
 }

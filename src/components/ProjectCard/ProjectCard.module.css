@@ -3,7 +3,7 @@
   height: max-content;
   display: flex;
   flex-direction: column;
-  margin: 20px 10px;
+  margin: 28px 10px;
 }
 
 .imageWrapper {
@@ -17,6 +17,7 @@
   width: 265px;
   height: 76px;
   margin-top: 12px;
+  line-height: 160%;
 }
 
 .contentWrapper > * {
@@ -26,5 +27,5 @@
 .buttonWrapper {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 28px;
 }

@@ -45,22 +45,32 @@ export default function ProjectDetail({
         <ul className={styles.listWrapper}>
           <Typography weight="bold">결과</Typography>
           <li className={styles.listItem}>
-            <span className={styles.sidebar}>•</span>
             {result.description?.link ? (
-              <Typography
-                tag="a"
-                href={result.description.link}
-                target="_blank"
-                customStyle={{ cursor: 'pointer', textDecoration: 'underline' }}
-              >
-                {result.description?.name}
-              </Typography>
+              <>
+                <span className={styles.sidebar}>•</span>
+                <Typography
+                  tag="a"
+                  href={result.description.link}
+                  target="_blank"
+                  customStyle={{
+                    cursor: 'pointer',
+                    textDecoration: 'underline',
+                  }}
+                >
+                  {result.description?.name}
+                </Typography>
+              </>
             ) : (
               <Typography>{result.description?.name}</Typography>
             )}
           </li>
           {result.imageSrc && (
-            <Image src={result.imageSrc} alt="결과 이미지" width={1140} />
+            <Image
+              src={result.imageSrc}
+              alt="결과 이미지"
+              width={1140}
+              loading="lazy"
+            />
           )}
         </ul>
       )}
