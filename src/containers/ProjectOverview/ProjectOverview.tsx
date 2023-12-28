@@ -2,6 +2,7 @@ import Image, { StaticImageData } from 'next/image';
 import { Typography } from '../../components/common/Typography';
 import styles from './ProjectOverview.module.css';
 import { Button } from '../../components/common/Button';
+import { Space } from '@/components/common/Space';
 
 interface Props {
   imageSrc: StaticImageData;
@@ -46,24 +47,31 @@ export default function ProjectOverview({
                 <Typography>{intro}</Typography>
               </li>
             ))}
-            <li className={styles.listItem} style={{ marginTop: '16px' }}>
-              <Typography weight="bold" customStyle={{ marginRight: '12px' }}>
-                기간 :
-              </Typography>
-              <Typography>{period}</Typography>
-            </li>
-            <li className={styles.listItem}>
-              <Typography weight="bold" customStyle={{ marginRight: '12px' }}>
-                인원 :
-              </Typography>
-              <Typography>{personnel}</Typography>
-            </li>
-            <li className={styles.listItem}>
-              <Typography weight="bold" customStyle={{ marginRight: '12px' }}>
-                수행 역할 :
-              </Typography>
-              <Typography>{role}</Typography>
-            </li>
+            <Space size={16} />
+            {period && (
+              <li className={styles.listItem}>
+                <Typography weight="bold" customStyle={{ marginRight: '12px' }}>
+                  기간 :
+                </Typography>
+                <Typography>{period}</Typography>
+              </li>
+            )}
+            {personnel && (
+              <li className={styles.listItem}>
+                <Typography weight="bold" customStyle={{ marginRight: '12px' }}>
+                  인원 :
+                </Typography>
+                <Typography>{personnel}</Typography>
+              </li>
+            )}
+            {role && (
+              <li className={styles.listItem}>
+                <Typography weight="bold" customStyle={{ marginRight: '12px' }}>
+                  수행 역할 :
+                </Typography>
+                <Typography>{role}</Typography>
+              </li>
+            )}
             <li className={styles.listItem}>
               <Typography
                 weight="bold"
