@@ -59,7 +59,9 @@ export default function ProjectDetail({
               <Typography>{result.description?.name}</Typography>
             )}
           </li>
-          {result.imageSrc && <Image src={result.imageSrc} alt="결과 이미지" />}
+          {result.imageSrc && (
+            <Image src={result.imageSrc} alt="결과 이미지" width={1140} />
+          )}
         </ul>
       )}
     </article>

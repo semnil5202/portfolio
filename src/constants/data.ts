@@ -1,5 +1,8 @@
 import { ProjectDetails } from '@/types/projectDetails';
 import mapBeFineImage from '../../public/assets/mapbefine.png';
+import mapBeFineSwiperImage from '../../public/assets/mapbefine_swiper.png';
+import mapBeFineClusterImage from '../../public/assets/mapbefine_cluster.png';
+import mapBeFineResponsiveImage from '../../public/assets/mapbefine_responsive.png';
 
 export const SKILLS = [
   'HTML',
@@ -164,7 +167,7 @@ export const PROJECT_DETAILS: ProjectDetails = {
             name: 'Pull Request',
             link: 'https://github.com/woowacourse-teams/2023-map-befine/pull/615',
           },
-          imageSrc: mapBeFineImage,
+          imageSrc: mapBeFineClusterImage,
         },
       },
       {
@@ -195,7 +198,7 @@ export const PROJECT_DETAILS: ProjectDetails = {
             name: 'Blog Post',
             link: 'https://velog.io/@semnil5202/Swiper%EB%A5%BC-%EB%A7%8C%EB%93%A0-%EC%9D%B4%EC%9C%A0-u6qi4df8',
           },
-          imageSrc: mapBeFineImage,
+          imageSrc: mapBeFineSwiperImage,
         },
       },
       {
@@ -236,7 +239,7 @@ export const PROJECT_DETAILS: ProjectDetails = {
             name: 'Pull Request',
             link: 'https://github.com/woowacourse-teams/2023-map-befine/pull/387',
           },
-          imageSrc: mapBeFineImage,
+          imageSrc: mapBeFineResponsiveImage,
         },
       },
       {
