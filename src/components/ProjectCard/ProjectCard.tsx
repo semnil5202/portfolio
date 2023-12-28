@@ -20,7 +20,13 @@ export default function ProjectCard({
   return (
     <article className={styles.wrapper}>
       <div className={styles.imageWrapper}>
-        <Image src={imageSrc} alt="프로젝트 이미지" width={265} height={265} />
+        <Image
+          src={imageSrc}
+          alt="프로젝트 이미지"
+          width={265}
+          height={265}
+          loading="lazy"
+        />
       </div>
       <div className={styles.contentWrapper}>
         <Typography size="medium" weight="bold">
