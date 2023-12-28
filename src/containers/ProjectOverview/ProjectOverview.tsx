@@ -35,6 +35,7 @@ export default function ProjectOverview({
             alt="프로젝트 이미지"
             width={440}
             height={440}
+            quality={100}
           />
         </div>
         <div className={styles.infoWrapper}>

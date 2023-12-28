@@ -17,6 +17,7 @@ export default function Profile() {
             alt="프로필 이미지"
             width={352}
             height={352}
+            quality={100}
           />
         </div>
 

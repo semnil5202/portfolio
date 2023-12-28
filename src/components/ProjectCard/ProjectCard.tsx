@@ -27,6 +27,7 @@ export default function ProjectCard({
           width={265}
           height={265}
           loading="lazy"
+          quality={100}
         />
       </div>
       <div className={styles.contentWrapper}>

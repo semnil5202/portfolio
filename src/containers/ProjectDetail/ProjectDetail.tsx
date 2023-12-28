@@ -71,6 +71,7 @@ export default function ProjectDetail({
               alt="결과 이미지"
               width={1140}
               loading="lazy"
+              quality={100}
             />
           )}
         </ul>
