@@ -30,6 +30,7 @@ export default function ProjectOverview({
       <div className={styles.overviewWrapper}>
         <div className={styles.imageWrapper}>
           <Image
+            className="skeleton"
             src={imageSrc}
             alt="프로젝트 이미지"
             width={440}

@@ -66,6 +66,7 @@ export default function ProjectDetail({
           </li>
           {result.imageSrc && (
             <Image
+              className="skeleton"
               src={result.imageSrc}
               alt="결과 이미지"
               width={1140}

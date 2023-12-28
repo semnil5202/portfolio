@@ -12,6 +12,7 @@ export default function Profile() {
       <section className={styles.profile}>
         <div className={styles.imageContainer}>
           <Image
+            className="skeleton"
             src={profileImage}
             alt="프로필 이미지"
             width={352}

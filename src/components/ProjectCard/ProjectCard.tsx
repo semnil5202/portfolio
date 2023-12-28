@@ -21,6 +21,7 @@ export default function ProjectCard({
     <article className={styles.wrapper}>
       <div className={styles.imageWrapper}>
         <Image
+          className="skeleton"
           src={imageSrc}
           alt="프로젝트 이미지"
           width={265}
