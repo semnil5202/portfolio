@@ -59,7 +59,7 @@ export default function Profile() {
             >
               Blog
             </Button>
-            <Button customStyle={{ fontSize: '20px', cursor: 'auto' }}>
+            <Button customStyle={{ fontSize: '18px', cursor: 'auto' }}>
               semnil5202@gmail.com
             </Button>
           </div>

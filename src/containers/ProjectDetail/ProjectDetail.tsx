@@ -52,16 +52,18 @@ export default function ProjectDetail({
                   tag="a"
                   href={result.description.link}
                   target="_blank"
-                  customStyle={{
-                    cursor: 'pointer',
-                    textDecoration: 'underline',
-                  }}
+                  color="gray"
                 >
                   {result.description?.name}
                 </Typography>
               </>
             ) : (
-              <Typography>{result.description?.name}</Typography>
+              result.description?.name && (
+                <>
+                  <span className={styles.sidebar}>•</span>
+                  <Typography>{result.description.name}</Typography>
+                </>
+              )
             )}
           </li>
           {result.imageSrc && (
