@@ -2,6 +2,15 @@
   display: block;
 }
 
+.tag-a {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.tag-a:hover {
+  color: var(--color-black);
+}
+
 .size-small {
   font-size: 14px;
 }

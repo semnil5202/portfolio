@@ -38,8 +38,6 @@ export default function Education({ organization, content }: Props) {
             color="gray"
             customStyle={{
               width: 'min-content',
-              cursor: 'pointer',
-              textDecoration: 'underline',
             }}
           >
             {link}

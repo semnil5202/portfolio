@@ -34,7 +34,7 @@ export default function Typography<T extends ElementType>({
     <Tag
       className={`${styles.default} ${styles[`size-${size}`]} ${
         styles[`weight-${weight}`]
-      } ${styles[`color-${color}`]}`}
+      } ${styles[`color-${color}`]} ${styles[`tag-${Tag}`]}`}
       style={{ ...customStyle }}
       {...attributes}
     >
