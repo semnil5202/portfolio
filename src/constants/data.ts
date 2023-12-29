@@ -13,6 +13,7 @@ import paymentsImage from '../../public/assets/payments.png';
 
 import movieListImage from '../../public/assets/movielist.png';
 import movieListSkeletonImage from '../../public/assets/movielist_skeleton.png';
+import movieListResponsiveImage from '../../public/assets/movielist_responsive.png';
 
 import lunchRecommendationImage from '../../public/assets/lunchrecommendation.png';
 
@@ -35,10 +36,11 @@ export const STRENGTHS = [
   {
     title: 'React',
     description: [
-      '• 팀 프로젝트로 React를 사용하여 웹 애플리케이션을 개발한 경험이 있습니다.',
+      '• React를 사용하여 팀 프로젝트로 웹 서비스를 개발한 경험이 있습니다.',
       '• React와 외부시스템인 지도를 결합해본 경험이 있습니다. ',
       '• Recoil, Zustand 등 상태 관리 라이브러리 사용 경험이 있습니다.',
       '• React Lazy를 활용한 성능 최적화를 진행한 경험이 있습니다.',
+      '• ErrorBoundary, Suspense를 활용한 선언형 프로그래밍에 능숙합니다.',
     ],
   },
   {
@@ -46,25 +48,26 @@ export const STRENGTHS = [
     description: [
       '• 반응형 웹 및 크로스 브라우징에 대응할 수 있습니다.',
       '• 시맨틱 태그, 웹 표준, 웹 접근성을 준수해본 경험이 있습니다.',
-      '• CSS In JS 방식인 styled-components를 사용할 수 있습니다.',
+      '• CSS In JS 방식인 Styled-Components를 사용할 수 있습니다.',
     ],
   },
   {
     title: 'NEXT',
     description: [
       '• CSR, SSG, SSR, ISR 방식을 상황에 맞게 활용할 수 있습니다.',
-      '• 동적 라우팅, SSG 방식을 활용하여 프로젝트를 수행한 경험이 있습니다.',
+      '• App Router 방식을 활용하여 배포해 본 경험이 있습니다.',
     ],
   },
 
   {
     title: 'JS/TS',
     description: [
-      '• Closure, 비동기 프로그래밍 등의 상황에 익숙합니다.',
+      '• Closure, 비동기 프로그래밍 등의 문법에 능숙합니다.',
       '• TypeScript를 사용하여 프로젝트를 진행한 경험이 있습니다.',
       '• Webpack을 활용한 번들러 사용 경험이 있습니다.',
       '• Jest, Cypress를 활용한 테스트 작성 및 환경 구축 경험이 있습니다.',
       '• Storybook 작성 및 배포, Addon을 활용한 경험이 있습니다.',
+      '• MSW를 활용하여 Mock API를 만들 수 있습니다.',
     ],
   },
 ];
@@ -255,7 +258,7 @@ export const PROJECT_DETAILS: ProjectDetails = {
           'PC 환경을 기준으로 서비스를 개발하였기에 모바일, 태블릿 환경에서 서비스를 쾌적하게 이용하기 어려운 점이 있었습니다.',
         ],
         solves: [
-          'CSS의 Media Query, Web API의 MatchMedia를 사용하여 PC, 태블릿, 모바일 환경에서 동일한 사용자 경험을 제공할 수 있도록 하였습니다.',
+          'CSS의 Media Query, Web API의 MatchMedia를 사용하여 PC, 태블릿, 모바일 환경에서 최적의 사용자 경험을 제공할 수 있도록 하였습니다.',
         ],
         result: {
           description: {
@@ -333,7 +336,7 @@ export const PROJECT_DETAILS: ProjectDetails = {
           '모바일 및 태블릿 환경에서 웹 페이지를 확인하기에는 불편함이 있었습니다.',
         ],
         solves: [
-          'CSS Media Query를 활용하여 PC, 태블릿, 모바일 환경에서 동일한 사용자 경험을 제공할 수 있도록 하였습니다.',
+          'CSS Media Query를 활용하여 PC, 태블릿, 모바일 환경에서 최적의 사용자 경험을 제공할 수 있도록 하였습니다.',
         ],
         result: {
           imageSrc: shoppingCartResponsiveImage,
@@ -449,14 +452,26 @@ export const PROJECT_DETAILS: ProjectDetails = {
           imageSrc: movieListSkeletonImage,
         },
       },
+      {
+        title: '3. 반응형 웹 적용',
+        problems: [
+          '모바일 및 태블릿 환경에서 웹 페이지를 확인하기에는 불편함이 있었습니다.',
+        ],
+        solves: [
+          'CSS Media Query를 활용하여 PC, 태블릿, 모바일 환경에서 최적의 사용자 경험을 제공할 수 있도록 하였습니다.',
+        ],
+        result: {
+          imageSrc: movieListResponsiveImage,
+        },
+      },
     ],
   },
   'lunch-recommendation': {
     overview: {
       imageSrc: lunchRecommendationImage,
-      name: '무비 리스트',
+      name: '점심 뭐 먹지',
       intros: [
-        'TMDB API를 활용하여 인기 영화 목록을 확인하고 영화를 검색할 수 있는 우아한테크코스 Vanilla JS 미션입니다.',
+        '우아한테크코스 교육캠퍼스 주변 맛집을 기록할 수 있는 우아한테크코스 Vanilla JS 미션입니다.',
       ],
       tecStack: 'HTML, CSS, JavaScript, Typescript',
       links: [
@@ -479,6 +494,12 @@ export const PROJECT_DETAILS: ProjectDetails = {
         solves: [
           'Observer 패턴을 도입하여 도메인에 컴포넌트 의존성을 종속함으로써, 컴포넌트간 의존성을 최소화하여 로직을 보다 간소화하고 재사용성을 높일 수 있었습니다.',
         ],
+        result: {
+          description: {
+            name: 'Blog Post',
+            link: 'https://velog.io/@semnil5202/Observer-%ED%8C%A8%ED%84%B4%EC%9C%BC%EB%A1%9C-%EC%83%81%ED%83%9C-%EB%B3%80%ED%99%94-%EA%B0%90%EC%A7%80%ED%95%98%EA%B8%B0',
+          },
+        },
       },
     ],
   },
