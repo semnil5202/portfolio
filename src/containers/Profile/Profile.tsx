@@ -5,6 +5,7 @@ import profileImage from '../../../public/assets/profile.png';
 import styles from './Profile.module.css';
 import { DynamicText } from '@/components/common/DynamicText';
 import { Space } from '@/components/common/Space';
+import { DYNAMIC_TEXTS } from '@/constants/data';
 
 export default function Profile() {
   return (
@@ -27,13 +28,7 @@ export default function Profile() {
               안녕하세요.
             </Typography>
             <Space size={8} />
-            <DynamicText
-              texts={[
-                '사용자 경험을 우선시하는',
-                '기록과 공유를 좋아하는',
-                '유연한 코드를 고민하는',
-              ]}
-            />
+            <DynamicText texts={DYNAMIC_TEXTS} />
             <Space size={8} />
             <Typography tag="h2" size="large" weight="bold" color="default">
               프론트엔드 개발자 이세민입니다.
