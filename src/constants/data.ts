@@ -17,6 +17,12 @@ import movieListResponsiveImage from '../../public/assets/movielist_responsive.p
 
 import lunchRecommendationImage from '../../public/assets/lunchrecommendation.png';
 
+export const DYNAMIC_TEXTS = [
+  '좋은 사용자 경험을 전하는',
+  '기록과 공유를 좋아하는',
+  '유연한 코드를 고민하는',
+];
+
 export const SKILLS = [
   'HTML',
   'CSS',
