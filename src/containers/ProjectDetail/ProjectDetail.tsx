@@ -1,6 +1,7 @@
 import Image, { StaticImageData } from 'next/image';
 import { Typography } from '../../components/common/Typography';
 import styles from './ProjectDetail.module.css';
+import { ListText } from '@/components/common/ListText';
 
 interface Props {
   title: string;
@@ -26,19 +27,13 @@ export default function ProjectDetail({
       <ul className={styles.listWrapper}>
         <Typography weight="bold">문제 상황</Typography>
         {problems.map((problem) => (
-          <li key={problem} className={styles.listItem}>
-            <span className={styles.sidebar}>•</span>
-            <Typography>{problem}</Typography>
-          </li>
+          <ListText key={problem}>{problem}</ListText>
         ))}
       </ul>
       <ul className={styles.listWrapper}>
         <Typography weight="bold">해결 과정</Typography>
         {solves.map((solve) => (
-          <li key={solve} className={styles.listItem}>
-            <span className={styles.sidebar}>•</span>
-            <Typography>{solve}</Typography>
-          </li>
+          <ListText key={solve}>{solve}</ListText>
         ))}
       </ul>
       {result && (

@@ -1,3 +1,4 @@
+import { ListText } from '../common/ListText';
 import styles from './Strength.module.css';
 
 interface Props {
@@ -10,8 +11,8 @@ export default function Strength({ title, descriptions }: Props) {
     <div className={styles.wrapper}>
       <div className={styles.titleWrapper}>{title}</div>
       <ul className={styles.descriptionWrapper}>
-        {descriptions.map((description, idx) => (
-          <li key={`${description}-${idx}`}>{description}</li>
+        {descriptions.map((description) => (
+          <ListText key={description}>{description}</ListText>
         ))}
       </ul>
     </div>

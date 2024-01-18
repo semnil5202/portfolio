@@ -1,3 +1,4 @@
+import { ListText } from '../common/ListText';
 import { Typography } from '../common/Typography';
 import styles from './Education.module.css';
 
@@ -49,10 +50,8 @@ export default function Education({ organization, content }: Props) {
           {title}
         </Typography>
         <ul className={styles.descriptionWrapper}>
-          {descriptions.map((description, idx) => (
-            <Typography key={`${description}-${idx}`} tag="li">
-              {description}
-            </Typography>
+          {descriptions.map((description) => (
+            <ListText key={description}>{description}</ListText>
           ))}
         </ul>
       </div>
