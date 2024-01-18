@@ -10,11 +10,6 @@ export default function Ability() {
     <TabLayout width={1140} height={600} tabBoxesWidth={400}>
       <Tab label="Skills">
         <div className={styles.skillsWrapper}>
-          <div className={styles.skillWrapper}>
-            {SKILLS.map((skill) => (
-              <Skill key={skill} content={skill} />
-            ))}
-          </div>
           <div className={styles.strengthWrapper}>
             {STRENGTHS.map(({ title, description }) => (
               <Strength key={title} title={title} descriptions={description} />
