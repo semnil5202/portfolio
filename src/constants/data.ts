@@ -85,7 +85,16 @@ export const EDUCATIONS = [
       school: '우아한테크코스 5기',
       date: '2023.02 - 2023.11',
       motherSchool: '우아한형제들',
-      link: 'Archive',
+      links: [
+        {
+          name: 'Archive',
+          link: 'https://github.com/semnil5202/woowacourse-archive',
+        },
+        {
+          name: 'Youtube',
+          link: 'https://www.youtube.com/watch?v=PBgQKK6nelo&ab_channel=%EC%9A%B0%EC%95%84%ED%95%9C%ED%85%8C%ED%81%AC',
+        },
+      ],
     },
     content: {
       title: '웹 프론트엔드 과정',

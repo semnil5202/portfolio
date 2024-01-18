@@ -6,7 +6,10 @@ interface OrganizationProps {
   school: string;
   date: string;
   motherSchool?: string;
-  link?: string;
+  links?: {
+    name: string;
+    link: string;
+  }[];
 }
 
 interface ContentProps {
@@ -20,7 +23,7 @@ interface Props {
 }
 
 export default function Education({ organization, content }: Props) {
-  const { school, date, motherSchool = '', link = '' } = organization;
+  const { school, date, motherSchool = '', links = [] } = organization;
   const { title, descriptions } = content;
 
   return (
@@ -31,19 +34,21 @@ export default function Education({ organization, content }: Props) {
         </Typography>
         <Typography>{date}</Typography>
         {motherSchool && <Typography color="gray">{motherSchool}</Typography>}
-        {link && (
-          <Typography
-            tag="a"
-            href="https://github.com/semnil5202/woowacourse-archive"
-            target="_blank"
-            color="gray"
-            customStyle={{
-              width: 'min-content',
-            }}
-          >
-            {link}
-          </Typography>
-        )}
+        {links &&
+          links.map(({ name, link }) => (
+            <Typography
+              key={link}
+              tag="a"
+              href={link}
+              target="_blank"
+              color="gray"
+              customStyle={{
+                width: 'min-content',
+              }}
+            >
+              {name}
+            </Typography>
+          ))}
       </div>
       <div className={styles.contentWrapper}>
         <Typography size="medium" weight="bold">
