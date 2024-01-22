@@ -16,7 +16,6 @@ export default function Ability() {
           </div>
         </div>
       </Tab>
-
       <Tab label="Education">
         {EDUCATIONS.map(({ organization, content }) => (
           <Education

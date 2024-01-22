@@ -1,8 +1,8 @@
 .wrapper {
   width: 100%;
   display: flex;
-  justify-content: end;
-  margin: 40px 0;
+  justify-content: center;
+  margin: 40px 0 0 0;
 }
 
 .sidebarWrapper {
@@ -15,7 +15,7 @@
 }
 
 .contentWrapper {
-  width: 780px;
+  width: 680px;
   height: max-content;
   padding: 8px;
 }
