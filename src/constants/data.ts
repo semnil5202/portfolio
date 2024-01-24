@@ -45,11 +45,11 @@ export const STRENGTHS = [
   {
     title: 'React',
     description: [
-      'React를 사용하여 팀 프로젝트로 웹 서비스를 개발한 경험이 있습니다.',
-      'React와 외부시스템인 지도를 결합해본 경험이 있습니다.',
-      'Recoil, Zustand 등 상태 관리 라이브러리 사용 경험이 있습니다.',
-      'React Lazy를 활용한 성능 최적화를 진행한 경험이 있습니다.',
-      'ErrorBoundary, Suspense를 활용한 선언형 프로그래밍에 능숙합니다.',
+      'React와 지도를 결합하여 서비스를 개발한 경험이 있습니다.',
+      '상태 관리 라이브러리인 Recoil, Zustand를 사용할 수 있습니다.',
+      'React Lazy를 활용하여 로딩 성능 최적화를 진행한 경험이 있습니다.',
+      'Custom Hook을 활용하여 컴포넌트 관심사 분리 및 재사용에 익숙합니다.',
+      'ErrorBoundary, Suspense를 활용한 선언형 프로그래밍에 익숙합니다.',
     ],
   },
   {
@@ -57,25 +57,25 @@ export const STRENGTHS = [
     description: [
       '반응형 웹 및 크로스 브라우징에 대응할 수 있습니다.',
       '시맨틱 태그, 웹 표준, 웹 접근성을 준수해본 경험이 있습니다.',
-      'CSS In JS 방식인 Styled-Components를 사용할 수 있습니다.',
+      'Styled-Components, Emotion을 사용할 수 있습니다.',
     ],
   },
   {
     title: 'NEXT',
     description: [
       'CSR, SSG, SSR, ISR 방식을 상황에 맞게 활용할 수 있습니다.',
-      'App Router 방식을 활용하여 배포해 본 경험이 있습니다.',
+      'App Router 방식을 활용하여 프로젝트를 배포해 본 경험이 있습니다.',
     ],
   },
 
   {
     title: 'JS/TS',
     description: [
-      'Closure, 비동기 프로그래밍 등의 문법에 능숙합니다.',
-      'TypeScript를 사용하여 프로젝트를 진행한 경험이 있습니다.',
-      'Webpack을 활용한 번들러 사용 경험이 있습니다.',
+      'ES6+ 문법과 비동기 프로그래밍에 익숙합니다.',
+      'TypeScript를 사용하여 React 서비스를 개발한 경험이 있습니다.',
+      'Webpack을 활용하여 보일러 플레이트를 작성한 경험이 있습니다.',
       'Jest, Cypress를 활용한 테스트 작성 및 환경 구축 경험이 있습니다.',
-      'Storybook 작성 및 배포, Addon을 활용할 수 있습니다.',
+      'Storybook을 활용하여 디자인 시스템을 구축해본 경험이 있습니다.',
       'MSW를 활용하여 Mock API를 만들 수 있습니다.',
     ],
   },
@@ -84,7 +84,7 @@ export const STRENGTHS = [
 export const EDUCATIONS = [
   {
     organization: {
-      school: '우아한테크코스 5기',
+      school: '우아한테크코스',
       date: '2023.02 - 2023.11',
       motherSchool: '우아한형제들',
       links: [
@@ -99,7 +99,7 @@ export const EDUCATIONS = [
       ],
     },
     content: {
-      title: '웹 프론트엔드 과정',
+      title: '웹 프론트엔드 5기',
       descriptions: [
         'Vanilla JavaScript, TypeScript, Webpack, Jest, Cypress를 활용한 미션 기반의 웹 기술 학습',
         'Recoil, MSW, Storybook, React-Testing-Library를 활용한 React 학습',

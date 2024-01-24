@@ -3,6 +3,7 @@
   height: auto;
   min-height: calc(100vh - 200px);
   margin: 0 auto;
+  letter-spacing: -0.5px;
 }
 
 .projectsWrapper {
