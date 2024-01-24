@@ -20,9 +20,9 @@ import lunchRecommendationImage from '../../public/assets/lunchrecommendation.pn
 import conceptBeImage from '../../public/assets/conceptbe.png';
 
 export const DYNAMIC_TEXTS = [
-  '좋은 사용자 경험을 전하는',
   '기록과 공유를 좋아하는',
   '유연한 코드를 고민하는',
+  '사용자 경험을 중시하는',
 ];
 
 export const SKILLS = [
@@ -308,7 +308,7 @@ export const PROJECT_DETAILS: ProjectDetails = {
         '기존의 지도 서비스는 개인의 관심사를 기록하는데 용이하지만, 다른 사람과 정보를 공유하는데 불편하다는 점에서 이를 개선하고자 프로젝트를 시작했습니다.',
       ],
       period: '2023.12 - 현재',
-      personnel: 'PM: 2명, Design: 1명, BE: 3명, FE: 2명',
+      personnel: 'PM: 2명, Design: 2명, BE: 3명, FE: 2명',
       role: '프론트엔드',
       tecStack:
         'Typescript, React, React-Query, Axios, Emotion, Storybook, Jest, React-Testing-Library',
