@@ -48,7 +48,7 @@ export const STRENGTHS = [
       'React와 지도를 결합하여 서비스를 개발한 경험이 있습니다.',
       'Recoil, Zustand 상태 관리 라이브러리를 사용할 수 있습니다.',
       'React Lazy를 활용하여 로딩 성능 최적화를 진행한 경험이 있습니다.',
-      'Custom Hook을 활용하여 컴포넌트 관심사 분리 및 재사용에 익숙합니다.',
+      'Custom Hook을 활용하여 컴포넌트 관심사 분리에 익숙합니다.',
       'ErrorBoundary, Suspense를 활용한 선언형 프로그래밍에 익숙합니다.',
     ],
   },
@@ -135,8 +135,7 @@ export const PROJECTS = [
   {
     imageSrc: conceptBeImage,
     title: '컨셉비',
-    description:
-      '아이디어를 공유하고 토론하며 프로젝트 인원들을 구인할 수 있는 서비스',
+    description: '다양한 종목의 프로젝트 인원들을 구인할 수 있는 서비스',
     slug: 'concept-be',
   },
   {
@@ -157,7 +156,7 @@ export const PROJECTS = [
     imageSrc: movieListImage,
     title: '무비 리스트',
     description:
-      'TMDB API를 활용해 영화 목록을 만드는 우아한테크코스 Vanilla JS 미션',
+      'TMDB를 활용해 영화 목록을 만드는 우아한테크코스 Vanilla JS 미션',
     slug: 'movie-list',
   },
   {
@@ -305,8 +304,8 @@ export const PROJECT_DETAILS: ProjectDetails = {
       imageSrc: conceptBeImage,
       name: '컨셉비',
       intros: [
-        '아이디어를 공유하고 토론하며 프로젝트 인원들을 구인할 수 있는 서비스입니다.',
-        '기존의 프로젝트 구인 서비스는 개발 분야에 치우쳐져 있어 기획, 마케팅 등의 비 개발 분야는 프로젝트 인원 구인이 어렵다는 점을 개선하고자 이 프로젝트를 시작했습니다.',
+        '다양한 종목의 프로젝트 인원들을 구인할 수 있는 서비스입니다.',
+        '기존의 프로젝트 구인 서비스는 개발 분야에 치우쳐져 있어 비 개발 분야는 프로젝트 인원 구인이 어렵다는 점을 개선하고자 이 프로젝트를 시작했습니다.',
         '아이디어를 공유하면서 토론하고 평가할 수 있는 공간을 제공하며, 사용자들 간의 다양한 전문성을 융합하여 다채로운 프로젝트를 형성하고자 합니다.',
       ],
       period: '2023.12 - 현재',
