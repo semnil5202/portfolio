@@ -3,6 +3,7 @@ import { Typography } from '../../components/common/Typography';
 import styles from './ProjectOverview.module.css';
 import { Button } from '../../components/common/Button';
 import { Space } from '@/components/common/Space';
+import { ListText } from '@/components/common/ListText';
 
 interface Props {
   imageSrc: StaticImageData;
@@ -44,10 +45,7 @@ export default function ProjectOverview({
           </Typography>
           <ul className={styles.listWrapper}>
             {intros.map((intro) => (
-              <li key={intro} className={styles.listItem}>
-                <span style={{ marginRight: '12px' }}>•</span>
-                <Typography>{intro}</Typography>
-              </li>
+              <ListText key={intro}>{intro}</ListText>
             ))}
             <Space size={16} />
             {period && (
