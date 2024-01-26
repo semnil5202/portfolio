@@ -2,11 +2,11 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  margin: 40px 0 0 0;
+  margin: 28px 0 0 0;
 }
 
 .sidebarWrapper {
-  width: 240px;
+  width: 200px;
   height: max-content;
 }
 

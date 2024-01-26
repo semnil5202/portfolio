@@ -6,14 +6,12 @@ import { EDUCATIONS, STRENGTHS } from '@/constants/data';
 
 export default function Ability() {
   return (
-    <TabLayout width={1140} height={580} tabBoxesWidth={400}>
+    <TabLayout width={1140} height={500} tabBoxesWidth={400}>
       <Tab label="Skills">
-        <div className={styles.skillsWrapper}>
-          <div className={styles.strengthWrapper}>
-            {STRENGTHS.map(({ title, description }) => (
-              <Strength key={title} title={title} descriptions={description} />
-            ))}
-          </div>
+        <div className={styles.strengthWrapper}>
+          {STRENGTHS.map(({ title, description }) => (
+            <Strength key={title} title={title} descriptions={description} />
+          ))}
         </div>
       </Tab>
       <Tab label="Education">
