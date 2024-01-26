@@ -13,12 +13,12 @@
 }
 
 .typographyContainer {
-  width: 652px;
+  width: max-content;
   height: min-content;
 }
 
 .buttonContainer {
-  width: 652px;
+  width: max-content;
   height: min-content;
   display: flex;
 }
