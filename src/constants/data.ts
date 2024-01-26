@@ -61,7 +61,7 @@ export const STRENGTHS = [
     ],
   },
   {
-    title: 'NEXT',
+    title: 'Next',
     description: [
       'App Router 방식을 사용할 수 있습니다.',
       'CSR, SSG, SSR, ISR 방식을 상황에 맞게 활용할 수 있습니다.',
