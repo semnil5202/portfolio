@@ -31,7 +31,7 @@ export default function Detail({ params }: { params: { slug: string } }) {
       ) : (
         <>
           <div className={styles.typographyWrapper}>
-            <h2 className={styles.contribution}>Contribution</h2>
+            <h2 className={styles.activity}>Activity</h2>
           </div>
           {details.map(({ title, problems, solves, result }) => (
             <ProjectDetail
