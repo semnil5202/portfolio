@@ -46,7 +46,7 @@ export const STRENGTHS = [
     title: 'React',
     description: [
       'React와 지도를 결합하여 서비스를 개발한 경험이 있습니다.',
-      'Recoil, Zustand 상태 관리 라이브러리를 사용할 수 있습니다.',
+      'Recoil 등 상태 관리 라이브러리를 사용할 수 있습니다.',
       'React Lazy를 활용하여 로딩 성능 최적화를 진행한 경험이 있습니다.',
       'Custom Hook을 활용한 컴포넌트 관심사 분리에 익숙합니다.',
       'ErrorBoundary, Suspense를 활용한 선언형 프로그래밍에 익숙합니다.',
@@ -158,13 +158,6 @@ export const PROJECTS = [
     description:
       'TMDB를 활용해 영화 목록을 만드는 우아한테크코스 Vanilla JS 미션',
     slug: 'movie-list',
-  },
-  {
-    imageSrc: lunchRecommendationImage,
-    title: '점심 뭐 먹지',
-    description:
-      '캠퍼스 주변 맛집을 기록할 수 있는 우아한테크코스 Vanilla JS 미션',
-    slug: 'lunch-recommendation',
   },
   {
     imageSrc: portfolioImage,
@@ -519,43 +512,6 @@ export const PROJECT_DETAILS: ProjectDetails = {
         ],
         result: {
           imageSrc: movieListResponsiveImage,
-        },
-      },
-    ],
-  },
-  'lunch-recommendation': {
-    overview: {
-      imageSrc: lunchRecommendationImage,
-      name: '점심 뭐 먹지',
-      intros: [
-        '우아한테크코스 교육캠퍼스 주변 맛집을 기록할 수 있는 우아한테크코스 Vanilla JS 미션입니다.',
-      ],
-      tecStack: 'HTML, CSS, JavaScript, Typescript',
-      links: [
-        {
-          name: 'Deploy',
-          link: 'https://semnil5202.github.io/javascript-lunch/',
-        },
-        {
-          name: 'Github',
-          link: 'https://github.com/semnil5202/javascript-lunch/tree/step2',
-        },
-      ],
-    },
-    details: [
-      {
-        title: '1. Observer 패턴 도입으로 컴포넌트 간 의존성 최소화',
-        problems: [
-          '컴포넌트에서 이벤트가 발생하여 특정 컴포넌트를 리렌더링 시켜야하는 상황일 때, 해당 컴포넌트를 직접 import 하여 리렌더링 로직을 수행했습니다. 이는 컴포넌트간 의존성이 높아져 가독성과 재사용성이 떨어졌습니다.',
-        ],
-        solves: [
-          'Observer 패턴을 도입하여 도메인 상태에 컴포넌트 의존성을 종속함으로써, 컴포넌트간 의존성을 최소화하여 가독성을 개선하고 재사용성을 높일 수 있었습니다.',
-        ],
-        result: {
-          description: {
-            name: '[Blog] Observer 패턴으로 상태 변화 감지하기',
-            link: 'https://velog.io/@semnil5202/Observer-%ED%8C%A8%ED%84%B4%EC%9C%BC%EB%A1%9C-%EC%83%81%ED%83%9C-%EB%B3%80%ED%99%94-%EA%B0%90%EC%A7%80%ED%95%98%EA%B8%B0',
-          },
         },
       },
     ],
