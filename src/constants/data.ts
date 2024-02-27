@@ -3,19 +3,21 @@ import mapBeFineImage from '../../public/assets/mapbefine.png';
 import mapBeFineSwiperImage from '../../public/assets/mapbefine_swiper.png';
 import mapBeFineClusterImage from '../../public/assets/mapbefine_cluster.png';
 import mapBeFineResponsiveImage from '../../public/assets/mapbefine_responsive.png';
+import mapBeFineInteractionImage from '../../public/assets/mapbefine_interaction.gif';
 
 import portfolioImage from '../../public/assets/portfolio.png';
 
 import shoppingCartImage from '../../public/assets/shoppingcart.png';
 import shoppingCartResponsiveImage from '../../public/assets/shoppingcart_responsive.png';
+import shoppingCartMockingImage from '../../public/assets/shoppingcart_mocking.gif';
 
 import paymentsImage from '../../public/assets/payments.png';
+import paymentsValidationImage from '../../public/assets/payments_validation.gif';
 
 import movieListImage from '../../public/assets/movielist.png';
 import movieListSkeletonImage from '../../public/assets/movielist_skeleton.png';
 import movieListResponsiveImage from '../../public/assets/movielist_responsive.png';
-
-import lunchRecommendationImage from '../../public/assets/lunchrecommendation.png';
+import movieListIntersectionImage from '../../public/assets/movie_intersection.gif';
 
 import conceptBeImage from '../../public/assets/conceptbe.png';
 
@@ -103,7 +105,7 @@ export const EDUCATIONS = [
       descriptions: [
         'Vanilla JavaScript, TypeScript, Webpack, Jest, Cypress를 활용한 미션 기반의 웹 기술 학습',
         'Recoil, MSW, Storybook, React-Testing-Library를 활용한 React 학습',
-        '웹 성능 최적화, NPM 라이브러리 배포, Github-Actions를 활용한 CI/CD 구축, NEXT.js 학습',
+        '웹 성능 최적화, NPM 라이브러리 배포, Github-Actions를 활용한 CI/CD 구축, Next.js 학습',
         '기획, 개발, 유지 보수 과정의 실 사용자가 있는 팀 프로젝트 수행',
         '페어 프로그래밍, 코드 리뷰, 협업, 팀 프로젝트, 글쓰기를 통한 소프트스킬 증진',
         '10분 테코톡에서 React의 제어 컴포넌트와 비제어 컴포넌트에 대해 발표',
@@ -162,7 +164,7 @@ export const PROJECTS = [
   {
     imageSrc: portfolioImage,
     title: '포트폴리오',
-    description: 'NEXT.js를 사용하여 만든 포트폴리오 웹 페이지 ',
+    description: 'Next.js를 사용하여 만든 포트폴리오 웹 페이지 ',
     slug: 'portfolio',
   },
 ];
@@ -198,11 +200,12 @@ export const PROJECT_DETAILS: ProjectDetails = {
       {
         title: '1. 마커 클러스터링 및 스크린 사이즈 렌더링으로 지도 최적화',
         problems: [
-          '수백 개 이상의 마커를 보유한 지도의 경우, 마커가 지도를 가려 위치 확인이 어렵고 지도를 조작할 때 버벅대는 불편함이 있었습니다.',
+          '적은 수의 마커를 보유한 지도의 경우 사용자가 서비스를 이용하는데 큰 문제점이 없었지만, 수백 개 이상의 마커를 보유한 지도의 경우 마커가 지도를 가려 위치 확인이 어렵고 지도를 조작할 때 버벅대는 불편함이 있었습니다.',
+          '마커 클러스터링을 도입한 후에도 사용자가 지도를 최대로 확대한 경우, 클러스터링이 모두 해제되어 지도를 조작할 때 버벅대는 문제가 여전히 남아있었습니다.',
         ],
         solves: [
           '지도의 줌 레벨에 따라 마커의 지름이 차지하는 실제 거리를 구하고, 이를 바탕으로 마커 간 겹침 여부를 판단하여 마커 클러스터링을 진행했습니다.',
-          '스크린 사이즈에 해당하는 마커들만 동적으로 렌더링함으로써 760여개의 마커를 기준으로 렌더링 프레임을 48fps에서 71fps로 개선했습니다.',
+          '스크린 사이즈에 해당하는 마커들만 동적으로 렌더링함으로써 27인치 FHD, 75fps 모니터에서 800여개의 마커를 기준으로 렌더링 프레임을 48fps에서 71fps로 개선했습니다.',
         ],
         result: {
           description: {
@@ -216,24 +219,27 @@ export const PROJECT_DETAILS: ProjectDetails = {
         title:
           '2. 지도 이벤트 핸들링 및 사이드 바와 지도 간 상호작용 기능 구현',
         problems: [
-          '지도를 드래그 및 줌 할 때 스크린 사이즈 마커 렌더링, 클러스터링 등 복잡한 연산 로직과 서버와의 통신을 최소한으로 수행해야 했습니다.',
+          '사용자가 지도를 드래그 및 줌 할 때 스크린 사이즈 마커 렌더링, 마커 클러스터링 등 복잡한 연산 로직과 서버와의 통신을 최소한으로 수행해야 했습니다.',
           '지도 위 마커를 클릭했을 때 사이드바를 확장하여 세부 정보를 보여줄 수 있도록 해야 했고, 사이드 바의 리스트를 클릭하면 지도를 해당 정보의 위치로 이동 및 줌 인 시켜야 했습니다. 또한 URL 공유 기능이 가능해야 했습니다.',
         ],
         solves: [
           '지도 이벤트 핸들링 로직에 디바운싱을 걸어 마지막 이벤트에만 로직을 수행함으로써 서버 통신 비용을 절감하고 효율적으로 지도를 조작할 수 있도록 했습니다.',
           'Route State 및 쿼리 파라미터를 사용하여 마커 및 사이드 바 리스트 클릭 여부를 확인할 수 있도록 함으로써 사이드 바와 지도 간 상호작용과 URL 공유를 가능하게 했습니다.',
         ],
+        result: {
+          imageSrc: mapBeFineInteractionImage,
+        },
       },
       {
         title:
-          '3. 공용 Swiper 컴포넌트 구현 및 적용으로 메인 페이지 사용자 경험 개선',
+          '3. Swiper 컴포넌트 구현 및 적용으로 메인 페이지 사용자 경험 개선',
         problems: [
-          '서비스 초기에는 메인 페이지에서 비효율적인 UI와 복잡한 유저 플로우로 인해 사용자 이탈 현상이 자주 발생했습니다.',
-          '동일하게 생긴 컨텐츠를 단순하게 나열한 형태로 배치함으로써 사용자에게 우선적으로 노출하고자 한 콘텐츠가 잘 전달되지 못했습니다.',
+          '서비스 초기에는 메인 페이지의 비효율적인 UI와 복잡한 유저 플로우로 인해 사용자가 서비스를 이용하는데 어려움을 겪었습니다.',
+          '컨텐츠를 동일하게 생긴 컴포넌트에 담아 단순하게 나열한 형태로 배치함으로써 사용자에게 우선적으로 노출하고자 한 컨텐츠가 잘 전달되지 못했습니다.',
         ],
         solves: [
           '효율적인 UI와 간편한 유저 플로우를 구현하기 위해 메인 페이지에서부터 존재하던 지도를 분리하고, 지도를 필요로 하는 페이지에서만 동적으로 보여줄 수 있도록 했습니다.',
-          '프로젝트 전반에 공용으로 사용할 수 있는 Swiper 컴포넌트를 구현함으로써, 사용자에게 노출하고자 하는 콘텐츠를 우선적으로 배치할 수 있었습니다.',
+          '프로젝트 전반에 공용으로 사용할 수 있는 Swiper 컴포넌트를 구현함으로써, 사용자에게 노출하고자 하는 컨텐츠를 우선적으로 배치할 수 있었습니다.',
         ],
         result: {
           description: {
@@ -246,7 +252,7 @@ export const PROJECT_DETAILS: ProjectDetails = {
       {
         title: '4. 번들 사이즈 최적화로 초기 로딩 속도 개선',
         problems: [
-          '서비스 기능이 다양해짐에 따라 번들 사이즈가 증가해 초기 로딩 시간이 길어지는 현상이 발생했습니다.',
+          '서비스 기능이 다양해짐에 따라 메인 번들 사이즈가 증가해 초기 로딩 시간이 길어지는 현상이 발생했습니다.',
         ],
         solves: [
           'Webpack의 sideEffects 속성을 false로 지정함으로써 Tree Shaking을 진행했습니다.',
@@ -254,18 +260,18 @@ export const PROJECT_DETAILS: ProjectDetails = {
         ],
         result: {
           description: {
-            name: '메인 페이지 LCP를 2.9초에서 1.5초로 약 1.4초 개선하고, 번들 사이즈를 609KB에서 455KB로 약 34% 축소시켰습니다.',
+            name: '메인 페이지 LCP를 3.5초에서 2.1초로 약 1.4초 개선하고, 메인 번들 사이즈를 609KB에서 455KB로 약 34% 축소시켰습니다.',
           },
         },
       },
       {
         title: '5. 시맨틱 태그 및 웹 표준, 웹 접근성 적용',
         problems: [
-          '스크린 리더기를 통해 서비스를 이용해 보았을 때, 예측 불가한 요소 포커스, 요소 설명 부족 등으로 인해 정상적으로 사용하기에는 어려움이 있었습니다.',
+          '스크린 리더기를 통해 서비스를 이용해 보았을 때, 예측 불가한 요소 포커스, 설명 부족 등으로 인해 스크린 리더기를 사용하는 사용자가 서비스를 정상적으로 이용하기에는 어려움이 있었습니다.',
         ],
         solves: [
-          '시맨틱 태그, aria-label 등을 적용하여 스크린 리더기를 사용하는 사용자들에게 페이지에 대한 이해를 높이고 보다 편리하게 사용할 수 있도록 했습니다.',
-          '서비스의 모든 플로우가 Chrome, Safari 등 목표한 브라우저에서 원활하게 동작하며, UI 통일성을 유지하기 위해 웹 표준을 준수하였습니다.',
+          '시맨틱 태그, aria-label 등을 활용하여 일반 사용자가 컨텐츠를 읽는 순으로 요소 포커스를 수행하고 동시에 컨텐츠에 대한 설명을 진행할 수 있도록 하였습니다. 이를 통해 스크린 리더기를 사용하는 사용자가 서비스에 대한 이해도를 높일 수 있도록 했고 보다 편리하게 사용할 수 있도록 했습니다.',
+          '서비스의 모든 플로우가 목표한 브라우저(Chrome, Edge, Safari, Whale, Samsung Mobile)에서 원활하게 동작하며, UI 통일성을 유지하기 위해 웹 표준을 준수하였습니다.',
         ],
       },
       {
@@ -281,7 +287,7 @@ export const PROJECT_DETAILS: ProjectDetails = {
         },
       },
       {
-        title: '7. Figma를 사용하여 전반적인 UI/UX 설계',
+        title: '7. Figma를 활용한 전반적인 UI/UX 설계',
         problems: [
           '디자이너의 부재로 서비스 전반의 UI/UX를 3명의 프론트엔드 인원이 나눠서 설계해야 하는 상황이었습니다. 이 경우 일관되지 않은 UI/UX로 이어져 사용자 경험에 부정적인 영향을 미칠 우려가 있으며, 프론트엔드 인원들이 개발과 디자인 양쪽에서의 업무를 병행해야 하는 어려움이 예상되었습니다.',
         ],
@@ -338,14 +344,14 @@ export const PROJECT_DETAILS: ProjectDetails = {
       {
         title: '2. Storybook을 활용한 디자인 시스템 구축',
         problems: [
-          '기획 및 디자이너분들이 구현된 컴포넌트를 확인하려면 프로젝트를 AWS 환경에 배포해야만 했으며, 서로 다른 전문성으로 인해 소통에 아쉬움이 있었습니다.',
+          '기획 및 디자이너분들이 구현된 결과물을 검토하려면 프로젝트를 AWS 환경에 배포해야만 했으며, 서로 다른 전문성으로 인해 소통에 아쉬움이 있었습니다.',
           '디자인 시스템의 컴포넌트를 수정한 후 미처 확인하지 못한 오류로 인해, 컴포넌트 개발 단계에서 오류가 발생하는 경우가 종종 있었습니다.',
           '디자인 시스템을 최초로 배포했을 때 컴포넌트, 이미지, 폰트 등이 모두 포함되다 보니 번들 사이즈가 4.5MB로 너무 큰 문제가 있었습니다.',
         ],
         solves: [
           'Figma에 마련된 디자인 가이드에 맞게 공통 컴포넌트를 구현하고 Storybook을 활용하여 문서화 및 배포함으로써, 기획 및 디자이너분들이 보다 편리하게 구현 결과물을 확인할 수 있도록 했습니다. 특히 Addon 기능을 적극적으로 활용하여 컴포넌트의 다양한 형태를 확인하고 테스트 해볼 수 있는 공간을 제공했습니다.',
-          'React-Testing-Library와 Jest를 활용하여 Storybook 상호 작용 테스트를 수행함으로써, 수정 과정에서 미처 확인하지 못한 오류를 조기에 식별하여 보다 안정적인 개발을 진행할 수 있도록 했습니다.',
-          '사용하지 않는 폰트 파일을 제거하고 font-face 속성을 수정했으며, Vite의 rollupOptions 속성을 활용하여 번들 파일에 포함시키지 않을 외부의 라이브러리 의존성 목록을 지정했습니다. 이를 통해 기존의 4.5MB이던 번들 사이즈를 1.93MB로 감소시킬 수 있었습니다.',
+          'React-Testing-Library와 Jest를 활용하여 Storybook 상호 작용 테스트를 수행함으로써, 컴포넌트 수정 과정에서 미처 확인하지 못한 오류를 조기에 식별하여 보다 안정적인 개발을 진행할 수 있도록 했습니다.',
+          '사용하지 않는 폰트 파일을 제거하고 font-face 속성을 지정했으며, Vite의 rollupOptions 속성을 활용하여 번들 파일에 포함시키지 않을 외부의 라이브러리 의존성 목록을 지정했습니다. 이를 통해 기존의 4.5MB이던 번들 사이즈를 1.93MB로 감소시킬 수 있었습니다.',
         ],
       },
     ],
@@ -374,11 +380,14 @@ export const PROJECT_DETAILS: ProjectDetails = {
       {
         title: '1. MSW를 활용하여 서버 의존성 없이 API 로직 구현',
         problems: [
-          '프론트엔드에서 API 로직을 구현하려면 백엔드 개발의 완료를 기다려야 하는 의존성이 있습니다. 이 의존성으로 인해 전반적인 개발 주기가 비효율적으로 흘러가는 불편함이 있었습니다.',
+          '프론트엔드에서 API 관련 로직을 구현하려면 백엔드 개발의 완료를 기다려야 하는 불편함이 있습니다. 이로 인해 프론트엔드 개발의 주기가 비효율적으로 흘러가 API 요청 상태에 따른 처리가 미흡한 문제가 있었습니다.',
         ],
         solves: [
           'MSW를 사용하여 백엔드 개발이 완료되지 않은 상황에서도 프론트엔드 단에서 독립적으로 개발을 진행할 수 있도록 했습니다. 추후 End Point만 교체하는 것으로 실제 서버와 통신이 가능했습니다.',
         ],
+        result: {
+          imageSrc: shoppingCartMockingImage,
+        },
       },
       {
         title: '2. 다형성 컴포넌트와 공통 컴포넌트를 통한 중복 코드 최소화',
@@ -387,7 +396,7 @@ export const PROJECT_DETAILS: ProjectDetails = {
           '통일되지 않은 스타일 코드로 인해 UI 일관성을 헤칠 우려가 있었습니다.',
         ],
         solves: [
-          'Styled-Components를 통해 다형성 컴포넌트를 구현하고, 미션 전반에 사용되는 공통 컴포넌트를 분리함으로써 중복 코드를 최소화하고 일관된 UI를 구현할 수 있었습니다.',
+          'Styled-Components를 통해 다형성 컴포넌트를 구현하고, 미션 전반에 사용되는 공통 컴포넌트를 분리함으로써 컴포넌트 재사용성을 높이고 일관된 UI를 구현할 수 있었습니다.',
         ],
       },
       {
@@ -432,17 +441,20 @@ export const PROJECT_DETAILS: ProjectDetails = {
         title:
           '1. 제어 컴포넌트 방식을 활용하여 사용자 입력값에 대한 즉각적인 피드백 제공',
         problems: [
-          '카드 등록 폼의 특성상 입력 형식이 까다롭고 복잡하기에, 제출 버튼을 누룬 후에 잘못된 입력값을 표시하는 방법은 다시 한번 입력값을 수정해야 하므로 사용자 경험이 좋지 못했습니다. 따라서 사용자가 잘못된 값을 입력했을 경우 사용자에게 즉각적인 피드백을 주어 수정을 유도할 필요가 있었습니다.',
+          '카드 등록 폼의 특성상 입력 형식이 까다롭고 복잡하기에, 사용자가 잘못된 형식으로 정보를 입력하는 경우가 발생할 가능성이 높았습니다. 제출 버튼을 누룬 후에 잘못된 입력값을 표시하는 방법은 사용자가 잘못 입력한 값을 찾아 다시 한번 수정해야 하므로 번거로웠습니다. 따라서 사용자가 잘못된 값을 입력했을 경우 그 즉시 사용자에게 피드백을 주어 수정을 유도하면 사용자 경험이 향상될 것이라 생각했습니다.',
         ],
         solves: [
-          'React의 제어 컴포넌트 방식을 활용하여 사용자의 입력이 발생할 때마다 유효성 검사를 실시했습니다. 이를 통해 사용자의 입력값이 잘못되었을 경우, 즉각적인 피드백을 통해 빠른 수정을 유도할 수 있었고 결과적으로 사용자 경험을 증진시킬 수 있었습니다.',
+          'React의 제어 컴포넌트 방식을 활용하여 사용자의 입력과 React의 상태를 결합함으로써 입력이 발생할 때마다 유효성 검사를 실시할 수 있었습니다. 이를 통해 사용자의 입력값이 잘못되었을 경우, 사용자의 입력을 막고 즉각적인 피드백을 통해 빠른 수정을 유도할 수 있게 함으로써 사용자 경험을 증진시킬 수 있었습니다.',
         ],
+        result: {
+          imageSrc: paymentsValidationImage,
+        },
       },
       {
         title: '2. Auto Focus, Numeric Input을 통한 모바일 사용성 증진',
         problems: [
           '모바일 환경에서 카드 정보를 입력하기 전에 일일이 해당 입력 창을 터치해야 하는 불편함이 있었습니다.',
-          '모바일 환경은 가상 키보드를 사용하기에 각 폼에서 요구하는 정보에 맞게 숫자 키보드, 문자 키보드 등으로 변환할 필요성이 있었습니다.',
+          '모바일 환경은 가상 키보드를 사용하기에 각 폼에서 요구하는 정보에 맞게 숫자 키보드, 문자 키보드 등으로 변환하면 사용자가 더 편리하게 정보를 입력할 수 있을 것이라 생각했습니다.',
         ],
         solves: [
           'React의 Ref와 제어 컴포넌트 방식을 활용하여 Auto Focus를 구현함으로써, 모바일 환경에서 입력 창을 터치하는 과정 없이 보다 편리하게 입력할 수 있도록 했습니다.',
@@ -483,11 +495,14 @@ export const PROJECT_DETAILS: ProjectDetails = {
       {
         title: '1. IntersectionObserver를 활용한 무한 스크롤 구현',
         problems: [
-          "영화 인기 목록을 추가 조회할 때 '더 불러오기' 등과 같은 버튼을 반복적으로 클릭해야하는 불편함이 있었습니다.",
+          "사용자가 영화 목록을 추가 조회할 때 '더 불러오기'와 같은 버튼을 반복적으로 클릭해야하는 불편함이 있었습니다.",
         ],
         solves: [
           'IntersectionObserver를 활용하여 사용자가 마지막 영화 목록까지 스크롤 하였을 경우 이를 감지해, 별도의 액션 없이 추가 조회를 수행할 수 있도록 했습니다.',
         ],
+        result: {
+          imageSrc: movieListIntersectionImage,
+        },
       },
       {
         title: '2. Skeleton UI를 사용하여 로딩 상태에서 사용자 경험 증진',
@@ -520,8 +535,8 @@ export const PROJECT_DETAILS: ProjectDetails = {
     overview: {
       imageSrc: portfolioImage,
       name: '포트폴리오',
-      intros: ['NEXT.js를 사용하여 SSG 방식으로 배포한 웹 포트폴리오입니다.'],
-      tecStack: 'Typescript, NEXT.js, Module CSS',
+      intros: ['Next.js를 사용하여 SSG 방식으로 배포한 웹 포트폴리오입니다.'],
+      tecStack: 'Typescript, Next.js, Module CSS',
       links: [
         {
           name: 'Github',
@@ -533,21 +548,21 @@ export const PROJECT_DETAILS: ProjectDetails = {
       {
         title: '1. 다형성 컴포넌트 구현으로 중복 코드 최소화',
         problems: [
-          '버튼, 텍스트 등 프로젝트 전반에 비슷하게 사용되는 컴포넌트들로 인해 중복 코드가 자주 발생했으며, 서로 다른 스타일 코드 방식으로 인해 UI 일관성을 헤칠 우려가 있었습니다.',
+          '버튼, 텍스트 등 프로젝트 전반에 비슷하게 사용되는 컴포넌트들로 인해 중복 코드가 많이 발생했으며, 서로 다른 스타일 코드 방식으로 인해 UI 일관성을 헤칠 우려가 있었습니다.',
           '컴포넌트 사용처에서 HTML Tag와 무관한 Attribute를 사용할 경우 잠재적인 오류가 발생할 수 있는 우려가 있었습니다.',
         ],
         solves: [
-          'TypeScript를 활용하여 React의 ElementType, ComponentPropsWithoutRef 타입을 통해 다형성 컴포넌트를 구현하였습니다. 이를 통해 사용처에서 HTML Tag에 알맞은 Attribute만 사용할 수 있도록 강제하여 보다 안정적인 개발을 가능하도록 했습니다.',
+          'TypeScript를 활용하여 React의 ElementType, ComponentPropsWithoutRef 타입을 통해 다형성 컴포넌트를 구현하였습니다. 이를 통해 중복 코드를 효과적으로 줄일 수 있었으며, 사용처에서 HTML Tag에 알맞은 Attribute만 사용할 수 있도록 강제하여 보다 안정적인 개발을 가능하도록 했습니다.',
         ],
       },
       {
         title: '2. 동적 라우팅 및 ErrorBoundary 적용',
         problems: [
-          '각 프로젝트 카드마다 정형화된 상세 페이지를 구현해야 했으며 이를 하드 코딩 방식으로 구현할 경우 중복 코드가 다량 발생할 가능성이 높아 보였습니다.',
+          '각 프로젝트 설명을 위한 정형화된 상세 페이지를 구현해야 했으며 이를 하드 코딩 방식으로 직접 구현할 경우 중복 코드가 다량 발생할 가능성이 높아 보였습니다.',
           '사용자가 라우팅 과정에서 잘못된 URL을 입력할 경우 애플리케이션 전체의 에러로 전이되는 문제점이 있었습니다.',
         ],
         solves: [
-          'NEXT.js에서 제공하는 동적 라우팅 기능과 error, not-found 페이지를 활용하여, 중복 코드를 효과적으로 줄이고 에러 상황을 선언적으로 처리할 수 있었습니다.',
+          'Next.js에서 제공하는 동적 라우팅 기능과 error, not-found 페이지를 활용하여, 중복 코드를 효과적으로 줄이고 에러 상황을 선언적으로 처리할 수 있었습니다.',
         ],
       },
     ],
