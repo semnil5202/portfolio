@@ -22,8 +22,8 @@ import movieListIntersectionImage from '../../public/assets/movie_intersection.g
 import conceptBeImage from '../../public/assets/conceptbe.png';
 
 export const DYNAMIC_TEXTS = [
+  '유연한 코드를 추구하는',
   '기록과 공유를 좋아하는',
-  '유연한 코드를 고민하는',
   '사용자 경험을 중시하는',
 ];
 
@@ -120,7 +120,7 @@ export const EDUCATIONS = [
     content: {
       title: '정보보호학 (학사)',
       descriptions: [
-        'Hidden Markov Model을 이용한 Anomaly Detection 수행 경험',
+        'Hidden Markov Model을 활용한 Anomaly Detection 수행 경험',
         'SYN Flood Attack, Key Log 등의 방법을 통해 취약점 분석 경험',
       ],
     },
