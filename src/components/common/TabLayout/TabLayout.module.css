@@ -11,7 +11,7 @@
 }
 
 .tabSection > * {
-  width: var(--tab-width);
+  width: var(--tab-width, 100%);
 }
 
 .tabBoxesContainer {
