@@ -54,7 +54,11 @@ export default function Profile() {
             >
               Blog
             </Button>
-            <Button customStyle={{ fontSize: '18px', cursor: 'auto' }}>
+            <Button
+              tag="a"
+              href="mailto:semnil5202@gmail.com"
+              customStyle={{ fontSize: '18px' }}
+            >
               semnil5202@gmail.com
             </Button>
           </div>
