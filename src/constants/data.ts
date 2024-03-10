@@ -20,11 +20,13 @@ import movieListResponsiveImage from '../../public/assets/movielist_responsive.p
 import movieListIntersectionImage from '../../public/assets/movie_intersection.gif';
 
 import conceptBeImage from '../../public/assets/conceptbe.png';
+import conceptBeInfiniteImage from '../../public/assets/conceptbe_infinite.gif';
+import conceptBeDebouncingImage from '../../public/assets/conceptbe_debouncing.gif';
 
 export const DYNAMIC_TEXTS = [
-  '유연한 코드를 추구하는',
+  '사용자 중심으로 사고하는',
   '기록과 공유를 좋아하는',
-  '사용자 경험을 중시하는',
+  '유연한 코드를 고민하는',
 ];
 
 export const SKILLS = [
@@ -198,14 +200,15 @@ export const PROJECT_DETAILS: ProjectDetails = {
     },
     details: [
       {
-        title: '1. 마커 클러스터링 및 스크린 사이즈 렌더링으로 지도 최적화',
+        title:
+          '1. 마커 클러스터링과 마커 동적 렌더링을 구현으로 렌더링 프레임 48% 향상',
         problems: [
           '적은 수의 마커를 보유한 지도의 경우 사용자가 서비스를 이용하는데 큰 문제점이 없었지만, 수백 개 이상의 마커를 보유한 지도의 경우 마커가 지도를 가려 위치 확인이 어렵고 지도를 조작할 때 버벅대는 불편함이 있었습니다.',
           '마커 클러스터링을 도입한 후에도 사용자가 지도를 최대로 확대한 경우, 클러스터링이 모두 해제되어 지도를 조작할 때 버벅대는 문제가 여전히 남아있었습니다.',
         ],
         solves: [
           '지도의 줌 레벨에 따라 마커의 지름이 차지하는 실제 거리를 구하고, 이를 바탕으로 마커 간 겹침 여부를 판단하여 마커 클러스터링을 진행했습니다.',
-          '스크린 사이즈에 해당하는 마커들만 동적으로 렌더링함으로써 27인치 FHD, 75fps 모니터에서 800여 개의 마커를 기준으로 렌더링 프레임을 48fps에서 71fps로 개선했습니다.',
+          '스크린 사이즈에 해당하는 마커들만 동적으로 렌더링함으로써 27인치 FHD, 75fps 모니터 환경에서 800여 개의 마커를 기준으로 렌더링 프레임을 48fps에서 71fps로 개선했습니다.',
         ],
         result: {
           description: {
@@ -313,6 +316,10 @@ export const PROJECT_DETAILS: ProjectDetails = {
         'Typescript, React, React-Query, Axios, Emotion, Storybook, Jest, React-Testing-Library',
       links: [
         {
+          name: 'Demo',
+          link: 'http://conceptbe.kr/',
+        },
+        {
           name: 'Github',
           link: 'https://github.com/ConceptBe/conceptbe-frontend',
         },
@@ -328,20 +335,7 @@ export const PROJECT_DETAILS: ProjectDetails = {
     },
     details: [
       {
-        title: '1. 레거시 코드 개선',
-        problems: [
-          'API 모듈과 컴포넌트 로직의 경계가 모호하여 코드 가독성이 떨어지고 컴포넌트 재사용성이 좋지 않았습니다.',
-          '컴포넌트 내부에 API 응답에 따른 성공, 로딩, 에러 상태 처리 로직이 모두 위치함으로써 컴포넌트의 책임 분리가 모호했습니다.',
-          '컴포넌트 스타일링 방식이 제각각이어서 중복되는 로직이 많았고 가독성 또한 떨어졌습니다.',
-        ],
-        solves: [
-          'API 모듈과 컴포넌트 사이에 Business Layer를 두어 해당 Layer에 API 요청 로직과 응답값 가공 로직을 커스텀 훅으로 분리했습니다. 이를 통해 컴포넌트와 비즈니스 로직을 분리하여 관심사 분리를 수행할 수 있었고, 컴포넌트 재사용성과 코드 가독성을 높일 수 있었습니다.',
-          'React Query의 useSuspenseQuery와 React의 Suspense를 활용하여 로딩 상태에 대한 책임을 위임하고, ApiErrorBoundary와 GlobalErrorBoundary를 구현하여 에러 상태에 대한 책임을 위임했습니다. 이를 통해 컴포넌트는 오로지 성공 상태에 대한 책임을 갖게하여 관심사 분리를 수행할 수 있었습니다.',
-          '프로젝트 전반에 사용할 수 있는 공통 컴포넌트를 구현함으로써 중복되는 스타일링 로직을 최소화하고, 사용 방식을 정형화함으로써 가독성을 개선했습니다.',
-        ],
-      },
-      {
-        title: '2. Storybook을 활용한 디자인 시스템 구축',
+        title: '1. Storybook을 활용한 디자인 시스템 구축',
         problems: [
           '기획 및 디자이너분들이 구현된 결과물을 검토하려면 프로젝트를 AWS 환경에 배포해야만 했으며, 서로 다른 전문성으로 인해 소통에 아쉬움이 있었습니다.',
           '디자인 시스템의 컴포넌트를 수정한 후 미처 확인하지 못한 오류로 인해, 컴포넌트 개발 단계에서 오류가 발생하는 경우가 종종 있었습니다.',
@@ -351,6 +345,48 @@ export const PROJECT_DETAILS: ProjectDetails = {
           'Figma에 마련된 디자인 가이드에 맞게 공통 컴포넌트를 구현하고 Storybook을 활용하여 문서화 및 배포함으로써, 기획 및 디자이너분들이 보다 편리하게 구현 결과물을 확인할 수 있도록 했습니다. 특히 Addon 기능을 적극적으로 활용하여 컴포넌트의 다양한 형태를 확인하고 테스트 해볼 수 있는 공간을 제공했습니다.',
           'React-Testing-Library와 Jest를 활용하여 Storybook 상호 작용 테스트를 수행함으로써, 컴포넌트 수정 과정에서 미처 확인하지 못한 오류를 조기에 식별하여 보다 안정적인 개발을 진행할 수 있도록 했습니다.',
           '사용하지 않는 폰트 파일을 제거하고 font-face 속성을 지정했으며, Vite의 rollupOptions 속성을 활용하여 번들 파일에 포함시키지 않을 외부의 라이브러리 의존성 목록을 지정했습니다. 이를 통해 기존의 4.5MB이던 번들 사이즈를 1.93MB로 감소시킬 수 있었습니다.',
+        ],
+      },
+      {
+        title: '2. 무한 스크롤을 활용한 댓글 및 답글 기능',
+        problems: [
+          "댓글 목록을 모두 한 번에 불러올 경우 서버에 부하가 발생할 가능성이 높았고, 나눠서 불러올 경우 사용자가 '더 보기'와 같은 버튼을 반복적으로 클릭해야 하는 불편함이 있었습니다.",
+          '답글 입력창이 고정된 위치에 있지 않고 각 댓글마다 답글 입력창을 생성할 수 있는 형태입니다. 또한 모바일 환경에서 가상 키보드가 확장됨에 따라 답글 입력창을 가려 스크롤 하여 위치를 수정해야 하는 불편함이 있었습니다.',
+        ],
+        solves: [
+          'React-Query의 useSuspenseInfiniteQuery와 React-use의 useIntersection을 활용하여, 무한 스크롤 기능을 구현함으로써 댓글 조회 시 발생하는 문제와 불편함을 해결할 수 있었습니다.',
+          'React의 useRef와 scrollIntoView 메서드를 활용하여 답글 입력창이 생성되었을 때, 해당 요소로 포커싱함으로써 가상 키보드에 의해 답글 입력창이 가리는 문제를 해결할 수 있었습니다.',
+        ],
+        result: {
+          imageSrc: conceptBeInfiniteImage,
+        },
+      },
+      {
+        title:
+          '3. 제어 컴포넌트와 디바운싱을 활용한 닉네임 유효성 및 중복 검사',
+        problems: [
+          "닉네임은 고유한 값이기 때문에 중복될 수 없습니다. 따라서 사용자가 본인이 입력한 닉네임이 고유한 값인지 확인하려면 '닉네임 중복 확인'과 같은 버튼을 반복적으로 눌러야하는 불편함이 예상되었습니다.",
+          '정책상 닉네임은 필수로 입력해야하고, 2글자 미만으로 작성할 수 없으며, 특수문자를 포함할 수 없습니다. 이런 사항을 일일이 설명하기엔 회원 가입 form이 너무 복잡해질 것 같았고, 제출 버튼을 누른 뒤 잘못 입력한 값에 대한 피드백을 주게 되면 입력했던 값을 다시 수정해야하는 불편함이 예상되었습니다.',
+        ],
+        solves: [
+          "React의 useRef와 setTimeout 메서드를 활용하여 디바운싱 기능을 구현했습니다. 유저의 입력이 300ms 동안 없을 경우 닉네임 작성을 완료했다고 판단하여, 자동으로 서버에 중복 검사 요청을 보내도록 했습니다. 이를 통해 '닉네임 중복 확인'과 같은 버튼을 누를 필요 없이 보다 편리하게 닉네임 중복 검사를 수행할 수 있었습니다.",
+          'React의 제어 컴포넌트 방식을 활용하여 form을 구성하였고, 잘못된 입력값이 발생할 경우 그 즉시 피드백을 주어 수정할 수 있도록 유도했습니다. 또한 form 내의 input, textarea가 많아짐에 따라 상태 관리 및 유효성 검사 로직이 중복되었고, 이를 useField라는 Custom Hook으로 분리해 재사용하여 코드 가독성을 높였습니다.',
+        ],
+        result: {
+          imageSrc: conceptBeDebouncingImage,
+        },
+      },
+      {
+        title: '4. 레거시 코드 개선',
+        problems: [
+          '전임자가 작성한 코드에는 API 모듈과 컴포넌트 로직의 경계가 모호하여 코드 가독성이 떨어지고 컴포넌트 재사용성이 좋지 않았습니다.',
+          '또한 컴포넌트 내부에 API 응답에 따른 성공, 로딩, 에러 상태 처리 로직이 모두 위치함으로써 컴포넌트의 책임 분리가 모호했습니다.',
+          '마지막으로 컴포넌트 스타일링 방식이 제각각이어서 중복되는 로직이 많았고 가독성 또한 떨어졌습니다.',
+        ],
+        solves: [
+          'API 모듈과 컴포넌트 사이에 Business Layer를 두어 해당 Layer에 API 요청 로직과 응답값 가공 로직을 커스텀 훅으로 분리했습니다. 이를 통해 컴포넌트와 비즈니스 로직을 분리하여 관심사 분리를 수행할 수 있었고, 컴포넌트 재사용성과 코드 가독성을 높일 수 있었습니다.',
+          'React Query의 useSuspenseQuery와 React의 Suspense를 활용하여 로딩 상태에 대한 책임을 위임하고, ApiErrorBoundary와 GlobalErrorBoundary를 구현하여 에러 상태에 대한 책임을 위임했습니다. 이를 통해 컴포넌트는 오로지 성공 상태에 대한 책임을 갖게하여 관심사 분리를 수행할 수 있었습니다.',
+          '프로젝트 전반에 사용할 수 있는 공통 컴포넌트를 구현함으로써 중복되는 스타일링 로직을 최소화하고, 사용 방식을 정형화함으로써 가독성을 개선했습니다.',
         ],
       },
     ],
@@ -456,7 +492,7 @@ export const PROJECT_DETAILS: ProjectDetails = {
           '모바일 환경은 가상 키보드를 사용하기에 각 폼에서 요구하는 정보에 맞게 숫자 키보드, 문자 키보드 등으로 변환하면 사용자가 더 편리하게 정보를 입력할 수 있을 것이라 생각했습니다.',
         ],
         solves: [
-          'React의 Ref와 제어 컴포넌트 방식을 활용하여 Auto Focus를 구현함으로써, 모바일 환경에서 입력 창을 터치하는 과정 없이 보다 편리하게 입력할 수 있도록 했습니다.',
+          'React의 useRef와 제어 컴포넌트 방식을 활용하여 Auto Focus를 구현함으로써, 모바일 환경에서 입력 창을 터치하는 과정 없이 보다 편리하게 입력할 수 있도록 했습니다.',
           'input 태그의 type 속성을 활용하여 각 입력 폼에 맞게 가상 키보드의 종류를 변경함으로써, 보다 편리하게 입력할 수 있도록 했습니다.',
         ],
       },
