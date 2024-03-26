@@ -50,7 +50,7 @@ export const STRENGTHS = [
     title: 'React',
     description: [
       'React와 지도를 결합하여 서비스를 개발한 경험이 있습니다.',
-      'Recoil 등 상태 관리 라이브러리를 사용할 수 있습니다.',
+      'Recoil, React-Query 등 상태 관리 라이브러리를 사용할 수 있습니다.',
       'React Lazy를 활용하여 로딩 성능 최적화를 진행한 경험이 있습니다.',
       'Custom Hook을 활용한 컴포넌트 관심사 분리에 익숙합니다.',
       'ErrorBoundary, Suspense를 활용한 선언형 프로그래밍에 익숙합니다.',
