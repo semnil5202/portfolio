@@ -24,9 +24,9 @@ import conceptBeInfiniteImage from '../../public/assets/conceptbe_infinite.gif';
 import conceptBeDebouncingImage from '../../public/assets/conceptbe_debouncing.gif';
 
 export const DYNAMIC_TEXTS = [
-  '사용자 중심으로 사고하는',
-  '기록과 공유를 좋아하는',
-  '유연한 코드를 고민하는',
+  '프로덕트 중심으로 사고하는',
+  '시도와 리팩토링을 반복하는',
+  '사용자 경험을 중시하는',
 ];
 
 export const SKILLS = [
