@@ -22,6 +22,7 @@ import movieListIntersectionImage from '../../public/assets/movie_intersection.g
 import conceptBeImage from '../../public/assets/conceptbe.png';
 import conceptBeInfiniteImage from '../../public/assets/conceptbe_infinite.gif';
 import conceptBeDebouncingImage from '../../public/assets/conceptbe_debouncing.gif';
+import conceptBeScroll from '../../public/assets/conceptbe_scroll.gif';
 
 export const DYNAMIC_TEXTS = [
   '프로덕트 중심으로 사고하는',
@@ -340,13 +341,13 @@ export const PROJECT_DETAILS: ProjectDetails = {
           '빠르고 일관된 UI를 갖춘 개발을 위해 공통으로 사용하는 컴포넌트, 이미지 등을 분리하여 사용할 필요가 있었습니다.',
           '기획 및 디자이너분들이 구현된 결과물을 검토하려면 프로젝트를 AWS 환경에 배포해야만 했으며, 서로 다른 전문성으로 인해 소통에 아쉬움이 있었습니다.',
           '디자인 시스템의 컴포넌트를 수정한 후 미처 확인하지 못한 오류를 배포 이후에 확인하는 경우가 종종 있었습니다.',
-          '디자인 시스템을 최초로 배포했을 때 컴포넌트, 이미지, 폰트 등이 모두 포함되다 보니 패키지 사이즈가 4.76MB로 너무 큰 문제가 있었습니다.',
+          '디자인 시스템을 최초로 배포했을 때 컴포넌트, 이미지, 폰트 등이 모두 포함되다 보니 패키지 사이즈가 4.76MB로 너무 컸습니다. 특히, 사용하지 않은 폰트들로 인해 최초 로딩 속도가 저하되는 문제가 있었습니다.',
         ],
         solves: [
           '프로젝트 전반에 공용으로 쓰일 이미지, 폰트, 컴포넌트 등을 구현 후 디자인 시스템으로 분리해 NPM에 배포했습니다.',
           'Figma에 마련된 디자인 가이드에 맞게 공통 컴포넌트를 구현하고 Storybook을 활용하여 문서화 및 배포함으로써, 기획 및 디자이너분들이 보다 편리하게 구현 결과물을 확인할 수 있도록 했습니다. 특히 Addon 기능을 적극적으로 활용하여 컴포넌트의 다양한 형태를 확인하고 테스트 해볼 수 있는 공간을 제공했습니다.',
           'Jest와 React-Testing-Library를 활용하여 Storybook 상호 작용 테스트를 수행함으로써, 컴포넌트 수정 과정에서 미처 확인하지 못한 오류를 조기에 식별하여 보다 안정적인 개발을 진행할 수 있도록 했습니다.',
-          '사용하지 않는 폰트 파일을 제거하고 font-face 속성을 지정했으며, Vite의 rollupOptions 속성을 활용하여 번들 파일에 포함시키지 않을 외부의 라이브러리 의존성 목록을 지정했습니다. 이를 통해 기존의 4.76MB이던 패키지 사이즈를 2.19MB로 감소시킬 수 있었습니다.',
+          '사용하지 않는 폰트 파일을 제거하고 font-face 속성을 지정했으며, Vite의 rollupOptions 속성을 활용하여 번들 파일에 포함시키지 않을 외부의 라이브러리 의존성 목록을 지정했습니다. 이를 통해 기존의 4.76MB이던 패키지 사이즈를 2.19MB로 축소시켰고, 서비스 LCP를 1.6초 개선할 수 있었습니다.',
         ],
         result: {
           description: {
@@ -389,7 +390,23 @@ export const PROJECT_DETAILS: ProjectDetails = {
         },
       },
       {
-        title: '4. 레거시 코드 개선',
+        title: '4. 페이지 별로 마지막 스크롤 위치 복원',
+        problems: [
+          '페이지 전환 시 스크롤 위치가 유지되지 않고 초기화되어, 사용자가 불필요한 스크롤을 반복적으로 해야 하는 문제점이 있었습니다. 예를 들면, 메인 페이지에서 하단으로 스크롤 하며 콘텐츠를 보고 있던 중 A 콘텐츠 페이지로 이동한 뒤, 다시 뒤로 가기 하여 메인 페이지로 돌아왔을 때 스크롤 위치가 최초 접속 시의 위치인 최상단으로 초기화되었습니다.',
+        ],
+        solves: [
+          'React의 useLayoutEffect와 세션 스토리지를 활용하여, 페이지 전환 시 각 페이지 별로 마지막 스크롤 위치를 기록해두었습니다. 뒤로 가기 또는 이전에 방문한 기록이 있는 페이지를 재 방문할 경우, 마지막 스크롤 위치로 복원시켜 위 문제점을 해결할 수 있었습니다.',
+        ],
+        result: {
+          description: {
+            name: '[Blog] 페이지 별로 마지막 스크롤 위치 기억하기',
+            link: 'https://velog.io/@semnil5202/%ED%8E%98%EC%9D%B4%EC%A7%80-%EB%B3%84%EB%A1%9C-%EB%A7%88%EC%A7%80%EB%A7%89-%EC%8A%A4%ED%81%AC%EB%A1%A4-%EC%9C%84%EC%B9%98-%EA%B8%B0%EC%96%B5%ED%95%98%EA%B8%B0',
+          },
+          imageSrc: conceptBeScroll,
+        },
+      },
+      {
+        title: '5. 레거시 코드 개선',
         problems: [
           '전임자가 작성한 코드에는 비즈니스 로직과 컴포넌트 UI 로직의 경계가 모호하여 코드 가독성이 떨어지고 컴포넌트 재사용성이 좋지 않았습니다.',
           '또한 컴포넌트 내부에 API 응답에 따른 성공, 로딩, 에러 상태 처리 로직이 모두 위치함으로써 컴포넌트의 책임 분리가 모호했습니다.',
