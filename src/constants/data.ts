@@ -330,7 +330,7 @@ export const PROJECT_DETAILS: ProjectDetails = {
         },
         {
           name: 'Storybook',
-          link: 'https://65a04fca8611ba47d7f8b115-bdybhmnomg.chromatic.com/',
+          link: 'https://65a04fca8611ba47d7f8b115-dqgporpvoy.chromatic.com/',
         },
       ],
     },
