@@ -318,7 +318,7 @@ export const PROJECT_DETAILS: ProjectDetails = {
       links: [
         {
           name: 'Demo',
-          link: 'http://conceptbe.kr/',
+          link: 'https://conceptbe.kr/',
         },
         {
           name: 'Github',
