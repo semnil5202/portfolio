@@ -1,54 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
-  --color-primary: #3483ec;
-  --color-primary-deep: #263af3;
-  --color-black: #454545;
-  --color-gray: #767676;
-  --color-white: #fff;
-  --width-page: 1140px;
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
 }
 
-* {
-  box-sizing: border-box;
-  color: var(--color-black);
-  word-break: keep-all;
-}
-
-html,
-body,
-h1,
-h2,
-h3,
-h4,
-textarea,
-a,
-ul,
-li,
-button,
-p {
-  all: unset;
-}
-
-input[type='number']::-webkit-outer-spin-button,
-input[type='number']::-webkit-inner-spin-button {
-  appearance: none;
-  margin: 0;
-}
-
-@keyframes skeleton-animation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
   }
 }
 
-.skeleton {
-  background: linear-gradient(-90deg, #767676, #f0f0f0, #767676, #f0f0f0);
-  background-size: 400%;
-  animation: skeleton-animation 5s infinite ease-out;
-  border-radius: 8px;
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
 }
