@@ -8,6 +8,7 @@ import 'swiper/css/pagination';
 import { useState } from 'react';
 import Background from '@/containers/Landing/Background';
 import LandingMain from '@/containers/Landing/LandingMain';
+import Strength from '@/containers/Landing/Strength';
 
 export default function Home() {
   const [currentPageIndex, setCurrentPageIndex] = useState<number>(0);
@@ -27,7 +28,9 @@ export default function Home() {
         <SwiperSlide tag="article">
           <LandingMain />
         </SwiperSlide>
-        <SwiperSlide tag="article">Slide 2</SwiperSlide>
+        <SwiperSlide tag="article">
+          <Strength />
+        </SwiperSlide>
         <SwiperSlide tag="article">Slide 3</SwiperSlide>
       </Swiper>
       <div className="flex">hello</div>

@@ -11,6 +11,7 @@ const config: Config = {
     colors: {
       primary: '#2A392F',
       'primary-dark': '#2C3533',
+      link: '#BFBFBF',
       fff: '#ffffff',
     },
     screens: {
