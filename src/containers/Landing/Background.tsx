@@ -3,7 +3,6 @@ interface Props {
 }
 
 const Background = ({ currentPageIndex }: Props) => {
-  console.log(currentPageIndex);
   const primaryColorWidth = currentPageIndex === 0 ? 'w-2/5' : 'w-full';
 
   return (
