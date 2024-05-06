@@ -10,6 +10,7 @@ const config: Config = {
   theme: {
     colors: {
       primary: '#2A392F',
+      'primary-dark': '#2C3533',
       fff: '#ffffff',
     },
     screens: {
@@ -39,9 +40,20 @@ const config: Config = {
           opacity: '1',
         },
       },
+      initFadeIn: {
+        from: {
+          opacity: '0',
+          transform: 'translateY(20px)',
+        },
+        to: {
+          opacity: '1',
+          transform: 'translateY(0)',
+        },
+      },
     },
     animation: {
       'init-background': 'initBackground 1s ease',
+      'init-fade-in': 'initFadeIn 1.5s ease',
       flickering: 'flickering 1s infinite step-start',
     },
   },
