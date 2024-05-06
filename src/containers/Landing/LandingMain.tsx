@@ -1,11 +1,22 @@
 import Image from 'next/image';
 import DynamicText from '../../components/DynamicText/DynamicText';
 import PNGPortfolioProfile from '../../../public/assets/portfolio-profile.png';
+import SVGGithubLogo from '../../../public/assets/github-logo.svg';
+import SVGVelogLogo from '../../../public/assets/velog-logo.svg';
 import ListItem from '@/components/ListItem/ListItem';
+import Link from 'next/link';
 
 const LandingMain = () => {
   return (
     <div className="flex">
+      <div className="fixed flex flex-col h-[100px] justify-between right-0 mr-10 mt-8 animate-init-fade-in">
+        <Link href="https://github.com/semnil5202" target="_blank">
+          <SVGGithubLogo />
+        </Link>
+        <Link href="https://velog.io/@semnil5202/posts" target="_blank">
+          <SVGVelogLogo />
+        </Link>
+      </div>
       <article className="w-2/5 mt-[136px] animate-init-fade-in">
         <div className="flex flex-col w-max mx-auto">
           <div className="w-[300px] h-[300px] rounded-[50%] overflow-hidden">
@@ -51,7 +62,7 @@ const LandingMain = () => {
           </div>
 
           <div className="flex justify-between mt-24">
-            <div className="w-[2px] h-10 bg-primary mt-[6px]" />
+            <div className="w-[2px] h-[42px] bg-primary mt-[6px]" />
             <p className="w-[94%] text-primary-dark leading-7">
               대학에서 정보보호를 전공했지만 UX를 다루는 웹 프론트엔드 분야에
               매력을 느끼고, 우아한테크코스에 진학하여 10개월간의 웹 프론트엔드
