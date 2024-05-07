@@ -13,6 +13,7 @@ interface Props {
 const TranslateTemplate = ({ slide }: Props) => {
   if (slide.template === 'title') return <Title {...slide} />;
   if (slide.template === 'introduction') return <Introduction {...slide} />;
+  if (slide.template === 'activity') return <Activity {...slide} />;
   return <></>;
 };
 

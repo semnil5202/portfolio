@@ -34,6 +34,35 @@ export type TemplateType =
         image: StaticImageData;
         name: string;
       }[];
+    }
+  | {
+      id: number;
+      template: 'activity';
+      subHeading: string;
+      image: StaticImageData;
+      contents: {
+        heading: string;
+        descriptions: string[];
+      }[];
+    }
+  | {
+      id: number;
+      template: 'activity-extend';
+      subHeading: string;
+      contents: {
+        image?: StaticImageData;
+        heading: string;
+        descriptions: string[];
+      }[];
+    }
+  | {
+      id: number;
+      template: 'activity-grid';
+      subHeading: string;
+      contents: {
+        heading: string;
+        descriptions: string[];
+      }[];
     };
 
 export interface Detail {

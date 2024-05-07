@@ -15,6 +15,7 @@ import PNGTechZustand from '../../public/assets/icons/tech-zustand.png';
 import SVGGithubLogoWhite from '../../public/assets/icons/github-logo-white.svg';
 import SVGMapBeFineLogo from '../../public/assets/icons/mapbefine-logo.svg';
 import SVGFigmaLogo from '../../public/assets/icons/figma-logo.svg';
+import GIFMapBeFineInteraction from '../../public/assets/gifs/mapbefine-interaction.gif';
 
 export const DETAIL_LANDING = {
   'map-befine': PNGMapBeFine,
@@ -76,6 +77,29 @@ const DETAILS: Detail = {
         { image: PNGTechCypress, name: 'Cypress' },
         { image: PNGTechTl, name: 'Testing Library' },
         { image: PNGTechGa, name: 'Github Action' },
+      ],
+    },
+    {
+      id: 3,
+      template: 'activity',
+      subHeading:
+        '사이드 바와 지도 간 상호작용 기능 및 지도 이벤트 핸들링 구현',
+      image: GIFMapBeFineInteraction,
+      contents: [
+        {
+          heading: '문제 상황',
+          descriptions: [
+            '지도 위 마커를 클릭했을 때 사이드바를 확장하여 세부 정보를 보여줄 수 있도록 해야 했고, 사이드 바의 리스트를 클릭하면 지도를 해당 정보의 위치로 이동 및 줌 인 시켜야 했습니다. 또한 URL 공유 기능이 가능해야 했습니다.',
+            '사용자가 지도를 드래그 및 줌 할 때 마커 클러스터링, 마커 동적 렌더링 등 복잡한 연산 로직과 서버와의 통신을 최소한으로 수행해야 했습니다.',
+          ],
+        },
+        {
+          heading: '해결 과정',
+          descriptions: [
+            'Route State 및 쿼리 파라미터를 사용하여 마커 및 사이드 바 리스트 클릭 여부를 확인할 수 있도록 함으로써 사이드 바와 지도 간 상호작용과 URL 공유를 가능하게 했습니다.',
+            '지도 이벤트 핸들링 로직에 디바운싱을 걸어 마지막 이벤트에만 로직을 수행함으로써 서버 통신 비용을 절감하고 효율적으로 지도를 조작할 수 있도록 했습니다.',
+          ],
+        },
       ],
     },
   ],

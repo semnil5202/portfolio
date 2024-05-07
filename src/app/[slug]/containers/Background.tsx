@@ -13,7 +13,7 @@ const Background = ({ currentPageIndex, landing }: Props) => {
     <>
       <div className="w-full h-full fixed">
         <div
-          className={`${landingWidth} h-full fixed right-0 z-[-1] transition-all animate-init-fade-in ease duration-700`}
+          className={`${landingWidth} h-full fixed right-0 z-[-1] animate-init-fade-in transition-all ease duration-700`}
         >
           <Image src={landing} alt="랜딩 이미지" fill />
         </div>
