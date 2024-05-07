@@ -22,9 +22,9 @@ export default function Home() {
         tag="section"
         speed={700}
         direction="vertical"
-        mousewheel={true}
         onSlideChange={(swiper) => setCurrentPageIndex(swiper.activeIndex)}
         modules={[Mousewheel]}
+        mousewheel
         className="h-full"
       >
         <SwiperSlide tag="article">

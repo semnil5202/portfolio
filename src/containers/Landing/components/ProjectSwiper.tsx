@@ -1,7 +1,7 @@
 'use client';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper/modules';
+import { Pagination, Mousewheel } from 'swiper/modules';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -12,12 +12,14 @@ const ProjectSwiper = () => {
   return (
     <Swiper
       slidesPerView={4}
-      grabCursor={true}
-      modules={[Pagination]}
+      modules={[Pagination, Mousewheel]}
       pagination={{
         clickable: true,
       }}
-      loop={true}
+      mousewheel
+      grabCursor
+      nested
+      loop
       className="w-full h-full"
     >
       {CARDS.map(({ id, src, title, description }) => (
