@@ -12,6 +12,9 @@ import PNGTechStyled from '../../public/assets/icons/tech-styled.png';
 import PNGTechTs from '../../public/assets/icons/tech-ts.png';
 import PNGTechWebpack from '../../public/assets/icons/tech-webpack.png';
 import PNGTechZustand from '../../public/assets/icons/tech-zustand.png';
+import SVGGithubLogoWhite from '../../public/assets/icons/github-logo-white.svg';
+import SVGMapBeFineLogo from '../../public/assets/icons/mapbefine-logo.svg';
+import SVGFigmaLogo from '../../public/assets/icons/figma-logo.svg';
 
 export const DETAIL_LANDING = {
   'map-befine': PNGMapBeFine,
@@ -29,7 +32,23 @@ const DETAILS: Detail = {
       title: '괜찮을지도',
       description: '개인의 관심사를 다양한 지도로 만들고 공유할 수 있는 서비스',
       backgroundImg: PNGMapBeFine,
-      links: [],
+      links: [
+        {
+          name: 'Service',
+          href: 'https://mapbefine.com/',
+          svg: SVGMapBeFineLogo,
+        },
+        {
+          name: 'Github',
+          href: 'https://github.com/woowacourse-teams/2023-map-befine',
+          svg: SVGGithubLogoWhite,
+        },
+        {
+          name: 'Figma',
+          href: 'https://www.figma.com/file/xgmKaz4AiIrlctuhCb1avk/map-befine?type=design&node-id=0%3A1&mode=design&t=ZRmgumwgoYJMraPb-1',
+          svg: SVGFigmaLogo,
+        },
+      ],
     },
     {
       id: 2,

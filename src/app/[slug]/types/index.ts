@@ -16,6 +16,7 @@ export type TemplateType =
       backgroundImg: StaticImageData;
       links: {
         name: string;
+        href: string;
         svg: React.FC<React.SVGProps<SVGSVGElement>>;
       }[];
     }
