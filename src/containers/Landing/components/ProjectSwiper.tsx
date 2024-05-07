@@ -22,9 +22,14 @@ const ProjectSwiper = () => {
       loop
       className="w-full h-full"
     >
-      {CARDS.map(({ id, src, title, description }) => (
+      {CARDS.map(({ id, src, title, description, slug }) => (
         <SwiperSlide key={id}>
-          <ProjectCard src={src} title={title} description={description} />
+          <ProjectCard
+            src={src}
+            title={title}
+            description={description}
+            slug={slug}
+          />
         </SwiperSlide>
       ))}
     </Swiper>
