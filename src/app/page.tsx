@@ -5,7 +5,7 @@ import { Mousewheel } from 'swiper/modules';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
-import './swiper.css';
+
 import { useState } from 'react';
 import Background from '@/containers/Landing/Background';
 import LandingMain from '@/containers/Landing/LandingMain';
@@ -37,7 +37,6 @@ export default function Home() {
           <Projects />
         </SwiperSlide>
       </Swiper>
-      <div className="flex">hello</div>
     </main>
   );
 }
