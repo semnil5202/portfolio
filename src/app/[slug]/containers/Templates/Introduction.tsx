@@ -72,8 +72,8 @@ const Introduction = ({
             <p className="text-fff font-extralight ml-3">{contribution}</p>
           </div>
           <div>
-            <div className="flex">
-              <div className="mr-10">
+            <div className="flex justify-between">
+              <div>
                 <ListItem
                   color="fff"
                   bgColor="fff"
@@ -85,7 +85,7 @@ const Introduction = ({
                 </ListItem>
                 <p className="text-fff font-extralight ml-3">{organization}</p>
               </div>
-              <div className="mr-10">
+              <div>
                 <ListItem
                   color="fff"
                   bgColor="fff"
