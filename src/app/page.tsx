@@ -5,10 +5,12 @@ import { Mousewheel } from 'swiper/modules';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
+import './swiper.css';
 import { useState } from 'react';
 import Background from '@/containers/Landing/Background';
 import LandingMain from '@/containers/Landing/LandingMain';
 import Strength from '@/containers/Landing/Strength';
+import Projects from '@/containers/Landing/Projects';
 
 export default function Home() {
   const [currentPageIndex, setCurrentPageIndex] = useState<number>(0);
@@ -31,7 +33,9 @@ export default function Home() {
         <SwiperSlide tag="article">
           <Strength />
         </SwiperSlide>
-        <SwiperSlide tag="article">Slide 3</SwiperSlide>
+        <SwiperSlide tag="article">
+          <Projects />
+        </SwiperSlide>
       </Swiper>
       <div className="flex">hello</div>
     </main>
