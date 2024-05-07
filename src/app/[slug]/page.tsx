@@ -3,9 +3,6 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Mousewheel, Pagination } from 'swiper/modules';
 
-import 'swiper/css';
-import 'swiper/css/pagination';
-
 import { useState } from 'react';
 import Background from './containers/Background';
 import DETAILS, { DETAIL_LANDING } from '@/constants/details';

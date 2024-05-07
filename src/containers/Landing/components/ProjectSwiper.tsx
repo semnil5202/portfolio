@@ -3,8 +3,6 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Mousewheel } from 'swiper/modules';
 
-import 'swiper/css';
-import 'swiper/css/pagination';
 import ProjectCard from './ProjectCard';
 import CARDS from '@/constants/cards';
 
