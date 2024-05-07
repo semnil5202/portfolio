@@ -14,6 +14,10 @@ export type TemplateType =
       title: string;
       description: string;
       backgroundImg: StaticImageData;
+      links: {
+        name: string;
+        svg: React.FC<React.SVGProps<SVGSVGElement>>;
+      }[];
     }
   | {
       id: number;
@@ -22,11 +26,12 @@ export type TemplateType =
       intro: string;
       value: string;
       contribution: string;
+      organization?: string;
       date: string;
       member: string;
-      links: {
+      techs: {
+        image: StaticImageData;
         name: string;
-        svg: React.FC<React.SVGProps<SVGSVGElement>>;
       }[];
     };
 

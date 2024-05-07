@@ -1,6 +1,6 @@
-import PNGCoding from '../../../public/assets/strength-coding.png';
-import PNGSoft from '../../../public/assets/strength-soft.png';
-import PNGRecord from '../../../public/assets/strength-record.png';
+import PNGCoding from '../../../public/assets/icons/strength-coding.png';
+import PNGSoft from '../../../public/assets/icons/strength-soft.png';
+import PNGRecord from '../../../public/assets/icons/strength-record.png';
 import RoundedImage from '@/components/RoundedImage/RoundedImage';
 import ListItem from '@/components/ListItem/ListItem';
 import Link from 'next/link';
@@ -8,7 +8,7 @@ import Link from 'next/link';
 const Strength = () => {
   return (
     <div className="h-full flex items-center">
-      <div className="w-4/5 h-max flex justify-around mx-auto">
+      <div className="w-4/5 max-w-[1128px] h-max flex justify-between mx-auto">
         <div className="flex flex-col items-center">
           <RoundedImage
             src={PNGCoding}

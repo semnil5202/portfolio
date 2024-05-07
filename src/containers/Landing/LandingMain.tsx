@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import DynamicText from '../../components/DynamicText/DynamicText';
 import PNGPortfolioProfile from '../../../public/assets/portfolio-profile.png';
-import SVGGithubLogo from '../../../public/assets/github-logo.svg';
-import SVGVelogLogo from '../../../public/assets/velog-logo.svg';
+import SVGGithubLogo from '../../../public/assets/icons/github-logo.svg';
+import SVGVelogLogo from '../../../public/assets/icons/velog-logo.svg';
 import ListItem from '@/components/ListItem/ListItem';
 import Link from 'next/link';
 
