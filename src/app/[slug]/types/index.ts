@@ -23,7 +23,6 @@ export type TemplateType =
   | {
       id: number;
       template: 'introduction';
-      subHeading: string;
       intro: string;
       value: string;
       contribution: string;
@@ -38,7 +37,8 @@ export type TemplateType =
   | {
       id: number;
       template: 'activity';
-      subHeading: string;
+      heading: string;
+      subHeading?: string;
       image: StaticImageData;
       contents: {
         heading: string;
@@ -47,22 +47,34 @@ export type TemplateType =
     }
   | {
       id: number;
-      template: 'activity-extend';
-      subHeading: string;
+      template: 'activity-images';
+      heading: string;
+      subHeading?: string;
+      images: StaticImageData[];
       contents: {
-        image?: StaticImageData;
         heading: string;
         descriptions: string[];
       }[];
     }
   | {
       id: number;
-      template: 'activity-grid';
-      subHeading: string;
-      contents: {
-        heading: string;
-        descriptions: string[];
-      }[];
+      template: 'activity-texts';
+      heading: string;
+      subHeading?: string;
+      first: {
+        title: string;
+        contents: {
+          heading: string;
+          descriptions: string[];
+        }[];
+      };
+      second: {
+        title: string;
+        contents: {
+          heading: string;
+          descriptions: string[];
+        }[];
+      };
     };
 
 export interface Detail {

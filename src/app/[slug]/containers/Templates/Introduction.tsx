@@ -3,7 +3,6 @@ import { StaticImageData } from 'next/image';
 import Tech from './components/Tech';
 
 interface Props {
-  subHeading: string;
   intro: string;
   value: string;
   contribution: string;
@@ -17,7 +16,6 @@ interface Props {
 }
 
 const Introduction = ({
-  subHeading,
   intro,
   value,
   contribution,
@@ -27,14 +25,14 @@ const Introduction = ({
   techs,
 }: Props) => {
   return (
-    <section className="w-full h-full px-[12%] pb-[4%]">
+    <section className="w-full h-full px-[12%] pb-[6%]">
       <div className="w-full h-[28%] flex flex-col justify-end">
-        <h2 className="text-5xl text-fff font-bold">프로젝트 소개</h2>
+        <h2 className="text-5xl text-fff font-bold">프로젝트 개요</h2>
         <div className="w-[48px] h-[2px] bg-fff my-3" />
-        <h4 className="text-xl text-fff font-extralight">{subHeading}</h4>
+        <div className="w-full h-[28px]" />
       </div>
-      <div className="w-full h-[72%] flex items-center pt-4">
-        <ul className="w-[50%] h-full flex flex-col justify-evenly pr-10">
+      <div className="w-full h-[72%] flex pt-6">
+        <ul className="w-[50%] h-full flex flex-col justify-between pr-10">
           <div>
             <ListItem
               color="fff"

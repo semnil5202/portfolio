@@ -29,7 +29,7 @@ const ProjectDetail = ({ params }: { params: { slug: SlugType } }) => {
         className="h-full"
       >
         {DETAILS[params.slug].map((slide, idx) => (
-          <SwiperSlide key={idx}>
+          <SwiperSlide key={idx} className="overflow-hidden">
             <TranslateTemplate slide={slide} />
           </SwiperSlide>
         ))}
