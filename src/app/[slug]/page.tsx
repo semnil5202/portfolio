@@ -12,10 +12,15 @@ import { SlugType } from './types';
 const ProjectDetail = ({ params }: { params: { slug: SlugType } }) => {
   const [currentPageIndex, setCurrentPageIndex] = useState<number>(0);
   const landingImage = DETAIL_LANDING[params.slug];
+  const slideLength = DETAILS[params.slug].length;
 
   return (
     <main className="w-screen h-dvh">
-      <Background currentPageIndex={currentPageIndex} landing={landingImage} />
+      <Background
+        currentPageIndex={currentPageIndex}
+        landing={landingImage}
+        slideLength={slideLength}
+      />
       <Swiper
         tag="section"
         speed={700}
