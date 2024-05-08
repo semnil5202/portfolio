@@ -19,7 +19,7 @@ const RoundedImage = ({ src, alt, width, height, bgColor = 'fff' }: Props) => {
       className={`${widthPx} ${heightPx} rounded-[50%] overflow-hidden`}
       style={{ backgroundColor }}
     >
-      <Image src={src} alt={alt} width={width} height={width} />
+      <Image src={src} alt={alt} width={width} height={width} loading="lazy" />
     </div>
   );
 };

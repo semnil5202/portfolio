@@ -26,6 +26,7 @@ const LandingMain = () => {
                 alt="프로필"
                 width={300}
                 height={300}
+                priority
               />
             </div>
 

@@ -9,7 +9,7 @@ const Tech = ({ image, name }: Props) => {
   return (
     <li className="flex w-[110px] h-[170px] flex-col items-center">
       <div className="w-[110px] h-[110px]">
-        <Image src={image} alt={name} />
+        <Image src={image} alt={name} loading="lazy" />
       </div>
       <p className="text-fff text-center font-extralight">{name}</p>
     </li>
