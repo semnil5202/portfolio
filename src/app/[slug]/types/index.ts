@@ -32,6 +32,7 @@ export type TemplateType =
       type: 'end';
       heading: string;
       link: string;
+      svg?: React.FC<React.SVGProps<SVGSVGElement>>;
     }
   | {
       id: number;

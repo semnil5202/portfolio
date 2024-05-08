@@ -22,6 +22,7 @@ import PNGMapBeFineLoading1 from '../../public/assets/projects//mapbefine-loadin
 import PNGMapBeFineLoading2 from '../../public/assets/projects//mapbefine-loading-2.png';
 import SVGGithubLogoWhite from '../../public/assets/icons/github-logo-white.svg';
 import SVGMapBeFineLogo from '../../public/assets/icons/mapbefine-logo.svg';
+import SVGConceptBeLogoBig from '../../public/assets/icons/concept-be-logo-big.svg';
 import SVGFigmaLogo from '../../public/assets/icons/figma-logo.svg';
 import GIFMapBeFineInteraction from '../../public/assets/projects/mapbefine-interaction.gif';
 import GIFMapBeFineResponsive from '../../public/assets/projects/mapbefine-responsive.gif';
@@ -282,6 +283,7 @@ const DETAILS: Detail = {
       type: 'end',
       heading: '컨셉비 프로젝트',
       link: 'concept-be',
+      svg: SVGConceptBeLogoBig,
     },
   ],
   'concept-be': [
