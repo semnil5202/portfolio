@@ -6,7 +6,6 @@ import Title from './Templates/Title';
 import { TemplateType } from '../types';
 import ActivityImages from './Templates/ActivityImages';
 import ActivityTexts from './Templates/ActivityTexts';
-import { Dispatch } from 'react';
 
 interface Props {
   slide: TemplateType;
@@ -18,9 +17,8 @@ const TranslateTemplate = ({ slide }: Props) => {
   if (slide.template === 'introduction') return <Introduction {...slide} />;
   if (slide.template === 'activity') return <Activity {...slide} />;
   if (slide.template === 'activity-texts') return <ActivityTexts {...slide} />;
-  if (slide.template === 'activity-images')
-    return <ActivityImages {...slide} />;
-  return <></>;
+
+  return <ActivityImages {...slide} />;
 };
 
 export default TranslateTemplate;
