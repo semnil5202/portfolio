@@ -35,7 +35,7 @@ const ProjectDetail = ({ params }: { params: { slug: SlugType } }) => {
         style={{ '--swiper-pagination-color': '#ffffff' } as {}}
       >
         {DETAILS[params.slug].map((slide, idx) => (
-          <SwiperSlide key={idx} className="overflow-hidden">
+          <SwiperSlide key={slide.id} className="overflow-hidden">
             <TranslateTemplate slide={slide} />
           </SwiperSlide>
         ))}

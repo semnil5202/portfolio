@@ -23,7 +23,7 @@ interface Props {
 const ActivityTexts = ({ heading, subHeading, first, second }: Props) => {
   return (
     <section className="w-full h-full px-[12%] pb-[4%]">
-      <div className="w-full h-[28%] flex flex-col justify-end">
+      <div className="w-full h-[24%] flex flex-col justify-end">
         <h2 className="text-4xl text-fff font-bold">{heading}</h2>
         <div className="w-[48px] h-[2px] bg-fff my-3" />
         {subHeading ? (
@@ -32,17 +32,17 @@ const ActivityTexts = ({ heading, subHeading, first, second }: Props) => {
           <div className="w-full h-[28px]" />
         )}
       </div>
-      <div className="w-full h-[72%] flex pt-6">
+      <div className="w-full h-[76%] flex pt-6">
         <div className="w-[50%] h-full flex flex-col pr-10">
           <h5 className="w-max text-lg bg-fff py-1 px-3 font-semibold rounded-[4px] mb-4">
             {first.title}
           </h5>
           {first.contents.map(({ heading, descriptions }, idx) => (
-            <div key={idx} className="mb-8 last:mb-0">
+            <div key={heading} className="mb-8 last:mb-0">
               <p className="text-lg text-fff font-semibold mb-2">{heading}</p>
               {descriptions.map((description, idx) => (
                 <ListItem
-                  key={idx}
+                  key={description}
                   color="fff"
                   bgColor="fff"
                   mb="mb-2"
@@ -59,7 +59,7 @@ const ActivityTexts = ({ heading, subHeading, first, second }: Props) => {
             {second.title}
           </h5>
           {second.contents.map(({ heading, descriptions }, idx) => (
-            <div key={idx} className="mb-8 last:mb-0">
+            <div key={idx} className="mb-6 last:mb-0">
               <p className="text-lg text-fff font-semibold mb-2">{heading}</p>
               {descriptions.map((description, idx) => (
                 <ListItem
