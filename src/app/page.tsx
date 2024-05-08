@@ -27,13 +27,13 @@ export default function Home() {
         mousewheel
         className="h-full"
       >
-        <SwiperSlide tag="article">
+        <SwiperSlide tag="article" className="overflow-hidden">
           <LandingMain />
         </SwiperSlide>
-        <SwiperSlide tag="article">
+        <SwiperSlide tag="article" className="overflow-hidden">
           <Strength />
         </SwiperSlide>
-        <SwiperSlide tag="article">
+        <SwiperSlide tag="article" className="overflow-hidden">
           <Projects />
         </SwiperSlide>
       </Swiper>

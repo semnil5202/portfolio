@@ -44,7 +44,7 @@ const LandingMain = () => {
           </div>
         </article>
 
-        <article className="w-3/5 animate-init-fade-in-move">
+        <article className="w-3/5 ml-[-2%] animate-init-fade-in-move">
           <div className="w-min mx-auto">
             <div>
               <h2 className="text-[42px] w-max text-primary-dark font-bold">
