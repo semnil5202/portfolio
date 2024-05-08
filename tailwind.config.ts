@@ -48,6 +48,14 @@ const config: Config = {
       initFadeIn: {
         from: {
           opacity: '0',
+        },
+        to: {
+          opacity: '1',
+        },
+      },
+      initFadeInMove: {
+        from: {
+          opacity: '0',
           transform: 'translateY(20px)',
         },
         to: {
@@ -59,6 +67,7 @@ const config: Config = {
     animation: {
       'init-background': 'initBackground 1s ease',
       'init-fade-in': 'initFadeIn 1.5s ease',
+      'init-fade-in-move': 'initFadeInMove 1.5s ease',
       flickering: 'flickering 1s infinite step-start',
     },
   },

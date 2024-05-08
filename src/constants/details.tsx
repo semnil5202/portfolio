@@ -86,6 +86,12 @@ const DETAILS: Detail = {
       ],
     },
     {
+      id: 6,
+      template: 'separator',
+      type: 'separate',
+      heading: '프로젝트 활동',
+    },
+    {
       id: 3,
       template: 'activity',
       heading: '사이드 바와 지도 간 상호작용 기능 및 지도 이벤트 핸들링 구현',
@@ -236,12 +242,19 @@ const DETAILS: Detail = {
         ],
       },
     },
+    {
+      id: 6,
+      template: 'separator',
+      type: 'end',
+      heading: '컨셉비 프로젝트',
+      link: 'concept-be',
+    },
   ],
   'concept-be': [
     {
       id: 1,
       template: 'title',
-      title: '괜찮을지도',
+      title: '컨셉비',
       description: '개인의 관심사를 다양한 지도로 만들고 공유할 수 있는 서비스',
       backgroundImg: PNGMapBeFine,
       links: [],
@@ -256,7 +269,6 @@ const DETAILS: Detail = {
       organization: '우아한테크코스',
       date: '23.06 - 23.12',
       member: 'FE: 3명, BE: 4명',
-
       techs: [],
     },
   ],

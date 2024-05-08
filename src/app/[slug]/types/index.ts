@@ -22,6 +22,19 @@ export type TemplateType =
     }
   | {
       id: number;
+      template: 'separator';
+      type: 'separate';
+      heading: string;
+    }
+  | {
+      id: number;
+      template: 'separator';
+      type: 'end';
+      heading: string;
+      link: string;
+    }
+  | {
+      id: number;
       template: 'introduction';
       intro: string;
       value: string;
