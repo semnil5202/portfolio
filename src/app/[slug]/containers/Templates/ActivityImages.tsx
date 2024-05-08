@@ -5,6 +5,7 @@ import { Pagination } from 'swiper/modules';
 
 import ListItem from '@/components/ListItem/ListItem';
 import Image, { StaticImageData } from 'next/image';
+import { useRef } from 'react';
 
 interface Props {
   heading: string;
@@ -17,6 +18,10 @@ interface Props {
 }
 
 const ActivityImages = ({ heading, subHeading, images, contents }: Props) => {
+  const swiperRef = useRef<HTMLDivElement | null>(null);
+
+  console.dir(swiperRef);
+
   return (
     <section className="w-full h-full px-[12%] pb-[4%]">
       <div className="w-full h-[28%] flex flex-col justify-end">
@@ -30,7 +35,10 @@ const ActivityImages = ({ heading, subHeading, images, contents }: Props) => {
       </div>
       <div className="w-full h-[72%] flex items-center pt-10">
         <div className="w-[50%] h-full">
-          <div className="w-full h-full flex transition-all ease duration-400 hover:scale-135 hover:translate-y-16">
+          <div
+            className="w-full h-full flex transition-all ease duration-400 hover:scale-135 hover:translate-y-16"
+            ref={swiperRef}
+          >
             <Swiper
               speed={700}
               spaceBetween={20}
@@ -39,7 +47,8 @@ const ActivityImages = ({ heading, subHeading, images, contents }: Props) => {
               }}
               modules={[Pagination]}
               grabCursor
-              className="w-full h-[82%]"
+              className="w-full h-max"
+              style={{ '--swiper-pagination-color': '#2A392F' } as {}}
             >
               {images.map((image, idx) => (
                 <SwiperSlide key={idx}>

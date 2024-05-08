@@ -32,6 +32,7 @@ const ProjectDetail = ({ params }: { params: { slug: SlugType } }) => {
         modules={[Mousewheel, Pagination]}
         mousewheel
         className="h-full"
+        style={{ '--swiper-pagination-color': '#ffffff' } as {}}
       >
         {DETAILS[params.slug].map((slide, idx) => (
           <SwiperSlide key={idx} className="overflow-hidden">

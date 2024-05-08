@@ -19,6 +19,7 @@ const ProjectSwiper = () => {
       nested
       loop
       className="w-full h-full"
+      style={{ '--swiper-pagination-color': '#ffffff' } as {}}
     >
       {CARDS.map(({ id, src, title, description, slug }) => (
         <SwiperSlide key={id}>
