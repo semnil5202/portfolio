@@ -6,6 +6,7 @@ import { Pagination } from 'swiper/modules';
 import ListItem from '@/components/ListItem/ListItem';
 import Image, { StaticImageData } from 'next/image';
 import { useRef } from 'react';
+import Link from 'next/link';
 
 interface Props {
   heading: string;
@@ -15,9 +16,20 @@ interface Props {
     heading: string;
     descriptions: string[];
   }[];
+  link?: {
+    heading: string;
+    name: string;
+    href: string;
+  };
 }
 
-const ActivityImages = ({ heading, subHeading, images, contents }: Props) => {
+const ActivityImages = ({
+  heading,
+  subHeading,
+  images,
+  contents,
+  link,
+}: Props) => {
   const swiperRef = useRef<HTMLDivElement | null>(null);
 
   console.dir(swiperRef);
@@ -77,6 +89,22 @@ const ActivityImages = ({ heading, subHeading, images, contents }: Props) => {
               ))}
             </div>
           ))}
+          {link && (
+            <div className="mb-6 last:mb-0">
+              <p className="text-lg text-fff font-semibold mb-2">
+                {link.heading}
+              </p>
+              <ListItem bgColor="fff" mb="mb-2" weight="extralight">
+                <Link
+                  href={link.href}
+                  target="_blank"
+                  className="underline text-link hover:text-fff"
+                >
+                  {link.name}
+                </Link>
+              </ListItem>
+            </div>
+          )}
         </div>
       </div>
     </section>

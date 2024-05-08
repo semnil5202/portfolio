@@ -13,7 +13,6 @@ export type TemplateType =
       template: 'title';
       title: string;
       description: string;
-      backgroundImg: StaticImageData;
       links: {
         name: string;
         href: string;
@@ -58,6 +57,11 @@ export type TemplateType =
         heading: string;
         descriptions: string[];
       }[];
+      link?: {
+        heading: string;
+        name: string;
+        href: string;
+      };
     }
   | {
       id: number;
@@ -69,6 +73,11 @@ export type TemplateType =
         heading: string;
         descriptions: string[];
       }[];
+      link?: {
+        heading: string;
+        name: string;
+        href: string;
+      };
     }
   | {
       id: number;
@@ -81,6 +90,11 @@ export type TemplateType =
           heading: string;
           descriptions: string[];
         }[];
+        link?: {
+          heading: string;
+          name: string;
+          href: string;
+        };
       };
       second: {
         title: string;
@@ -88,6 +102,11 @@ export type TemplateType =
           heading: string;
           descriptions: string[];
         }[];
+        link?: {
+          heading: string;
+          name: string;
+          href: string;
+        };
       };
     };
 

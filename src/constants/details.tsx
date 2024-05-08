@@ -1,5 +1,4 @@
 import { Detail } from '@/app/[slug]/types';
-import PNGMapBeFine from '../../public/assets/mapbefine-landing.png';
 import PNGTechCypress from '../../public/assets/icons/tech-cypress.png';
 import PNGTechGa from '../../public/assets/icons/tech-ga.png';
 import PNGTechJest from '../../public/assets/icons/tech-jest.png';
@@ -12,6 +11,14 @@ import PNGTechStyled from '../../public/assets/icons/tech-styled.png';
 import PNGTechTs from '../../public/assets/icons/tech-ts.png';
 import PNGTechWebpack from '../../public/assets/icons/tech-webpack.png';
 import PNGTechZustand from '../../public/assets/icons/tech-zustand.png';
+import PNGTechEmotion from '../../public/assets/icons/tech-emotion.png';
+import PNGTechVite from '../../public/assets/icons/tech-vite.png';
+
+import SVGFigmaLogo from '../../public/assets/icons/figma-logo.svg';
+import SVGGithubLogoWhite from '../../public/assets/icons/github-logo-white.svg';
+
+import SVGMapBeFineLogo from '../../public/assets/icons/mapbefine-logo.svg';
+import PNGMapBeFine from '../../public/assets/mapbefine-landing.png';
 import PNGMapBeFineMcBefore from '../../public/assets/projects/mapbefine-mc-before.png';
 import PNGMapBeFineMcAfter from '../../public/assets/projects/mapbefine-mc-after.png';
 import PNGMapBeFineSwiper1 from '../../public/assets/projects/mapbefine-swiper-1.png';
@@ -20,16 +27,20 @@ import PNGMapBeFineSwiper3 from '../../public/assets/projects/mapbefine-swiper-3
 import PNGMapBeFineSwiperPercentage from '../../public/assets/projects/mapbefine-swiper-percentage.png';
 import PNGMapBeFineLoading1 from '../../public/assets/projects//mapbefine-loading-1.png';
 import PNGMapBeFineLoading2 from '../../public/assets/projects//mapbefine-loading-2.png';
-import SVGGithubLogoWhite from '../../public/assets/icons/github-logo-white.svg';
-import SVGMapBeFineLogo from '../../public/assets/icons/mapbefine-logo.svg';
-import SVGConceptBeLogoBig from '../../public/assets/icons/concept-be-logo-big.svg';
-import SVGFigmaLogo from '../../public/assets/icons/figma-logo.svg';
 import GIFMapBeFineInteraction from '../../public/assets/projects/mapbefine-interaction.gif';
 import GIFMapBeFineResponsive from '../../public/assets/projects/mapbefine-responsive.gif';
 
+import SVGConceptBeLogoBig from '../../public/assets/icons/concept-be-logo-big.svg';
+import SVGConceptLogo from '../../public/assets/icons/concept-be-logo.svg';
+import PNGConceptBe from '../../public/assets/concept-be-landing.png';
+import GIFConceptBeDebouncing from '../../public/assets/projects/conceptbe-debouncing.gif';
+import GIFConceptBeScroll from '../../public/assets/projects/conceptbe-scroll.gif';
+
+import SVGWoowaLogoBig from '../../public/assets/icons/woowa-logo-big.svg';
+
 export const DETAIL_LANDING = {
   'map-befine': PNGMapBeFine,
-  'concept-be': PNGMapBeFine,
+  'concept-be': PNGConceptBe,
   'shopping-cart': PNGMapBeFine,
   'movie-list': PNGMapBeFine,
   portfolio: PNGMapBeFine,
@@ -42,7 +53,6 @@ const DETAILS: Detail = {
       template: 'title',
       title: '괜찮을지도',
       description: '개인의 관심사를 다양한 지도로 만들고 공유할 수 있는 서비스',
-      backgroundImg: PNGMapBeFine,
       links: [
         {
           name: 'Service',
@@ -278,7 +288,7 @@ const DETAILS: Detail = {
       },
     },
     {
-      id: 6,
+      id: 11,
       template: 'separator',
       type: 'end',
       heading: '컨셉비 프로젝트',
@@ -291,42 +301,198 @@ const DETAILS: Detail = {
       id: 1,
       template: 'title',
       title: '컨셉비',
-      description: '개인의 관심사를 다양한 지도로 만들고 공유할 수 있는 서비스',
-      backgroundImg: PNGMapBeFine,
-      links: [],
+      description:
+        '공모전, 스터디 등을 위한 인원을 구인할 수 있는 모바일 웹 서비스',
+      links: [
+        {
+          name: 'Service',
+          href: 'https://concept-be.kr/',
+          svg: SVGConceptLogo,
+        },
+        {
+          name: 'Github',
+          href: 'https://github.com/ConceptBe/conceptbe-frontend',
+          svg: SVGGithubLogoWhite,
+        },
+        {
+          name: 'Design System',
+          href: 'https://github.com/ConceptBe/conceptbe-design-system',
+          svg: SVGGithubLogoWhite,
+        },
+        {
+          name: 'Figma',
+          href: 'https://www.figma.com/file/ExNUhQLDU6HDROD14k4bXN/%EC%BB%A8%EC%85%89%EB%B9%84_%EB%93%9C%EB%9E%98%ED%94%84%ED%8A%B8?type=design&node-id=0%3A1&mode=design&t=3ffb0AJJm2wTW32s-1',
+          svg: SVGFigmaLogo,
+        },
+      ],
     },
     {
       id: 2,
       template: 'introduction',
-      subHeading: '개요',
-      intro: 'asdf',
-      value: 'sadf',
-      contribution: 'asdf',
-      organization: '우아한테크코스',
-      date: '23.06 - 23.12',
-      member: 'FE: 3명, BE: 4명',
-      techs: [],
+      intro:
+        '공모전, 스터디 등을 위한 다양한 직군의 팀원을 구인할 수 있는 모바일 웹 서비스입니다. 기존의 프로젝트 구인 서비스는 개발 분야에 치우쳐져 있어 비 개발 분야는 프로젝트 인원 구인이 어렵다는 점을 개선하고자 이 프로젝트를 시작했습니다.',
+      value:
+        '아이디어를 공유하면서 토론하고 평가할 수 있는 공간을 제공하며, 사용자들 간의 다양한 전문성을 융합하여 다채로운 활동을 형성하는데 기여하는 것을 핵심 가치로 삼고 있습니다.',
+      contribution:
+        '현재는 공모전을 같이 나갈 팀원을 구하는 공간이 마땅치 않은 문제를 해결하는데 집중하고 있습니다. 컨셉비를 통해 공모전 구인을 보다 간편하게 진행할 수 있도록 기대합니다.',
+      organization: '비사이드',
+      date: '24.01 - 현재',
+      member: 'PM: 2명, PD: 1명, FE: 3명, BE: 4명',
+      techs: [
+        { image: PNGTechTs, name: 'TypeScript' },
+        { image: PNGTechReact, name: 'React' },
+        { image: PNGTechRq, name: 'React Query' },
+        { image: PNGTechEmotion, name: 'Emotion' },
+        { image: PNGTechVite, name: 'Vite' },
+        { image: PNGTechStory, name: 'Storybook' },
+        { image: PNGTechJest, name: 'Jest' },
+        { image: PNGTechTl, name: 'Testing Library' },
+      ],
+    },
+    {
+      id: 3,
+      template: 'separator',
+      type: 'separate',
+      heading: '프로젝트 활동',
+    },
+    {
+      id: 4,
+      template: 'activity-texts',
+      heading: '레거시 코드 개선 및 디자인 시스템 구축',
+      first: {
+        title: 'React Query 도입 및 레거시 코드 개선',
+        contents: [
+          {
+            heading: '문제 상황',
+            descriptions: [
+              '여러 명의 개발자가 거쳐가면서 제각각의 코드 컨벤션과 중복 코드로 인해 가독성이 좋지 않았습니다.',
+              '컴포넌트 내부에 API 응답에 따른 성공, 로딩, 에러 상태 처리 로직이 모두 위치하여 컴포넌트 책임 분리가 모호했습니다.',
+            ],
+          },
+          {
+            heading: '해결 과정',
+            descriptions: [
+              '프로젝트 전반에 사용될 공통 컴포넌트를 구현 후 이미지, 폰트 등과 함께 디자인 시스템으로 분리하여 중복 코드를 최소화하고 일관된 UI를 보장할 수 있도록 했습니다.',
+              'React-Query를 도입하여 useSuspenseQuery와 React의 Suspense를 활용하여 로딩 상태에 대한 코드를 분리하고, ApiErrorBoundary와 GlobalErrorBoundary를 구현해 에러 상태에 대한 코드를 중앙화 했습니다. 이를 통해 컴포넌트는 성공 상태에 대한 책임만 갖도록 리팩토링을 진행했습니다.',
+            ],
+          },
+        ],
+      },
+      second: {
+        title: 'Storybook을 활용한 디자인 시스템 구축',
+        contents: [
+          {
+            heading: '문제 상황',
+            descriptions: [
+              '비 개발 팀원이 구현된 결과물을 검토하려면 프로젝트를 AWS 환경에 배포해야만 했으며, 다른 페이지에 위치했지만 동일한 컴포넌트의 UI를 반복적으로 검토하는 불편함이 있었습니다.',
+              '디자인 시스템을 최초로 배포했을 때 패키지 사이즈가 4.76MB로 너무 무거웠으며, 서비스 초기 로딩 속도가 저하되는 문제가 있었습니다.',
+            ],
+          },
+          {
+            heading: '해결 과정',
+            descriptions: [
+              'Storybook을 활용하여 공통 컴포넌트를 문서화하여 배포함으로써 비 개발 팀원들의 검수 작업을 효율적으로 수행할 수 있었습니다. 특히, Addon 기능을 적극적으로 활용하여 컴포넌트의 다양한 형태를 확인하고 테스트 해볼 수 있는 공간을 제공했습니다.',
+              '무거운 Variable 파일 대신 사용하는 폰트만 font-face를 통해 지정했으며, Vite의 rollupOptions 속성을 활용하여 번들 파일에 포함시키지 않을 외부의 라이브러리 의존성 목록을 지정했습니다. 이를 통해 기존 4.76MB이던 패키지 사이즈를 2.19MB로 축소시킬 수 있었고, 서비스 LCP를 약 1.6초 개선할 수 있었습니다.',
+            ],
+          },
+        ],
+      },
+    },
+    {
+      id: 5,
+      template: 'activity',
+      heading: '무한 스크롤 기능과 스크롤 제어 로직을 통한 포커싱 기능 구현',
+      image: GIFConceptBeScroll,
+      contents: [
+        {
+          heading: '요구 사항',
+          descriptions: [
+            "모바일 환경에서 댓글 목록을 한 번에 불러올 경우 긴 로딩 시간을 갖게 될 가능성이 높았고, 나눠서 불러올 경우 사용자가 '더 보기'와 같은 버튼을 반복적으로 클릭해야 하는 불편함이 예상되었습니다.",
+            '답글 입력창이 고정된 위치에 있지 않고 각 댓글마다 답글 입력창을 생성할 수 있는 형태입니다. 따라서 모바일 환경에서 가상 키보드가 확장됨에 따라 답글 입력창을 가려 스크롤 하여 위치를 수정해야 하는 불편함이 있었습니다.',
+          ],
+        },
+        {
+          heading: '해결 과정',
+          descriptions: [
+            'useSuspenseInfiniteQuery와 useIntersection을 활용하여, 무한 스크롤 기능을 구현함으로써 추가 동작 없이 댓글 추가 조회를 가능토록 했습니다.',
+            'React의 useRef와 브라우저의 resize 이벤트를 통해 사용자의 키보드 높이를 파악하여 답글 입력창이 키보드에 가려지지 않도록 포커싱 기능을 구현했습니다. 또한 OS별로 최적화된 포커싱 기능을 분기 적용하여 PC, Android, iOS 각각의 환경에서 최적의 사용성을 제공했습니다.',
+          ],
+        },
+      ],
+      link: {
+        heading: '관련 블로그 포스팅',
+        name: '댓글 및 답글 스크롤 포커싱 리팩토링',
+        href: 'https://velog.io/@semnil5202/%EB%8C%93%EA%B8%80-%EB%B0%8F-%EB%8B%B5%EA%B8%80-%EC%8A%A4%ED%81%AC%EB%A1%A4-%ED%8F%AC%EC%BB%A4%EC%8B%B1-%EB%A6%AC%ED%8C%A9%ED%86%A0%EB%A7%81',
+      },
+    },
+    {
+      id: 6,
+      template: 'activity',
+      heading: '제어 컴포넌트와 디바운싱을 활용한 닉네임 유효성 및 중복 검사',
+      image: GIFConceptBeDebouncing,
+      contents: [
+        {
+          heading: '요구 사항',
+          descriptions: [
+            '정책상 닉네임은 필수로 입력해야하고, 두 글자 미만으로 작성할 수 없으며, 특수문자를 포함할 수 없습니다. 이런 사항을 일일이 설명하기엔 회원 가입 form이 너무 복잡해질 것 같았고, 제출 버튼을 누른 뒤 잘못 입력한 값에 대한 피드백을 주게 되면 입력했던 값을 다시 수정해야하는 불편함이 예상되었습니다.',
+            "사용자가 본인이 입력한 닉네임이 고유한 값인지 확인하려면 '닉네임 중복 확인'과 같은 버튼을 반복적으로 눌러야하는 불편함이 예상되었습니다.",
+          ],
+        },
+        {
+          heading: '해결 과정',
+          descriptions: [
+            'React의 제어 컴포넌트 방식을 활용하여 Form을 구성하였고, 잘못된 입력값이 발생할 경우 그 즉시 피드백을 주어 수정할 수 있도록 유도했습니다. 또한 form 내의 input, textarea가 많아짐에 따라 상태 관리 및 유효성 검사 로직이 중복되었고, 이를 useField라는 Custom Hook으로 분리해 재사용하여 코드 가독성을 높였습니다.',
+            "React의 useRef와 setTimeout 메서드를 활용하여 디바운싱 기능을 구현했습니다. 유저의 입력이 300ms 동안 없을 경우 닉네임 작성을 완료했다고 판단하여, 자동으로 서버에 중복 검사 요청을 보내도록 했습니다. 이를 통해 '닉네임 중복 확인'과 같은 버튼을 누를 필요 없이 보다 편리하게 닉네임 중복 검사를 수행할 수 있었습니다.",
+          ],
+        },
+      ],
+    },
+    {
+      id: 7,
+      template: 'separator',
+      type: 'end',
+      heading: '장바구니 미션',
+      link: 'shopping-cart',
+      svg: SVGWoowaLogoBig,
     },
   ],
   'shopping-cart': [
     {
       id: 1,
       template: 'title',
-      title: '괜찮을지도',
-      description: '개인의 관심사를 다양한 지도로 만들고 공유할 수 있는 서비스',
-      backgroundImg: PNGMapBeFine,
+      title: '장바구니',
+      description:
+        'MSW를 활용하여 장바구니 페이지를 만드는 우아한테크코스 React 미션',
       links: [],
     },
     {
       id: 2,
       template: 'introduction',
-      subHeading: '개요',
-      intro: 'asdf',
-      value: 'sadf',
-      contribution: 'asdf',
-      date: '23.06 - 23.12',
-      member: 'FE: 3명, BE: 4명',
-      techs: [],
+      intro:
+        '공모전, 스터디 등을 위한 다양한 직군의 팀원을 구인할 수 있는 모바일 웹 서비스입니다. 기존의 프로젝트 구인 서비스는 개발 분야에 치우쳐져 있어 비 개발 분야는 프로젝트 인원 구인이 어렵다는 점을 개선하고자 이 프로젝트를 시작했습니다.',
+      value:
+        '아이디어를 공유하면서 토론하고 평가할 수 있는 공간을 제공하며, 사용자들 간의 다양한 전문성을 융합하여 다채로운 활동을 형성하는데 기여하는 것을 핵심 가치로 삼고 있습니다.',
+      contribution:
+        '현재는 공모전을 같이 나갈 팀원을 구하는 공간이 마땅치 않은 문제를 해결하는데 집중하고 있습니다. 컨셉비를 통해 공모전 구인을 보다 간편하게 진행할 수 있도록 기대합니다.',
+      organization: '비사이드',
+      date: '24.01 - 현재',
+      member: 'PM: 2명, PD: 1명, FE: 3명, BE: 4명',
+      techs: [
+        { image: PNGTechTs, name: 'TypeScript' },
+        { image: PNGTechReact, name: 'React' },
+        { image: PNGTechRq, name: 'React Query' },
+        { image: PNGTechEmotion, name: 'Emotion' },
+        { image: PNGTechVite, name: 'Vite' },
+        { image: PNGTechStory, name: 'Storybook' },
+        { image: PNGTechJest, name: 'Jest' },
+        { image: PNGTechTl, name: 'Testing Library' },
+      ],
+    },
+    {
+      id: 3,
+      template: 'separator',
+      type: 'separate',
+      heading: '프로젝트 활동',
     },
   ],
   'movie-list': [
