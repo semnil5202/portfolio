@@ -39,7 +39,7 @@ const ActivityImages = ({ heading, subHeading, images, contents }: Props) => {
               }}
               modules={[Pagination]}
               grabCursor
-              className="w-full h-[80%]"
+              className="w-full h-[82%]"
             >
               {images.map((image, idx) => (
                 <SwiperSlide key={idx}>
