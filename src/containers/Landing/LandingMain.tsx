@@ -9,7 +9,7 @@ import Link from 'next/link';
 const LandingMain = () => {
   return (
     <>
-      <div className="fixed flex flex-col h-[100px] justify-between right-0 mr-10 mt-8 animate-init-fade-in">
+      <div className="fixed flex flex-col h-[100px] justify-between right-0 mr-10 mt-8 animate-init-fade-in-move">
         <Link href="https://github.com/semnil5202" target="_blank">
           <SVGGithubLogo />
         </Link>
@@ -18,7 +18,7 @@ const LandingMain = () => {
         </Link>
       </div>
       <div className="h-full flex items-center">
-        <article className="w-2/5 mt-[-100px] animate-init-fade-in">
+        <article className="w-2/5 mt-[-100px] animate-init-fade-in-move">
           <div className="flex flex-col w-max mx-auto">
             <div className="w-[300px] h-[300px] rounded-[50%] overflow-hidden">
               <Image
@@ -44,7 +44,7 @@ const LandingMain = () => {
           </div>
         </article>
 
-        <article className="w-3/5 animate-init-fade-in">
+        <article className="w-3/5 animate-init-fade-in-move">
           <div className="w-min mx-auto">
             <div>
               <h2 className="text-[42px] w-max text-primary-dark font-bold">

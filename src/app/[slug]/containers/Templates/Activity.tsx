@@ -13,7 +13,7 @@ interface Props {
 
 const Activity = ({ heading, subHeading, image, contents }: Props) => {
   return (
-    <section className="w-full h-full px-[12%] pb-[4%] bg-primary">
+    <section className="w-full h-full px-[12%] pb-[4%]">
       <div className="w-full h-[28%] flex flex-col justify-end">
         <h2 className="text-4xl text-fff font-bold">{heading}</h2>
         <div className="w-[48px] h-[2px] bg-fff my-3" />
