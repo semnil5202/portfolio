@@ -25,7 +25,7 @@ const Separator = ({ type, heading, link }: Props) => {
 
   return (
     <section className="relative w-full h-full flex justify-center items-center">
-      <HomeIcon />
+      <HomeIcon position="absolute" />
       <Link href={`/${link}`} className="flex flex-col items-center">
         <div className="flex items-center">
           <p className="text-7xl text-fff font-bold mr-4">{heading}</p>
