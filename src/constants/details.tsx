@@ -18,6 +18,8 @@ import PNGMapBeFineSwiper1 from '../../public/assets/projects/mapbefine-swiper-1
 import PNGMapBeFineSwiper2 from '../../public/assets/projects/mapbefine-swiper-2.png';
 import PNGMapBeFineSwiper3 from '../../public/assets/projects/mapbefine-swiper-3.png';
 import PNGMapBeFineSwiperPercentage from '../../public/assets/projects/mapbefine-swiper-percentage.png';
+import PNGMapBeFineLoading1 from '../../public/assets/projects//mapbefine-loading-1.png';
+import PNGMapBeFineLoading2 from '../../public/assets/projects//mapbefine-loading-2.png';
 import SVGGithubLogoWhite from '../../public/assets/icons/github-logo-white.svg';
 import SVGMapBeFineLogo from '../../public/assets/icons/mapbefine-logo.svg';
 import SVGFigmaLogo from '../../public/assets/icons/figma-logo.svg';
@@ -177,6 +179,32 @@ const DETAILS: Detail = {
           descriptions: [
             '메인 페이지에서는 다른 사람이 만들어 둔 지도를 확인하는데 집중할 수 있도록 지도를 분리하고, 지도가 필요한 페이지에서 동적으로 지도를 보일 수 있도록 기능을 구현함으로써 첫 번째 문제점을 해결할 수 있었습니다.',
             'Swiper 컴포넌트를 구현하여 메인 페이지의 UI를 개선함으로써 두 번째 문제점을 해결할 수 있었습니다. Swiper 컴포넌트를 활용하여 메인 페이지에 배너, 토픽 조회 섹션을 구현하였고, 우선적으로 노출하고자 하는 콘텐츠를 메인 페이지 배너에 위치해 배너를 클릭하면 해당 콘텐츠 페이지로 이동할 수 있도록 기능을 구현했습니다. GA를 확인해 본 결과 Swiper 컴포넌트를 적용하기 전 우선적으로 노출시키고자 한 콘텐츠 방문율이 9.5%였던 것에 반에, 적용 후 21.4%로 약 12% 증가했습니다.',
+          ],
+        },
+      ],
+    },
+    {
+      id: 5,
+      template: 'activity-images',
+      heading: '번들 사이즈 최적화로 초기 로딩 속도 개선',
+      images: [PNGMapBeFineLoading1, PNGMapBeFineLoading2],
+      contents: [
+        {
+          heading: '문제 상황',
+          descriptions: [
+            '서비스 기능이 다양해짐에 따라 메인 번들 사이즈가 증가해 초기 로딩 시간이 길어지는 현상이 발생했습니다.',
+          ],
+        },
+        {
+          heading: '해결 과정',
+          descriptions: [
+            'Page 컴포넌트 단위로 Dynamic Import와 React의 Lazy, Suspense를 활용하여 Code Splitting을 진행했습니다.',
+          ],
+        },
+        {
+          heading: '결과',
+          descriptions: [
+            '메인 페이지 LCP를 3.5초에서 2.1초로 약 1.4초 개선하고, 메인 번들 사이즈를 609KB(Gzip: 141.52KB)에서 455KB(Gzip: 93.22KB)로 약 34% 축소시켰습니다.',
           ],
         },
       ],
