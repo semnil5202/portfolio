@@ -5,7 +5,7 @@ import { Pagination } from 'swiper/modules';
 
 import ListItem from '@/components/ListItem/ListItem';
 import Image, { StaticImageData } from 'next/image';
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 
 interface Props {
@@ -21,6 +21,8 @@ interface Props {
     name: string;
     href: string;
   };
+  currentPageIndex: number;
+  slideIndex: number;
 }
 
 const ActivityImages = ({
@@ -29,10 +31,19 @@ const ActivityImages = ({
   images,
   contents,
   link,
+  currentPageIndex,
+  slideIndex,
 }: Props) => {
-  const swiperRef = useRef<HTMLDivElement | null>(null);
+  const [viewTime, setViewTime] = useState<number>(0);
 
-  console.dir(swiperRef);
+  const isIntoView = currentPageIndex === slideIndex;
+  const isFirstView = viewTime === 1;
+
+  useEffect(() => {
+    if (!isIntoView) return;
+
+    setViewTime((prev) => prev + 1);
+  }, [isIntoView]);
 
   return (
     <section className="w-full h-full px-[8%] pb-[4%] flex flex-col items-center">
@@ -47,10 +58,7 @@ const ActivityImages = ({
       </div>
       <div className="w-full max-w-[1140px] h-[76%] flex items-center pt-10">
         <div className="w-[50%] h-full">
-          <div
-            className="w-full h-full flex transition-all ease duration-400 hover:scale-135 hover:translate-y-20"
-            ref={swiperRef}
-          >
+          <div className="w-full h-full flex transition-all ease duration-400 hover:scale-135 hover:translate-y-20">
             <Swiper
               speed={700}
               spaceBetween={20}
@@ -64,7 +72,13 @@ const ActivityImages = ({
             >
               {images.map((image, idx) => (
                 <SwiperSlide key={idx}>
-                  <div className="rounded-lg overflow-hidden">
+                  <div
+                    className={`rounded-lg overflow-hidden ${
+                      isIntoView &&
+                      isFirstView &&
+                      'animate-slide-image-hint-move'
+                    }`}
+                  >
                     <Image
                       src={image}
                       alt={heading}

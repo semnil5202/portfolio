@@ -76,14 +76,20 @@ const config: Config = {
         },
       },
       navHintMove: {
-        '0%': {},
         '25%': {
           transform: 'translateX(-50%)',
         },
         '75%': {
           transform: 'translateX(-50%)',
         },
-        '100%': {},
+      },
+      slideImageHintMove: {
+        '25%': {
+          transform: 'translateX(-25%)',
+        },
+        '75%': {
+          transform: 'translateX(-25%)',
+        },
       },
     },
     animation: {
@@ -92,7 +98,8 @@ const config: Config = {
       'init-fade-in-move': 'initFadeInMove 1.5s ease',
       flickering: 'flickering 1s infinite step-start',
       skeleton: 'skeleton 2s infinite ease-out',
-      'nav-hint-move': 'navHintMove 2s ease 1500ms',
+      'nav-hint-move': 'navHintMove 1.5s ease 1500ms',
+      'slide-image-hint-move': 'slideImageHintMove 1.5s ease 1500ms',
     },
   },
   plugins: [],
