@@ -67,9 +67,9 @@ const LandingMain = () => {
             <div className="flex justify-between mt-24">
               <div className="w-[2px] h-[42px] bg-primary mt-[6px]" />
               <p className="w-[94%] text-primary-dark leading-7">
-                대학에서 정보보호를 전공했지만 UX를 다루는 웹 프론트엔드 분야에
-                매력을 느끼고, 우아한테크코스에 진학하여 10개월간의 웹
-                프론트엔드 과정을 수료했습니다.
+                대학에서 정보보호를 전공하고 UX를 다루는 웹 프론트엔드 분야에
+                매력을 느껴, 우아한테크코스에 진학해 10개월간의 웹 프론트엔드
+                과정을 수료했습니다.
                 <br />
                 <br />
                 프로덕트 밸류를 높이기 위해 능동적으로 사고하고 행동합니다.
