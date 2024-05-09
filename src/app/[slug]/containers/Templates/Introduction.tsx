@@ -48,7 +48,9 @@ const Introduction = ({
             >
               설명
             </ListItem>
-            <p className="text-fff font-extralight ml-3">{intro}</p>
+            <p className="text-fff font-extralight ml-3 leading-relaxed">
+              {intro}
+            </p>
           </div>
           {value && (
             <div className="pb-8">
@@ -61,7 +63,9 @@ const Introduction = ({
               >
                 핵심 가치
               </ListItem>
-              <p className="text-fff font-extralight ml-3">{value}</p>
+              <p className="text-fff font-extralight ml-3 leading-relaxed">
+                {value}
+              </p>
             </div>
           )}
           {contribution && (
@@ -75,7 +79,9 @@ const Introduction = ({
               >
                 기대 효과
               </ListItem>
-              <p className="text-fff font-extralight ml-3">{contribution}</p>
+              <p className="text-fff font-extralight ml-3 leading-relaxed">
+                {contribution}
+              </p>
             </div>
           )}
           <div>
@@ -91,7 +97,7 @@ const Introduction = ({
                   >
                     소속
                   </ListItem>
-                  <p className="text-fff font-extralight ml-3">
+                  <p className="text-fff font-extralight ml-3 leading-relaxed">
                     {organization}
                   </p>
                 </div>
@@ -106,7 +112,9 @@ const Introduction = ({
                 >
                   기간
                 </ListItem>
-                <p className="text-fff font-extralight ml-3">{date}</p>
+                <p className="text-fff font-extralight ml-3 leading-relaxed">
+                  {date}
+                </p>
               </div>
               <div className={`${isEnough && 'pb-8'}`}>
                 <ListItem
@@ -118,7 +126,9 @@ const Introduction = ({
                 >
                   인원
                 </ListItem>
-                <p className="text-fff font-extralight ml-3">{member}</p>
+                <p className="text-fff font-extralight ml-3 leading-relaxed">
+                  {member}
+                </p>
               </div>
             </div>
           </div>

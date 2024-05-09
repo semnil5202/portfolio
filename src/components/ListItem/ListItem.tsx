@@ -29,7 +29,9 @@ const ListItem = ({
         className={`min-w-1 min-h-1 rounded-[50%] mt-[10px]`}
         style={{ backgroundColor }}
       />
-      <span className={`${textColor} ${fontWeight} ${fontSize}`}>
+      <span
+        className={`${textColor} ${fontWeight} ${fontSize} leading-relaxed`}
+      >
         {children}
       </span>
     </li>
