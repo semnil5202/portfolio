@@ -29,9 +29,8 @@ const NavigationSwiper = ({ setThumbsSwiper, navigations }: Props) => {
         slidesPerView={6}
         watchSlidesProgress={true}
         modules={[Thumbs, Mousewheel]}
-        grabCursor
         mousewheel
-        className={`w-[15%] ${thumbTranslate} bg-fff h-full animate-nav-hint-move transition-all ease duration-300`}
+        className={`w-[15%] ${thumbTranslate} bg-fff h-full animate-nav-hint-move transition-all ease duration-300 cursor-pointer`}
         style={{ position: 'fixed', top: '0', left: '0' }}
       >
         {navigations.map((image, idx) => (
