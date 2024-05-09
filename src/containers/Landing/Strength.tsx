@@ -8,7 +8,7 @@ import Link from 'next/link';
 const Strength = () => {
   return (
     <div className="h-full flex items-center">
-      <div className="w-4/5 max-w-[1128px] h-max flex justify-between mx-auto">
+      <div className="w-4/5 max-w-[1140px] h-max flex justify-between mx-auto">
         <div className="flex flex-col items-center">
           <RoundedImage
             src={PNGCoding}

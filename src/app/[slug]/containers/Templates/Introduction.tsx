@@ -30,14 +30,14 @@ const Introduction = ({
   const bottomContainer = isEnough ? 'flex flex-col' : 'flex justify-between';
 
   return (
-    <section className="w-full h-full px-[12%] pb-[6%]">
-      <div className="w-full h-[24%] flex flex-col justify-end">
+    <section className="w-full h-full px-[8%] pb-[6%] flex flex-col items-center">
+      <div className="w-full max-w-[1140px] h-[24%] flex flex-col justify-end">
         <h2 className="text-5xl text-fff font-bold">{heading}</h2>
         <div className="w-[48px] h-[2px] bg-fff my-3" />
         <div className="w-full h-[28px]" />
       </div>
-      <div className="w-full h-[76%] flex pt-6">
-        <ul className="w-[50%] h-max flex flex-col pr-10">
+      <div className="w-full max-w-[1140px] h-[76%] flex pt-6">
+        <ul className="w-[50%] max-w-[620px] h-max flex flex-col pr-10">
           <div className="pb-8">
             <ListItem
               color="fff"
@@ -124,7 +124,7 @@ const Introduction = ({
           </div>
         </ul>
         <div className="w-[50%]">
-          <ul className="flex max-w-[600px] justify-center items-center flex-wrap gap-2 pl-10 overflow-hidden">
+          <ul className="flex max-w-[620px] justify-center items-center flex-wrap gap-2 pl-10 overflow-hidden">
             {techs.map(({ image, name }) => (
               <Tech key={name} image={image} name={name} />
             ))}
