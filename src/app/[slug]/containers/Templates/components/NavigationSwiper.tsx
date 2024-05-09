@@ -10,7 +10,7 @@ interface Props {
   navigations: StaticImageData[];
 }
 
-const ThumbsSwiper = ({ setThumbsSwiper, navigations }: Props) => {
+const NavigationSwiper = ({ setThumbsSwiper, navigations }: Props) => {
   const [isMouseEnter, setIsMouseEnter] = useState<boolean>(false);
   const thumbTranslate = isMouseEnter
     ? 'translate-x-[0%]'
@@ -18,7 +18,7 @@ const ThumbsSwiper = ({ setThumbsSwiper, navigations }: Props) => {
 
   return (
     <div
-      className={`fixed top-0 left-0 w-[4%] h-full bg-transparent z-50`}
+      className={`fixed top-0 left-0 w-[3%] h-full bg-transparent z-50`}
       onMouseEnter={() => setIsMouseEnter(true)}
       onMouseLeave={() => setIsMouseEnter(false)}
     >
@@ -34,9 +34,12 @@ const ThumbsSwiper = ({ setThumbsSwiper, navigations }: Props) => {
         className={`w-[15%] ${thumbTranslate} bg-fff h-full animate-nav-hint-move transition-all ease duration-300`}
         style={{ position: 'fixed', top: '0', left: '0' }}
       >
-        {navigations.map((template, idx) => (
-          <SwiperSlide key={idx} className="w-full h-full">
-            <Image src={template} alt={`${idx + 1}`} />
+        {navigations.map((image, idx) => (
+          <SwiperSlide key={idx} className="w-full h-full relative">
+            <Image src={image} alt={`${idx + 1}`} />
+            <div className="absolute top-2 left-2 w-4 h-4 rounded-full bg-fff text-[12px] flex justify-center items-center">
+              {idx + 1}
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>
@@ -44,4 +47,4 @@ const ThumbsSwiper = ({ setThumbsSwiper, navigations }: Props) => {
   );
 };
 
-export default ThumbsSwiper;
+export default NavigationSwiper;

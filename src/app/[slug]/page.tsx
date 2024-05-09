@@ -8,7 +8,7 @@ import Background from './containers/Background';
 import DETAILS, { DETAIL_LANDING, DETAIL_NAV } from '@/constants/details';
 import TranslateTemplate from './containers/TranslateTemplate';
 import { SlugType } from './types';
-import ThumbsSwiper from './containers/Templates/components/ThumbsSwiper';
+import NavigationSwiper from './containers/Templates/components/NavigationSwiper';
 
 const ProjectDetail = ({ params }: { params: { slug: SlugType } }) => {
   const [currentPageIndex, setCurrentPageIndex] = useState<number>(0);
@@ -54,7 +54,7 @@ const ProjectDetail = ({ params }: { params: { slug: SlugType } }) => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <ThumbsSwiper
+      <NavigationSwiper
         setThumbsSwiper={setThumbsSwiper}
         navigations={navigations}
       />
