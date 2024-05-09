@@ -63,12 +63,21 @@ const config: Config = {
           transform: 'translateY(0)',
         },
       },
+      skeleton: {
+        from: {
+          'background-color': '#BFBFBF',
+        },
+        to: {
+          'background-color': '#767676',
+        },
+      },
     },
     animation: {
       'init-background': 'initBackground 1s ease',
       'init-fade-in': 'initFadeIn 1.5s ease',
       'init-fade-in-move': 'initFadeInMove 1.5s ease',
       flickering: 'flickering 1s infinite step-start',
+      skeleton: 'skeleton 1s infinite step-start',
     },
   },
   plugins: [],

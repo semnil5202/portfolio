@@ -27,6 +27,7 @@ const LandingMain = () => {
                 width={300}
                 height={300}
                 priority
+                className="animate-skeleton"
               />
             </div>
 

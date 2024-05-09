@@ -19,6 +19,7 @@ const ProjectCard = ({ src, title, description, slug }: Props) => {
             width={250}
             height={250}
             loading="lazy"
+            className="animate-skeleton"
           />
         </div>
         <h4 className="text-fff text-xl font-semibold mt-4">{title}</h4>

@@ -32,7 +32,12 @@ const Activity = ({ heading, subHeading, image, contents, link }: Props) => {
       <div className="w-full h-[76%] flex items-center pt-10">
         <div className="w-[50%] h-full flex">
           <div className="h-max rounded-lg overflow-hidden transition-all ease duration-400 hover:scale-135 hover:translate-y-10">
-            <Image src={image} alt={heading} loading="lazy" />
+            <Image
+              src={image}
+              alt={heading}
+              loading="lazy"
+              className="animate-skeleton"
+            />
           </div>
         </div>
         <div className="w-[50%] h-full flex flex-col pl-12">

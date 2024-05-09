@@ -65,7 +65,12 @@ const ActivityImages = ({
               {images.map((image, idx) => (
                 <SwiperSlide key={idx}>
                   <div className="rounded-lg overflow-hidden">
-                    <Image src={image} alt={heading} loading="lazy" />
+                    <Image
+                      src={image}
+                      alt={heading}
+                      loading="lazy"
+                      className="animate-skeleton"
+                    />
                   </div>
                 </SwiperSlide>
               ))}

@@ -18,7 +18,13 @@ const Background = ({ currentPageIndex, landing, slideLength }: Props) => {
         <div
           className={`${landingWidth} h-full fixed right-0 z-[-1] animate-init-fade-in-move transition-all ease duration-700`}
         >
-          <Image src={landing} alt="랜딩 이미지" fill priority />
+          <Image
+            src={landing}
+            alt="랜딩 이미지"
+            fill
+            priority
+            className="animate-skeleton"
+          />
         </div>
         <div
           className={`${primaryColorWidth} h-full ${bgColor} animate-init-background transition-all ease duration-700`}
