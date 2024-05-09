@@ -37,7 +37,7 @@ const Introduction = ({
         <div className="w-full h-[28px]" />
       </div>
       <div className="w-full max-w-[1140px] h-[76%] flex pt-6">
-        <ul className="w-[50%] max-w-[620px] h-max flex flex-col pr-10">
+        <ul className="w-[50%] h-max flex flex-col pr-10">
           <div className="pb-8">
             <ListItem
               color="fff"
@@ -124,7 +124,7 @@ const Introduction = ({
           </div>
         </ul>
         <div className="w-[50%]">
-          <ul className="flex max-w-[620px] justify-center items-center flex-wrap gap-2 pl-10 overflow-hidden">
+          <ul className="flex justify-center items-center flex-wrap gap-2 pl-10 overflow-hidden">
             {techs.map(({ image, name }) => (
               <Tech key={name} image={image} name={name} />
             ))}

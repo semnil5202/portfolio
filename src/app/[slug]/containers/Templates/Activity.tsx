@@ -19,8 +19,8 @@ interface Props {
 
 const Activity = ({ heading, subHeading, image, contents, link }: Props) => {
   return (
-    <section className="w-full h-full px-[12%] pb-[4%]">
-      <div className="w-full h-[24%] flex flex-col justify-end">
+    <section className="w-full h-full px-[8%] pb-[4% flex flex-col items-center">
+      <div className="w-full max-w-[1140px] h-[24%] flex flex-col justify-end">
         <h2 className="text-4xl text-fff font-bold">{heading}</h2>
         <div className="w-[48px] h-[2px] bg-fff my-3" />
         {subHeading ? (
@@ -29,7 +29,7 @@ const Activity = ({ heading, subHeading, image, contents, link }: Props) => {
           <div className="w-full h-[28px]" />
         )}
       </div>
-      <div className="w-full h-[76%] flex items-center pt-10">
+      <div className="w-full h-[76%] max-w-[1140px] flex items-center pt-10">
         <div className="w-[50%] h-full flex">
           <div className="h-max rounded-lg overflow-hidden transition-all ease duration-400 hover:scale-135 hover:translate-y-10">
             <Image

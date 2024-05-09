@@ -74,9 +74,11 @@ export default function DynamicText({ texts }: Props) {
 
   return (
     <div className="flex w-max">
-      <h2 className="text-[42px] text-primary-dark font-bold">{currentText}</h2>
+      <h2 className="text-5xl leading-snug text-primary-dark font-bold">
+        {currentText}
+      </h2>
       <span
-        className={`text-[42px] text-primary-dark ${
+        className={`text-5xl leading-snug text-primary-dark ${
           !isTyping && 'animate-flickering'
         }`}
       >

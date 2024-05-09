@@ -33,8 +33,8 @@ interface Props {
 
 const ActivityTexts = ({ heading, subHeading, first, second }: Props) => {
   return (
-    <section className="w-full h-full px-[12%] pb-[4%]">
-      <div className="w-full h-[24%] flex flex-col justify-end">
+    <section className="w-full h-full px-[8%] pb-[4%] flex flex-col items-center">
+      <div className="w-full max-w-[1140px] h-[24%] flex flex-col justify-end">
         <h2 className="text-4xl text-fff font-bold">{heading}</h2>
         <div className="w-[48px] h-[2px] bg-fff my-3" />
         {subHeading ? (
@@ -43,13 +43,13 @@ const ActivityTexts = ({ heading, subHeading, first, second }: Props) => {
           <div className="w-full h-[28px]" />
         )}
       </div>
-      <div className="w-full h-[76%] flex pt-6">
+      <div className="w-full max-w-[1140px] h-[76%] flex pt-6">
         <div className="w-[50%] h-full flex flex-col pr-10">
-          <h5 className="w-max text-lg bg-fff py-1 px-3 font-semibold rounded-[4px] mb-4">
+          <h5 className="w-max text-lg bg-fff py-1 px-3 font-semibold rounded-[4px] mb-8">
             {first.title}
           </h5>
           {first.contents.map(({ heading, descriptions }, idx) => (
-            <div key={heading} className="mb-8 last:mb-0">
+            <div key={heading} className="mb-6 last:mb-0">
               <p className="text-lg text-fff font-semibold mb-2">{heading}</p>
               {descriptions.map((description, idx) => (
                 <ListItem
@@ -82,15 +82,15 @@ const ActivityTexts = ({ heading, subHeading, first, second }: Props) => {
           )}
         </div>
         <div className="w-[50%] h-full flex flex-col pl-10">
-          <h5 className="w-max text-lg bg-fff py-1 px-3 font-semibold rounded-[4px] mb-4">
+          <h5 className="w-max text-lg bg-fff py-1 px-3 font-semibold rounded-[4px] mb-8">
             {second.title}
           </h5>
           {second.contents.map(({ heading, descriptions }, idx) => (
-            <div key={idx} className="mb-6 last:mb-0">
+            <div key={heading} className="mb-6 last:mb-0">
               <p className="text-lg text-fff font-semibold mb-2">{heading}</p>
               {descriptions.map((description, idx) => (
                 <ListItem
-                  key={idx}
+                  key={description}
                   color="fff"
                   bgColor="fff"
                   mb="mb-2"

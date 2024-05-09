@@ -64,11 +64,14 @@ const config: Config = {
         },
       },
       skeleton: {
-        from: {
+        '0%': {
           'background-color': '#BFBFBF',
         },
-        to: {
+        '50%': {
           'background-color': '#767676',
+        },
+        '100%': {
+          'background-color': '#BFBFBF',
         },
       },
     },
@@ -77,7 +80,7 @@ const config: Config = {
       'init-fade-in': 'initFadeIn 1.5s ease',
       'init-fade-in-move': 'initFadeInMove 1.5s ease',
       flickering: 'flickering 1s infinite step-start',
-      skeleton: 'skeleton 1s infinite step-start',
+      skeleton: 'skeleton 2s infinite ease-out',
     },
   },
   plugins: [],

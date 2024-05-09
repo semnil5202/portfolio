@@ -169,7 +169,7 @@ const DETAILS: Detail = {
         {
           heading: '결과',
           descriptions: [
-            '두 번째 이미지에서 볼 수 있듯이 지도의 가시성을 효과적으로 개선했고, 27인치 FHD, 75fps 모니터 환경에서 800여 개의 마커를 기준으로 렌더링 프레임을 48fps에서 71fps로 향상시킬 수 있었습니다.',
+            '지도의 가시성을 효과적으로 개선하고 27인치 FHD, 75fps 모니터 환경에서 800여 개의 마커를 기준으로 렌더링 프레임을 48fps에서 71fps로 향상시킬 수 있었습니다.',
           ],
         },
       ],
@@ -707,7 +707,7 @@ const DETAILS: Detail = {
         {
           heading: '해결 과정',
           descriptions: [
-            'IntersectionObserver를 활용하여 사용자가 마지막 영화 포스터까지 스크롤 하였을 경우 이를 감지하여 별도의 액션 없이 추가 조회를 수행할 수 있도록 했습니다.',
+            'IntersectionObserver를 활용하여 사용자가 마지막 영화 포스터까지 스크롤 했을 경우 이를 감지하여 별도의 액션 없이 추가 조회를 수행할 수 있도록 했습니다.',
           ],
         },
       ],
@@ -728,7 +728,7 @@ const DETAILS: Detail = {
         {
           heading: '해결 과정',
           descriptions: [
-            'Skeleton UI를 도입함으로써 영화 포스터 이미지가 로딩 중임을 사용자가 보다 명확하게 인지할 수 있도록 하고, Layout Shift를 개선하여 CLS 0을 달성했습니다.',
+            'Skeleton UI를 도입해 영화 포스터 이미지가 로딩 중임을 사용자가 보다 명확하게 인지할 수 있도록 하고, Layout Shift를 개선하여 CLS 0을 달성했습니다.',
           ],
         },
       ],
