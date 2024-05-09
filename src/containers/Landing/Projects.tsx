@@ -1,8 +1,10 @@
-import ProjectCard from './components/ProjectCard';
-import CARDS from '@/constants/cards';
 import ProjectSwiper from './components/ProjectSwiper';
 
-const Projects = () => {
+interface Props {
+  currentPageIndex: number;
+}
+
+const Projects = ({ currentPageIndex }: Props) => {
   return (
     <div className="w-[1140px] h-full mx-auto flex flex-col items-center justify-center gap-10">
       <div className="flex flex-col items-center">
@@ -10,7 +12,7 @@ const Projects = () => {
         <div className="w-[60px] h-[1px] bg-fff mt-4" />
       </div>
       <article className="w-full h-[440px]">
-        <ProjectSwiper />
+        <ProjectSwiper currentPageIndex={currentPageIndex} />
       </article>
     </div>
   );
