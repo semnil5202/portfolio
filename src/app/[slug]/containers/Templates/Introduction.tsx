@@ -80,18 +80,22 @@ const Introduction = ({
           )}
           <div>
             <div className={`${bottomContainer}`}>
-              <div className={`${isEnough && 'pb-8'}`}>
-                <ListItem
-                  color="fff"
-                  bgColor="fff"
-                  mb="mb-2"
-                  weight="semibold"
-                  size="lg"
-                >
-                  소속
-                </ListItem>
-                <p className="text-fff font-extralight ml-3">{organization}</p>
-              </div>
+              {organization && (
+                <div className={`${isEnough && 'pb-8'}`}>
+                  <ListItem
+                    color="fff"
+                    bgColor="fff"
+                    mb="mb-2"
+                    weight="semibold"
+                    size="lg"
+                  >
+                    소속
+                  </ListItem>
+                  <p className="text-fff font-extralight ml-3">
+                    {organization}
+                  </p>
+                </div>
+              )}
               <div className={`${isEnough && 'pb-8'}`}>
                 <ListItem
                   color="fff"

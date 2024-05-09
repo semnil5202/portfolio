@@ -14,12 +14,20 @@ import PNGTechWebpack from '../../public/assets/icons/tech-webpack.png';
 import PNGTechZustand from '../../public/assets/icons/tech-zustand.png';
 import PNGTechEmotion from '../../public/assets/icons/tech-emotion.png';
 import PNGTechVite from '../../public/assets/icons/tech-vite.png';
+import PNGTechHtml from '../../public/assets/icons/tech-html.png';
+import PNGTechCss from '../../public/assets/icons/tech-css.png';
+import PNGTechJs from '../../public/assets/icons/tech-js.png';
+import PNGTechNext from '../../public/assets/icons/tech-next.png';
+import PNGTechTail from '../../public/assets/icons/tech-tail.png';
+import PNGTechSwiper from '../../public/assets/icons/tech-swiper.png';
 
 import SVGFigmaLogo from '../../public/assets/icons/figma-logo.svg';
 import SVGGithubLogoWhite from '../../public/assets/icons/github-logo-white.svg';
 import SVGWoowaLogoBig from '../../public/assets/icons/woowa-logo-big.svg';
-
+import SVGPortfolioLogoBig from '../../public/assets/icons/portfolio-logo-big.svg';
+import SVGMapBeFineLogoBig from '../../public/assets/icons/mapbefine-logo-big.svg';
 import SVGMapBeFineLogo from '../../public/assets/icons/mapbefine-logo.svg';
+
 import PNGMapBeFine from '../../public/assets/mapbefine-landing.png';
 import PNGMapBeFineMcBefore from '../../public/assets/projects/mapbefine-mc-before.png';
 import PNGMapBeFineMcAfter from '../../public/assets/projects/mapbefine-mc-after.png';
@@ -42,12 +50,19 @@ import PNGShoppingCart from '../../public/assets/shopping-cart-landing.png';
 import PNGShoppingCartMocking from '../../public/assets/projects/shopping-cart-mocking.gif';
 import PNGShoppingCartResponsive from '../../public/assets/projects/shopping-cart-responsive.gif';
 
+import PNGMovieList from '../../public/assets/movie-list-landing.png';
+import PNGMovieListResponsive from '../../public/assets/projects/movie-list-responsive.gif';
+import PNGMovieListScroll from '../../public/assets/projects/movie-list-scroll.gif';
+import PNGMovieListSkeleton from '../../public/assets/projects/movie-list-skeleton.png';
+
+import PNGWhiteLanding from '../../public/assets/white-landing.png';
+
 export const DETAIL_LANDING = {
   'map-befine': PNGMapBeFine,
   'concept-be': PNGConceptBe,
   'shopping-cart': PNGShoppingCart,
-  'movie-list': PNGMapBeFine,
-  portfolio: PNGMapBeFine,
+  'movie-list': PNGMovieList,
+  portfolio: PNGWhiteLanding,
 };
 
 const DETAILS: Detail = {
@@ -565,7 +580,7 @@ const DETAILS: Detail = {
     {
       id: 6,
       template: 'activity',
-      heading: 'MSW를 활용하여 서버 의존성 없이 API 로직 구현',
+      heading: '반응형 웹 적용',
       image: PNGShoppingCartResponsive,
       contents: [
         {
@@ -616,19 +631,15 @@ const DETAILS: Detail = {
       template: 'introduction',
       heading: '미션 개요',
       intro:
-        'MSW를 사용하여 Mock API를 만들고, 이를 활용하여 장바구니 플로우를 구현한 우아한테크코스 React 미션입니다. 서버 개발이 완료되기 전에 API 로직을 미리 작성해보고 테스트 해볼 수 있다는 점에서 MSW의 활용 가치를 느낄 수 있었던 미션입니다.',
+        'TMDB API를 활용하여 인기 영화 목록을 확인하고 영화를 검색할 수 있는 우아한테크코스 Vanilla JS 미션입니다. Vanilla JS에서의 상태 관리에 대해서 깊은 고민을 하게 해주었던 미션입니다. 상태 관리를 위한 Observer 패턴과 컴포넌트 재사용을 위한 Custom Element를 활용하여 웹 페이지를 구현했습니다.',
       organization: '우아한테크코스',
-      date: '23.05',
+      date: '23.03',
       member: 'FE: 1명',
       techs: [
+        { image: PNGTechHtml, name: 'HTML' },
+        { image: PNGTechCss, name: 'CSS' },
+        { image: PNGTechJs, name: 'JavaScript' },
         { image: PNGTechTs, name: 'TypeScript' },
-        { image: PNGTechReact, name: 'React' },
-        { image: PNGTechRecoil, name: 'Recoil' },
-        { image: PNGTechStyled, name: 'Styled Components' },
-        { image: PNGTechStory, name: 'Storybook' },
-        { image: PNGTechMsw, name: 'MSW' },
-        { image: PNGTechJest, name: 'Jest' },
-        { image: PNGTechTl, name: 'Testing Library' },
       ],
     },
     {
@@ -639,63 +650,94 @@ const DETAILS: Detail = {
     },
     {
       id: 4,
-      template: 'activity',
-      heading: 'MSW를 활용하여 서버 의존성 없이 API 로직 구현',
-      image: PNGShoppingCartMocking,
-      contents: [
-        {
-          heading: '문제 상항',
-          descriptions: [
-            '협업 시 API 관련 로직을 구현하려면 서버 개발의 완료를 기다려야 하는 불편함이 있었습니다. 이로 인해 프론트엔드 개발 주기가 비효율적으로 흘러가 API 요청 상태에 따른 처리 로직이 미흡한 문제가 있었습니다.',
-          ],
-        },
-        {
-          heading: '해결 과정',
-          descriptions: [
-            'MSW를 사용하여 백엔드 개발이 완료되지 않은 상황에서도 프론트엔드 단에서 독립적으로 개발을 진행할 수 있도록 했습니다. 추후 End Point만 교체하는 것으로 실제 서버와 통신이 가능토록 했습니다.',
-          ],
-        },
-      ],
-    },
-    {
-      id: 5,
       template: 'activity-texts',
-      heading: '다형성 컴포넌트 및 Recoil 전역 상태 관리',
+      heading: 'Observer 패턴과 Custom Element 활용',
       first: {
-        title: '다형성 컴포넌트를 통한 중복 코드 최소화',
+        title: '도메인 상태에 Observer 패턴 적용',
         contents: [
           {
             heading: '문제 상황',
             descriptions: [
-              '버튼, 텍스트, 레이아웃 등 미션 전반에 유사하게 사용되는 컴포넌트가 자주 중복되었고, 간혹 통일되지 않은 스타일 코드로 인해 UI 일관성을 헤쳤습니다.',
+              'React와는 달리 Vanilla JS에서는 공통으로 사용되는 컴포넌트에 기능을 부여하는 것이 까다로웠습니다. 예를 들어, 버튼 컴포넌트를 클릭하면 모달을 열어야한다고 가정하면 버튼 컴포넌트 내부로 모달을 import 해야했으며, 이 경우 버튼 컴포넌트의 재사용성이 떨어졌습니다.',
             ],
           },
           {
             heading: '해결 과정',
             descriptions: [
-              'Styled-Components를 활용해 다형성 컴포넌트를 구현하고, 미션 전반에 사용되는 공통 컴포넌트를 분리함으로써 컴포넌트 재사용성을 높이고 일관된 UI를 구현할 수 있었습니다.',
+              '도메인 상태에 Observer 패턴을 적용하여 도메인 상태가 변하면 그 상태를 구독하고 있던 컴포넌트를 업데이트 할 수 있도록 파이프 라인을 구현했습니다. 이를 통해, 컴포넌트 간 의존 관계를 제거하여 재사용성을 높일 수 있었습니다.',
             ],
           },
         ],
+        link: {
+          heading: '블로그 포스팅',
+          name: 'Observer 패턴으로 상태 변화 감지하기',
+          href: 'https://velog.io/@semnil5202/Observer-%ED%8C%A8%ED%84%B4%EC%9C%BC%EB%A1%9C-%EC%83%81%ED%83%9C-%EB%B3%80%ED%99%94-%EA%B0%90%EC%A7%80%ED%95%98%EA%B8%B0',
+        },
       },
       second: {
-        title: 'Recoil을 활용한 전역 상태 관리',
+        title: 'HTMLElement를 상속 받아 Custom Element로 활용',
         contents: [
           {
-            heading: '배운 점',
+            heading: '문제 상황',
             descriptions: [
-              'Recoil Atom 개념에 대해서 이해하고 파생된 상태인 Selector를 활용해 보면서, 기존 React의 Context를 활용한 상태 관리 대비 Recoil의 장점에 대해서 이해할 수 있었습니다.',
-              '컴포넌트 내부에 Recoil의 state setter만 불러올 경우 리렌더링 최적화가 된다는 점을 깨닫고, React memo와 더불어 컴포넌트 리렌더링 최적화를 수행해 볼 수 있었습니다.',
+              '컴포넌트 렌더링 시점과 실제 DOM에 컴포넌트가 렌더링 되는 시점이 달라, 컴포넌트에 addEventListener를 통해 이벤트를 추가하기가 까다로웠습니다.',
+            ],
+          },
+          {
+            heading: '해결 과정',
+            descriptions: [
+              'class로 만들어진 컴포넌트에 HTMLElement를 상속 받아 connectedCallback이란 함수를 활용하여 React의 useEffect 역할을 수행하는 메서드를 작성할 수 있었습니다. 이를 통해, addEventListener를 달기 위한 복잡한 코드를 개선할 수 있었습니다.',
             ],
           },
         ],
       },
     },
     {
+      id: 5,
+      template: 'activity',
+      heading: 'IntersectionObserver를 활용한 무한 스크롤 구현',
+      image: PNGMovieListScroll,
+      contents: [
+        {
+          heading: '문제 상항',
+          descriptions: [
+            "사용자가 영화 목록을 추가 조회할 때마다 '더 불러오기'와 같은 버튼을 반복적으로 클릭해야하는 불편함이 있었습니다.",
+          ],
+        },
+        {
+          heading: '해결 과정',
+          descriptions: [
+            'IntersectionObserver를 활용하여 사용자가 마지막 영화 포스터까지 스크롤 하였을 경우 이를 감지하여 별도의 액션 없이 추가 조회를 수행할 수 있도록 했습니다.',
+          ],
+        },
+      ],
+    },
+    {
       id: 6,
       template: 'activity',
-      heading: 'MSW를 활용하여 서버 의존성 없이 API 로직 구현',
-      image: PNGShoppingCartResponsive,
+      heading: 'Skeleton UI를 사용하여 로딩 상태에서 사용자 경험 증진',
+      image: PNGMovieListSkeleton,
+      contents: [
+        {
+          heading: '문제 상항',
+          descriptions: [
+            '영화 포스터의 이미지 로딩 시간이 오래 걸려 영화 목록을 조회하는 동안의 사용자 경험이 좋지 않았습니다.',
+            '영화 포스터의 이미지를 로딩하는 과정에서 Layout Shift가 발생하여 사용자가 잘못된 조작을 할 우려가 있었습니다.',
+          ],
+        },
+        {
+          heading: '해결 과정',
+          descriptions: [
+            'Skeleton UI를 도입함으로써 영화 포스터 이미지가 로딩 중임을 사용자가 보다 명확하게 인지할 수 있도록 하고, Layout Shift를 개선하여 CLS 0을 달성했습니다.',
+          ],
+        },
+      ],
+    },
+    {
+      id: 7,
+      template: 'activity',
+      heading: '반응형 웹 적용',
+      image: PNGMovieListResponsive,
       contents: [
         {
           heading: '문제 상항',
@@ -712,33 +754,50 @@ const DETAILS: Detail = {
       ],
     },
     {
-      id: 7,
+      id: 8,
       template: 'separator',
       type: 'end',
-      heading: '무비 리스트',
-      link: 'movie-list',
-      svg: SVGWoowaLogoBig,
+      heading: '포트폴리오',
+      link: 'portfolio',
+      svg: SVGPortfolioLogoBig,
     },
   ],
   portfolio: [
     {
       id: 1,
       template: 'title',
-      title: '괜찮을지도',
-      description: '개인의 관심사를 다양한 지도로 만들고 공유할 수 있는 서비스',
-      backgroundImg: PNGMapBeFine,
-      links: [],
+      title: '포트폴리오',
+      description: 'Next.js를 활용하여 만든 포트폴리오 웹 페이지',
+      links: [
+        {
+          name: 'Github',
+          href: 'https://github.com/semnil5202/portfolio',
+          svg: SVGGithubLogoWhite,
+        },
+      ],
     },
     {
       id: 2,
       template: 'introduction',
-      subHeading: '개요',
-      intro: 'asdf',
-      value: 'sadf',
-      contribution: 'asdf',
-      date: '23.06 - 23.12',
-      member: 'FE: 3명, BE: 4명',
-      techs: [],
+      heading: '프로젝트 소개',
+      intro:
+        'Next.js를 사용하여 SSG 방식으로 배포한 웹 포트폴리오입니다. Swiper JS를 활용하여 PPT 형식의 포트폴리오를 구현했습니다. 추후 상수로 관리하고 있는 데이터를 DB에 옮기고 use sever 방식을 활용해볼 예정입니다.',
+      date: '24.05 - 현재',
+      member: 'FE: 1명',
+      techs: [
+        { image: PNGTechTs, name: 'TypeScript' },
+        { image: PNGTechNext, name: 'Next.js' },
+        { image: PNGTechTail, name: 'Tailwind CSS' },
+        { image: PNGTechSwiper, name: 'Swiper JS' },
+      ],
+    },
+    {
+      id: 3,
+      template: 'separator',
+      type: 'end',
+      heading: '괜찮을지도',
+      link: 'map-befine',
+      svg: SVGMapBeFineLogoBig,
     },
   ],
 };
