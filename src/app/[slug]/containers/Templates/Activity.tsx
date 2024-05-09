@@ -31,7 +31,7 @@ const Activity = ({ heading, subHeading, image, contents, link }: Props) => {
       </div>
       <div className="w-full h-[72%] max-w-[1140px] flex items-center pt-12">
         <div className="w-[50%] h-full flex">
-          <div className="h-max rounded-lg overflow-hidden transition-all ease duration-400 hover:scale-135 hover:translate-y-10">
+          <div className="h-max rounded-lg overflow-hidden transition-all ease duration-400 hover:scale-130 hover:translate-y-10">
             <Image
               src={image}
               alt={heading}

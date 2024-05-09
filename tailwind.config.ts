@@ -21,7 +21,7 @@ const config: Config = {
       lg: '1280px',
     },
     scale: {
-      135: '1.35',
+      130: '1.30',
     },
     keyframes: {
       initBackground: {
