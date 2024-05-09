@@ -1,49 +1,47 @@
-import { Space } from '@/components/common/Space';
-import { PROJECT_DETAILS } from '@/constants/data';
-import styles from './page.module.css';
-import { ProjectOverview } from '@/containers/ProjectOverview';
-import { ProjectDetail } from '@/containers/ProjectDetail';
+'use client';
 
-export default function Detail({ params }: { params: { slug: string } }) {
-  const { overview, details } = PROJECT_DETAILS[params.slug];
-  const { imageSrc, name, intros, tecStack, links, period, personnel, role } =
-    overview;
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Mousewheel, Pagination } from 'swiper/modules';
+
+import { useState } from 'react';
+import Background from './containers/Background';
+import DETAILS, { DETAIL_LANDING } from '@/constants/details';
+import TranslateTemplate from './containers/TranslateTemplate';
+import { SlugType } from './types';
+
+const ProjectDetail = ({ params }: { params: { slug: SlugType } }) => {
+  const [currentPageIndex, setCurrentPageIndex] = useState<number>(0);
+  const landingImage = DETAIL_LANDING[params.slug];
+  const slideLength = DETAILS[params.slug].length;
 
   return (
-    <main className={styles.main}>
-      <Space size={72} />
-      <div className={styles.typographyWrapper}>
-        <h2 className={styles.overview}>Overview</h2>
-      </div>
-      <ProjectOverview
-        imageSrc={imageSrc}
-        name={name}
-        intros={intros}
-        tecStack={tecStack}
-        links={links}
-        period={period}
-        personnel={personnel}
-        role={role}
+    <main className="w-screen h-dvh">
+      <Background
+        currentPageIndex={currentPageIndex}
+        landing={landingImage}
+        slideLength={slideLength}
       />
-      <Space size={120} />
-      {details.length === 0 ? (
-        ''
-      ) : (
-        <>
-          <div className={styles.typographyWrapper}>
-            <h2 className={styles.activity}>Activity</h2>
-          </div>
-          {details.map(({ title, problems, solves, result }) => (
-            <ProjectDetail
-              key={title}
-              title={title}
-              problems={problems}
-              solves={solves}
-              result={result}
-            />
-          ))}
-        </>
-      )}
+      <Swiper
+        tag="section"
+        speed={700}
+        direction="vertical"
+        pagination={{
+          type: 'progressbar',
+        }}
+        onSlideChange={(swiper) => setCurrentPageIndex(swiper.activeIndex)}
+        modules={[Mousewheel, Pagination]}
+        mousewheel
+        className="h-full"
+        style={{ '--swiper-pagination-color': '#ffffff' } as {}}
+      >
+        {DETAILS[params.slug].map((slide, idx) => (
+          <SwiperSlide key={slide.id} className="overflow-hidden">
+            <TranslateTemplate slide={slide} />
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </main>
   );
-}
+};
+
+export default ProjectDetail;

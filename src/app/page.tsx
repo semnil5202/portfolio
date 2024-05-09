@@ -1,23 +1,42 @@
-import styles from './page.module.css';
-import { Profile } from '@/containers/Profile';
-import { Ability } from '@/containers/Ability';
-import { Projects } from '@/containers/Projects';
-import { Space } from '@/components/common/Space';
+'use client';
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Mousewheel } from 'swiper/modules';
+
+import 'swiper/css';
+import 'swiper/css/pagination';
+
+import { useState } from 'react';
+import Background from '@/containers/Landing/Background';
+import LandingMain from '@/containers/Landing/LandingMain';
+import Strength from '@/containers/Landing/Strength';
+import Projects from '@/containers/Landing/Projects';
 
 export default function Home() {
+  const [currentPageIndex, setCurrentPageIndex] = useState<number>(0);
+
   return (
-    <main className={styles.main}>
-      <Space id="about" size={72} />
-      <Profile />
-      <Space size={60} />
-      <Ability />
-      <Space id="projects" size={72} />
-      <div className={styles.projectsWrapper}>
-        <h2 className={styles.projects}>Projects</h2>
-        <div className={styles.projectsLine}></div>
-      </div>
-      <Space size={40} />
-      <Projects />
+    <main className="w-screen h-dvh">
+      <Background currentPageIndex={currentPageIndex} />
+      <Swiper
+        tag="section"
+        speed={700}
+        direction="vertical"
+        onSlideChange={(swiper) => setCurrentPageIndex(swiper.activeIndex)}
+        modules={[Mousewheel]}
+        mousewheel
+        className="h-full"
+      >
+        <SwiperSlide tag="article" className="overflow-hidden">
+          <LandingMain />
+        </SwiperSlide>
+        <SwiperSlide tag="article" className="overflow-hidden">
+          <Strength />
+        </SwiperSlide>
+        <SwiperSlide tag="article" className="overflow-hidden">
+          <Projects />
+        </SwiperSlide>
+      </Swiper>
     </main>
   );
 }
