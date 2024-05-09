@@ -406,7 +406,7 @@ const DETAILS: Detail = {
       links: [
         {
           name: 'Service',
-          href: 'https://concept-be.kr/',
+          href: 'https://conceptbe.kr/',
           svg: SVGConceptLogo,
         },
         {
