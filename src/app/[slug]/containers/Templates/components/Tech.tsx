@@ -7,11 +7,16 @@ interface Props {
 
 const Tech = ({ image, name }: Props) => {
   return (
-    <li className="flex w-[110px] h-[170px] flex-col items-center">
+    <li className="flex w-[110px] h-[174px] flex-col items-center">
       <div className="w-[110px] h-[110px]">
-        <Image src={image} alt={name} loading="lazy" />
+        <Image
+          src={image}
+          alt={name}
+          loading="lazy"
+          className="animate-skeleton"
+        />
       </div>
-      <p className="text-fff text-center font-extralight">{name}</p>
+      <p className="text-fff text-center font-extralight mt-2">{name}</p>
     </li>
   );
 };
