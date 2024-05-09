@@ -9,6 +9,7 @@ import PNGTechTl from '../../public/assets/icons/tech-tl.png';
 import PNGTechStory from '../../public/assets/icons/tech-story.png';
 import PNGTechStyled from '../../public/assets/icons/tech-styled.png';
 import PNGTechTs from '../../public/assets/icons/tech-ts.png';
+import PNGTechRecoil from '../../public/assets/icons/tech-recoil.png';
 import PNGTechWebpack from '../../public/assets/icons/tech-webpack.png';
 import PNGTechZustand from '../../public/assets/icons/tech-zustand.png';
 import PNGTechEmotion from '../../public/assets/icons/tech-emotion.png';
@@ -16,6 +17,7 @@ import PNGTechVite from '../../public/assets/icons/tech-vite.png';
 
 import SVGFigmaLogo from '../../public/assets/icons/figma-logo.svg';
 import SVGGithubLogoWhite from '../../public/assets/icons/github-logo-white.svg';
+import SVGWoowaLogoBig from '../../public/assets/icons/woowa-logo-big.svg';
 
 import SVGMapBeFineLogo from '../../public/assets/icons/mapbefine-logo.svg';
 import PNGMapBeFine from '../../public/assets/mapbefine-landing.png';
@@ -36,12 +38,14 @@ import PNGConceptBe from '../../public/assets/concept-be-landing.png';
 import GIFConceptBeDebouncing from '../../public/assets/projects/conceptbe-debouncing.gif';
 import GIFConceptBeScroll from '../../public/assets/projects/conceptbe-scroll.gif';
 
-import SVGWoowaLogoBig from '../../public/assets/icons/woowa-logo-big.svg';
+import PNGShoppingCart from '../../public/assets/shopping-cart-landing.png';
+import PNGShoppingCartMocking from '../../public/assets/projects/shopping-cart-mocking.gif';
+import PNGShoppingCartResponsive from '../../public/assets/projects/shopping-cart-responsive.gif';
 
 export const DETAIL_LANDING = {
   'map-befine': PNGMapBeFine,
   'concept-be': PNGConceptBe,
-  'shopping-cart': PNGMapBeFine,
+  'shopping-cart': PNGShoppingCart,
   'movie-list': PNGMapBeFine,
   portfolio: PNGMapBeFine,
 };
@@ -74,6 +78,7 @@ const DETAILS: Detail = {
     {
       id: 2,
       template: 'introduction',
+      heading: '프로젝트 개요',
       intro:
         '개인의 관심사를 다양한 지도로 만들고 공유할 수 있는 서비스입니다. 서로 다른 주제의 지도를 한 번에 모아보거나, 마음에 드는 장소만 골라 나만의 지도로 재탄생 시킬 수도 있습니다. 또한 내가 선택한 사람들과 협력하여 지도를 만들 수 있습니다.',
       value:
@@ -234,7 +239,7 @@ const DETAILS: Detail = {
         {
           heading: '문제 상황',
           descriptions: [
-            '메인 타겟 환경을 PC로 설정하여 서비스를 개발하였기에 태블릿 및 보바일 환경에서 서비스를 이용하기 어려웠습니다. 또한 걸어다니면서 모바일로 주변의 정보를 확인할 수 있으면 좋겠다는 피드백을 다수 받았습니다.',
+            '메인 타겟 환경을 PC로 설정하여 서비스를 개발하였기에 태블릿 및 보바일 환경에서 서비스를 이용하기 어려웠습니다. 또한 걸어다니면서 모바일로 주변 정보를 확인할 수 있으면 좋겠다는 피드백을 다수 받았습니다.',
           ],
         },
         {
@@ -329,6 +334,7 @@ const DETAILS: Detail = {
     {
       id: 2,
       template: 'introduction',
+      heading: '프로젝트 개요',
       intro:
         '공모전, 스터디 등을 위한 다양한 직군의 팀원을 구인할 수 있는 모바일 웹 서비스입니다. 기존의 프로젝트 구인 서비스는 개발 분야에 치우쳐져 있어 비 개발 분야는 프로젝트 인원 구인이 어렵다는 점을 개선하고자 이 프로젝트를 시작했습니다.',
       value:
@@ -420,7 +426,7 @@ const DETAILS: Detail = {
         },
       ],
       link: {
-        heading: '관련 블로그 포스팅',
+        heading: '블로그 포스팅',
         name: '댓글 및 답글 스크롤 포커싱 리팩토링',
         href: 'https://velog.io/@semnil5202/%EB%8C%93%EA%B8%80-%EB%B0%8F-%EB%8B%B5%EA%B8%80-%EC%8A%A4%ED%81%AC%EB%A1%A4-%ED%8F%AC%EC%BB%A4%EC%8B%B1-%EB%A6%AC%ED%8C%A9%ED%86%A0%EB%A7%81',
       },
@@ -463,27 +469,35 @@ const DETAILS: Detail = {
       title: '장바구니',
       description:
         'MSW를 활용하여 장바구니 페이지를 만드는 우아한테크코스 React 미션',
-      links: [],
+      links: [
+        {
+          name: 'Deploy',
+          href: 'https://semnil5202.github.io/react-shopping-cart/',
+          svg: SVGGithubLogoWhite,
+        },
+        {
+          name: 'Github',
+          href: 'https://github.com/semnil5202/react-shopping-cart/tree/step2',
+          svg: SVGGithubLogoWhite,
+        },
+      ],
     },
     {
       id: 2,
       template: 'introduction',
+      heading: '미션 개요',
       intro:
-        '공모전, 스터디 등을 위한 다양한 직군의 팀원을 구인할 수 있는 모바일 웹 서비스입니다. 기존의 프로젝트 구인 서비스는 개발 분야에 치우쳐져 있어 비 개발 분야는 프로젝트 인원 구인이 어렵다는 점을 개선하고자 이 프로젝트를 시작했습니다.',
-      value:
-        '아이디어를 공유하면서 토론하고 평가할 수 있는 공간을 제공하며, 사용자들 간의 다양한 전문성을 융합하여 다채로운 활동을 형성하는데 기여하는 것을 핵심 가치로 삼고 있습니다.',
-      contribution:
-        '현재는 공모전을 같이 나갈 팀원을 구하는 공간이 마땅치 않은 문제를 해결하는데 집중하고 있습니다. 컨셉비를 통해 공모전 구인을 보다 간편하게 진행할 수 있도록 기대합니다.',
-      organization: '비사이드',
-      date: '24.01 - 현재',
-      member: 'PM: 2명, PD: 1명, FE: 3명, BE: 4명',
+        'MSW를 사용하여 Mock API를 만들고, 이를 활용하여 장바구니 플로우를 구현한 우아한테크코스 React 미션입니다. 서버 개발이 완료되기 전에 API 로직을 미리 작성해보고 테스트 해볼 수 있다는 점에서 MSW의 활용 가치를 느낄 수 있었던 미션입니다.',
+      organization: '우아한테크코스',
+      date: '23.05',
+      member: 'FE: 1명',
       techs: [
         { image: PNGTechTs, name: 'TypeScript' },
         { image: PNGTechReact, name: 'React' },
-        { image: PNGTechRq, name: 'React Query' },
-        { image: PNGTechEmotion, name: 'Emotion' },
-        { image: PNGTechVite, name: 'Vite' },
+        { image: PNGTechRecoil, name: 'Recoil' },
+        { image: PNGTechStyled, name: 'Styled Components' },
         { image: PNGTechStory, name: 'Storybook' },
+        { image: PNGTechMsw, name: 'MSW' },
         { image: PNGTechJest, name: 'Jest' },
         { image: PNGTechTl, name: 'Testing Library' },
       ],
@@ -492,28 +506,218 @@ const DETAILS: Detail = {
       id: 3,
       template: 'separator',
       type: 'separate',
-      heading: '프로젝트 활동',
+      heading: '미션 활동',
+    },
+    {
+      id: 4,
+      template: 'activity',
+      heading: 'MSW를 활용하여 서버 의존성 없이 API 로직 구현',
+      image: PNGShoppingCartMocking,
+      contents: [
+        {
+          heading: '문제 상항',
+          descriptions: [
+            '협업 시 API 관련 로직을 구현하려면 서버 개발의 완료를 기다려야 하는 불편함이 있었습니다. 이로 인해 프론트엔드 개발 주기가 비효율적으로 흘러가 API 요청 상태에 따른 처리 로직이 미흡한 문제가 있었습니다.',
+          ],
+        },
+        {
+          heading: '해결 과정',
+          descriptions: [
+            'MSW를 사용하여 백엔드 개발이 완료되지 않은 상황에서도 프론트엔드 단에서 독립적으로 개발을 진행할 수 있도록 했습니다. 추후 End Point만 교체하는 것으로 실제 서버와 통신이 가능토록 했습니다.',
+          ],
+        },
+      ],
+    },
+    {
+      id: 5,
+      template: 'activity-texts',
+      heading: '다형성 컴포넌트 및 Recoil 전역 상태 관리',
+      first: {
+        title: '다형성 컴포넌트를 통한 중복 코드 최소화',
+        contents: [
+          {
+            heading: '문제 상황',
+            descriptions: [
+              '버튼, 텍스트, 레이아웃 등 미션 전반에 유사하게 사용되는 컴포넌트가 자주 중복되었고, 간혹 통일되지 않은 스타일 코드로 인해 UI 일관성을 헤쳤습니다.',
+            ],
+          },
+          {
+            heading: '해결 과정',
+            descriptions: [
+              'Styled-Components를 활용해 다형성 컴포넌트를 구현하고, 미션 전반에 사용되는 공통 컴포넌트를 분리함으로써 컴포넌트 재사용성을 높이고 일관된 UI를 구현할 수 있었습니다.',
+            ],
+          },
+        ],
+      },
+      second: {
+        title: 'Recoil을 활용한 전역 상태 관리',
+        contents: [
+          {
+            heading: '배운 점',
+            descriptions: [
+              'Recoil Atom 개념에 대해서 이해하고 파생된 상태인 Selector를 활용해 보면서, 기존 React의 Context를 활용한 상태 관리 대비 Recoil의 장점에 대해서 이해할 수 있었습니다.',
+              '컴포넌트 내부에 Recoil의 state setter만 불러올 경우 리렌더링 최적화가 된다는 점을 깨닫고, React memo와 더불어 컴포넌트 리렌더링 최적화를 수행해 볼 수 있었습니다.',
+            ],
+          },
+        ],
+      },
+    },
+    {
+      id: 6,
+      template: 'activity',
+      heading: 'MSW를 활용하여 서버 의존성 없이 API 로직 구현',
+      image: PNGShoppingCartResponsive,
+      contents: [
+        {
+          heading: '문제 상항',
+          descriptions: [
+            'PC 환경을 기준으로 미션을 구현했기에 모바일 및 태블릿 환경에서 웹 페이지를 확인하기에는 불편함이 있었습니다.',
+          ],
+        },
+        {
+          heading: '해결 과정',
+          descriptions: [
+            'CSS Media Query를 활용하여 반응형 웹을 적용함으로써 PC, 태블릿, 모바일 각각의 환경에 적합한 사용성을 제공할 수 있도록 했습니다.',
+          ],
+        },
+      ],
+    },
+    {
+      id: 7,
+      template: 'separator',
+      type: 'end',
+      heading: '무비 리스트',
+      link: 'movie-list',
+      svg: SVGWoowaLogoBig,
     },
   ],
   'movie-list': [
     {
       id: 1,
       template: 'title',
-      title: '괜찮을지도',
-      description: '개인의 관심사를 다양한 지도로 만들고 공유할 수 있는 서비스',
-      backgroundImg: PNGMapBeFine,
-      links: [],
+      title: '무비 리스트',
+      description:
+        'TMDB를 활용해 영화 목록을 만드는 우아한테크코스 Vanilla JS 미션',
+      links: [
+        {
+          name: 'Deploy',
+          href: 'https://semnil5202.github.io/javascript-movie-review/',
+          svg: SVGGithubLogoWhite,
+        },
+        {
+          name: 'Github',
+          href: 'https://github.com/semnil5202/javascript-movie-review/tree/step2',
+          svg: SVGGithubLogoWhite,
+        },
+      ],
     },
     {
       id: 2,
       template: 'introduction',
-      subHeading: '개요',
-      intro: 'asdf',
-      value: 'sadf',
-      contribution: 'asdf',
-      date: '23.06 - 23.12',
-      member: 'FE: 3명, BE: 4명',
-      techs: [],
+      heading: '미션 개요',
+      intro:
+        'MSW를 사용하여 Mock API를 만들고, 이를 활용하여 장바구니 플로우를 구현한 우아한테크코스 React 미션입니다. 서버 개발이 완료되기 전에 API 로직을 미리 작성해보고 테스트 해볼 수 있다는 점에서 MSW의 활용 가치를 느낄 수 있었던 미션입니다.',
+      organization: '우아한테크코스',
+      date: '23.05',
+      member: 'FE: 1명',
+      techs: [
+        { image: PNGTechTs, name: 'TypeScript' },
+        { image: PNGTechReact, name: 'React' },
+        { image: PNGTechRecoil, name: 'Recoil' },
+        { image: PNGTechStyled, name: 'Styled Components' },
+        { image: PNGTechStory, name: 'Storybook' },
+        { image: PNGTechMsw, name: 'MSW' },
+        { image: PNGTechJest, name: 'Jest' },
+        { image: PNGTechTl, name: 'Testing Library' },
+      ],
+    },
+    {
+      id: 3,
+      template: 'separator',
+      type: 'separate',
+      heading: '미션 활동',
+    },
+    {
+      id: 4,
+      template: 'activity',
+      heading: 'MSW를 활용하여 서버 의존성 없이 API 로직 구현',
+      image: PNGShoppingCartMocking,
+      contents: [
+        {
+          heading: '문제 상항',
+          descriptions: [
+            '협업 시 API 관련 로직을 구현하려면 서버 개발의 완료를 기다려야 하는 불편함이 있었습니다. 이로 인해 프론트엔드 개발 주기가 비효율적으로 흘러가 API 요청 상태에 따른 처리 로직이 미흡한 문제가 있었습니다.',
+          ],
+        },
+        {
+          heading: '해결 과정',
+          descriptions: [
+            'MSW를 사용하여 백엔드 개발이 완료되지 않은 상황에서도 프론트엔드 단에서 독립적으로 개발을 진행할 수 있도록 했습니다. 추후 End Point만 교체하는 것으로 실제 서버와 통신이 가능토록 했습니다.',
+          ],
+        },
+      ],
+    },
+    {
+      id: 5,
+      template: 'activity-texts',
+      heading: '다형성 컴포넌트 및 Recoil 전역 상태 관리',
+      first: {
+        title: '다형성 컴포넌트를 통한 중복 코드 최소화',
+        contents: [
+          {
+            heading: '문제 상황',
+            descriptions: [
+              '버튼, 텍스트, 레이아웃 등 미션 전반에 유사하게 사용되는 컴포넌트가 자주 중복되었고, 간혹 통일되지 않은 스타일 코드로 인해 UI 일관성을 헤쳤습니다.',
+            ],
+          },
+          {
+            heading: '해결 과정',
+            descriptions: [
+              'Styled-Components를 활용해 다형성 컴포넌트를 구현하고, 미션 전반에 사용되는 공통 컴포넌트를 분리함으로써 컴포넌트 재사용성을 높이고 일관된 UI를 구현할 수 있었습니다.',
+            ],
+          },
+        ],
+      },
+      second: {
+        title: 'Recoil을 활용한 전역 상태 관리',
+        contents: [
+          {
+            heading: '배운 점',
+            descriptions: [
+              'Recoil Atom 개념에 대해서 이해하고 파생된 상태인 Selector를 활용해 보면서, 기존 React의 Context를 활용한 상태 관리 대비 Recoil의 장점에 대해서 이해할 수 있었습니다.',
+              '컴포넌트 내부에 Recoil의 state setter만 불러올 경우 리렌더링 최적화가 된다는 점을 깨닫고, React memo와 더불어 컴포넌트 리렌더링 최적화를 수행해 볼 수 있었습니다.',
+            ],
+          },
+        ],
+      },
+    },
+    {
+      id: 6,
+      template: 'activity',
+      heading: 'MSW를 활용하여 서버 의존성 없이 API 로직 구현',
+      image: PNGShoppingCartResponsive,
+      contents: [
+        {
+          heading: '문제 상항',
+          descriptions: [
+            'PC 환경을 기준으로 미션을 구현했기에 모바일 및 태블릿 환경에서 웹 페이지를 확인하기에는 불편함이 있었습니다.',
+          ],
+        },
+        {
+          heading: '해결 과정',
+          descriptions: [
+            'CSS Media Query를 활용하여 반응형 웹을 적용함으로써 PC, 태블릿, 모바일 각각의 환경에 적합한 사용성을 제공할 수 있도록 했습니다.',
+          ],
+        },
+      ],
+    },
+    {
+      id: 7,
+      template: 'separator',
+      type: 'end',
+      heading: '무비 리스트',
+      link: 'movie-list',
+      svg: SVGWoowaLogoBig,
     },
   ],
   portfolio: [

@@ -36,9 +36,10 @@ export type TemplateType =
   | {
       id: number;
       template: 'introduction';
+      heading: string;
       intro: string;
-      value: string;
-      contribution: string;
+      value?: string;
+      contribution?: string;
       organization?: string;
       date: string;
       member: string;
