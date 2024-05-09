@@ -97,7 +97,7 @@ const config: Config = {
       'init-fade-in': 'initFadeIn 1.5s ease',
       'init-fade-in-move': 'initFadeInMove 1.5s ease',
       flickering: 'flickering 1s infinite step-start',
-      skeleton: 'skeleton 2s infinite ease-out',
+      skeleton: 'skeleton 2s 3 ease-out',
       'nav-hint-move': 'navHintMove 1.5s ease 1500ms',
       'slide-image-hint-move': 'slideImageHintMove 1.5s ease 1500ms',
     },
