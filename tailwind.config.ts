@@ -14,6 +14,7 @@ const config: Config = {
       dark: '#191F1E',
       link: '#BFBFBF',
       fff: '#ffffff',
+      transparent: 'transparent',
     },
     screens: {
       sm: '768px',
@@ -74,6 +75,16 @@ const config: Config = {
           'background-color': '#BFBFBF',
         },
       },
+      navHintMove: {
+        '0%': {},
+        '25%': {
+          transform: 'translateX(-50%)',
+        },
+        '75%': {
+          transform: 'translateX(-50%)',
+        },
+        '100%': {},
+      },
     },
     animation: {
       'init-background': 'initBackground 1s ease',
@@ -81,6 +92,7 @@ const config: Config = {
       'init-fade-in-move': 'initFadeInMove 1.5s ease',
       flickering: 'flickering 1s infinite step-start',
       skeleton: 'skeleton 2s infinite ease-out',
+      'nav-hint-move': 'navHintMove 2s ease 1500ms',
     },
   },
   plugins: [],

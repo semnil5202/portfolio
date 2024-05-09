@@ -21,6 +21,18 @@ import PNGTechNext from '../../public/assets/icons/tech-next.png';
 import PNGTechTail from '../../public/assets/icons/tech-tail.png';
 import PNGTechSwiper from '../../public/assets/icons/tech-swiper.png';
 
+import PNGNavMbf1 from '../../public/assets/navigations/mbf-1.png';
+import PNGNavMbf2 from '../../public/assets/navigations/mbf-2.png';
+import PNGNavMbf3 from '../../public/assets/navigations/mbf-3.png';
+import PNGNavMbf4 from '../../public/assets/navigations/mbf-4.png';
+import PNGNavMbf5 from '../../public/assets/navigations/mbf-5.png';
+import PNGNavMbf6 from '../../public/assets/navigations/mbf-6.png';
+import PNGNavMbf7 from '../../public/assets/navigations/mbf-7.png';
+import PNGNavMbf8 from '../../public/assets/navigations/mbf-8.png';
+import PNGNavMbf9 from '../../public/assets/navigations/mbf-9.png';
+import PNGNavMbf10 from '../../public/assets/navigations/mbf-10.png';
+import PNGNavMbf11 from '../../public/assets/navigations/mbf-11.png';
+
 import SVGFigmaLogo from '../../public/assets/icons/figma-logo.svg';
 import SVGGithubLogoWhite from '../../public/assets/icons/github-logo-white.svg';
 import SVGWoowaLogoBig from '../../public/assets/icons/woowa-logo-big.svg';
@@ -63,6 +75,26 @@ export const DETAIL_LANDING = {
   'shopping-cart': PNGShoppingCart,
   'movie-list': PNGMovieList,
   portfolio: PNGWhiteLanding,
+};
+
+export const DETAIL_NAV = {
+  'map-befine': [
+    PNGNavMbf1,
+    PNGNavMbf2,
+    PNGNavMbf3,
+    PNGNavMbf4,
+    PNGNavMbf5,
+    PNGNavMbf6,
+    PNGNavMbf7,
+    PNGNavMbf8,
+    PNGNavMbf9,
+    PNGNavMbf10,
+    PNGNavMbf11,
+  ],
+  'concept-be': [],
+  'shopping-cart': [],
+  'movie-list': [],
+  portfolio: [],
 };
 
 const DETAILS: Detail = {
