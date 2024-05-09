@@ -35,7 +35,12 @@ const NavigationSwiper = ({ setThumbsSwiper, navigations }: Props) => {
       >
         {navigations.map((image, idx) => (
           <SwiperSlide key={idx} className="w-full h-full relative">
-            <Image src={image} alt={`${idx + 1}`} />
+            <Image
+              src={image}
+              alt={`${idx + 1}`}
+              loading="lazy"
+              className="animate-skeleton"
+            />
             <div className="absolute top-2 left-2 w-4 h-4 rounded-full bg-fff text-[12px] flex justify-center items-center">
               {idx + 1}
             </div>
