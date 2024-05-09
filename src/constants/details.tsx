@@ -21,9 +21,10 @@ import PNGTechNext from '../../public/assets/icons/tech-next.png';
 import PNGTechTail from '../../public/assets/icons/tech-tail.png';
 import PNGTechSwiper from '../../public/assets/icons/tech-swiper.png';
 
+import PNGNavPa from '../../public/assets/navigations/pa.png';
+import PNGNavMa from '../../public/assets/navigations/ma.png';
 import PNGNavMbf1 from '../../public/assets/navigations/mbf-1.png';
 import PNGNavMbf2 from '../../public/assets/navigations/mbf-2.png';
-import PNGNavPa from '../../public/assets/navigations/pa.png';
 import PNGNavMbf4 from '../../public/assets/navigations/mbf-4.png';
 import PNGNavMbf5 from '../../public/assets/navigations/mbf-5.png';
 import PNGNavMbf6 from '../../public/assets/navigations/mbf-6.png';
@@ -38,6 +39,22 @@ import PNGNavCb4 from '../../public/assets/navigations/cb-4.png';
 import PNGNavCb5 from '../../public/assets/navigations/cb-5.png';
 import PNGNavCb6 from '../../public/assets/navigations/cb-6.png';
 import PNGNavCb7 from '../../public/assets/navigations/cb-7.png';
+import PNGNavSc1 from '../../public/assets/navigations/sc-1.png';
+import PNGNavSc2 from '../../public/assets/navigations/sc-2.png';
+import PNGNavSc4 from '../../public/assets/navigations/sc-4.png';
+import PNGNavSc5 from '../../public/assets/navigations/sc-5.png';
+import PNGNavSc6 from '../../public/assets/navigations/sc-6.png';
+import PNGNavSc7 from '../../public/assets/navigations/sc-7.png';
+import PNGNavMl1 from '../../public/assets/navigations/ml-1.png';
+import PNGNavMl2 from '../../public/assets/navigations/ml-2.png';
+import PNGNavMl4 from '../../public/assets/navigations/ml-4.png';
+import PNGNavMl5 from '../../public/assets/navigations/ml-5.png';
+import PNGNavMl6 from '../../public/assets/navigations/ml-6.png';
+import PNGNavMl7 from '../../public/assets/navigations/ml-7.png';
+import PNGNavMl8 from '../../public/assets/navigations/ml-8.png';
+import PNGNavPt1 from '../../public/assets/navigations/pt-1.png';
+import PNGNavPt2 from '../../public/assets/navigations/pt-2.png';
+import PNGNavPt3 from '../../public/assets/navigations/pt-3.png';
 
 import SVGFigmaLogo from '../../public/assets/icons/figma-logo.svg';
 import SVGGithubLogoWhite from '../../public/assets/icons/github-logo-white.svg';
@@ -73,14 +90,14 @@ import PNGMovieListResponsive from '../../public/assets/projects/movie-list-resp
 import PNGMovieListScroll from '../../public/assets/projects/movie-list-scroll.gif';
 import PNGMovieListSkeleton from '../../public/assets/projects/movie-list-skeleton.png';
 
-import PNGWhiteLanding from '../../public/assets/white-landing.png';
+import PNGPortfolioLanding from '../../public/assets/portfolio-landing.png';
 
 export const DETAIL_LANDING = {
   'map-befine': PNGMapBeFine,
   'concept-be': PNGConceptBe,
   'shopping-cart': PNGShoppingCart,
   'movie-list': PNGMovieList,
-  portfolio: PNGWhiteLanding,
+  portfolio: PNGPortfolioLanding,
 };
 
 export const DETAIL_NAV = {
@@ -106,9 +123,26 @@ export const DETAIL_NAV = {
     PNGNavCb6,
     PNGNavCb7,
   ],
-  'shopping-cart': [],
-  'movie-list': [],
-  portfolio: [],
+  'shopping-cart': [
+    PNGNavSc1,
+    PNGNavSc2,
+    PNGNavMa,
+    PNGNavSc4,
+    PNGNavSc5,
+    PNGNavSc6,
+    PNGNavSc7,
+  ],
+  'movie-list': [
+    PNGNavMl1,
+    PNGNavMl2,
+    PNGNavMa,
+    PNGNavMl4,
+    PNGNavMl5,
+    PNGNavMl6,
+    PNGNavMl7,
+    PNGNavMl8,
+  ],
+  portfolio: [PNGNavPt1, PNGNavPt2, PNGNavPt3],
 };
 
 const DETAILS: Detail = {
