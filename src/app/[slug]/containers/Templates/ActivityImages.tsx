@@ -47,7 +47,7 @@ const ActivityImages = ({
 
   return (
     <section className="w-full h-full px-[8%] pb-[4%] flex flex-col items-center">
-      <div className="w-full max-w-[1140px] h-[24%] flex flex-col justify-end">
+      <div className="w-full max-w-[1140px] h-[28%] flex flex-col justify-end">
         <h2 className="text-4xl text-fff font-bold">{heading}</h2>
         <div className="w-[48px] h-[2px] bg-fff my-3" />
         {subHeading ? (
@@ -56,7 +56,7 @@ const ActivityImages = ({
           <div className="w-full h-[28px]" />
         )}
       </div>
-      <div className="w-full max-w-[1140px] h-[76%] flex items-center pt-10">
+      <div className="w-full max-w-[1140px] h-[72%] flex items-center pt-12">
         <div className="w-[50%] h-full">
           <div className="w-full h-full flex transition-all ease duration-400 hover:scale-135 hover:translate-y-20">
             <Swiper
