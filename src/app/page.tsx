@@ -34,7 +34,7 @@ export default function Home() {
           <Strength />
         </SwiperSlide>
         <SwiperSlide tag="article" className="overflow-hidden">
-          <Projects />
+          <Projects currentPageIndex={currentPageIndex} />
         </SwiperSlide>
       </Swiper>
     </main>

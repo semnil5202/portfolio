@@ -23,7 +23,7 @@ import PNGTechSwiper from '../../public/assets/icons/tech-swiper.png';
 
 import PNGNavMbf1 from '../../public/assets/navigations/mbf-1.png';
 import PNGNavMbf2 from '../../public/assets/navigations/mbf-2.png';
-import PNGNavMbf3 from '../../public/assets/navigations/mbf-3.png';
+import PNGNavPa from '../../public/assets/navigations/pa.png';
 import PNGNavMbf4 from '../../public/assets/navigations/mbf-4.png';
 import PNGNavMbf5 from '../../public/assets/navigations/mbf-5.png';
 import PNGNavMbf6 from '../../public/assets/navigations/mbf-6.png';
@@ -32,6 +32,12 @@ import PNGNavMbf8 from '../../public/assets/navigations/mbf-8.png';
 import PNGNavMbf9 from '../../public/assets/navigations/mbf-9.png';
 import PNGNavMbf10 from '../../public/assets/navigations/mbf-10.png';
 import PNGNavMbf11 from '../../public/assets/navigations/mbf-11.png';
+import PNGNavCb1 from '../../public/assets/navigations/cb-1.png';
+import PNGNavCb2 from '../../public/assets/navigations/cb-2.png';
+import PNGNavCb4 from '../../public/assets/navigations/cb-4.png';
+import PNGNavCb5 from '../../public/assets/navigations/cb-5.png';
+import PNGNavCb6 from '../../public/assets/navigations/cb-6.png';
+import PNGNavCb7 from '../../public/assets/navigations/cb-7.png';
 
 import SVGFigmaLogo from '../../public/assets/icons/figma-logo.svg';
 import SVGGithubLogoWhite from '../../public/assets/icons/github-logo-white.svg';
@@ -81,7 +87,7 @@ export const DETAIL_NAV = {
   'map-befine': [
     PNGNavMbf1,
     PNGNavMbf2,
-    PNGNavMbf3,
+    PNGNavPa,
     PNGNavMbf4,
     PNGNavMbf5,
     PNGNavMbf6,
@@ -91,7 +97,15 @@ export const DETAIL_NAV = {
     PNGNavMbf10,
     PNGNavMbf11,
   ],
-  'concept-be': [],
+  'concept-be': [
+    PNGNavCb1,
+    PNGNavCb2,
+    PNGNavPa,
+    PNGNavCb4,
+    PNGNavCb5,
+    PNGNavCb6,
+    PNGNavCb7,
+  ],
   'shopping-cart': [],
   'movie-list': [],
   portfolio: [],
