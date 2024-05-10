@@ -30,7 +30,7 @@ const ListItem = ({
         style={{ backgroundColor }}
       />
       <span
-        className={`${textColor} ${fontWeight} ${fontSize} leading-relaxed`}
+        className={`${textColor} ${fontWeight} ${fontSize} leading-relaxed md:text-sm`}
       >
         {children}
       </span>
