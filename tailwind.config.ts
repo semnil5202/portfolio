@@ -20,9 +20,6 @@ const config: Config = {
       sm: '768px',
       lg: '1280px',
     },
-    scale: {
-      130: '1.30',
-    },
     keyframes: {
       initBackground: {
         '0%': {
