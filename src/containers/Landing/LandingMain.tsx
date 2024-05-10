@@ -33,13 +33,13 @@ const LandingMain = () => {
               <ListItem color="fff" bgColor="fff">
                 23.02 - 23.11
               </ListItem>
-              <p className="text-fff mb-6 ml-3 mt-1 md:text-[1.6vw] md:mb-3">
+              <p className="text-fff mb-6 ml-3 mt-1 md:text-[1.41vw] md:mb-[2.5vw]">
                 우아한테크코스 웹 프론트엔드 5기
               </p>
               <ListItem color="fff" bgColor="fff">
                 17.02 - 23.02
               </ListItem>
-              <p className="text-fff ml-3 mt-1 md:text-[1.6vw]">
+              <p className="text-fff ml-3 mt-1 md:text-[1.41vw]">
                 순천향대학교 정보보호학과
               </p>
             </ul>
@@ -64,9 +64,9 @@ const LandingMain = () => {
               </h2>
             </div>
 
-            <div className="flex justify-between mt-24 md:mt-6">
+            <div className="flex justify-between mt-24 md:mt-[5vw]">
               <div className="w-[2px] h-[42px] bg-primary mt-[6px]" />
-              <p className="w-[94%] text-primary-dark leading-relaxed md:text-[1.6vw]">
+              <p className="w-[94%] text-primary-dark leading-relaxed md:text-[1.41vw]">
                 대학에서 정보보호를 전공하고 UX를 다루는 웹 프론트엔드 분야에
                 매력을 느껴, 우아한테크코스에 진학해 10개월간의 웹 프론트엔드
                 과정을 수료했습니다.
