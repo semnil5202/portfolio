@@ -6,14 +6,14 @@ interface Props {
 
 const Projects = ({ currentPageIndex }: Props) => {
   return (
-    <div className="w-[1140px] h-full mx-auto flex flex-col items-center justify-center gap-10 md:w-full md:gap-3">
+    <div className="w-[1140px] h-full mx-auto flex flex-col items-center justify-center gap-10 md:w-full md:gap-[3vw]">
       <div className="flex flex-col items-center">
-        <h2 className="text-fff text-5xl font-semibold md:text-3xl">
+        <h2 className="text-fff text-5xl font-semibold md:text-[4vw]">
           프로젝트
         </h2>
         <div className="w-[60px] h-[1px] bg-fff mt-4 md:hidden" />
       </div>
-      <article className="w-full h-[440px] md:h-[308px]">
+      <article className="w-full h-[440px] md:h-[35vw]">
         <ProjectSwiper currentPageIndex={currentPageIndex} />
       </article>
     </div>
