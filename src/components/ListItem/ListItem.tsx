@@ -16,7 +16,7 @@ const ListItem = ({
   mb = 'mb-0',
   weight = 'light',
   size = 'base',
-  media = 'md:text-sm',
+  media = 'md:text-[1.6vw]',
   children,
 }: Props) => {
   const backgroundColor = `#${bgColor}`;
