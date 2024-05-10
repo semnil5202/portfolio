@@ -6,23 +6,40 @@ import { Mousewheel } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Background from '@/containers/Landing/Background';
 import LandingMain from '@/containers/Landing/LandingMain';
 import Strength from '@/containers/Landing/Strength';
 import Projects from '@/containers/Landing/Projects';
 
+let pageIndexBeforeRouting = 0;
+
 export default function Home() {
-  const [currentPageIndex, setCurrentPageIndex] = useState<number>(0);
+  const [swiper, setSwiper] = useState(null);
+  const [currentPageIndex, setCurrentPageIndex] = useState<number>(
+    pageIndexBeforeRouting
+  );
+
+  useEffect(() => {
+    if (!swiper) return;
+
+    const swiperInstance = swiper as { slideTo: (index: number) => void };
+
+    swiperInstance.slideTo(pageIndexBeforeRouting);
+  }, [swiper]);
 
   return (
     <main className="w-screen h-dvh">
       <Background currentPageIndex={currentPageIndex} />
       <Swiper
+        onSwiper={setSwiper as () => void}
         tag="section"
         speed={700}
         direction="vertical"
-        onSlideChange={(swiper) => setCurrentPageIndex(swiper.activeIndex)}
+        onSlideChange={(swiper) => {
+          setCurrentPageIndex(swiper.activeIndex);
+          pageIndexBeforeRouting = swiper.activeIndex;
+        }}
         modules={[Mousewheel]}
         mousewheel
         className="h-full"
