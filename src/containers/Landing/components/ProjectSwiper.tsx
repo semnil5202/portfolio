@@ -11,17 +11,19 @@ interface Props {
   currentPageIndex: number;
 }
 
+let viewTimeWithRoute = 0;
 const PROJECT_SLIDE_INDEX = 2;
 
 const ProjectSwiper = ({ currentPageIndex }: Props) => {
   const [viewTime, setViewTime] = useState<number>(0);
 
   const isIntoView = currentPageIndex === PROJECT_SLIDE_INDEX;
-  const isFirstView = viewTime === 1;
+  const isFirstView = viewTime === 1 && viewTimeWithRoute === 1;
 
   useEffect(() => {
     if (!isIntoView) return;
 
+    viewTimeWithRoute += 1;
     setViewTime((prev) => prev + 1);
   }, [isIntoView]);
 
