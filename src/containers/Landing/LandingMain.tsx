@@ -20,7 +20,7 @@ const LandingMain = () => {
       <div className="h-full flex items-center">
         <article className="w-2/5 mt-[-100px] animate-init-fade-in-move md:mt-0">
           <div className="flex flex-col w-max mx-auto md:items-center">
-            <div className="w-[300px] h-[300px] rounded-[50%] overflow-hidden md:w-[150px] md:h-[150px]">
+            <div className="w-[300px] h-[300px] rounded-[50%] overflow-hidden md:w-[180px] md:h-[180px]">
               <Image
                 src={PNGPortfolioProfile}
                 alt="프로필"
@@ -39,7 +39,9 @@ const LandingMain = () => {
               <ListItem color="fff" bgColor="fff">
                 17.02 - 23.02
               </ListItem>
-              <p className="text-fff ml-3 mt-1">순천향대학교 정보보호학과</p>
+              <p className="text-fff ml-3 mt-1 md:text-sm">
+                순천향대학교 정보보호학과
+              </p>
             </ul>
           </div>
         </article>
@@ -47,7 +49,7 @@ const LandingMain = () => {
         <article className="w-3/5 ml-[-1%] animate-init-fade-in-move md:ml-0">
           <div className="w-min mx-auto">
             <div>
-              <h2 className="text-5xl leading-snug w-max text-primary-dark font-bold md:text-3xl">
+              <h2 className="text-5xl leading-snug w-max text-primary-dark font-bold md:text-3xl md:leading-snug">
                 안녕하세요.
               </h2>
               <DynamicText
@@ -57,7 +59,7 @@ const LandingMain = () => {
                   '사용자 경험을 중시하는',
                 ]}
               />
-              <h2 className="text-5xl leading-snug w-max text-primary-dark font-bold md:text-3xl">
+              <h2 className="text-5xl leading-snug w-max text-primary-dark font-bold md:text-3xl md:leading-snug">
                 프론트엔드 개발자 이세민입니다.
               </h2>
             </div>
