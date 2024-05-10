@@ -55,6 +55,11 @@ import PNGNavMl8 from '../../public/assets/navigations/ml-8.png';
 import PNGNavPt1 from '../../public/assets/navigations/pt-1.png';
 import PNGNavPt2 from '../../public/assets/navigations/pt-2.png';
 import PNGNavPt3 from '../../public/assets/navigations/pt-3.png';
+import PNGNavPt4 from '../../public/assets/navigations/pt-4.png';
+import PNGNavPt5 from '../../public/assets/navigations/pt-5.png';
+import PNGNavPt6 from '../../public/assets/navigations/pt-6.png';
+import PNGNavPt7 from '../../public/assets/navigations/pt-7.png';
+import PNGNavPt8 from '../../public/assets/navigations/pt-8.png';
 
 import SVGFigmaLogo from '../../public/assets/icons/figma-logo.svg';
 import SVGGithubLogoWhite from '../../public/assets/icons/github-logo-white.svg';
@@ -91,6 +96,13 @@ import PNGMovieListScroll from '../../public/assets/projects/movie-list-scroll.g
 import PNGMovieListSkeleton from '../../public/assets/projects/movie-list-skeleton.png';
 
 import PNGPortfolioLanding from '../../public/assets/portfolio-landing.png';
+import GIFPortfolioVersion1 from '../../public/assets/projects/portfolio-version-1.gif';
+import GIFPortfolioVersion2 from '../../public/assets/projects/portfolio-version-2.gif';
+import GIFPortfolioHint1 from '../../public/assets/projects/portfolio-hint-1.gif';
+import GIFPortfolioHint2 from '../../public/assets/projects/portfolio-hint-2.gif';
+import GIFPortfolioHint3 from '../../public/assets/projects/portfolio-hint-3.gif';
+import GIFPortfolioNavigation from '../../public/assets/projects/portfolio-navigation.gif';
+import GIFPortfolioScrollRestore from '../../public/assets/projects/portfolio-scroll-restore.gif';
 
 export const DETAIL_LANDING = {
   'map-befine': PNGMapBeFine,
@@ -142,7 +154,16 @@ export const DETAIL_NAV = {
     PNGNavMl7,
     PNGNavMl8,
   ],
-  portfolio: [PNGNavPt1, PNGNavPt2, PNGNavPt3],
+  portfolio: [
+    PNGNavPt1,
+    PNGNavPt2,
+    PNGNavPt3,
+    PNGNavPt4,
+    PNGNavPt5,
+    PNGNavPt6,
+    PNGNavPt7,
+    PNGNavPt8,
+  ],
 };
 
 const DETAILS: Detail = {
@@ -781,19 +802,21 @@ const DETAILS: Detail = {
     {
       id: 5,
       template: 'activity',
-      heading: 'IntersectionObserver를 활용한 무한 스크롤 구현',
+      heading: 'IntersectionObserver를 활용한 무한 스크롤과 Scroll To Top 구현',
       image: PNGMovieListScroll,
       contents: [
         {
           heading: '문제 상황',
           descriptions: [
             "영화 목록을 추가 조회할 때마다 '더 불러오기'와 같은 버튼을 반복적으로 클릭하다 보니, 페이지를 이용하는데 불편함이 있었습니다.",
+            'Header가 고정되지 않고 스크롤 되어 넘어가는 방식이었기 때문에, 스크롤 이후 Header에 위치한 영화 검색 버튼을 사용하려면 다시 최상단까지 스크롤을 진행해야 했습니다.',
           ],
         },
         {
           heading: '해결 과정',
           descriptions: [
             'IntersectionObserver를 활용하여 사용자가 마지막 영화 포스터까지 스크롤 했을 경우를 감지하여 별도의 액션 없이 추가 조회를 수행할 수 있도록 했습니다.',
+            'Window의 ScrollTo 메서드를 사용하여 Scroll To Top 기능을 구현함으로써, 영화 검색을 위한 번거로움을 해결할 수 있었습니다.',
           ],
         },
       ],
@@ -822,19 +845,21 @@ const DETAILS: Detail = {
     {
       id: 7,
       template: 'activity',
-      heading: '반응형 웹 적용',
+      heading: '반응형 웹 적용 및 Bottom Sheet 동적 적용',
       image: PNGMovieListResponsive,
       contents: [
         {
           heading: '문제 상황',
           descriptions: [
             'PC 환경을 기준으로 미션을 구현했기에 모바일 및 태블릿 환경에서 웹 페이지를 확인하기에는 불편함이 있었습니다.',
+            '모바일 환경에서 Modal이 화면 중앙에 위치하게 될 경우 Modal을 조작하는게 불편했습니다.',
           ],
         },
         {
           heading: '해결 과정',
           descriptions: [
             'CSS Media Query를 활용하여 반응형 웹을 적용함으로써 PC, 태블릿, 모바일 각각의 환경에 적합한 사용성을 제공할 수 있도록 했습니다.',
+            'CSS Media Query를 활용하여 모바일 환경으로 인식되었을 때 Modal의 위치를 하단으로 고정하여 Bottom Sheet 형태로 전환될 수 있도록 했습니다.',
           ],
         },
       ],
@@ -853,7 +878,7 @@ const DETAILS: Detail = {
       id: 1,
       template: 'title',
       title: '포트폴리오',
-      description: 'Next.js를 활용하여 만든 포트폴리오 웹 페이지',
+      description: 'Next.js를 활용하여 만든 웹 포트폴리오',
       links: [
         {
           name: 'Github',
@@ -865,9 +890,9 @@ const DETAILS: Detail = {
     {
       id: 2,
       template: 'introduction',
-      heading: '프로젝트 소개',
+      heading: '포트폴리오 소개',
       intro:
-        'Next.js를 사용하여 SSG 방식으로 배포한 웹 포트폴리오입니다. Swiper JS를 활용하여 PPT 형식의 포트폴리오를 구현했습니다. 추후 상수로 관리하고 있는 데이터를 DB에 옮기고 use sever 방식을 활용해볼 예정입니다.',
+        'Next.js 14 버전을 사용하여 SSG 방식으로 배포한 웹 포트폴리오입니다. 기존 평범한 웹 형식의 포트폴리오에서 Swiper JS를 활용하여 PPT 형식의 포트폴리오를 구현했습니다. 내용은 지속적으로 업데이트 되며, 추후 상수로 관리하고 있는 데이터를 DB에 옮기고 use sever 방식을 활용해볼 예정입니다.',
       date: '24.05 - 현재',
       member: 'FE: 1명',
       techs: [
@@ -879,6 +904,94 @@ const DETAILS: Detail = {
     },
     {
       id: 3,
+      template: 'separator',
+      type: 'separate',
+      heading: '포트폴리오 특징',
+    },
+    {
+      id: 4,
+      template: 'activity-images',
+      heading: '평범한 웹 형식에서 PPT 컨셉의 포트폴리오로 재구성',
+      images: [GIFPortfolioVersion1, GIFPortfolioVersion2],
+      contents: [
+        {
+          heading: '1.0.0 버전의 포트폴리오',
+          descriptions: [
+            '기존의 포트폴리오는 평범한 웹 형식의 포트폴리오였습니다. 포트폴리오로서 특색을 느낄 수 없었고, 투박한 레이아웃 형식 때문에 텍스트의 배치가 가로로 넓게 분산되어 가독성이 떨어졌습니다.',
+          ],
+        },
+        {
+          heading: '2.0.0 버전의 포트폴리오',
+          descriptions: [
+            '앞으로 프로젝트를 꾸준히 진행할 계획이며, 활동한 내용을 지속적으로 기록할 예정입니다. 포트폴리오의 특색을 살리고 발표에 사용될 경우까지 고려하여 PPT 형식의 포트폴리오로 업데이트 했습니다.',
+            '템플릿 단위로 레이아웃을 구현하여 1.0.0 버전 대비 가독성을 개선하고, Next.js의 동적 라우팅 방식을 활용하여 템플릿 재사용성을 높일 수 있었습니다.',
+            'Full Page Scroll 방식을 활용하여 보다 생동감 있고, PPT 미리보기 네비게이션, 힌트 기능 등 편의성 기능들을 추가해 포트폴리오 확인을 편리하게 진행할 수 있도록 했습니다.',
+          ],
+        },
+      ],
+    },
+    {
+      id: 5,
+      template: 'activity',
+      heading: '프로젝트 페이지 미리보기 네비게이션 구현',
+      image: GIFPortfolioNavigation,
+      contents: [
+        {
+          heading: '문제 상황',
+          descriptions: [
+            'PPT 형식의 프로젝트 페이지는 Full Pagination을 위해 사용자의 스크롤을 제어하기 때문에 페이지가 많아질수록 스크롤 시간이 비례하여 증가했습니다. 주변 지인들의 피드백을 받아본 결과 원하는 페이지로의 이동까지 시간이 오래 걸려 답답한 느낌을 든다는 의견을 받았습니다.',
+          ],
+        },
+        {
+          heading: '해결 과정',
+          descriptions: [
+            'Thumb Swiper 기능을 활용하여 프로젝트 페이지 구조를 볼 수 있고 해당 페이지로 이동할 수 있는 네비게이션 기능을 구현해 사용자가 원하는 페이지를 보다 빠르고 간편하게 이동할 수 있도록 했습니다.',
+          ],
+        },
+      ],
+    },
+    {
+      id: 6,
+      template: 'activity-images',
+      heading: '가려진 요소를 알려주는 힌트 기능 구현',
+      images: [GIFPortfolioHint1, GIFPortfolioHint2, GIFPortfolioHint3],
+      contents: [
+        {
+          heading: '문제 상황',
+          descriptions: [
+            '스와이프 영역 및 프로젝트 페이지 네비게이션의 경우 사용자가 액션을 취하기 전까지는 화면에서 보이지 않는 요소가 존재했습니다. 지인의 사용을 지켜본 결과 가려진 요소에 대해서 인지하지 못하고 넘어가는 경우가 자주 발생했습니다.',
+          ],
+        },
+        {
+          heading: '해결 과정',
+          descriptions: [
+            '페이지마다 가려진 요소의 유무를 파악하여 최초 접속에 한에서 가려진 요소의 일부를 화면에 잠시 노출시키는 힌트 기능을 구현했습니다. 이를 통해 사용자가 가려진 요소를 인지하는데 도움이 되도록 했습니다.',
+          ],
+        },
+      ],
+    },
+    {
+      id: 7,
+      template: 'activity',
+      heading: '메인 페이지로 재진입 시 스크롤 복원 기능 구현',
+      image: GIFPortfolioScrollRestore,
+      contents: [
+        {
+          heading: '문제 상황',
+          descriptions: [
+            '프로젝트 페이지에서 뒤로가기 또는 홈 버튼을 클릭해서 메인 페이지로 재진입 했을 때, 첫 번째 슬라이드로 이동되어 다른 프로젝트를 확인하는데 번거롭다는 피드백을 받았습니다.',
+          ],
+        },
+        {
+          heading: '해결 과정',
+          descriptions: [
+            '메인 페이지는 Swiper를 통해 Full Screen Scroll이 적용되어 있었기 때문에, Next.js에서 기본으로 제공하는 스크롤 복원 기능이 정상적으로 동작하지 않았습니다. 하나의 변수로 스크롤 복원 기능을 구현할 수 있어서 전역 상태는 다소 과하다고 판단해, Closure의 특성을 살려 컴포넌트 외부 변수와 React의 State를 결합해 스크롤 복원 기능을 구현했습니다.',
+          ],
+        },
+      ],
+    },
+    {
+      id: 8,
       template: 'separator',
       type: 'end',
       heading: '괜찮을지도',
