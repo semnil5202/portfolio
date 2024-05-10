@@ -12,7 +12,7 @@ const RoundedImage = ({ src, alt, bgColor = 'fff' }: Props) => {
   return (
     // TODO: 테일윈드 background Color 적용 불가 원인 파악 후 style attr 제거
     <div
-      className="w-[250px] h-[250px] rounded-[50%] overflow-hidden md:w-[120px] md:h-[120px]"
+      className="w-[250px] h-[250px] rounded-[50%] overflow-hidden md:w-[18vw] md:h-[18vw]"
       style={{ backgroundColor }}
     >
       <Image src={src} alt={alt} loading="lazy" className="animate-skeleton" />
