@@ -68,7 +68,7 @@ const ActivityImages = ({
               modules={[Pagination]}
               grabCursor
               className="w-full h-max"
-              style={{ '--swiper-pagination-color': '#2A392F' } as {}}
+              style={{ '--swiper-pagination-color': '#191F1E' } as {}}
             >
               {images.map((image, idx) => (
                 <SwiperSlide key={idx}>
