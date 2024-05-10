@@ -6,6 +6,7 @@ interface Props {
   mb?: string;
   weight?: string;
   size?: string;
+  media?: string;
   children: ReactNode;
 }
 
@@ -15,6 +16,7 @@ const ListItem = ({
   mb = 'mb-0',
   weight = 'light',
   size = 'base',
+  media = 'md:text-sm',
   children,
 }: Props) => {
   const backgroundColor = `#${bgColor}`;
@@ -23,14 +25,14 @@ const ListItem = ({
   const fontSize = `text-${size}`;
 
   return (
-    <li className={`flex items-start gap-2 ${mb}`}>
+    <li className={`flex items-start gap-2 ${mb} md:mb-[2px]`}>
       {/* TODO: 테일윈드 background Color 적용 불가 원인 파악 후 style attr 제거 */}
       <div
         className={`min-w-1 min-h-1 rounded-[50%] mt-[10px]`}
         style={{ backgroundColor }}
       />
       <span
-        className={`${textColor} ${fontWeight} ${fontSize} leading-relaxed md:text-sm`}
+        className={`${textColor} ${fontWeight} ${fontSize} leading-relaxed ${media}`}
       >
         {children}
       </span>

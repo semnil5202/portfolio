@@ -7,8 +7,8 @@ interface Props {
 
 const Tech = ({ image, name }: Props) => {
   return (
-    <li className="flex w-[110px] h-[174px] flex-col items-center">
-      <div className="w-[110px] h-[110px] rounded-md overflow-hidden">
+    <li className="flex w-[110px] h-[174px] flex-col items-center md:w-[72px] md:h-[108px]">
+      <div className="w-[110px] h-[110px] rounded-md overflow-hidden md:w-[72px] md:h-[72px]">
         <Image
           src={image}
           alt={name}
@@ -16,7 +16,9 @@ const Tech = ({ image, name }: Props) => {
           className="animate-skeleton"
         />
       </div>
-      <p className="text-fff text-center font-extralight mt-2">{name}</p>
+      <p className="text-fff text-center font-extralight mt-2 md:mt-1 md:text-xs">
+        {name}
+      </p>
     </li>
   );
 };

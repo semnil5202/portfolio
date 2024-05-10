@@ -17,8 +17,8 @@ const Separator = ({ type, heading, link, svg }: Props) => {
     return (
       <section className="relative w-full h-full flex justify-center items-center">
         <div className="flex flex-col items-center">
-          <p className="text-7xl text-fff font-bold">{heading}</p>
-          <div className="w-[30%] h-[2px] bg-fff mt-10 mr-4" />
+          <p className="text-7xl text-fff font-bold md:text-5xl">{heading}</p>
+          <div className="w-[30%] h-[2px] bg-fff mt-10 mr-4 md:mt-5" />
         </div>
       </section>
     );
@@ -34,10 +34,12 @@ const Separator = ({ type, heading, link, svg }: Props) => {
               <Svg />
             </div>
           )}
-          <p className="text-7xl text-fff font-bold mr-4">{heading}</p>
+          <p className="text-7xl text-fff font-bold mr-4 md:text-5xl">
+            {heading}
+          </p>
           <SVGNextIcon />
         </div>
-        <div className="w-[30%] h-[2px] bg-fff mt-10 mr-4" />
+        <div className="w-[30%] h-[2px] bg-fff mt-10 mr-4 md:mt-5 md:w-[20%]" />
       </Link>
     </section>
   );
