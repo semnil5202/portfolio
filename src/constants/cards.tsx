@@ -16,7 +16,8 @@ const CARDS = [
     id: 2,
     src: PNGConceptBe,
     title: '컨셉비',
-    description: '다양한 종목의 프로젝트 인원들을 구인할 수 있는 서비스',
+    description:
+      '공모전, 스터디 등을 위한 인원을 구인할 수 있는 모바일 웹 서비스',
     slug: 'concept-be',
   },
   {
@@ -31,15 +32,14 @@ const CARDS = [
     id: 4,
     src: PNGMovieList,
     title: '무비 리스트',
-    description:
-      'TMDB를 활용해 영화 목록을 만드는 우아한테크코스 Vanilla JS 미션',
+    description: 'TMDB로 영화 목록을 만드는 우아한테크코스 Vanilla JS 미션',
     slug: 'movie-list',
   },
   {
     id: 5,
     src: PNGPortfolio,
     title: '포트폴리오',
-    description: 'Next.js를 사용하여 만든 포트폴리오 웹 페이지',
+    description: 'Next.js를 활용하여 만든 웹 포트폴리오',
     slug: 'portfolio',
   },
 ];

@@ -9,7 +9,7 @@ import Link from 'next/link';
 const LandingMain = () => {
   return (
     <>
-      <div className="fixed flex flex-col h-[100px] justify-between right-8 top-8 animate-init-fade-in-move md:right-4 md:top-4">
+      <div className="fixed flex flex-col h-[100px] justify-between right-8 top-8 animate-init-fade-in-move md:right-2 md:top-2 md:h-[96px]">
         <Link href="https://github.com/semnil5202" target="_blank">
           <SVGGithubLogo />
         </Link>
@@ -47,7 +47,7 @@ const LandingMain = () => {
         <article className="w-3/5 ml-[-1%] animate-init-fade-in-move md:ml-0">
           <div className="w-min mx-auto">
             <div>
-              <h2 className="text-5xl leading-snug w-max text-primary-dark font-bold md:text-3xl md:leading-normal">
+              <h2 className="text-5xl leading-snug w-max text-primary-dark font-bold md:text-3xl">
                 안녕하세요.
               </h2>
               <DynamicText
@@ -57,7 +57,7 @@ const LandingMain = () => {
                   '사용자 경험을 중시하는',
                 ]}
               />
-              <h2 className="text-5xl leading-snug w-max text-primary-dark font-bold md:text-3xl md:leading-normal">
+              <h2 className="text-5xl leading-snug w-max text-primary-dark font-bold md:text-3xl">
                 프론트엔드 개발자 이세민입니다.
               </h2>
             </div>
