@@ -77,7 +77,7 @@ import GIFMapBeFineResponsive from '../../public/assets/projects/mapbefine-respo
 
 import SVGConceptBeLogoBig from '../../public/assets/icons/concept-be-logo-big.svg';
 import SVGConceptLogo from '../../public/assets/icons/concept-be-logo.svg';
-import PNGConceptBe from '../../public/assets/concept-be-landing.png';
+import PNGConceptBe from '../../public/assets/conceptbe-landing.png';
 import GIFConceptBeDebouncing from '../../public/assets/projects/conceptbe-debouncing.gif';
 import GIFConceptBeScroll from '../../public/assets/projects/conceptbe-scroll.gif';
 
@@ -293,7 +293,7 @@ const DETAILS: Detail = {
         {
           heading: 'Swiper 적용 후',
           descriptions: [
-            'Swiper 라이브러리를 적용한 후엔 목표한 콘텐츠 유입률이 전체 페이지 조회수 10,807회 중 2,321회로 21.4%를 기록하여, 기존보다 유입률을 12% 증가시킬 수 있었습니다.',
+            'Swiper 라이브러리를 적용한 후엔 목표한 콘텐츠 유입률이 전체 페이지 조회수 10,807회 중 2,321회로 21.4%를 기록하여, 기존보다 유입률을 약 12% 증가시킬 수 있었습니다.',
             '서비스에 특화 되도록 Swiper 라이브러리를 직접 구현한 덕분에, 팀원들이 이미지 조회 등의 영역을 구현할 때 시간을 절감할 수 있었다는 긍정적인 피드백을 받을 수 있었습니다.',
           ],
         },
@@ -542,7 +542,7 @@ const DETAILS: Detail = {
         {
           heading: '해결 과정',
           descriptions: [
-            '제어 컴포넌트 방식을 활용하여 Form을 구성하였고, 잘못된 입력값이 발생할 경우 그 즉시 피드백을 주어 수정할 수 있도록 유도했습니다. 또한 form 내의 input, textarea가 많아짐에 따라 상태 관리 및 유효성 검사 로직이 중복되었고, 이를 useField라는 Custom Hook으로 분리해 재사용하여 코드 가독성을 높였습니다.',
+            '제어 컴포넌트 방식을 활용하여 Form을 구성하였고, 잘못된 입력값이 발생할 경우 그 즉시 피드백을 주어 수정할 수 있도록 유도했습니다. 또한 Form 내의 Input, Textarea가 많아짐에 따라 상태 관리 및 유효성 검사 로직이 중복되었고, 이를 useField라는 Custom Hook으로 분리해 재사용하여 코드 가독성을 높였습니다.',
             "Ref와 setTimeout 메서드를 활용하여 디바운싱 기능을 구현했습니다. 유저의 입력이 300ms 동안 없을 경우 닉네임 작성을 완료했다고 판단하여, 자동으로 서버에 중복 검사 요청을 보내도록 했습니다. 이를 통해 '닉네임 중복 확인'과 같은 버튼을 누를 필요 없이 보다 편리하게 닉네임 중복 검사를 수행할 수 있었습니다.",
           ],
         },
@@ -624,7 +624,7 @@ const DETAILS: Detail = {
         {
           heading: '배운 점',
           descriptions: [
-            'MSW를 활용하면 API 로직을 미리 작성하고 테스트해 볼 수 있어, 보다 로직을 안정적으로 작성할 수 있다는 점에서 그 활용 가치를 이해할 수 있었습니다. 이뿐만 아니라, E2E 테스트를 진행할 때 실제 서버 대신 MSW를 활용하면 응답 시간을 설정할 수 있어 테스트 시간 절약 및 오 테스트 비중을 줄일 수 있었습니다.',
+            'MSW를 활용하면 API 로직을 미리 작성하고 테스트해 볼 수 있어, 로직을 보다 안정적으로 작성할 수 있다는 점에서 그 활용 가치를 이해할 수 있었습니다. 이뿐만 아니라, E2E 테스트를 진행할 때 실제 서버 대신 MSW를 활용하면 응답 시간을 설정할 수 있어 테스트 시간 절약 및 오 테스트 비중을 줄일 수 있었습니다.',
           ],
         },
       ],
