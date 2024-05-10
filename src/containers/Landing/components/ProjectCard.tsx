@@ -10,8 +10,8 @@ interface Props {
 
 const ProjectCard = ({ src, title, description, slug }: Props) => {
   return (
-    <Link href={`/${slug}`}>
-      <div className="w-[282px] cursor-pointer p-[16px]">
+    <Link href={`/${slug}`} className="cursor-grab">
+      <div className="w-[282px] p-[16px]">
         <div className="w-[250px] h-[250px] rounded-xl overflow-hidden">
           <Image
             src={src}

@@ -1,11 +1,10 @@
 import localFont from 'next/font/local';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
 import './globals.css';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
-import 'swiper/css/effect-creative';
+import 'swiper/css/thumbs';
 
 const pretendard = localFont({
   src: '../../public/fonts/PretendardVariable.woff2',

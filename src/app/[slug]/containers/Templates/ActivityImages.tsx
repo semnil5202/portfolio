@@ -5,7 +5,7 @@ import { Pagination } from 'swiper/modules';
 
 import ListItem from '@/components/ListItem/ListItem';
 import Image, { StaticImageData } from 'next/image';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 
 interface Props {
