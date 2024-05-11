@@ -33,8 +33,8 @@ const Introduction = ({
 
   return (
     <TemplateLayout heading={heading}>
-      <div className="w-full max-w-[1140px] h-[72%] flex pt-6">
-        <ul className="w-[50%] h-full flex flex-col pr-10">
+      <div className="w-full max-w-[1140px] h-[72%] flex pt-6 lg:h-[80%] lg:pt-3 md:h-[84%] md:pt-[0.1vw]">
+        <ul className="w-[50%] h-full flex flex-col pr-10 md:pr-[2.1vw]">
           <IntroductionContent heading="설명" content={intro} />
           {value && <IntroductionContent heading="핵심 가치" content={value} />}
           {contribution && (
@@ -61,7 +61,7 @@ const Introduction = ({
           </div>
         </ul>
         <div className="w-[50%] h-full">
-          <ul className="flex max-w-[504px] mx-auto items-center flex-wrap gap-2 pl-10">
+          <ul className="flex max-w-[504px] mx-auto items-center flex-wrap gap-2 pl-10 md:pl-0 md:mt-[-11.5%]">
             {techs.map(({ image, name }) => (
               <Tech key={name} image={image} name={name} />
             ))}
