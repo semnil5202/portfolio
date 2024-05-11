@@ -1,9 +1,11 @@
 import localFont from 'next/font/local';
 import type { Metadata } from 'next';
+
 import './globals.css';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/thumbs';
+import 'swiper/css/zoom';
 
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';

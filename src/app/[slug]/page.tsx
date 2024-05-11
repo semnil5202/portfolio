@@ -1,7 +1,7 @@
 'use client';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Mousewheel, Pagination, Thumbs } from 'swiper/modules';
+import { Mousewheel, Pagination, Thumbs, Zoom } from 'swiper/modules';
 
 import { useState } from 'react';
 import Background from './containers/Background';
@@ -34,8 +34,9 @@ const ProjectDetail = ({ params }: { params: { slug: SlugType } }) => {
         }}
         thumbs={{ swiper: thumbsSwiper }}
         onSlideChange={(swiper) => setCurrentPageIndex(swiper.activeIndex)}
-        modules={[Mousewheel, Pagination, Thumbs]}
+        modules={[Mousewheel, Pagination, Thumbs, Zoom]}
         mousewheel
+        zoom
         className="h-full"
         style={
           {

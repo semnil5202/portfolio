@@ -1,7 +1,7 @@
 'use client';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Mousewheel } from 'swiper/modules';
+import { Mousewheel, Zoom } from 'swiper/modules';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -40,7 +40,7 @@ export default function Home() {
           setCurrentPageIndex(swiper.activeIndex);
           pageIndexBeforeRouting = swiper.activeIndex;
         }}
-        modules={[Mousewheel]}
+        modules={[Mousewheel, Zoom]}
         mousewheel
         className="h-full"
       >
