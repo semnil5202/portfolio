@@ -26,7 +26,7 @@ const LandingMain = () => {
       <div className="h-full flex items-center">
         <article className="w-2/5 mt-[-100px] animate-init-fade-in-move md:mt-0">
           <div className="flex flex-col w-max mx-auto">
-            <div className="w-[300px] h-[300px] rounded-[50%] overflow-hidden md:w-[24vw] md:h-[24vw]">
+            <div className="w-[300px] h-[300px] rounded-[50%] overflow-hidden md:w-[22vw] md:h-[22vw]">
               <Image
                 src={PNGPortfolioProfile}
                 alt="프로필"
@@ -55,7 +55,7 @@ const LandingMain = () => {
         <article className="w-3/5 ml-[-1%] animate-init-fade-in-move">
           <div className="w-min mx-auto">
             <div>
-              <h2 className="text-5xl leading-snug w-max text-primary-dark font-bold lg:text-4xl lg:leading-normal md:text-[3.7vw]">
+              <h2 className="text-5xl leading-snug w-max text-primary-dark font-bold lg:text-4xl lg:leading-normal md:text-[3.7vw] md:font-semibold">
                 안녕하세요.
               </h2>
               <DynamicText
@@ -65,7 +65,7 @@ const LandingMain = () => {
                   '사용자 경험을 중시하는',
                 ]}
               />
-              <h2 className="text-5xl leading-snug w-max text-primary-dark font-bold lg:text-4xl lg:leading-normal md:text-[3.7vw]">
+              <h2 className="text-5xl leading-snug w-max text-primary-dark font-bold lg:text-4xl lg:leading-normal md:text-[3.7vw] md:font-semibold">
                 프론트엔드 개발자 이세민입니다.
               </h2>
             </div>
