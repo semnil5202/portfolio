@@ -11,8 +11,8 @@ interface Props {
 const ProjectCard = ({ src, title, description, slug }: Props) => {
   return (
     <Link href={`/${slug}`} className="cursor-grab flex justify-center">
-      <div className="w-[250px] flex flex-col items-center lg:w-[22vw]">
-        <div className="w-[250px] h-[250px] rounded-xl overflow-hidden lg:w-[22vw] lg:h-[22vw]">
+      <div className="w-[250px] flex flex-col items-center lg:w-[22vw] md:w-[22vw]">
+        <div className="w-[250px] h-[250px] rounded-xl overflow-hidden lg:w-[22vw] lg:h-[22vw] md:w-[22vw] md:h-[22vw]">
           <Image
             src={src}
             alt={title}
@@ -21,8 +21,10 @@ const ProjectCard = ({ src, title, description, slug }: Props) => {
           />
         </div>
         <div>
-          <h4 className="text-fff text-xl font-semibold mt-4">{title}</h4>
-          <p className="text-fff font-light mt-2 leading-relaxed">
+          <h4 className="text-fff text-xl font-semibold mt-4 md:text-[2vw] md:mt-[0.8vw]">
+            {title}
+          </h4>
+          <p className="text-fff font-light mt-2 leading-relaxed md:text-[1.6vw] md:mt-[0.4vw]">
             {description}
           </p>
         </div>
