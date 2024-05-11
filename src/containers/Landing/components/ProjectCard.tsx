@@ -11,8 +11,8 @@ interface Props {
 const ProjectCard = ({ src, title, description, slug }: Props) => {
   return (
     <Link href={`/${slug}`} className="cursor-grab flex justify-center">
-      <div className="w-[250px] flex flex-col items-center">
-        <div className="w-[250px] h-[250px] rounded-xl overflow-hidden">
+      <div className="w-[250px] flex flex-col items-center lg:w-[22vw]">
+        <div className="w-[250px] h-[250px] rounded-xl overflow-hidden lg:w-[22vw] lg:h-[22vw]">
           <Image
             src={src}
             alt={title}

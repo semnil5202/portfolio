@@ -47,7 +47,7 @@ const LandingMain = () => {
         <article className="w-3/5 ml-[-1%] animate-init-fade-in-move">
           <div className="w-min mx-auto">
             <div>
-              <h2 className="text-5xl leading-snug w-max text-primary-dark font-bold">
+              <h2 className="text-5xl leading-snug w-max text-primary-dark font-bold lg:text-4xl lg:leading-normal">
                 안녕하세요.
               </h2>
               <DynamicText
@@ -57,7 +57,7 @@ const LandingMain = () => {
                   '사용자 경험을 중시하는',
                 ]}
               />
-              <h2 className="text-5xl leading-snug w-max text-primary-dark font-bold">
+              <h2 className="text-5xl leading-snug w-max text-primary-dark font-bold lg:text-4xl lg:leading-normal">
                 프론트엔드 개발자 이세민입니다.
               </h2>
             </div>

@@ -18,7 +18,8 @@ const config: Config = {
     },
     screens: {
       sm: { min: '1px', max: '449px' },
-      md: { min: '450px', max: '1139px' },
+      md: { min: '450px', max: '949px' },
+      lg: { min: '950px', max: '1139px' },
     },
     keyframes: {
       initBackground: {
