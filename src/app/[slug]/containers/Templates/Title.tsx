@@ -17,7 +17,7 @@ const Title = ({ title, description, links }: Props) => {
       <HomeIcon position="fixed" />
       <div className="w-3/6 h-full flex flex-col items-center mt-[-40px] justify-center animate-init-fade-in-move md:mt-[-2.1vw]">
         <div className="ml-[-20px] max-w-[70%]">
-          <h1 className="text-7xl text-fff font-bold lg:text-6xl md:text-[5vw]">
+          <h1 className="text-7xl text-fff font-bold lg:text-6xl md:text-[5vw] md:font-medium">
             {title}
           </h1>
           <div className="flex mt-6 md:mt-[2vw]">
