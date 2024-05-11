@@ -49,7 +49,7 @@ const ActivityImages = ({
 
   return (
     <TemplateLayout heading={heading} subHeading={subHeading}>
-      <div className="w-full max-w-[1140px] h-[72%] flex items-center pt-12">
+      <div className="w-full max-w-[1140px] h-[74%] flex items-center pt-12 lg:h-[80%] lg:pt-6">
         <div className="w-[50%] h-full">
           <div className="w-full h-full flex transition-all ease duration-400 hover:scale-125 hover:translate-y-14">
             <Swiper

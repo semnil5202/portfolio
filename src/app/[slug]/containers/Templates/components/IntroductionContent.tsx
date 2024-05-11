@@ -8,7 +8,7 @@ interface Props {
 
 const IntroductionContent = ({ heading, content, isColumnLayout }: Props) => {
   return (
-    <div className={`${isColumnLayout && 'pb-8'}`}>
+    <div className="pb-8 lg:pb-[2vw]">
       <ListItem color="fff" bgColor="fff" mb="mb-2" weight="semibold" size="lg">
         {heading}
       </ListItem>
