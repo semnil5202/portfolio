@@ -21,7 +21,7 @@ const ProjectCard = ({ src, title, description, slug }: Props) => {
           />
         </div>
         <div>
-          <h4 className="text-fff text-xl font-semibold mt-4 md:text-[2vw] md:mt-[0.2vw]">
+          <h4 className="text-fff text-xl font-semibold mt-4 md:text-[2vw] md:mt-[0.2vw] md:font-medium">
             {title}
           </h4>
           <p className="text-fff font-light mt-2 leading-relaxed md:text-[1.6vw] md:mt-[0.1vw]">
