@@ -7,9 +7,9 @@ interface Props {
 
 const HomeIcon = ({ position }: Props) => {
   return (
-    <Link href="/" className={`${position} top-[6%] left-[4%]`}>
+    <Link href="/" className={`${position} top-[6%] left-[4%] md:left-[6%]`}>
       <div className="flex items-center">
-        <SVGHomeLogo />
+        <SVGHomeLogo className="md:w-[24px] md:h-[24px]" viewBox="0 0 40 40" />
       </div>
     </Link>
   );
