@@ -8,6 +8,7 @@ import ListItem from '@/components/ListItem/ListItem';
 import Image, { StaticImageData } from 'next/image';
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import ActivityContents from './components/ActivityContents';
 
 interface Props {
   heading: string;
@@ -84,38 +85,7 @@ const ActivityImages = ({
           </div>
         </div>
         <div className="w-[50%] h-full flex flex-col pl-12">
-          {contents.map(({ heading, descriptions }, idx) => (
-            <div key={idx} className="mb-6 last:mb-0">
-              <p className="text-lg text-fff font-semibold mb-2">{heading}</p>
-              {descriptions.map((description, idx) => (
-                <ListItem
-                  key={idx}
-                  color="fff"
-                  bgColor="fff"
-                  mb="mb-2"
-                  weight="extralight"
-                >
-                  {description}
-                </ListItem>
-              ))}
-            </div>
-          ))}
-          {link && (
-            <div className="mb-6 last:mb-0">
-              <p className="text-lg text-fff font-semibold mb-2">
-                {link.heading}
-              </p>
-              <ListItem bgColor="fff" mb="mb-2" weight="extralight">
-                <Link
-                  href={link.href}
-                  target="_blank"
-                  className="underline text-link hover:text-fff"
-                >
-                  {link.name}
-                </Link>
-              </ListItem>
-            </div>
-          )}
+          <ActivityContents contents={contents} link={link} />
         </div>
       </div>
     </TemplateLayout>

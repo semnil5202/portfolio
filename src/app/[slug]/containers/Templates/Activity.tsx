@@ -1,7 +1,6 @@
-import ListItem from '@/components/ListItem/ListItem';
 import Image, { StaticImageData } from 'next/image';
-import Link from 'next/link';
 import TemplateLayout from './components/TemplateLayout';
+import ActivityContents from './components/ActivityContents';
 
 interface Props {
   heading: string;
@@ -33,40 +32,7 @@ const Activity = ({ heading, subHeading, image, contents, link }: Props) => {
           </div>
         </div>
         <div className="w-[50%] h-full flex flex-col pl-12">
-          {contents.map(({ heading, descriptions }, idx) => (
-            <div key={heading} className="mb-6 last:mb-0">
-              <p className="text-lg text-fff font-semibold mb-2">{heading}</p>
-              {descriptions.map((description, idx) => (
-                <ListItem
-                  key={description}
-                  color="fff"
-                  bgColor="fff"
-                  mb="mb-2"
-                  weight="extralight"
-                  media=""
-                >
-                  {description}
-                </ListItem>
-              ))}
-            </div>
-          ))}
-          {link && (
-            <div className="mb-6 last:mb-0">
-              <p className="text-lg text-fff font-semibold mb-2">
-                {link.heading}
-              </p>
-              <ListItem bgColor="fff" mb="mb-2" weight="extralight">
-                <Link
-                  href={link.href}
-                  target="_blank"
-                  className="underline text-link hover:text-fff"
-                  media=""
-                >
-                  {link.name}
-                </Link>
-              </ListItem>
-            </div>
-          )}
+          <ActivityContents contents={contents} link={link} />
         </div>
       </div>
     </TemplateLayout>
