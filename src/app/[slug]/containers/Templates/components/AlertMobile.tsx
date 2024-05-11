@@ -12,7 +12,7 @@ const AlertMobile = () => {
       </p>
       <p className="w-[320px] text-sm text-fff font-extralight mb-10 leading-relaxed text-center break-keep">
         모바일 환경에선 페이지 특성상 세로로 보기가 어렵습니다. <br /> 아이폰
-        Mini 기종과 같이 화면 크기가 작은 기종은 PC로 접속해 주세요.
+        미니와 같이 화면 크기가 작은 기종은 PC로 접속해 주세요.
       </p>
       <p className="w-[320px] text-sm text-link font-extralight leading-relaxed text-center break-keep">
         프로젝트 상세 페이지에서 PPT 미리 보기를 열려면 좌측 스크롤 바를 터치해

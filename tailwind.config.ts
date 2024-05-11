@@ -17,8 +17,8 @@ const config: Config = {
       transparent: 'transparent',
     },
     screens: {
-      sm: { min: '1px', max: '799px' },
-      md: { min: '800px', max: '1139px' },
+      sm: { min: '1px', max: '449px' },
+      md: { min: '450px', max: '1139px' },
     },
     keyframes: {
       initBackground: {
