@@ -8,10 +8,10 @@ import Link from 'next/link';
 const Strength = () => {
   return (
     <div className="h-full flex items-center">
-      <div className="w-[1140px] h-max flex justify-between mx-auto lg:w-full lg:justify-around">
+      <div className="w-[1140px] h-max flex justify-between mx-auto lg:w-full lg:justify-around md:w-full md:justify-around">
         <div className="flex flex-col items-center">
           <RoundedImage src={PNGCoding} alt="개발 일러스트" bgColor="fff" />
-          <ul className="w-[300px] mt-10 font-light">
+          <ul className="w-[300px] mt-10 font-light md:w-[28vw] md:mt-[2vw]">
             <ListItem color="fff" bgColor="fff" mb="mb-3">
               React와 Next.js를 주로 사용하고 있으며, T-Map과 React를 결합하여
               서비스를 배포해 본{' '}
@@ -49,7 +49,7 @@ const Strength = () => {
         </div>
         <div className="flex flex-col items-center">
           <RoundedImage src={PNGSoft} alt="회의 일러스트" bgColor="fff" />
-          <ul className="w-[300px] mt-10 font-light">
+          <ul className="w-[300px] mt-10 font-light md:w-[28vw] md:mt-[2vw]">
             <ListItem color="fff" bgColor="fff" mb="mb-3">
               여러 직군과 적극적으로 소통합니다. 8개월 간 완성되지 못한
               프로젝트에 중도 참여하여 4개월만에 런칭시킨{' '}
@@ -76,7 +76,7 @@ const Strength = () => {
         </div>
         <div className="flex flex-col items-center">
           <RoundedImage src={PNGRecord} alt="기록 일러스트" bgColor="fff" />
-          <ul className="w-[300px] mt-10 font-light">
+          <ul className="w-[300px] mt-10 font-light md:w-[28vw] md:mt-[2vw]">
             <ListItem color="fff" bgColor="fff" mb="mb-3">
               기록과 공유를 좋아해 개발 과정에서 겪은 트러블 슈팅이나 학습한
               내용을 블로그에 꾸준히{' '}
