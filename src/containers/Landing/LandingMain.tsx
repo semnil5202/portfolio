@@ -9,7 +9,7 @@ import Link from 'next/link';
 const LandingMain = () => {
   return (
     <>
-      <div className="fixed flex flex-col h-[100px] justify-between right-8 top-8 animate-init-fade-in-move md:right-2 md:top-2 md:h-[96px]">
+      <div className="fixed flex flex-col h-[100px] justify-between right-8 top-8 animate-init-fade-in-move">
         <Link href="https://github.com/semnil5202" target="_blank">
           <SVGGithubLogo />
         </Link>
@@ -18,9 +18,9 @@ const LandingMain = () => {
         </Link>
       </div>
       <div className="h-full flex items-center">
-        <article className="w-2/5 mt-[-100px] animate-init-fade-in-move md:mt-0">
-          <div className="flex flex-col w-max mx-auto md:items-center">
-            <div className="w-[300px] h-[300px] rounded-[50%] overflow-hidden md:w-[25vw] md:h-[25vw]">
+        <article className="w-2/5 mt-[-100px] animate-init-fade-in-move">
+          <div className="flex flex-col w-max mx-auto">
+            <div className="w-[300px] h-[300px] rounded-[50%] overflow-hidden">
               <Image
                 src={PNGPortfolioProfile}
                 alt="프로필"
@@ -29,27 +29,25 @@ const LandingMain = () => {
               />
             </div>
 
-            <ul className="w-max mx-auto mt-12 font-light md:mt-6">
+            <ul className="w-max mx-auto mt-12 font-light">
               <ListItem color="fff" bgColor="fff">
                 23.02 - 23.11
               </ListItem>
-              <p className="text-fff mb-6 ml-3 mt-1 md:text-[1.41vw] md:mb-[2.5vw]">
+              <p className="text-fff mb-6 ml-3 mt-1">
                 우아한테크코스 웹 프론트엔드 5기
               </p>
               <ListItem color="fff" bgColor="fff">
                 17.02 - 23.02
               </ListItem>
-              <p className="text-fff ml-3 mt-1 md:text-[1.41vw]">
-                순천향대학교 정보보호학과
-              </p>
+              <p className="text-fff ml-3 mt-1">순천향대학교 정보보호학과</p>
             </ul>
           </div>
         </article>
 
-        <article className="w-3/5 ml-[-1%] animate-init-fade-in-move md:ml-0">
+        <article className="w-3/5 ml-[-1%] animate-init-fade-in-move">
           <div className="w-min mx-auto">
             <div>
-              <h2 className="text-5xl leading-snug w-max text-primary-dark font-bold md:text-[4vw] md:leading-snug">
+              <h2 className="text-5xl leading-snug w-max text-primary-dark font-bold">
                 안녕하세요.
               </h2>
               <DynamicText
@@ -59,14 +57,14 @@ const LandingMain = () => {
                   '사용자 경험을 중시하는',
                 ]}
               />
-              <h2 className="text-5xl leading-snug w-max text-primary-dark font-bold md:text-[4vw] md:leading-snug">
+              <h2 className="text-5xl leading-snug w-max text-primary-dark font-bold">
                 프론트엔드 개발자 이세민입니다.
               </h2>
             </div>
 
-            <div className="flex justify-between mt-24 md:mt-[5vw]">
+            <div className="flex justify-between mt-24">
               <div className="w-[2px] h-[42px] bg-primary mt-[6px]" />
-              <p className="w-[94%] text-primary-dark leading-relaxed md:text-[1.41vw]">
+              <p className="w-[94%] text-primary-dark leading-relaxed">
                 대학에서 정보보호를 전공하고 UX를 다루는 웹 프론트엔드 분야에
                 매력을 느껴, 우아한테크코스에 진학해 10개월간의 웹 프론트엔드
                 과정을 수료했습니다.
