@@ -9,16 +9,16 @@ import Link from 'next/link';
 const LandingMain = () => {
   return (
     <>
-      <div className="fixed flex flex-col h-[100px] justify-between right-8 top-8 animate-init-fade-in-move md:right-2 md:top-2 md:h-[80px]">
+      <div className="fixed flex flex-col h-[100px] justify-between right-8 top-8 animate-init-fade-in-move md:right-2 md:top-2 md:h-[68px]">
         <Link href="https://github.com/semnil5202" target="_blank">
           <SVGGithubLogo
-            className="md:w-[32px] md:h-[32px]"
+            className="md:w-[28px] md:h-[28px]"
             viewBox="0 0 40 40"
           />
         </Link>
         <Link href="https://velog.io/@semnil5202/posts" target="_blank">
           <SVGVelogLogo
-            className="md:w-[32px] md:h-[32px]"
+            className="md:w-[28px] md:h-[28px]"
             viewBox="0 0 40 40"
           />
         </Link>
