@@ -24,8 +24,7 @@ const CARDS = [
     id: 3,
     src: PNGShoppingCart,
     title: '장바구니',
-    description:
-      'MSW를 활용하여 장바구니 페이지를 만드는 우아한테크코스 React 미션',
+    description: 'MSW로 장바구니 페이지를 만드는 우아한테크코스 React 미션',
     slug: 'shopping-cart',
   },
   {
