@@ -1,6 +1,7 @@
 import ListItem from '@/components/ListItem/ListItem';
 import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link';
+import TemplateLayout from './components/TemplateLayout';
 
 interface Props {
   heading: string;
@@ -19,16 +20,7 @@ interface Props {
 
 const Activity = ({ heading, subHeading, image, contents, link }: Props) => {
   return (
-    <section className="w-full h-full px-[8%] pb-[4%] flex flex-col items-center">
-      <div className="w-full max-w-[1140px] h-[28%] flex flex-col justify-end">
-        <h2 className="text-4xl text-fff font-bold">{heading}</h2>
-        <div className="w-[48px] h-[2px] bg-fff my-3" />
-        {subHeading ? (
-          <h4 className="text-lg text-fff font-extralight">{subHeading}</h4>
-        ) : (
-          <div className="w-full h-[28px]" />
-        )}
-      </div>
+    <TemplateLayout heading={heading} subHeading={subHeading}>
       <div className="w-full h-[72%] max-w-[1140px] flex items-center pt-12">
         <div className="w-[50%] h-full flex">
           <div className="h-max rounded-lg overflow-hidden transition-all ease duration-400 hover:scale-125 hover:translate-y-10">
@@ -77,7 +69,7 @@ const Activity = ({ heading, subHeading, image, contents, link }: Props) => {
           )}
         </div>
       </div>
-    </section>
+    </TemplateLayout>
   );
 };
 

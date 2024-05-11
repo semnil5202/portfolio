@@ -1,6 +1,7 @@
 import ListItem from '@/components/ListItem/ListItem';
 import { StaticImageData } from 'next/image';
 import Tech from './components/Tech';
+import TemplateLayout from './components/TemplateLayout';
 
 interface Props {
   heading: string;
@@ -30,12 +31,7 @@ const Introduction = ({
   const bottomContainer = isEnough ? 'flex flex-col' : 'flex justify-between';
 
   return (
-    <section className="w-full h-full px-[8%] pb-[4%] flex flex-col items-center">
-      <div className="w-full max-w-[1140px] h-[28%] flex flex-col justify-end">
-        <h2 className="text-4xl text-fff font-bold">{heading}</h2>
-        <div className="w-[48px] h-[2px] bg-fff my-3" />
-        <div className="w-full h-[28px]" />
-      </div>
+    <TemplateLayout heading={heading}>
       <div className="w-full max-w-[1140px] h-[72%] flex pt-6">
         <ul className="w-[50%] h-full flex flex-col pr-10">
           <div className="pb-8">
@@ -141,7 +137,7 @@ const Introduction = ({
           </ul>
         </div>
       </div>
-    </section>
+    </TemplateLayout>
   );
 };
 
