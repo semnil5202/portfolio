@@ -88,6 +88,23 @@ const config: Config = {
           transform: 'translateX(-25%)',
         },
       },
+      rotateSmartPhone: {
+        '0%': {
+          transform: 'rotate(0deg)',
+        },
+        '45%': {
+          transform: 'rotate(0deg)',
+        },
+        '60%': {
+          transform: 'rotate(-90deg)',
+        },
+        '95%': {
+          transform: 'rotate(-90deg)',
+        },
+        '100%': {
+          transform: 'rotate(0)',
+        },
+      },
     },
     animation: {
       'init-background': 'initBackground 1s ease',
@@ -97,6 +114,7 @@ const config: Config = {
       skeleton: 'skeleton 2s infinite ease-out',
       'nav-hint-move': 'navHintMove 1.5s ease 3000ms',
       'slide-image-hint-move': 'slideImageHintMove 1.5s ease 1500ms',
+      'rotate-smart-phone': 'rotateSmartPhone 4s infinite ease',
     },
   },
   plugins: [],
