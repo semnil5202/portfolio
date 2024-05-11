@@ -12,8 +12,9 @@ const AlertMobile = () => {
         디바이스를 가로로 회전시켜 주세요.
       </p>
       <p className="w-[80%] text-sm text-fff font-extralight mb-10 leading-relaxed text-center break-keep">
-        모바일 환경에선 페이지 특성상 세로로 보기가 어렵습니다. 아이폰 미니와
-        같이 화면 크기가 작은 기종은 PC로 접속해 주세요.
+        모바일 환경에선 가로로 긴 PPT 형식의 페이지 특성상 세로로 보기가
+        어렵습니다. 가로로 회전시킨 이후에도 이 화면이 유지된다면 PC로 접속해
+        주세요.
       </p>
     </section>
   );
