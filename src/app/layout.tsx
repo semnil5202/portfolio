@@ -3,14 +3,12 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 import { Analytics } from '@vercel/analytics/react';
-import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/thumbs';
 import AlertMobile from './[slug]/containers/Templates/components/AlertMobile';
-
-injectSpeedInsights();
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const pretendard = localFont({
   src: '../../public/fonts/PretendardVariable.woff2',
@@ -32,6 +30,7 @@ export default function RootLayout({
         <AlertMobile />
         {children}
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
