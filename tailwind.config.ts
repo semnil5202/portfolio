@@ -20,6 +20,7 @@ const config: Config = {
       sm: { min: '1px', max: '449px' },
       md: { min: '450px', max: '949px' },
       lg: { min: '950px', max: '1139px' },
+      tall: { raw: '(max-height: 262px)' },
     },
     keyframes: {
       initBackground: {
@@ -106,6 +107,17 @@ const config: Config = {
           transform: 'rotate(0)',
         },
       },
+      newTabSmartPhone: {
+        '0%': {
+          transform: 'scale(0)',
+        },
+        '20%': {
+          transform: 'scale(1)',
+        },
+        '100%': {
+          transform: 'scale(1)',
+        },
+      },
     },
     animation: {
       'init-background': 'initBackground 1s ease',
@@ -116,6 +128,7 @@ const config: Config = {
       'nav-hint-move': 'navHintMove 1.5s ease 3000ms',
       'slide-image-hint-move': 'slideImageHintMove 1.5s ease 1500ms',
       'rotate-smart-phone': 'rotateSmartPhone 4s infinite ease',
+      'new-tab-smart-phone': 'newTabSmartPhone 4s infinite ease',
     },
   },
   plugins: [],

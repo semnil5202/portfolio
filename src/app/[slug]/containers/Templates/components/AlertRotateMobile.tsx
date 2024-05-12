@@ -1,4 +1,4 @@
-const AlertMobile = () => {
+const AlertRotateMobile = () => {
   return (
     <section className="opacity-0 flex fixed flex-col justify-center items-center w-full h-full bg-dark sm:opacity-100 sm:z-[100]">
       <div className="w-[250px] h-[250px] flex justify-center items-center mb-4 sm:animate-rotate-smart-phone">
@@ -20,4 +20,4 @@ const AlertMobile = () => {
   );
 };
 
-export default AlertMobile;
+export default AlertRotateMobile;
