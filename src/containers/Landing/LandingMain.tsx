@@ -54,7 +54,7 @@ const LandingMain = () => {
         <article className="w-3/5 ml-[-1%] animate-init-fade-in-move">
           <div className="w-min mx-auto md:w-[82%]">
             <div>
-              <h2 className="text-5xl leading-snug w-max text-primary-dark font-bold lg:text-4xl lg:leading-normal md:text-[2.8vw] md:font-medium">
+              <h2 className="text-5xl leading-snug w-max text-primary-dark font-bold lg:text-4xl lg:leading-normal md:text-[3vw] md:font-medium">
                 안녕하세요.
               </h2>
               <DynamicText
@@ -64,13 +64,13 @@ const LandingMain = () => {
                   '사용자 경험을 중시하는',
                 ]}
               />
-              <h2 className="text-5xl leading-snug w-max text-primary-dark font-bold lg:text-4xl lg:leading-normal md:text-[2.8vw] md:font-medium">
+              <h2 className="text-5xl leading-snug w-max text-primary-dark font-bold lg:text-4xl lg:leading-normal md:text-[3vw] md:font-medium">
                 프론트엔드 개발자 이세민입니다.
               </h2>
             </div>
 
             <div className="flex justify-between mt-24 md:mt-[2vw]">
-              <div className="w-[2px] h-[42px] bg-primary mt-[6px] lg:h-[64px] md:h-[28px]" />
+              <div className="w-[2px] h-[40px] bg-primary mt-[6px] lg:h-[64px] md:w-px md:h-[3.2vw] md:mt-[0.48vw]" />
               <p className="w-[94%] text-primary-dark leading-relaxed md:text-[1.5vw] md:leading-normal">
                 대학에서 정보보호를 전공하고 UX를 다루는 웹 프론트엔드 분야에
                 매력을 느껴, 우아한테크코스에 진학해 10개월간의 웹 프론트엔드
