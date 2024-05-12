@@ -15,6 +15,7 @@ const IntroductionContent = ({ heading, content, isColumnLayout }: Props) => {
         mb="mb-2 md:mb-0"
         weight="semibold"
         size="lg"
+        media="md:font-medium"
       >
         {heading}
       </ListItem>
