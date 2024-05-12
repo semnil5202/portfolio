@@ -11,27 +11,16 @@ const Strength = () => {
       <div className="w-[1140px] h-max flex justify-between mx-auto lg:w-full lg:justify-around md:w-full md:justify-around">
         <div className="flex flex-col items-center">
           <RoundedImage src={PNGCoding} alt="개발 일러스트" bgColor="fff" />
-          <ul className="w-[300px] mt-10 font-light md:w-[28vw] md:mt-[1.5vw]">
+          <ul className="w-[300px] mt-10 font-light md:w-[31vw] md:mt-[1.5vw]">
             <ListItem color="fff" bgColor="fff" mb="mb-3 md:mb-[0.4vw]">
-              React와 Next.js를 주로 사용하고 있으며, T-Map과 React를 결합하여
-              서비스를 배포해 본{' '}
-              <Link
-                href="https://github.com/woowacourse-teams/2023-map-befine"
-                target="_blank"
-                className="text-link underline hover:text-fff"
-              >
-                경험이 있습니다.
-              </Link>
-            </ListItem>
-            <ListItem color="fff" bgColor="fff" mb="mb-3 md:mb-[0.4vw]">
-              마커 클러스터링과 마커 동적 렌더링을 구현하여 렌더링 프레임을 48%
-              향상시켜 사용자 경험을{' '}
+              T Map과 React를 결합하여 마커 클러스터링과 마커 동적 렌더링을
+              구현해 렌더링 프레임을 48% 향상시켜 사용자 경험을{' '}
               <Link
                 href="https://velog.io/@semnil5202/%EA%B8%B0%EB%8A%A5-%EA%B5%AC%ED%98%84-%EB%A7%88%EC%BB%A4-%ED%81%B4%EB%9F%AC%EC%8A%A4%ED%84%B0%EB%A7%81-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0"
                 target="_blank"
                 className="text-link underline hover:text-fff"
               >
-                개선했습니다.
+                개선한 경험이 있습니다.
               </Link>
             </ListItem>
             <ListItem color="fff" bgColor="fff">
@@ -49,7 +38,7 @@ const Strength = () => {
         </div>
         <div className="flex flex-col items-center">
           <RoundedImage src={PNGSoft} alt="회의 일러스트" bgColor="fff" />
-          <ul className="w-[300px] mt-10 font-light md:w-[28vw] md:mt-[1.5vw]">
+          <ul className="w-[300px] mt-10 font-light md:w-[31vw] md:mt-[1.5vw]">
             <ListItem color="fff" bgColor="fff" mb="mb-3 md:mb-[0.4vw]">
               여러 직군과 적극적으로 소통합니다. 8개월 간 완성되지 못한
               프로젝트에 중도 참여하여 4개월만에 런칭시킨{' '}
@@ -76,7 +65,7 @@ const Strength = () => {
         </div>
         <div className="flex flex-col items-center">
           <RoundedImage src={PNGRecord} alt="기록 일러스트" bgColor="fff" />
-          <ul className="w-[300px] mt-10 font-light md:w-[28vw] md:mt-[1.5vw]">
+          <ul className="w-[300px] mt-10 font-light md:w-[31vw] md:mt-[1.5vw]">
             <ListItem color="fff" bgColor="fff" mb="mb-3 md:mb-[0.4vw]">
               기록과 공유를 좋아해 개발 과정에서 겪은 트러블 슈팅이나 학습한
               내용을 블로그에 꾸준히{' '}

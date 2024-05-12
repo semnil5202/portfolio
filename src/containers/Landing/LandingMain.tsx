@@ -26,7 +26,7 @@ const LandingMain = () => {
       <div className="h-full flex items-center">
         <article className="w-2/5 mt-[-100px] animate-init-fade-in-move md:mt-0">
           <div className="flex flex-col w-max mx-auto">
-            <div className="w-[300px] h-[300px] rounded-[50%] overflow-hidden md:w-[22vw] md:h-[22vw]">
+            <div className="w-[300px] h-[300px] rounded-[50%] overflow-hidden md:w-[17vw] md:h-[17vw]">
               <Image
                 src={PNGPortfolioProfile}
                 alt="프로필"
@@ -34,17 +34,17 @@ const LandingMain = () => {
               />
             </div>
 
-            <ul className="w-max mx-auto mt-12 font-light md:mt-[2.5vw]">
+            <ul className="w-max mx-auto mt-12 font-light md:mt-[1.2vw]">
               <ListItem color="fff" bgColor="fff">
                 23.02 - 23.11
               </ListItem>
-              <p className="text-fff mb-6 ml-3 mt-1 md:text-[1.6vw] md:mb-[1.2vw]">
+              <p className="text-fff mb-6 ml-3 mt-1 md:text-[1.5vw] md:mb-[0.6vw]">
                 우아한테크코스 웹 프론트엔드 5기
               </p>
               <ListItem color="fff" bgColor="fff">
                 17.02 - 23.02
               </ListItem>
-              <p className="text-fff ml-3 mt-1 md:text-[1.6vw]">
+              <p className="text-fff ml-3 mt-1 md:text-[1.5vw]">
                 순천향대학교 정보보호학과
               </p>
             </ul>
@@ -52,9 +52,9 @@ const LandingMain = () => {
         </article>
 
         <article className="w-3/5 ml-[-1%] animate-init-fade-in-move">
-          <div className="w-min mx-auto">
+          <div className="w-min mx-auto md:w-[82%]">
             <div>
-              <h2 className="text-5xl leading-snug w-max text-primary-dark font-bold lg:text-4xl lg:leading-normal md:text-[3.7vw] md:font-medium">
+              <h2 className="text-5xl leading-snug w-max text-primary-dark font-bold lg:text-4xl lg:leading-normal md:text-[2.8vw] md:font-medium">
                 안녕하세요.
               </h2>
               <DynamicText
@@ -64,14 +64,14 @@ const LandingMain = () => {
                   '사용자 경험을 중시하는',
                 ]}
               />
-              <h2 className="text-5xl leading-snug w-max text-primary-dark font-bold lg:text-4xl lg:leading-normal md:text-[3.7vw] md:font-medium">
+              <h2 className="text-5xl leading-snug w-max text-primary-dark font-bold lg:text-4xl lg:leading-normal md:text-[2.8vw] md:font-medium">
                 프론트엔드 개발자 이세민입니다.
               </h2>
             </div>
 
-            <div className="flex justify-between mt-24 md:mt-[3vw]">
-              <div className="w-[2px] h-[42px] bg-primary mt-[6px]" />
-              <p className="w-[94%] text-primary-dark leading-relaxed md:text-[1.6vw]">
+            <div className="flex justify-between mt-24 md:mt-[2vw]">
+              <div className="w-[2px] h-[42px] bg-primary mt-[6px] lg:h-[64px] md:h-[28px]" />
+              <p className="w-[94%] text-primary-dark leading-relaxed md:text-[1.5vw] md:leading-normal">
                 대학에서 정보보호를 전공하고 UX를 다루는 웹 프론트엔드 분야에
                 매력을 느껴, 우아한테크코스에 진학해 10개월간의 웹 프론트엔드
                 과정을 수료했습니다.
