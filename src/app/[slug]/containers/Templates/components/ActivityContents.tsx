@@ -29,7 +29,8 @@ const ActivityContents = ({ contents, link }: Props) => {
               bgColor="fff"
               mb="mb-2 md:mb-0"
               weight="extralight"
-              media="md:text-[1.2vw]"
+              mediaText="md:text-[1.2vw]"
+              mediaBullet="md:min-w-[0.3vw] md:min-h-[0.3vw] md:mt-[0.8vw]"
             >
               {description}
             </ListItem>
@@ -45,7 +46,8 @@ const ActivityContents = ({ contents, link }: Props) => {
             bgColor="fff"
             mb="mb-2 md:mb-0"
             weight="extralight"
-            media="md:text-[1.2vw]"
+            mediaText="md:text-[1.2vw]"
+            mediaBullet="md:min-w-[0.3vw] md:min-h-[0.3vw] md:mt-[0.8vw]"
           >
             <Link
               href={link.href}

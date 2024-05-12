@@ -6,7 +6,8 @@ interface Props {
   mb?: string;
   weight?: string;
   size?: string;
-  media?: string;
+  mediaText?: string;
+  mediaBullet?: string;
   children: ReactNode;
 }
 
@@ -16,7 +17,8 @@ const ListItem = ({
   mb = 'mb-0',
   weight = 'light',
   size = 'base',
-  media = 'md:text-[1.5vw]',
+  mediaText = 'md:text-[1.5vw]',
+  mediaBullet = '',
   children,
 }: Props) => {
   const backgroundColor = `#${bgColor}`;
@@ -28,11 +30,11 @@ const ListItem = ({
     <li className={`flex items-start gap-2 ${mb}`}>
       {/* TODO: 테일윈드 background Color 적용 불가 원인 파악 후 style attr 제거 */}
       <div
-        className="min-w-1 min-h-1 rounded-[50%] mt-[10px] md:mt-[1vw]"
+        className={`min-w-1 min-h-1 rounded-[50%] mt-[10px] md:mt-[1vw] ${mediaBullet}`}
         style={{ backgroundColor }}
       />
       <span
-        className={`${textColor} ${fontWeight} ${fontSize} leading-relaxed ${media}`}
+        className={`${textColor} ${fontWeight} ${fontSize} leading-relaxed ${mediaText}`}
       >
         {children}
       </span>
