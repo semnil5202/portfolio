@@ -29,7 +29,7 @@ const ActivityContents = ({ contents, link }: Props) => {
               bgColor="fff"
               mb="mb-2 md:mb-0"
               weight="extralight"
-              media="md:text-[1.35vw]"
+              media="md:text-[1.2vw]"
             >
               {description}
             </ListItem>
@@ -45,7 +45,7 @@ const ActivityContents = ({ contents, link }: Props) => {
             bgColor="fff"
             mb="mb-2 md:mb-0"
             weight="extralight"
-            media="md:text-[1.35vw]"
+            media="md:text-[1.2vw]"
           >
             <Link
               href={link.href}

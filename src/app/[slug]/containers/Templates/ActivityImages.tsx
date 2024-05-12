@@ -50,8 +50,8 @@ const ActivityImages = ({
   return (
     <TemplateLayout heading={heading} subHeading={subHeading}>
       <div className="w-full max-w-[1140px] h-[74%] flex items-center pt-12 lg:h-[80%] lg:pt-6 md:h-[84%] md:pt-[1.2vw]">
-        <div className="w-[50%] h-full md:w-[45%]">
-          <div className="w-full h-full flex transition-all ease duration-400 hover:scale-125 hover:translate-y-14 md:rounded-md md:hover:translate-x-[5vw] md:hover:translate-y-[-1.5vw]">
+        <div className="w-[50%] h-full md:w-[37%]">
+          <div className="w-full h-full flex transition-all ease duration-400 hover:scale-125 hover:translate-y-14 md:rounded-md md:hover:translate-x-[5vw] md:hover:translate-y-[-0.5vw]">
             <Swiper
               speed={700}
               spaceBetween={20}
@@ -84,7 +84,7 @@ const ActivityImages = ({
             </Swiper>
           </div>
         </div>
-        <div className="w-[50%] h-full flex flex-col pl-12 md:pl-[2vw] md:w-[55%]">
+        <div className="w-[50%] h-full flex flex-col pl-12 md:pl-[2vw] md:w-[63%]">
           <ActivityContents contents={contents} link={link} />
         </div>
       </div>
