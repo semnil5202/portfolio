@@ -30,7 +30,6 @@ const LandingMain = () => {
               <Image
                 src={PNGPortfolioProfile}
                 alt="프로필"
-                priority
                 className="animate-skeleton"
               />
             </div>

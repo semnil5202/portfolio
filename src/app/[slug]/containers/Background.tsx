@@ -22,7 +22,6 @@ const Background = ({ currentPageIndex, landing, slideLength }: Props) => {
             src={landing}
             alt="랜딩 이미지"
             fill
-            priority
             className="animate-skeleton"
           />
         </div>
