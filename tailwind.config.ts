@@ -93,13 +93,13 @@ const config: Config = {
         '0%': {
           transform: 'rotate(0deg)',
         },
-        '25%': {
+        '10%': {
           transform: 'rotate(0deg)',
         },
-        '50%': {
+        '35%': {
           transform: 'rotate(-90deg)',
         },
-        '95%': {
+        '85%': {
           transform: 'rotate(-90deg)',
         },
         '100%': {
