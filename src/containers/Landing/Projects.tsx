@@ -13,7 +13,7 @@ const Projects = ({ currentPageIndex }: Props) => {
         </h2>
         <div className="w-[60px] h-[1px] bg-fff mt-4 md:hidden" />
       </div>
-      <article className="w-full h-[440px] md:h-[36vw]">
+      <article className="w-full h-[440px] md:h-[34.5vw]">
         <ProjectSwiper currentPageIndex={currentPageIndex} />
       </article>
     </div>
