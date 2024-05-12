@@ -8,7 +8,7 @@ const AlertMobile = () => {
         </div>
       </div>
 
-      <p className="w-[80%] text-xl text-fff font-bold mb-4 text-center break-keep md:font-medium">
+      <p className="w-[80%] text-xl text-fff font-medium mb-4 text-center break-keep">
         디바이스를 가로로 회전시켜 주세요.
       </p>
       <p className="w-[80%] text-sm text-fff font-extralight mb-10 leading-relaxed text-center break-keep">
