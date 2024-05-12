@@ -24,9 +24,10 @@ const NavigationSwiper = ({ setThumbsSwiper, navigations }: Props) => {
     if (!prevTouch) return;
 
     const diff = touch.pageX - prevTouch.pageX;
+    const otherDiff = touch.pageY - prevTouch.pageY;
 
-    if (diff > 3) setIsMouseEnter(true);
-    if (diff < -3) setIsMouseEnter(false);
+    if (diff > 3 && Math.abs(otherDiff) < 3) setIsMouseEnter(true);
+    if (diff < -3 && Math.abs(otherDiff) < 3) setIsMouseEnter(false);
   };
 
   const onTouchEndNavigation: TouchEventHandler = () => {
