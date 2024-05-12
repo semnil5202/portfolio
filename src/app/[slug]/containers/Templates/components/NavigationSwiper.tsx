@@ -21,6 +21,8 @@ const NavigationSwiper = ({ setThumbsSwiper, navigations }: Props) => {
       className={`fixed top-0 left-0 w-[2%] h-full bg-transparent z-50 md:w-[5%]`}
       onMouseEnter={() => setIsMouseEnter(true)}
       onMouseLeave={() => setIsMouseEnter(false)}
+      onTouchStart={() => setIsMouseEnter(true)}
+      onTouchEnd={() => setIsMouseEnter(false)}
     >
       <Swiper
         onSwiper={setThumbsSwiper}
