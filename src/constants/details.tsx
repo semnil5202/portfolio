@@ -86,11 +86,11 @@ import PNGConceptBe from '../../public/assets/conceptbe-landing.png';
 import GIFConceptBeDebouncing from '../../public/assets/projects/conceptbe-debouncing.gif';
 import GIFConceptBeScroll from '../../public/assets/projects/conceptbe-scroll.gif';
 
-import PNGShoppingCart from '../../public/assets/shopping-cart-landing.png';
+import PNGShoppingCart from '../../public/assets/shoppingcart-landing.png';
 import PNGShoppingCartMocking from '../../public/assets/projects/shopping-cart-mocking.gif';
 import PNGShoppingCartResponsive from '../../public/assets/projects/shopping-cart-responsive.gif';
 
-import PNGMovieList from '../../public/assets/movie-list-landing.png';
+import PNGMovieList from '../../public/assets/movielist-landing.png';
 import PNGMovieListResponsive from '../../public/assets/projects/movie-list-responsive.gif';
 import PNGMovieListScroll from '../../public/assets/projects/movie-list-scroll.gif';
 import PNGMovieListSkeleton from '../../public/assets/projects/movie-list-skeleton.png';
