@@ -16,7 +16,7 @@ const Tech = ({ image, name }: Props) => {
           className="animate-skeleton"
         />
       </div>
-      <p className="text-fff text-center font-extralight mt-2 md:text-[1.45vw] md:leading-tight md:mt-[0.2vw]">
+      <p className="text-fff text-center font-extralight mt-2 md:text-[1.2vw] md:leading-tight md:mt-[0.5vw]">
         {name}
       </p>
     </li>
