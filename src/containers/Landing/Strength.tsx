@@ -68,7 +68,7 @@ const Strength = () => {
           <ul className="w-[300px] mt-10 font-light md:w-[31vw] md:mt-[1.5vw]">
             <ListItem color="fff" bgColor="fff" mb="mb-3 md:mb-[0.4vw]">
               기록과 공유를 좋아해 개발 과정에서 겪은 트러블 슈팅이나 학습한
-              내용을 블로그에 꾸준히{' '}
+              내용, 회고 등을 블로그에 꾸준히{' '}
               <Link
                 href="https://velog.io/@semnil5202/posts"
                 target="_blank"
