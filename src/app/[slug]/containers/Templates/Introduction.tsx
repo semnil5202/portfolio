@@ -33,7 +33,7 @@ const Introduction = ({
 
   return (
     <TemplateLayout heading={heading}>
-      <div className="w-full max-w-[1140px] h-[72%] flex pt-6 lg:h-[80%] lg:pt-3 md:h-[84%] md:pt-[0.1vw]">
+      <div className="w-full max-w-[1140px] h-[72%] flex lg:h-[80%] lg:pt-3 md:h-[84%] md:pt-[0.1vw]">
         <ul className="w-[50%] h-full flex flex-col pr-10 md:pr-[2.1vw]">
           <IntroductionContent heading="설명" content={intro} />
           {value && <IntroductionContent heading="핵심 가치" content={value} />}

@@ -14,7 +14,7 @@ const Strength = () => {
           <ul className="w-[300px] mt-10 font-light md:w-[31vw] md:mt-[1.5vw]">
             <ListItem color="fff" bgColor="fff" mb="mb-3 md:mb-[0.4vw]">
               T Map과 React로 마커 클러스터링과 마커 동적 렌더링을 구현하여,
-              렌더링 프레임을 48% 향상시켜 사용자 경험을{' '}
+              서비스 렌더링 성능을 48% 향상시켜 UX를{' '}
               <Link
                 href="https://velog.io/@semnil5202/%EA%B8%B0%EB%8A%A5-%EA%B5%AC%ED%98%84-%EB%A7%88%EC%BB%A4-%ED%81%B4%EB%9F%AC%EC%8A%A4%ED%84%B0%EB%A7%81-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0"
                 target="_blank"

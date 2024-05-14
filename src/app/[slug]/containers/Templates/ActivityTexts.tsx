@@ -36,7 +36,7 @@ interface Props {
 const ActivityTexts = ({ heading, subHeading, first, second }: Props) => {
   return (
     <TemplateLayout heading={heading} subHeading={subHeading}>
-      <div className="w-full max-w-[1140px] h-[74%] flex pt-12 lg:h-[80%] lg:pt-6 md:h-[84%] md:pt-0">
+      <div className="w-full max-w-[1140px] h-[74%] flex pt-10 lg:h-[80%] lg:pt-6 md:h-[84%] md:pt-0">
         <div className="w-[50%] h-full flex flex-col pr-10 md:pr-[1vw]">
           <h5 className="w-max text-lg bg-fff py-1 px-3 font-semibold rounded-[4px] mb-8 md:text-[1.4vw] md:leading-tight md:py-[0.2vw] md:px-[1vw] md:rounded-sm md:mb-[0.5vw] md:font-medium">
             {first.title}

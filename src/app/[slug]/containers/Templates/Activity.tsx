@@ -20,7 +20,7 @@ interface Props {
 const Activity = ({ heading, subHeading, image, contents, link }: Props) => {
   return (
     <TemplateLayout heading={heading} subHeading={subHeading}>
-      <div className="w-full h-[74%] max-w-[1140px] flex items-center pt-12 lg:h-[80%] lg:pt-6 md:h-[86%] md:pt-[1.2vw]">
+      <div className="w-full h-[74%] max-w-[1140px] flex items-center pt-10 lg:h-[80%] lg:pt-6 md:h-[86%] md:pt-[1.2vw]">
         <div className="w-[50%] h-full flex md:w-[37%]">
           <div className="h-max rounded-lg overflow-hidden transition-all ease duration-400 hover:scale-125 hover:translate-y-10 md:rounded-md md:hover:translate-x-[5vw] md:hover:translate-y-[-1.5vw]">
             <Image

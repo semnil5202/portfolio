@@ -18,7 +18,7 @@ const ActivityContents = ({ contents, link }: Props) => {
   return (
     <>
       {contents.map(({ heading, descriptions }, idx) => (
-        <div key={heading} className="mb-6 last:mb-0 md:mb-[0.4vw]">
+        <div key={heading} className="mb-4 last:mb-0 md:mb-[0.4vw]">
           <p className="text-lg text-fff font-semibold mb-2 md:text-[1.4vw] md:leading-snug md:mb-[0.1vw] md:font-medium">
             {heading}
           </p>
@@ -38,7 +38,7 @@ const ActivityContents = ({ contents, link }: Props) => {
         </div>
       ))}
       {link && (
-        <div className="mb-6 last:mb-0 md:mb-[0.4vw]">
+        <div className="mb-4 last:mb-0 md:mb-[0.4vw]">
           <p className="text-lg text-fff font-semibold mb-2 md:text-[1.4vw] md:leading-snug md:mb-[0.1vw] md:font-medium">
             {link.heading}
           </p>
