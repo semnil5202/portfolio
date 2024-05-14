@@ -25,6 +25,10 @@ const ProjectDetail = ({ params }: { params: { slug: SlugType } }) => {
         landing={landingImage}
         slideLength={slideLength}
       />
+      <NavigationSwiper
+        setThumbsSwiper={setThumbsSwiper}
+        navigations={navigations}
+      />
       <Swiper
         tag="section"
         speed={700}
@@ -54,10 +58,6 @@ const ProjectDetail = ({ params }: { params: { slug: SlugType } }) => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <NavigationSwiper
-        setThumbsSwiper={setThumbsSwiper}
-        navigations={navigations}
-      />
     </main>
   );
 };
