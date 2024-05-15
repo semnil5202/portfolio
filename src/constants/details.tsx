@@ -786,7 +786,7 @@ const DETAILS: Detail = {
           {
             heading: '문제 상황',
             descriptions: [
-              '컴포넌트 렌더링 시점과 실제 DOM에 컴포넌트가 렌더링 되는 시점이 달라, 컴포넌트에 addEventListener를 통해 이벤트를 추가하기가 까다로웠습니다.',
+              '컴포넌트 렌더링 시점과 실제 DOM에 컴포넌트가 페인팅 되는 시점이 달라, 컴포넌트에 addEventListener를 통해 이벤트를 추가하기가 까다로웠습니다.',
             ],
           },
           {
