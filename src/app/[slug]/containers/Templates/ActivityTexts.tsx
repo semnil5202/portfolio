@@ -38,13 +38,13 @@ const ActivityTexts = ({ heading, subHeading, first, second }: Props) => {
     <TemplateLayout heading={heading} subHeading={subHeading}>
       <div className="w-full max-w-[1140px] h-[74%] flex pt-10 lg:h-[80%] lg:pt-6 md:h-[84%] md:pt-0">
         <div className="w-[50%] h-full flex flex-col pr-10 md:pr-[1vw]">
-          <h5 className="w-max text-lg bg-fff py-1 px-3 font-semibold rounded-[4px] mb-8 md:text-[1.4vw] md:leading-tight md:py-[0.2vw] md:px-[1vw] md:rounded-sm md:mb-[0.5vw] md:font-medium">
+          <h5 className="w-max text-lg bg-white py-1 px-3 font-semibold rounded-[4px] mb-8 md:text-[1.4vw] md:leading-tight md:py-[0.2vw] md:px-[1vw] md:rounded-sm md:mb-[0.5vw] md:font-medium">
             {first.title}
           </h5>
           <ActivityContents contents={first.contents} link={first.link} />
         </div>
         <div className="w-[50%] h-full flex flex-col pl-10 md:pl-[1vw]">
-          <h5 className="w-max text-lg bg-fff py-1 px-3 font-semibold rounded-[4px] mb-8 md:text-[1.4vw] md:leading-tight md:py-[0.2vw] md:px-[1vw] md:rounded-sm md:mb-[0.5vw] md:font-medium">
+          <h5 className="w-max text-lg bg-white py-1 px-3 font-semibold rounded-[4px] mb-8 md:text-[1.4vw] md:leading-tight md:py-[0.2vw] md:px-[1vw] md:rounded-sm md:mb-[0.5vw] md:font-medium">
             {second.title}
           </h5>
           <ActivityContents contents={second.contents} link={second.link} />

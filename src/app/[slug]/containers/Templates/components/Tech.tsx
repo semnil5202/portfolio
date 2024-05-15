@@ -13,11 +13,11 @@ const Tech = ({ image, name }: Props) => {
           src={image}
           alt={name}
           loading="lazy"
-          className="animate-skeleton"
-          onLoadingComplete={(e) => e.classList.remove('animate-skeleton')}
+          className="animate-pulse bg-gray-500"
+          onLoad={(e) => e.currentTarget.classList.remove('animate-pulse')}
         />
       </div>
-      <p className="text-fff text-center font-extralight mt-2 md:text-[1.2vw] md:leading-tight md:mt-[0.5vw]">
+      <p className="text-white text-center font-extralight mt-2 md:text-[1.2vw] md:leading-tight md:mt-[0.5vw]">
         {name}
       </p>
     </li>

@@ -28,19 +28,19 @@ const ProjectCard = ({ src, title, description, slug }: Props) => {
             alt={title}
             loading="lazy"
             placeholder="blur"
-            className="animate-skeleton"
-            onLoadingComplete={(e) => e.classList.remove('animate-skeleton')}
+            className="animate-pulse bg-gray-500"
+            onLoad={(e) => e.currentTarget.classList.remove('animate-pulse')}
           />
         </div>
         <div>
           <h4
-            className={`text-fff text-xl font-semibold mt-4 ${
+            className={`text-white text-xl font-semibold mt-4 ${
               isFocus && 'underline underline-offset-4 decoration-1'
             } md:text-[1.8vw] md:mt-[0.2vw] md:font-medium md:leading-normal`}
           >
             {title}
           </h4>
-          <p className="text-fff font-light mt-2 leading-relaxed md:text-[1.5vw] md:mt-0">
+          <p className="text-white font-light mt-2 leading-relaxed md:text-[1.5vw] md:mt-0">
             {description}
           </p>
         </div>

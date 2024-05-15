@@ -19,14 +19,14 @@ const ActivityContents = ({ contents, link }: Props) => {
     <>
       {contents.map(({ heading, descriptions }, idx) => (
         <div key={heading} className="mb-4 last:mb-0 md:mb-[0.4vw]">
-          <p className="text-lg text-fff font-semibold mb-2 md:text-[1.4vw] md:leading-snug md:mb-[0.1vw] md:font-medium">
+          <p className="text-lg text-white font-semibold mb-2 md:text-[1.4vw] md:leading-snug md:mb-[0.1vw] md:font-medium">
             {heading}
           </p>
           {descriptions.map((description) => (
             <ListItem
               key={description}
-              color="fff"
-              bgColor="fff"
+              textColor="text-white"
+              bgColor="bg-white"
               mb="mb-2 md:mb-0"
               weight="extralight"
               mediaText="md:text-[1.2vw]"
@@ -39,11 +39,11 @@ const ActivityContents = ({ contents, link }: Props) => {
       ))}
       {link && (
         <div className="mb-4 last:mb-0 md:mb-[0.4vw]">
-          <p className="text-lg text-fff font-semibold mb-2 md:text-[1.4vw] md:leading-snug md:mb-[0.1vw] md:font-medium">
+          <p className="text-lg text-white font-semibold mb-2 md:text-[1.4vw] md:leading-snug md:mb-[0.1vw] md:font-medium">
             {link.heading}
           </p>
           <ListItem
-            bgColor="fff"
+            bgColor="bg-white"
             mb="mb-2 md:mb-0"
             weight="extralight"
             mediaText="md:text-[1.2vw]"
@@ -52,7 +52,7 @@ const ActivityContents = ({ contents, link }: Props) => {
             <Link
               href={link.href}
               target="_blank"
-              className="underline text-link hover:text-fff"
+              className="underline underline-offset-4 text-gray-400 hover:text-white"
             >
               {link.name}
             </Link>

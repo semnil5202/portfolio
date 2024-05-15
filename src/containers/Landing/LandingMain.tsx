@@ -31,24 +31,24 @@ const LandingMain = () => {
                 src={PNGPortfolioProfile}
                 alt="프로필 이미지"
                 placeholder="blur"
-                className="animate-skeleton"
-                onLoadingComplete={(e) =>
-                  e.classList.remove('animate-skeleton')
+                className="animate-pulse bg-gray-500"
+                onLoad={(e) =>
+                  e.currentTarget.classList.remove('animate-pulse')
                 }
               />
             </div>
 
             <ul className="w-max mx-auto mt-12 font-light md:mt-[1.2vw]">
-              <ListItem color="fff" bgColor="fff">
+              <ListItem textColor="text-white" bgColor="bg-white">
                 23.02 - 23.11
               </ListItem>
-              <p className="text-fff mb-6 ml-3 mt-1 md:text-[1.5vw] md:mb-[0.6vw]">
+              <p className="text-white mb-6 ml-3 mt-1 md:text-[1.5vw] md:mb-[0.6vw]">
                 우아한테크코스 웹 프론트엔드 5기
               </p>
-              <ListItem color="fff" bgColor="fff">
+              <ListItem textColor="text-white" bgColor="bg-white">
                 17.02 - 23.02
               </ListItem>
-              <p className="text-fff ml-3 mt-1 md:text-[1.5vw]">
+              <p className="text-white ml-3 mt-1 md:text-[1.5vw]">
                 순천향대학교 정보보호학과
               </p>
             </ul>

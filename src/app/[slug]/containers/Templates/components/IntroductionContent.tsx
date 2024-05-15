@@ -10,8 +10,8 @@ const IntroductionContent = ({ heading, content, isColumnLayout }: Props) => {
   return (
     <div className="mb-8 lg:mb-[2vw] md:mb-[0.5vw]">
       <ListItem
-        color="fff"
-        bgColor="fff"
+        textColor="text-white"
+        bgColor="bg-white"
         mb="mb-2 md:mb-0"
         weight="semibold"
         size="lg"
@@ -19,7 +19,7 @@ const IntroductionContent = ({ heading, content, isColumnLayout }: Props) => {
       >
         {heading}
       </ListItem>
-      <p className="text-fff font-extralight ml-3 leading-relaxed md:text-[1.2vw] md:leading-normal">
+      <p className="text-white font-extralight ml-3 leading-relaxed md:text-[1.2vw] md:leading-normal">
         {content}
       </p>
     </div>

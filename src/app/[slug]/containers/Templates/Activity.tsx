@@ -27,8 +27,8 @@ const Activity = ({ heading, subHeading, image, contents, link }: Props) => {
               src={image}
               alt={`${heading} 이미지`}
               loading="lazy"
-              className="animate-skeleton"
-              onLoadingComplete={(e) => e.classList.remove('animate-skeleton')}
+              className="animate-pulse bg-gray-500"
+              onLoad={(e) => e.currentTarget.classList.remove('animate-pulse')}
             />
           </div>
         </div>

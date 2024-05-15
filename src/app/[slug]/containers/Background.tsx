@@ -24,8 +24,8 @@ const Background = ({ currentPageIndex, landing, slideLength }: Props) => {
             fill
             loading="lazy"
             placeholder="blur"
-            className="animate-skeleton"
-            onLoadingComplete={(e) => e.classList.remove('animate-skeleton')}
+            className="animate-pulse bg-gray-500"
+            onLoad={(e) => e.currentTarget.classList.remove('animate-pulse')}
           />
         </div>
         <div

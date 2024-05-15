@@ -50,7 +50,7 @@ const NavigationSwiper = ({ setThumbsSwiper, navigations }: Props) => {
         watchSlidesProgress={true}
         modules={[Thumbs, Mousewheel]}
         mousewheel
-        className={`w-[15%] ${thumbTranslate} bg-fff h-full animate-nav-hint-move transition-all ease duration-300`}
+        className={`w-[15%] ${thumbTranslate} bg-white h-full animate-nav-hint-move transition-all ease duration-300`}
         style={{ position: 'fixed', top: '0', left: '0' }}
       >
         {navigations.map((image, idx) => (
@@ -64,10 +64,10 @@ const NavigationSwiper = ({ setThumbsSwiper, navigations }: Props) => {
               src={image}
               alt={`${idx + 1}번째 슬라이드 이미지`}
               loading="lazy"
-              className="animate-skeleton"
-              onLoadingComplete={(e) => e.classList.remove('animate-skeleton')}
+              className="animate-pulse bg-gray-500"
+              onLoad={(e) => e.currentTarget.classList.remove('animate-pulse')}
             />
-            <div className="absolute top-2 left-2 w-4 h-4 rounded-full bg-fff text-[12px] flex justify-center items-center">
+            <div className="absolute top-2 left-2 w-4 h-4 rounded-full bg-white text-[12px] flex justify-center items-center">
               {idx + 1}
             </div>
           </SwiperSlide>
