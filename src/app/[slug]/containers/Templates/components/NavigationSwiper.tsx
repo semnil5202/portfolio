@@ -62,9 +62,10 @@ const NavigationSwiper = ({ setThumbsSwiper, navigations }: Props) => {
           >
             <Image
               src={image}
-              alt={`${idx + 1}`}
+              alt={`${idx + 1}번째 슬라이드 이미지`}
               loading="lazy"
               className="animate-skeleton"
+              onLoadingComplete={(e) => e.classList.remove('animate-skeleton')}
             />
             <div className="absolute top-2 left-2 w-4 h-4 rounded-full bg-fff text-[12px] flex justify-center items-center">
               {idx + 1}

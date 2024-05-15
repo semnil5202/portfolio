@@ -74,9 +74,12 @@ const ActivityImages = ({
                   >
                     <Image
                       src={image}
-                      alt={heading}
+                      alt={`${heading} ${idx + 1}번째 이미지`}
                       loading="lazy"
                       className="animate-skeleton"
+                      onLoadingComplete={(e) =>
+                        e.classList.remove('animate-skeleton')
+                      }
                     />
                   </div>
                 </SwiperSlide>

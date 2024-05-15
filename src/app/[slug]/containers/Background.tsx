@@ -20,9 +20,12 @@ const Background = ({ currentPageIndex, landing, slideLength }: Props) => {
         >
           <Image
             src={landing}
-            alt="랜딩 이미지"
+            alt="프로젝트 소개 이미지"
             fill
+            loading="lazy"
+            placeholder="blur"
             className="animate-skeleton"
+            onLoadingComplete={(e) => e.classList.remove('animate-skeleton')}
           />
         </div>
         <div

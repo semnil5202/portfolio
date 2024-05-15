@@ -15,7 +15,13 @@ const RoundedImage = ({ src, alt, bgColor = 'fff' }: Props) => {
       className="w-[250px] h-[250px] rounded-[50%] overflow-hidden md:w-[13vw] md:h-[13vw]"
       style={{ backgroundColor }}
     >
-      <Image src={src} alt={alt} loading="lazy" className="animate-skeleton" />
+      <Image
+        src={src}
+        alt={alt}
+        loading="lazy"
+        className="animate-skeleton"
+        onLoadingComplete={(e) => e.classList.remove('animate-skeleton')}
+      />
     </div>
   );
 };

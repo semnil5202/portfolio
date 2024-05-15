@@ -29,8 +29,12 @@ const LandingMain = () => {
             <div className="w-[300px] h-[300px] rounded-[50%] overflow-hidden md:w-[17vw] md:h-[17vw]">
               <Image
                 src={PNGPortfolioProfile}
-                alt="프로필"
+                alt="프로필 이미지"
+                placeholder="blur"
                 className="animate-skeleton"
+                onLoadingComplete={(e) =>
+                  e.classList.remove('animate-skeleton')
+                }
               />
             </div>
 

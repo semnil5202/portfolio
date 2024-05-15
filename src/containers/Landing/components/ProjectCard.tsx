@@ -17,7 +17,9 @@ const ProjectCard = ({ src, title, description, slug }: Props) => {
             src={src}
             alt={title}
             loading="lazy"
+            placeholder="blur"
             className="animate-skeleton"
+            onLoadingComplete={(e) => e.classList.remove('animate-skeleton')}
           />
         </div>
         <div>

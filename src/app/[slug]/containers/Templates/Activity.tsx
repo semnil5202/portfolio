@@ -25,9 +25,10 @@ const Activity = ({ heading, subHeading, image, contents, link }: Props) => {
           <div className="h-max rounded-lg overflow-hidden transition-all ease duration-400 hover:scale-125 hover:translate-y-10 md:rounded-md md:hover:translate-x-[5vw] md:hover:translate-y-[-1.5vw]">
             <Image
               src={image}
-              alt={heading}
+              alt={`${heading} 이미지`}
               loading="lazy"
               className="animate-skeleton"
+              onLoadingComplete={(e) => e.classList.remove('animate-skeleton')}
             />
           </div>
         </div>
