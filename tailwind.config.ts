@@ -19,6 +19,7 @@ const config: Config = {
         primary: '#2A392F',
         'primary-dark': '#2C3533',
         dark: '#191F1E',
+        link: '#BFBFBF',
       },
       keyframes: {
         initBackground: {

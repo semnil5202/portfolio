@@ -26,7 +26,7 @@ const Strength = () => {
               <Link
                 href="https://velog.io/@semnil5202/%EA%B8%B0%EB%8A%A5-%EA%B5%AC%ED%98%84-%EB%A7%88%EC%BB%A4-%ED%81%B4%EB%9F%AC%EC%8A%A4%ED%84%B0%EB%A7%81-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0"
                 target="_blank"
-                className="text-gray-400 underline underline-offset-4 hover:text-white"
+                className="text-link underline underline-offset-4 hover:text-white"
               >
                 경험이 있습니다.
               </Link>
@@ -37,7 +37,7 @@ const Strength = () => {
               <Link
                 href="https://github.com/ConceptBe/conceptbe-design-system"
                 target="_blank"
-                className="text-gray-400 underline underline-offset-4 hover:text-white"
+                className="text-link underline underline-offset-4 hover:text-white"
               >
                 경험이 있습니다.
               </Link>
@@ -57,7 +57,7 @@ const Strength = () => {
               <Link
                 href="https://github.com/ConceptBe/conceptbe-frontend"
                 target="_blank"
-                className="text-gray-400 underline underline-offset-4 hover:text-white"
+                className="text-link underline underline-offset-4 hover:text-white"
               >
                 경험이 있습니다.
               </Link>
@@ -72,7 +72,7 @@ const Strength = () => {
               <Link
                 href="https://github.com/woowacourse-teams/2023-map-befine/wiki/%ED%8C%80-%EC%86%8C%EA%B0%9C"
                 target="_blank"
-                className="text-gray-400 underline underline-offset-4 hover:text-white"
+                className="text-link underline underline-offset-4 hover:text-white"
               >
                 구축한 적이 있습니다.
               </Link>
@@ -96,7 +96,7 @@ const Strength = () => {
               <Link
                 href="https://velog.io/@semnil5202/posts"
                 target="_blank"
-                className="text-gray-400 underline underline-offset-4 hover:text-white"
+                className="text-link underline underline-offset-4 hover:text-white"
               >
                 작성하고 있습니다.
               </Link>
@@ -107,7 +107,7 @@ const Strength = () => {
               <Link
                 href="https://www.youtube.com/watch?v=PBgQKK6nelo&ab_channel=%EC%9A%B0%EC%95%84%ED%95%9C%ED%85%8C%ED%81%AC"
                 target="_blank"
-                className="text-gray-400 underline underline-offset-4 hover:text-white"
+                className="text-link underline underline-offset-4 hover:text-white"
               >
                 발표했습니다.
               </Link>
