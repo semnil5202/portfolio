@@ -1,11 +1,11 @@
 import { StaticImageData } from 'next/image';
-import Activity from './Templates/Activity';
-import Separator from './Templates/Separator';
-import Introduction from './Templates/Introduction';
-import Title from './Templates/Title';
-import { TemplateType } from '../types';
-import ActivityImages from './Templates/ActivityImages';
-import ActivityTexts from './Templates/ActivityTexts';
+import Activity from './Activity';
+import Separator from './Separator';
+import Introduction from './Introduction';
+import Title from './Title';
+import { TemplateType } from '../../types';
+import ActivityImages from './ActivityImages';
+import ActivityTexts from './ActivityTexts';
 
 interface Props {
   slide: TemplateType;

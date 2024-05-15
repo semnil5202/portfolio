@@ -1,4 +1,4 @@
-import { Detail } from '@/app/[slug]/types';
+import { Detail } from '@/types';
 import PNGTechCypress from '../../public/assets/icons/tech-cypress.png';
 import PNGTechGa from '../../public/assets/icons/tech-ga.png';
 import PNGTechJest from '../../public/assets/icons/tech-jest.png';

@@ -1,4 +1,4 @@
-import ListItem from '@/components/ListItem/ListItem';
+import ListItem from '@/components/ListItem';
 import { StaticImageData } from 'next/image';
 import Tech from './components/Tech';
 import TemplateLayout from './components/TemplateLayout';

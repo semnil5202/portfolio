@@ -10,8 +10,8 @@ import 'swiper/css/thumbs';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 
-import AlertRotateMobile from './[slug]/containers/Templates/components/AlertRotateMobile';
-import AlertNewTabMobile from './[slug]/containers/Templates/components/AlertNewTabMobile';
+import AlertRotateMobile from '../components/AlertMobile/AlertRotateMobile';
+import AlertNewTabMobile from '../components/AlertMobile/AlertNewTabMobile';
 
 const pretendard = localFont({
   src: '../../public/fonts/PretendardVariable.woff2',

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import SVGHomeLogo from '../../../../../../public/assets/icons/home-logo.svg';
+import SVGHomeLogo from '../../../../public/assets/icons/home-logo.svg';
 
 interface Props {
   position: 'fixed' | 'absolute';

@@ -1,4 +1,4 @@
-import ListItem from '@/components/ListItem/ListItem';
+import ListItem from '@/components/ListItem';
 
 interface Props {
   heading: string;

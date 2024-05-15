@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import HomeIcon from './components/HomeIcon';
-import SVGNextIcon from '../../../../../public/assets/icons/next-icon.svg';
-import { Dispatch } from 'react';
+import SVGNextIcon from '../../../public/assets/icons/next-icon.svg';
 
 interface Props {
   type: 'end' | 'separate';

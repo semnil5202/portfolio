@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 
 import TemplateLayout from './components/TemplateLayout';
-import ListItem from '@/components/ListItem/ListItem';
+import ListItem from '@/components/ListItem';
 import Image, { StaticImageData } from 'next/image';
 import { useEffect, useState } from 'react';
 import Link from 'next/link';

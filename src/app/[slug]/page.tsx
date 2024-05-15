@@ -4,11 +4,11 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Mousewheel, Pagination, Thumbs } from 'swiper/modules';
 
 import { useState } from 'react';
-import Background from './containers/Background';
+import Background from '../../containers/Templates/Background';
 import DETAILS, { DETAIL_LANDING, DETAIL_NAV } from '@/constants/details';
-import TranslateTemplate from './containers/TranslateTemplate';
-import { SlugType } from './types';
-import NavigationSwiper from './containers/Templates/components/NavigationSwiper';
+import TranslateTemplate from '../../containers/Templates/TranslateTemplate';
+import { SlugType } from '../../types';
+import NavigationSwiper from '../../containers/Templates/components/NavigationSwiper';
 
 const ProjectDetail = ({ params }: { params: { slug: SlugType } }) => {
   const [currentPageIndex, setCurrentPageIndex] = useState<number>(0);

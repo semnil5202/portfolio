@@ -1,8 +1,8 @@
 import PNGCoding from '../../../public/assets/icons/strength-coding.png';
 import PNGSoft from '../../../public/assets/icons/strength-soft.png';
 import PNGRecord from '../../../public/assets/icons/strength-record.png';
-import RoundedImage from '@/components/RoundedImage/RoundedImage';
-import ListItem from '@/components/ListItem/ListItem';
+import RoundedImage from '@/components/RoundedImage';
+import ListItem from '@/components/ListItem';
 import Link from 'next/link';
 
 const Strength = () => {

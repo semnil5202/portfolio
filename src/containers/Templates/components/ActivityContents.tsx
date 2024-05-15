@@ -1,4 +1,4 @@
-import ListItem from '@/components/ListItem/ListItem';
+import ListItem from '@/components/ListItem';
 import Link from 'next/link';
 import { ReactNode } from 'react';
 
