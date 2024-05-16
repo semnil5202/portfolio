@@ -18,7 +18,7 @@ const ActivityContents = ({ contents, link }: Props) => {
   return (
     <>
       {contents.map(({ heading, descriptions }, idx) => (
-        <div key={heading} className="mb-4 last:mb-0 md:mb-[0.4vw]">
+        <div key={heading} className="mb-4 last:mb-0 lg:mb-2 md:mb-[0.4vw]">
           <p className="text-lg text-white font-semibold mb-2 md:text-[1.4vw] md:leading-snug md:mb-[0.1vw] md:font-medium">
             {heading}
           </p>
@@ -27,7 +27,7 @@ const ActivityContents = ({ contents, link }: Props) => {
               key={description}
               textColor="text-white"
               bgColor="bg-white"
-              mb="mb-2 md:mb-0"
+              mb="mb-2 lg:mb-1 md:mb-0"
               weight="extralight"
               mediaText="md:text-[1.2vw]"
               mediaBullet="md:min-w-[0.3vw] md:min-h-[0.3vw] md:mt-[0.8vw]"
@@ -38,13 +38,13 @@ const ActivityContents = ({ contents, link }: Props) => {
         </div>
       ))}
       {link && (
-        <div className="mb-4 last:mb-0 md:mb-[0.4vw]">
+        <div className="mb-4 last:mb-0 lg:mb-2 md:mb-[0.4vw]">
           <p className="text-lg text-white font-semibold mb-2 md:text-[1.4vw] md:leading-snug md:mb-[0.1vw] md:font-medium">
             {link.heading}
           </p>
           <ListItem
             bgColor="bg-white"
-            mb="mb-2 md:mb-0"
+            mb="mb-2 lg:mb-1 md:mb-0"
             weight="extralight"
             mediaText="md:text-[1.2vw]"
             mediaBullet="md:min-w-[0.3vw] md:min-h-[0.3vw] md:mt-[0.8vw]"

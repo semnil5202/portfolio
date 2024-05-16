@@ -19,7 +19,7 @@ const StrengthItem = ({ image, alt, contents }: Props) => {
   return (
     <div className="flex flex-col items-center">
       <RoundedImage src={image} alt={alt} bgColor="bg-white" />
-      <ul className="w-[300px] mt-10 font-light lg:w-[264px] md:w-[31vw] md:mt-[1.5vw]">
+      <ul className="w-[300px] mt-10 font-light lg:w-[232px] md:w-[31vw] md:mt-[1.5vw]">
         {contents.map(({ name, link }) => (
           <ListItem
             key={name}

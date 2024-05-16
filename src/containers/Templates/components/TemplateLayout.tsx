@@ -9,7 +9,7 @@ interface Props {
 const TemplateLayout = ({ heading, subHeading, children }: Props) => {
   return (
     <>
-      <section className="w-full h-full px-[8%] pb-[4%] flex flex-col items-center md:px-[4%] md:pb-[1%]">
+      <section className="w-full h-full px-[8%] pb-[4%] flex flex-col items-center lg:px-[4%] md:px-[4%] md:pb-[1%]">
         <div className="w-full max-w-[1140px] h-[26%] flex flex-col justify-end lg:h-[20%] md:h-[14%]">
           <h2 className="text-4xl text-white font-bold lg:text-3xl md:text-[2.2vw] md:leading-tight md:font-medium">
             {heading}

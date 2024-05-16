@@ -31,7 +31,7 @@ const ProjectSwiper = ({ currentPageIndex }: Props) => {
     <Swiper
       slidesPerView={4}
       breakpoints={{
-        850: {
+        768: {
           slidesPerView: 3,
         },
         1140: {

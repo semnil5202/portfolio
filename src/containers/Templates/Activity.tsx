@@ -32,7 +32,7 @@ const Activity = ({ heading, subHeading, image, contents, link }: Props) => {
             />
           </div>
         </div>
-        <div className="w-[50%] h-full flex flex-col pl-12 md:pl-[2vw] md:w-[63%]">
+        <div className="w-[50%] h-full flex flex-col pl-12 lg:pl-6 md:pl-[2vw] md:w-[63%]">
           <ActivityContents contents={contents} link={link} />
         </div>
       </div>

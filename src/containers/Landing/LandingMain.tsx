@@ -26,7 +26,7 @@ const LandingMain = () => {
       <div className="h-full flex items-center md:flex-col md:justify-center">
         <article className="w-2/5 mt-[-8vh] animate-init-fade-in-move lg:mt-[-12.5vh] md:w-full md:flex md:items-center md:h-[50%] md:mt-0">
           <div className="flex flex-col w-max mx-auto">
-            <div className="w-[300px] h-[300px] rounded-[50%] overflow-hidden lg:w-[260px] lg:h-[260px] md:w-[200px] md:h-[200px]">
+            <div className="w-[300px] h-[300px] rounded-[50%] overflow-hidden lg:w-[240px] lg:h-[240px] md:w-[200px] md:h-[200px]">
               <Image
                 src={PNGPortfolioProfile}
                 alt="프로필 이미지"
@@ -68,7 +68,7 @@ const LandingMain = () => {
         <article className="w-3/5 ml-[-1%] animate-init-fade-in-move lg:ml-0 md:w-full md:flex md:items-center md:h-[50%]">
           <div className="w-min mx-auto md:w-[80%] md:max-w-[460px]">
             <div>
-              <h2 className="text-5xl leading-snug w-max text-primary-dark font-bold lg:text-4xl lg:leading-normal md:text-[22px] md:leading-normal md:text-white md:font-medium">
+              <h2 className="text-5xl leading-snug w-max text-primary-dark font-bold lg:text-[32px] lg:leading-normal md:text-[22px] md:leading-normal md:text-white md:font-medium">
                 안녕하세요.
               </h2>
               <DynamicText
@@ -78,7 +78,7 @@ const LandingMain = () => {
                   '사용자 경험을 중시하는',
                 ]}
               />
-              <h2 className="text-5xl leading-snug w-max text-primary-dark font-bold lg:text-4xl lg:leading-normal md:text-[22px] md:leading-normal md:text-white md:font-medium">
+              <h2 className="text-5xl leading-snug w-max text-primary-dark font-bold lg:text-[32px] lg:leading-normal md:text-[22px] md:leading-normal md:text-white md:font-medium">
                 프론트엔드 개발자 이세민입니다.
               </h2>
             </div>

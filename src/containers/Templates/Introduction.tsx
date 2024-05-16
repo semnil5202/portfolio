@@ -61,7 +61,7 @@ const Introduction = ({
           </div>
         </ul>
         <div className="w-[50%] h-full lg:w-[45%]">
-          <ul className="flex max-w-[464px] h-max mx-auto items-center flex-wrap gap-2 pl-10 lg:max-w-[312px] lg:pl-5 md:pl-0 md:gap-[0.6vw]">
+          <ul className="flex max-w-[464px] h-max mx-auto items-center flex-wrap gap-2 pl-10 lg:max-w-[312px] lg:pl-5 lg:gap-1 md:pl-0 md:gap-[0.6vw]">
             {techs.map(({ image, name }) => (
               <Tech key={name} image={image} name={name} />
             ))}

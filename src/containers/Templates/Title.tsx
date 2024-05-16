@@ -16,7 +16,7 @@ const Title = ({ title, description, links }: Props) => {
     <section className="relative w-full h-full">
       <HomeIcon position="fixed" />
       <div className="w-3/6 h-full flex flex-col items-center mt-[-40px] justify-center animate-init-fade-in-move md:mt-[-2.1vw]">
-        <div className="ml-[-20px] max-w-[70%]">
+        <div className="ml-[-20px] max-w-[75%]">
           <h1 className="text-7xl text-white font-bold lg:text-6xl md:text-[4vw] md:font-medium">
             {title}
           </h1>
