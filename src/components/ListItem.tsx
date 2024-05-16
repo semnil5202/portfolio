@@ -27,7 +27,7 @@ const ListItem = ({
   return (
     <li className={`flex items-start gap-2 ${mb}`}>
       <div
-        className={`min-w-1 min-h-1 ${bgColor} rounded-[50%] mt-[10px] md:mt-[0.9vw] md:min-w-[0.38vw] md:min-h-[0.38vw] ${mediaBullet}`}
+        className={`min-w-1 min-h-1 ${bgColor} rounded-[50%] mt-[10px] ${mediaBullet}`}
       />
       <span
         className={`${textColor} ${fontWeight} ${fontSize} leading-relaxed ${mediaText}`}
