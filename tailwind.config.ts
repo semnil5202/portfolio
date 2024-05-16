@@ -10,10 +10,8 @@ const config: Config = {
   theme: {
     extend: {
       screens: {
-        sm: { min: '1px', max: '449px' },
-        md: { min: '450px', max: '949px' },
-        lg: { min: '950px', max: '1139px' },
-        tall: { raw: '(max-height: 262px)' },
+        md: { min: '1px', max: '849px' },
+        lg: { min: '850px', max: '1139px' },
       },
       colors: {
         primary: '#2A392F',

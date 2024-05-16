@@ -10,9 +10,6 @@ import 'swiper/css/thumbs';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 
-import AlertRotateMobile from '../components/AlertMobile/AlertRotateMobile';
-import AlertNewTabMobile from '../components/AlertMobile/AlertNewTabMobile';
-
 const pretendard = localFont({
   src: '../../public/fonts/PretendardVariable.woff2',
 });
@@ -30,8 +27,6 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body className={pretendard.className}>
-        <AlertRotateMobile />
-        <AlertNewTabMobile />
         {children}
         <Analytics />
         <SpeedInsights />
