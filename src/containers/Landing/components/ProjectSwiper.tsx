@@ -4,8 +4,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Mousewheel } from 'swiper/modules';
 
 import ProjectCard from './ProjectCard';
-import CARDS from '@/constants/cards';
 import { useEffect, useState } from 'react';
+import CARDS from '@/constants/cards';
 
 interface Props {
   currentPageIndex: number;

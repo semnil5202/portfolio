@@ -5,10 +5,10 @@ import { Mousewheel, Pagination, Thumbs } from 'swiper/modules';
 
 import { useState } from 'react';
 import Background from '../../containers/Templates/Background';
-import DETAILS, { DETAIL_LANDING, DETAIL_NAV } from '@/constants/details';
 import TranslateTemplate from '../../containers/Templates/TranslateTemplate';
 import { SlugType } from '../../types';
 import NavigationSwiper from '../../containers/Templates/components/NavigationSwiper';
+import DETAILS, { DETAIL_LANDING, DETAIL_NAV } from '@/constants/details';
 
 const ProjectDetail = ({ params }: { params: { slug: SlugType } }) => {
   const [currentPageIndex, setCurrentPageIndex] = useState<number>(0);
