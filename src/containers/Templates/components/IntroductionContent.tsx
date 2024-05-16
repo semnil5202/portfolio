@@ -8,18 +8,18 @@ interface Props {
 
 const IntroductionContent = ({ heading, content, isColumnLayout }: Props) => {
   return (
-    <div className="mb-8 lg:mb-[2vw] md:mb-[0.5vw]">
+    <div className="mb-8 lg:mb-4 md:mb-2">
       <ListItem
         textColor="text-white"
         bgColor="bg-white"
         mb="mb-2 md:mb-0"
         weight="semibold"
         size="lg"
-        mediaText="md:font-medium md:text-[1.4vw]"
+        mediaText="md:font-medium md:text-[14px]"
       >
         {heading}
       </ListItem>
-      <p className="text-white font-extralight ml-3 leading-relaxed md:text-[1.2vw] md:leading-normal">
+      <p className="text-white font-extralight ml-3 leading-relaxed md:text-[12px] md:leading-normal">
         {content}
       </p>
     </div>

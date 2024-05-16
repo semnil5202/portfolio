@@ -32,9 +32,9 @@ const Introduction = ({
   const bottomContainer = isEnough ? 'flex flex-col' : 'flex justify-between';
 
   return (
-    <TemplateLayout heading={heading}>
-      <div className="w-full max-w-[1140px] h-[72%] flex lg:h-[80%] lg:pt-3 md:h-[84%] md:pt-[0.1vw]">
-        <ul className="w-[50%] h-full flex flex-col pr-10 lg:w-[55%] lg:pr-5 md:pr-[2.1vw]">
+    <TemplateLayout heading={heading} hidingSubHeading="introduction">
+      <div className="w-full max-w-[1140px] h-[72%] flex lg:h-[80%] lg:pt-3 md:h-[93%] md:flex md:flex-col">
+        <ul className="w-[50%] h-full flex flex-col pr-10 lg:w-[55%] lg:pr-5 md:w-full md:pr-0">
           <IntroductionContent heading="설명" content={intro} />
           {value && <IntroductionContent heading="핵심 가치" content={value} />}
           {contribution && (
@@ -60,8 +60,8 @@ const Introduction = ({
             />
           </div>
         </ul>
-        <div className="w-[50%] h-full lg:w-[45%]">
-          <ul className="flex max-w-[464px] h-max mx-auto items-center flex-wrap gap-2 pl-10 lg:max-w-[312px] lg:pl-5 lg:gap-1 md:pl-0 md:gap-[0.6vw]">
+        <div className="w-[50%] h-full lg:w-[45%] md:w-full md:flex md:items-center">
+          <ul className="flex max-w-[464px] h-max mx-auto items-center flex-wrap gap-2 pl-10 lg:max-w-[312px] lg:pl-5 lg:gap-1 md:pl-0 md:max-w-[308px] md:gap-1">
             {techs.map(({ image, name }) => (
               <Tech key={name} image={image} name={name} />
             ))}
