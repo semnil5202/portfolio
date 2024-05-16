@@ -17,7 +17,7 @@ const ListItem = ({
   mb = 'mb-0',
   weight = 'light',
   size = 'base',
-  mediaText = 'md:text-[1.5vw]',
+  mediaText = '',
   mediaBullet = '',
   children,
 }: Props) => {

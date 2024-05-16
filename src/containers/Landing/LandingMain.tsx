@@ -24,7 +24,7 @@ const LandingMain = () => {
         </Link>
       </div>
       <div className="h-full flex items-center md:flex-col md:justify-center">
-        <article className="w-2/5 mt-[-8vh] animate-init-fade-in-move lg:mt-[-12.5vh] md:w-full md:flex md:items-center md:h-[50%] md:mt-0">
+        <article className="w-2/5 mt-[-8vh] animate-init-fade-in-move lg:mt-[-12.5vh] md:w-full md:flex md:items-center md:h-[55%] md:mt-0">
           <div className="flex flex-col w-max mx-auto">
             <div className="w-[300px] h-[300px] rounded-[50%] overflow-hidden lg:w-[240px] lg:h-[240px] md:w-[200px] md:h-[200px]">
               <Image
@@ -42,31 +42,31 @@ const LandingMain = () => {
               <ListItem
                 textColor="text-white"
                 bgColor="bg-white"
-                mediaText="md:text-dark md:text-[13px] md:font-medium"
+                mediaText="md:text-dark md:text-[14px] md:font-medium"
                 mediaBullet="md:bg-dark"
               >
                 23.02 - 23.11
               </ListItem>
-              <p className="text-white mb-6 ml-3 mt-1 md:text-dark md:text-[13px] md:font-medium md:mb-2">
+              <p className="text-white mb-6 ml-3 mt-1 md:text-dark md:text-[14px] md:font-medium md:mb-2">
                 우아한테크코스 웹 프론트엔드 5기
               </p>
               <ListItem
                 textColor="text-white"
                 bgColor="bg-white"
-                mediaText="md:text-dark md:text-[13px] md:font-medium"
+                mediaText="md:text-dark md:text-[14px] md:font-medium"
                 mediaBullet="md:bg-dark"
               >
                 17.02 - 23.02
               </ListItem>
-              <p className="text-white ml-3 mt-1 md:text-dark md:text-[13px] md:font-medium">
+              <p className="text-white ml-3 mt-1 md:text-dark md:text-[14px] md:font-medium">
                 순천향대학교 정보보호학과
               </p>
             </ul>
           </div>
         </article>
 
-        <article className="w-3/5 ml-[-1%] animate-init-fade-in-move lg:ml-0 md:w-full md:flex md:items-center md:h-[50%]">
-          <div className="w-min mx-auto md:w-[80%] md:max-w-[460px]">
+        <article className="w-3/5 ml-[-1%] animate-init-fade-in-move lg:ml-0 md:w-full md:flex md:items-center md:h-[45%]">
+          <div className="w-min mx-auto md:w-[75%] md:max-w-[460px]">
             <div>
               <h2 className="text-5xl leading-snug w-max text-primary-dark font-bold lg:text-[32px] lg:leading-normal md:text-[22px] md:leading-normal md:text-white md:font-medium">
                 안녕하세요.
@@ -85,8 +85,8 @@ const LandingMain = () => {
 
             <div className="flex justify-between mt-24 md:mt-4">
               <div className="w-[2px] h-[40px] bg-primary mt-[6px] lg:h-[64px] md:w-px md:bg-white md:h-[32px] md:mt-[4px]" />
-              <div className="w-[94%] text-primary-dark leading-relaxed md:text-[13px] md:text-white md:font-extralight md:leading-normal">
-                <p className="mb-4">
+              <div className="w-[94%] text-primary-dark leading-relaxed md:text-[14px] md:text-white md:font-extralight md:leading-normal">
+                <p className="mb-4 md:hidden">
                   대학에서 정보보호를 전공하고 UX를 다루는 웹 프론트엔드 분야에
                   매력을 느껴, 우아한테크코스에 진학해 10개월간의 웹 프론트엔드
                   과정을 수료했습니다.
