@@ -30,6 +30,14 @@ const ProjectSwiper = ({ currentPageIndex }: Props) => {
   return (
     <Swiper
       slidesPerView={4}
+      breakpoints={{
+        850: {
+          slidesPerView: 3,
+        },
+        1140: {
+          slidesPerView: 4,
+        },
+      }}
       modules={[Pagination, Mousewheel]}
       pagination={{
         clickable: true,

@@ -24,9 +24,9 @@ const LandingMain = () => {
         </Link>
       </div>
       <div className="h-full flex items-center">
-        <article className="w-2/5 mt-[-100px] animate-init-fade-in-move md:mt-0">
+        <article className="w-2/5 mt-[-8vh] animate-init-fade-in-move lg:mt-[-12.5vh] md:mt-0">
           <div className="flex flex-col w-max mx-auto">
-            <div className="w-[300px] h-[300px] rounded-[50%] overflow-hidden md:w-[17vw] md:h-[17vw]">
+            <div className="w-[300px] h-[300px] rounded-[50%] overflow-hidden lg:w-[260px] lg:h-[260px] md:w-[17vw] md:h-[17vw]">
               <Image
                 src={PNGPortfolioProfile}
                 alt="프로필 이미지"
@@ -55,7 +55,7 @@ const LandingMain = () => {
           </div>
         </article>
 
-        <article className="w-3/5 ml-[-1%] animate-init-fade-in-move">
+        <article className="w-3/5 ml-[-1%] animate-init-fade-in-move lg:ml-0">
           <div className="w-min mx-auto md:w-[82%]">
             <div>
               <h2 className="text-5xl leading-snug w-max text-primary-dark font-bold lg:text-4xl lg:leading-normal md:text-[3vw] md:font-medium">

@@ -21,8 +21,8 @@ const ProjectCard = ({ src, title, description, slug }: Props) => {
       onMouseEnter={() => setIsFocus(true)}
       onMouseLeave={() => setIsFocus(false)}
     >
-      <div className="w-[250px] flex flex-col items-center lg:w-[22vw] md:w-[22vw]">
-        <div className="w-[250px] h-[250px] rounded-xl overflow-hidden lg:w-[22vw] lg:h-[22vw] md:w-[22vw] md:h-[18.5vw] md:flex md:items-center md:rounded-md">
+      <div className="w-[250px] flex flex-col items-center">
+        <div className="w-[250px] h-[250px] rounded-xl overflow-hidden md:w-[22vw] md:h-[18.5vw] md:flex md:items-center md:rounded-md">
           <Image
             src={src}
             alt={title}
