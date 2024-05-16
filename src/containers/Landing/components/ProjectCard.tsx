@@ -21,8 +21,8 @@ const ProjectCard = ({ src, title, description, slug }: Props) => {
       onMouseEnter={() => setIsFocus(true)}
       onMouseLeave={() => setIsFocus(false)}
     >
-      <div className="w-[250px] flex flex-col items-center lg:w-[236px]">
-        <div className="w-[250px] h-[250px] rounded-xl overflow-hidden lg:w-[236px] lg:h-[236px] md:w-[22vw] md:h-[18.5vw] md:flex md:items-center md:rounded-md">
+      <div className="w-[250px] flex flex-col items-center lg:w-[236px] md:w-[168px]">
+        <div className="w-[250px] h-[250px] rounded-xl overflow-hidden lg:w-[236px] lg:h-[236px] md:w-[168px] md:h-[168px] md:rounded-md">
           <Image
             src={src}
             alt={title}
@@ -36,11 +36,11 @@ const ProjectCard = ({ src, title, description, slug }: Props) => {
           <h4
             className={`text-white text-xl font-semibold mt-4 ${
               isFocus && 'underline underline-offset-4 decoration-1'
-            } md:text-[1.8vw] md:mt-[0.2vw] md:font-medium md:leading-normal`}
+            } md:text-[14px] md:mt-2 md:font-medium md:leading-normal`}
           >
             {title}
           </h4>
-          <p className="text-white font-light mt-2 leading-relaxed md:text-[1.5vw] md:mt-0">
+          <p className="text-white font-light mt-2 leading-relaxed md:text-[12px] md:mt-1">
             {description}
           </p>
         </div>
