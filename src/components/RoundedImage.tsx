@@ -9,7 +9,7 @@ interface Props {
 const RoundedImage = ({ src, alt, bgColor = 'bg-white' }: Props) => {
   return (
     <div
-      className={`w-[250px] h-[250px] ${bgColor} rounded-[50%] overflow-hidden lg:w-[220px] lg:h-[220px] md:w-[13vw] md:h-[13vw]`}
+      className={`w-[250px] h-[250px] ${bgColor} rounded-[50%] overflow-hidden lg:w-[220px] lg:h-[220px] md:w-[200px] md:h-[200px]`}
     >
       <Image
         src={src}

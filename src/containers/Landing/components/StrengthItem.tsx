@@ -17,15 +17,16 @@ interface Props {
 
 const StrengthItem = ({ image, alt, contents }: Props) => {
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center md:h-full md:justify-center">
       <RoundedImage src={image} alt={alt} bgColor="bg-white" />
-      <ul className="w-[300px] mt-10 font-light lg:w-[232px] md:w-[31vw] md:mt-[1.5vw]">
+      <ul className="w-[300px] mt-10 font-light lg:w-[232px] md:w-[248px] md:mt-6">
         {contents.map(({ name, link }) => (
           <ListItem
             key={name}
             textColor="text-white"
             bgColor="bg-white"
-            mb="mb-3 md:mb-[0.4vw]"
+            mb="mb-3"
+            mediaText="md:text-[14px]"
           >
             {name}{' '}
             <Link
