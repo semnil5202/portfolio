@@ -7,8 +7,8 @@ interface Props {
 
 const Tech = ({ image, name }: Props) => {
   return (
-    <li className="flex w-[100px] h-[174px] flex-col items-center lg:w-[8vw] lg:h-[15vw] md:w-[7vw] md:h-[11.5vw]">
-      <div className="w-[100px] h-[100px] rounded-md overflow-hidden lg:w-[8vw] lg:h-[8vw] md:w-[7vw] md:h-[7vw]">
+    <li className="flex w-[100px] h-[174px] flex-col items-center lg:w-[92px] lg:h-[158px] md:w-[7vw] md:h-[11.5vw]">
+      <div className="w-[100px] h-[100px] rounded-md overflow-hidden lg:w-[92px] lg:h-[92px] md:w-[7vw] md:h-[7vw]">
         <Image
           src={image}
           alt={name}
