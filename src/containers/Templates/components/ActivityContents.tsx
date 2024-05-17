@@ -18,8 +18,8 @@ const ActivityContents = ({ contents, link }: Props) => {
   return (
     <>
       {contents.map(({ heading, descriptions }, idx) => (
-        <div key={heading} className="mb-4 last:mb-0 lg:mb-2 md:mb-[0.4vw]">
-          <p className="text-lg text-white font-semibold mb-2 md:text-[1.4vw] md:leading-snug md:mb-[0.1vw] md:font-medium">
+        <div key={heading} className="mb-4 last:mb-0 lg:mb-2 md:mb-2">
+          <p className="text-lg text-white font-semibold mb-2 md:text-[14px] md:leading-snug md:mb-[1px] md:font-medium">
             {heading}
           </p>
           {descriptions.map((description) => (
@@ -29,8 +29,8 @@ const ActivityContents = ({ contents, link }: Props) => {
               bgColor="bg-white"
               mb="mb-2 lg:mb-1 md:mb-0"
               weight="extralight"
-              mediaText="md:text-[1.2vw]"
-              mediaBullet="md:min-w-[0.3vw] md:min-h-[0.3vw] md:mt-[0.8vw]"
+              mediaText="md:text-[12px]"
+              mediaBullet="md:min-w-[2px] md:min-h-[2px] md:mt-[8px]"
             >
               {description}
             </ListItem>
@@ -38,16 +38,16 @@ const ActivityContents = ({ contents, link }: Props) => {
         </div>
       ))}
       {link && (
-        <div className="mb-4 last:mb-0 lg:mb-2 md:mb-[0.4vw]">
-          <p className="text-lg text-white font-semibold mb-2 md:text-[1.4vw] md:leading-snug md:mb-[0.1vw] md:font-medium">
+        <div className="mb-4 last:mb-0 lg:mb-2 md:mb-2">
+          <p className="text-lg text-white font-semibold mb-2 md:text-[14px] md:leading-snug md:mb-[1px] md:font-medium">
             {link.heading}
           </p>
           <ListItem
             bgColor="bg-white"
             mb="mb-2 lg:mb-1 md:mb-0"
             weight="extralight"
-            mediaText="md:text-[1.2vw]"
-            mediaBullet="md:min-w-[0.3vw] md:min-h-[0.3vw] md:mt-[0.8vw]"
+            mediaText="md:text-[12px]"
+            mediaBullet="md:min-w-[2px] md:min-h-[2px] md:mt-[8px]"
           >
             <Link
               href={link.href}

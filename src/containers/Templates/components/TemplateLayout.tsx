@@ -3,18 +3,19 @@ import { ReactNode } from 'react';
 interface Props {
   heading: string;
   subHeading?: string;
-  hidingSubHeading?: 'introduction';
+  isHideSubHeading?: boolean;
   children: ReactNode;
 }
 
 const TemplateLayout = ({
   heading,
   subHeading,
-  hidingSubHeading,
+  isHideSubHeading,
   children,
 }: Props) => {
-  const isHide = hidingSubHeading === 'introduction';
-  const headingMediaHeight = isHide ? 'md:h-[7%] md:mb-2' : 'h-[12%]';
+  const headingMediaHeight = isHideSubHeading
+    ? 'md:h-[6%] md:mb-2'
+    : 'md:h-[11%]';
 
   return (
     <>
@@ -22,14 +23,14 @@ const TemplateLayout = ({
         <div
           className={`w-full max-w-[1140px] h-[26%] flex flex-col justify-end lg:h-[20%] ${headingMediaHeight}`}
         >
-          <h2 className="text-4xl text-white font-bold lg:text-3xl md:text-[22px] md:leading-tight md:font-medium">
+          <h2 className="text-4xl text-white font-bold lg:text-3xl md:text-[20px] md:leading-tight md:font-medium">
             {heading}
           </h2>
-          {isHide ? (
+          {isHideSubHeading ? (
             <></>
           ) : (
             <>
-              <div className="w-[48px] h-[2px] bg-white my-3 lg:my-2 lg:w-[36px] md:w-[20px]" />
+              <div className="w-[48px] h-[2px] bg-white my-3 lg:my-2 lg:w-[36px] md:hidden" />
               {subHeading ? (
                 <h4 className="text-lg text-white font-extralight lg:text-base md:text-[14px] md:leading-tight">
                   {subHeading}
