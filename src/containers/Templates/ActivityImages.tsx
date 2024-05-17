@@ -7,6 +7,7 @@ import TemplateLayout from './components/TemplateLayout';
 import Image, { StaticImageData } from 'next/image';
 import { useEffect, useState } from 'react';
 import ActivityContents from './components/ActivityContents';
+import ActivitySwiperContents from './components/ActivitySwiperContents';
 
 interface Props {
   heading: string;
@@ -47,9 +48,9 @@ const ActivityImages = ({
 
   return (
     <TemplateLayout heading={heading} subHeading={subHeading}>
-      <div className="w-full max-w-[1140px] h-[74%] flex items-center pt-10 lg:h-[80%] lg:pt-6 md:flex-col md:h-[86%] md:pt-2">
-        <div className="w-[50%] h-full md:w-[80%] md:h-[38%]">
-          <div className="w-full h-full flex transition-all ease duration-400 hover:scale-125 hover:translate-y-14 md:rounded-sm md:hover:translate-y-[8px]">
+      <div className="w-full max-w-[1140px] h-[74%] flex items-center pt-10 lg:h-[80%] lg:pt-6 md:flex-col md:h-[84%] md:pt-5">
+        <div className="w-[50%] h-full md:w-full md:max-w-[420px] md:h-[50%]">
+          <div className="w-full h-full flex transition-all ease duration-400 hover:scale-125 hover:translate-y-14 md:hover:scale-100 md:hover:translate-y-0">
             <Swiper
               speed={700}
               spaceBetween={20}
@@ -85,8 +86,13 @@ const ActivityImages = ({
             </Swiper>
           </div>
         </div>
-        <div className="w-[50%] h-full flex flex-col pl-12 lg:pl-6 md:pl-0 md:w-full md:h-[62%]">
-          <ActivityContents contents={contents} link={link} />
+        <div className="w-[50%] h-full flex flex-col pl-12 lg:pl-6 md:pl-0 md:w-full md:h-[50%] md:mt-3">
+          <ActivitySwiperContents
+            contents={contents}
+            link={link}
+            currentPageIndex={currentPageIndex}
+            slideIndex={slideIndex}
+          />
         </div>
       </div>
     </TemplateLayout>
