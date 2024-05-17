@@ -22,6 +22,7 @@ const config: Config = {
       height: {
         'swiper-max': 'max-content !important',
         'swiper-min': 'min-content !important',
+        'swiper-full': '100% !important',
       },
       keyframes: {
         initBackground: {

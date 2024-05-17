@@ -54,14 +54,16 @@ const ActivitySwiperContents = ({
       }}
       modules={[Pagination]}
       grabCursor
-      className="w-full h-swiper-max md:pb-10 md:max-w-[420px]"
-      style={{ '--swiper-pagination-color': '#ffffff' } as {}}
+      className="w-full h-swiper-max md:max-w-[420px]"
+      style={
+        { '--swiper-pagination-color': '#ffffff', paddingBottom: 40 } as {}
+      }
     >
       {contents.map(({ heading, descriptions }, idx) => (
         <SwiperSlide
           tag="ul"
           key={heading}
-          className={`h-swiper-min mb-4 last:mb-0 lg:mb-2 md:h-full md:mb-2 ${
+          className={`h-swiper-min mb-4 last:mb-0 lg:mb-2 md:h-swiper-full md:mb-2 ${
             isIntoView && isFirstView && 'md:animate-slide-image-hint-move'
           }`}
         >
@@ -86,7 +88,7 @@ const ActivitySwiperContents = ({
       {link && (
         <SwiperSlide
           tag="ul"
-          className="h-swiper-min mb-4 last:mb-0 lg:mb-2 md:h-full md:mb-2"
+          className="h-swiper-min mb-4 last:mb-0 lg:mb-2 md:h-swiper-full md:mb-2"
         >
           <p className="text-lg text-white font-semibold mb-2 md:text-[14px] md:leading-snug md:font-medium">
             {link.heading}
