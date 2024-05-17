@@ -26,7 +26,7 @@ const LandingMain = () => {
       <div className="h-full flex items-center md:flex-col md:justify-center">
         <article className="w-2/5 mt-[-8vh] animate-init-fade-in-move lg:mt-[-12.5vh] md:w-full md:flex md:items-center md:h-[50%] md:mt-0">
           <div className="flex flex-col w-max mx-auto md:relative">
-            <div className="w-[300px] h-[300px] rounded-[50%] overflow-hidden lg:w-[240px] lg:h-[240px] md:fixed md:translate-y-[-55%] md:translate-x-[-75%] md:w-[55vw] md:h-[55vw] md:max-w-[300px] md:max-h-[300px]">
+            <div className="w-[300px] h-[300px] rounded-[50%] overflow-hidden lg:w-[240px] lg:h-[240px] md:fixed md:translate-y-[-55%] md:translate-x-[-75%] md:w-[55vw] md:h-[55vw] md:min-w-[200px] md:min-h-[200px] md:max-w-[300px] md:max-h-[300px]">
               <Image
                 src={PNGPortfolioProfile}
                 alt="프로필 이미지"
