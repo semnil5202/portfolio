@@ -76,32 +76,15 @@ const config: Config = {
             transform: 'translateX(-25%)',
           },
         },
-        rotateSmartPhone: {
+        notifyToggle: {
           '0%': {
-            transform: 'rotate(0deg)',
+            opacity: '1',
           },
-          '10%': {
-            transform: 'rotate(0deg)',
-          },
-          '35%': {
-            transform: 'rotate(-90deg)',
-          },
-          '85%': {
-            transform: 'rotate(-90deg)',
+          '50%': {
+            opacity: '0.3',
           },
           '100%': {
-            transform: 'rotate(0)',
-          },
-        },
-        newTabSmartPhone: {
-          '0%': {
-            transform: 'scale(0)',
-          },
-          '20%': {
-            transform: 'scale(1)',
-          },
-          '100%': {
-            transform: 'scale(1)',
+            opacity: '1',
           },
         },
       },
@@ -114,6 +97,7 @@ const config: Config = {
         'slide-image-hint-move': 'slideImageHintMove 1.5s ease 1500ms',
         'rotate-smart-phone': 'rotateSmartPhone 4s infinite ease',
         'new-tab-smart-phone': 'newTabSmartPhone 4s infinite ease',
+        'notify-toggle': 'notifyToggle 1s 2 linear 1500ms',
       },
     },
   },

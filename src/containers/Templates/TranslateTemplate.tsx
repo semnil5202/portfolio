@@ -18,7 +18,14 @@ const TranslateTemplate = ({ slide, currentPageIndex, slideIndex }: Props) => {
   if (slide.template === 'separator') return <Separator {...slide} />;
   if (slide.template === 'introduction') return <Introduction {...slide} />;
   if (slide.template === 'activity') return <Activity {...slide} />;
-  if (slide.template === 'activity-texts') return <ActivityTexts {...slide} />;
+  if (slide.template === 'activity-texts')
+    return (
+      <ActivityTexts
+        {...slide}
+        currentPageIndex={currentPageIndex}
+        slideIndex={slideIndex}
+      />
+    );
 
   return (
     <ActivityImages

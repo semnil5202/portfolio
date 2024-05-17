@@ -27,7 +27,7 @@ const ActivityContents = ({ contents, link }: Props) => {
               key={description}
               textColor="text-white"
               bgColor="bg-white"
-              mb="mb-2 lg:mb-1 md:mb-0"
+              mb="mb-2 lg:mb-1 md:mb-1"
               weight="extralight"
               mediaText="md:text-[12px]"
               mediaBullet="md:min-w-[2px] md:min-h-[2px] md:mt-[8px]"
