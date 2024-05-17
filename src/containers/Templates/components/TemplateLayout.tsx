@@ -14,7 +14,7 @@ const TemplateLayout = ({ heading, subHeading, children }: Props) => {
           <h2 className="text-4xl text-white font-bold lg:text-3xl md:text-[20px] md:leading-tight md:font-medium">
             {heading}
           </h2>
-          <div className="w-[48px] h-[2px] bg-white my-3 lg:my-2 lg:w-[36px] md:w-[24px]" />
+          <div className="w-[48px] h-[2px] bg-white my-3 lg:my-2 lg:w-[36px] md:w-[24px] md:h-px md:my-1" />
           {subHeading ? (
             <h4 className="text-lg text-white font-extralight lg:text-base md:text-[14px] md:leading-tight">
               {subHeading}

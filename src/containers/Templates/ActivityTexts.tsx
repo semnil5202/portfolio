@@ -62,10 +62,10 @@ const ActivityTexts = ({
 
   return (
     <TemplateLayout heading={heading} subHeading={subHeading}>
-      <div className="w-full max-w-[1140px] h-[74%] flex pt-10 lg:h-[80%] lg:pt-6 md:h-[84%] md:pt-2 md:flex-col">
+      <div className="w-full max-w-[1140px] h-[74%] flex pt-10 lg:h-[80%] lg:pt-6 md:h-[84%] md:pt-4 md:flex-col">
         <div className="w-[50%] h-full flex flex-col pr-10 lg:pr-5 md:w-full md:h-max md:pr-0">
           <h5
-            className="w-full flex justify-center items-center text-lg text-dark bg-white py-1 font-semibold rounded-[4px] mb-8 lg:mb-4 md:text-[14px] md:leading-tight md:rounded-sm md:mb-2 md:font-medium md:cursor-pointer"
+            className="w-full flex justify-center items-center text-lg text-dark bg-white py-1 font-semibold rounded-[4px] mb-8 lg:mb-4 md:text-[14px] md:px-1 md:leading-tight md:rounded-sm md:mb-2 md:font-medium md:cursor-pointer"
             onClick={onClickToggle}
           >
             {first.title}
@@ -80,7 +80,7 @@ const ActivityTexts = ({
         </div>
         <div className="w-[50%] h-full flex flex-col pl-10 lg:pl-5 md:w-full md:pl-0 md:mt-2">
           <h5
-            className={`w-full flex justify-center items-center text-lg text-dark bg-white py-1 font-semibold rounded-[4px] mb-8 lg:mb-4 md:text-[14px] md:leading-tight md:rounded-sm md:mb-2 md:font-medium md:cursor-pointer ${
+            className={`w-full flex justify-center items-center text-lg text-dark bg-white py-1 font-semibold rounded-[4px] mb-8 lg:mb-4 md:text-[14px] md:px-1 md:leading-tight md:rounded-sm md:mb-2 md:font-medium md:cursor-pointer ${
               isIntoView && isFirstView && 'md:animate-notify-toggle'
             }`}
             onClick={onClickToggle}

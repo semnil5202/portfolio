@@ -61,7 +61,7 @@ const ActivitySwiperContents = ({
         <SwiperSlide
           tag="ul"
           key={heading}
-          className={`h-min mb-4 last:mb-0 lg:mb-2 md:mb-2 ${
+          className={`h-min mb-4 last:mb-0 lg:mb-2 md:h-full md:mb-2 ${
             isIntoView && isFirstView && 'md:animate-slide-image-hint-move'
           }`}
         >
@@ -73,7 +73,7 @@ const ActivitySwiperContents = ({
               key={description}
               textColor="text-white"
               bgColor="bg-white"
-              mb="mb-2 lg:mb-1 md:mb-2"
+              mb="mb-2 lg:mb-1 md:mb-1"
               weight="extralight"
               mediaText="md:text-[12px]"
               mediaBullet="md:min-w-[2px] md:min-h-[2px] md:mt-[8px]"
@@ -84,13 +84,16 @@ const ActivitySwiperContents = ({
         </SwiperSlide>
       ))}
       {link && (
-        <SwiperSlide tag="ul" className="h-max mb-4 last:mb-0 lg:mb-2 md:mb-2">
+        <SwiperSlide
+          tag="ul"
+          className="h-min mb-4 last:mb-0 lg:mb-2 md:h-full md:mb-2"
+        >
           <p className="text-lg text-white font-semibold mb-2 md:text-[14px] md:leading-snug md:font-medium">
             {link.heading}
           </p>
           <ListItem
             bgColor="bg-white"
-            mb="mb-2 lg:mb-1 md:mb-2"
+            mb="mb-2 lg:mb-1 md:mb-0"
             weight="extralight"
             mediaText="md:text-[12px]"
             mediaBullet="md:min-w-[2px] md:min-h-[2px] md:mt-[8px]"

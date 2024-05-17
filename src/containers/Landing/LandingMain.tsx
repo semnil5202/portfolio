@@ -24,9 +24,9 @@ const LandingMain = () => {
         </Link>
       </div>
       <div className="h-full flex items-center md:flex-col md:justify-center">
-        <article className="w-2/5 mt-[-8vh] animate-init-fade-in-move lg:mt-[-12.5vh] md:w-full md:flex md:items-center md:h-[55%] md:mt-0">
-          <div className="flex flex-col w-max mx-auto">
-            <div className="w-[300px] h-[300px] rounded-[50%] overflow-hidden lg:w-[240px] lg:h-[240px] md:w-[200px] md:h-[200px]">
+        <article className="w-2/5 mt-[-8vh] animate-init-fade-in-move lg:mt-[-12.5vh] md:w-full md:flex md:items-center md:h-[50%] md:mt-0">
+          <div className="flex flex-col w-max mx-auto md:relative">
+            <div className="w-[300px] h-[300px] rounded-[50%] overflow-hidden lg:w-[240px] lg:h-[240px] md:fixed md:translate-y-[-55%] md:translate-x-[-75%] md:w-[55vw] md:max-w-[240px] md:h-[55vw] md:max-h-[240px]">
               <Image
                 src={PNGPortfolioProfile}
                 alt="프로필 이미지"
@@ -38,37 +38,39 @@ const LandingMain = () => {
               />
             </div>
 
-            <ul className="w-max mx-auto mt-12 font-light md:mt-3">
+            <ul className="w-max mx-auto mt-12 font-light md:fixed md:bg-white md:rounded-md md:translate-y-[20%] md:translate-x-[-20%] md:mt-3">
               <ListItem
                 textColor="text-white"
                 bgColor="bg-white"
+                mb="md:px-1"
                 mediaText="md:text-dark md:text-[14px] md:font-medium"
                 mediaBullet="md:bg-dark"
               >
                 23.02 - 23.11
               </ListItem>
-              <p className="text-white mb-6 ml-3 mt-1 md:text-dark md:text-[14px] md:font-medium md:mb-2">
+              <p className="text-white mb-6 ml-3 mt-1 md:px-1 md:text-dark md:text-[14px] md:mt-0 md:font-medium md:mb-2">
                 우아한테크코스 웹 프론트엔드 5기
               </p>
               <ListItem
                 textColor="text-white"
                 bgColor="bg-white"
+                mb="md:px-1"
                 mediaText="md:text-dark md:text-[14px] md:font-medium"
                 mediaBullet="md:bg-dark"
               >
                 17.02 - 23.02
               </ListItem>
-              <p className="text-white ml-3 mt-1 md:text-dark md:text-[14px] md:font-medium">
+              <p className="text-white ml-3 mt-1 md:px-1 md:text-dark md:text-[14px] md:mt-0 md:font-medium">
                 순천향대학교 정보보호학과
               </p>
             </ul>
           </div>
         </article>
 
-        <article className="w-3/5 ml-[-1%] animate-init-fade-in-move lg:ml-0 md:w-full md:flex md:items-center md:h-[45%]">
+        <article className="w-3/5 ml-[-1%] animate-init-fade-in-move lg:ml-0 md:w-full md:flex md:items-center md:h-[50%]">
           <div className="w-min mx-auto md:w-[75%] md:max-w-[460px]">
             <div>
-              <h2 className="text-5xl leading-snug w-max text-primary-dark font-bold lg:text-[32px] lg:leading-normal md:text-[22px] md:leading-normal md:text-white md:font-medium">
+              <h2 className="text-5xl leading-snug w-max text-primary-dark font-bold lg:text-[32px] lg:leading-normal md:text-[20px] md:leading-normal md:text-white md:font-medium">
                 안녕하세요.
               </h2>
               <DynamicText
@@ -78,7 +80,7 @@ const LandingMain = () => {
                   '사용자 경험을 중시하는',
                 ]}
               />
-              <h2 className="text-5xl leading-snug w-max text-primary-dark font-bold lg:text-[32px] lg:leading-normal md:text-[22px] md:leading-normal md:text-white md:font-medium">
+              <h2 className="text-5xl leading-snug w-max text-primary-dark font-bold lg:text-[32px] lg:leading-normal md:text-[20px] md:leading-normal md:text-white md:font-medium">
                 프론트엔드 개발자 이세민입니다.
               </h2>
             </div>

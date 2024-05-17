@@ -4,7 +4,7 @@ interface Props {
 
 const Background = ({ currentPageIndex }: Props) => {
   const primaryColorWidth =
-    currentPageIndex === 0 ? 'w-2/5 md:w-full md:h-[45%]' : 'w-full md:h-full';
+    currentPageIndex === 0 ? 'w-2/5 md:w-full md:h-[50%]' : 'w-full md:h-full';
   const bgColor = currentPageIndex === 2 ? 'bg-dark' : 'bg-primary';
 
   return (

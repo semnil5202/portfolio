@@ -8,7 +8,7 @@ interface Props {
 
 const Background = ({ currentPageIndex, landing, slideLength }: Props) => {
   const primaryColorWidth =
-    currentPageIndex === 0 ? 'w-3/6 md:w-full md:h-1/2' : 'w-full md:h-full';
+    currentPageIndex === 0 ? 'w-3/6 md:w-full md:h-[55%]' : 'w-full md:h-full';
   const landingWidth =
     currentPageIndex === 0 ? 'w-4/6 md:w-full md:h-1/2' : 'w-0 md:h-0';
   const bgColor =
