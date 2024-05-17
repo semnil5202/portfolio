@@ -17,8 +17,17 @@ const TranslateTemplate = ({ slide, currentPageIndex, slideIndex }: Props) => {
   if (slide.template === 'title') return <Title {...slide} />;
   if (slide.template === 'separator') return <Separator {...slide} />;
   if (slide.template === 'introduction') return <Introduction {...slide} />;
-  if (slide.template === 'activity') return <Activity {...slide} />;
-  if (slide.template === 'activity-texts')
+  if (slide.template === 'activity') {
+    return (
+      <Activity
+        {...slide}
+        currentPageIndex={currentPageIndex}
+        slideIndex={slideIndex}
+      />
+    );
+  }
+
+  if (slide.template === 'activity-texts') {
     return (
       <ActivityTexts
         {...slide}
@@ -26,6 +35,7 @@ const TranslateTemplate = ({ slide, currentPageIndex, slideIndex }: Props) => {
         slideIndex={slideIndex}
       />
     );
+  }
 
   return (
     <ActivityImages
