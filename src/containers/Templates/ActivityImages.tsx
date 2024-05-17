@@ -50,7 +50,7 @@ const ActivityImages = ({
     <TemplateLayout heading={heading} subHeading={subHeading}>
       <div className="w-full max-w-[1140px] h-[74%] flex items-center pt-10 lg:h-[80%] lg:pt-6 md:flex-col md:h-[84%] md:pt-4">
         <div className="w-[50%] h-full md:w-[85%] md:max-w-[420px] md:h-[50%]">
-          <div className="w-full h-full flex transition-all ease duration-400 hover:scale-125 hover:translate-y-14 md:hover:translate-y-[12px]">
+          <div className="relative z-10 w-full h-full flex transition-all ease duration-400 hover:scale-125 hover:translate-y-14 lg:hover:translate-x-12 lg:hover:translate-y-20 md:hover:translate-y-[12px]">
             <Swiper
               speed={700}
               spaceBetween={20}
