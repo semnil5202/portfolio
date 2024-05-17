@@ -16,7 +16,7 @@ const ListItem = ({
   bgColor = 'bg-black',
   mb = 'mb-0',
   weight = 'light',
-  size = 'base',
+  size = 'normal',
   mediaText = '',
   mediaBullet = '',
   children,

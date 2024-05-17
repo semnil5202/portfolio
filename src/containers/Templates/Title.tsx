@@ -22,7 +22,7 @@ const Title = ({ title, description, links }: Props) => {
           </h1>
           <div className="flex mt-6 md:mt-3">
             <div className="w-[2px] h-[18px] bg-white mt-[6px] mr-4 md:w-px md:h-[14px] md:mt-[4px] md:mr-2" />
-            <p className="text-lg text-white lg:text-base md:text-[14px] md:leading-relaxed">
+            <p className="text-lg text-white lg:text-normal md:text-[14px] md:leading-relaxed">
               {description}
             </p>
           </div>
