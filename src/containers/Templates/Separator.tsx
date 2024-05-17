@@ -27,7 +27,7 @@ const Separator = ({ type, heading, link, svg }: Props) => {
 
   return (
     <section className="relative w-full h-full flex justify-center items-center">
-      <HomeIcon position="absolute" />
+      <HomeIcon position="absolute" mediaColor="white" />
       <Link href={`/${link}`} className="flex flex-col items-center">
         <div className="flex items-center">
           {Svg && (
