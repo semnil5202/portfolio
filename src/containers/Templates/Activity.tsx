@@ -29,7 +29,7 @@ const Activity = ({
 }: Props) => {
   return (
     <TemplateLayout heading={heading} subHeading={subHeading}>
-      <div className="w-full h-[74%] max-w-[1140px] flex items-center pt-10 lg:h-[80%] lg:pt-6 md:flex-col md:h-[84%] md:pt-4">
+      <section className="w-full h-[74%] max-w-[1140px] flex items-center pt-10 lg:h-[80%] lg:pt-6 md:flex-col md:h-[84%] md:pt-4">
         <div className="w-[50%] h-full flex md:w-[85%] md:max-w-[420px] md:h-[50%]">
           <SkeletonImage
             image={image}
@@ -45,7 +45,7 @@ const Activity = ({
             slideIndex={slideIndex}
           />
         </div>
-      </div>
+      </section>
     </TemplateLayout>
   );
 };

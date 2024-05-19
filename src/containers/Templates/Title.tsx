@@ -13,7 +13,7 @@ interface Props {
 
 const Title = ({ title, description, links }: Props) => {
   return (
-    <section className="relative w-full h-full md:flex md:flex-col-reverse">
+    <div className="relative w-full h-full md:flex md:flex-col-reverse">
       <HomeIcon position="fixed" />
       <div className="w-3/6 h-full flex flex-col items-center mt-[-4%] justify-center animate-init-fade-in-move md:w-full md:h-[55%] md:mt-0">
         <div className="ml-[-20px] max-w-[75%] md:ml-0 md:mt-[-120px]">
@@ -33,7 +33,7 @@ const Title = ({ title, description, links }: Props) => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

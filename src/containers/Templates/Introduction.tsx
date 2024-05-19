@@ -33,7 +33,7 @@ const Introduction = ({
 
   return (
     <TemplateLayout heading={heading}>
-      <div className="w-full max-w-[1140px] h-[72%] flex lg:h-[80%] lg:pt-3 md:h-[84%] md:flex md:flex-col">
+      <section className="w-full max-w-[1140px] h-[72%] flex lg:h-[80%] lg:pt-3 md:h-[84%] md:flex md:flex-col">
         <ul className="w-[50%] h-full flex flex-col pr-10 lg:w-[55%] lg:pr-5 md:w-full md:h-max md:pr-0">
           <IntroductionContent heading="설명" content={intro} />
           {value && <IntroductionContent heading="핵심 가치" content={value} />}
@@ -77,7 +77,7 @@ const Introduction = ({
             ))}
           </ul>
         </ul>
-      </div>
+      </section>
     </TemplateLayout>
   );
 };

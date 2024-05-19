@@ -41,7 +41,7 @@ const ActivityTexts = ({
 }: Props) => {
   return (
     <TemplateLayout heading={heading} subHeading={subHeading}>
-      <div className="w-full max-w-[1140px] h-[74%] flex pt-10 lg:h-[80%] lg:pt-6 md:h-[84%] md:pt-4 md:flex-col">
+      <section className="w-full max-w-[1140px] h-[74%] flex pt-10 lg:h-[80%] lg:pt-6 md:h-[84%] md:pt-4 md:flex-col">
         <div className="w-[50%] h-full flex flex-col pr-10 lg:pr-5 md:w-full md:h-max md:pr-0">
           <ActivityTextTitle title={first.title} slideIndex={slideIndex}>
             <ActivityContents contents={first.contents} link={first.link} />
@@ -56,7 +56,7 @@ const ActivityTexts = ({
             <ActivityContents contents={second.contents} link={second.link} />
           </ActivityTextTitle>
         </div>
-      </div>
+      </section>
     </TemplateLayout>
   );
 };

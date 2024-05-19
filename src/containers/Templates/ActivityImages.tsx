@@ -29,7 +29,7 @@ const ActivityImages = ({
 }: Props) => {
   return (
     <TemplateLayout heading={heading} subHeading={subHeading}>
-      <div className="w-full max-w-[1140px] h-[74%] flex items-center pt-10 lg:h-[80%] lg:pt-6 md:flex-col md:h-[84%] md:pt-4">
+      <section className="w-full max-w-[1140px] h-[74%] flex items-center pt-10 lg:h-[80%] lg:pt-6 md:flex-col md:h-[84%] md:pt-4">
         <div className="w-[50%] h-full md:w-[85%] md:max-w-[420px] md:h-[50%]">
           <div className="relative z-10 w-full flex transition-all ease duration-400 hover:scale-125 hover:translate-y-10 lg:hover:translate-x-12 lg:hover:translate-y-10 md:hover:translate-y-[12px]">
             <ActivityImageSwiper
@@ -46,7 +46,7 @@ const ActivityImages = ({
             slideIndex={slideIndex}
           />
         </div>
-      </div>
+      </section>
     </TemplateLayout>
   );
 };

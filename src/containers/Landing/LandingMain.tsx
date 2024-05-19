@@ -9,7 +9,7 @@ import SkeletonImage from '@/components/SkeletonImage';
 const LandingMain = () => {
   return (
     <div className="w-full h-full">
-      <div className="fixed flex flex-col h-[100px] justify-between right-8 top-8 animate-init-fade-in-move md:right-4 md:top-4 md:h-[84px]">
+      <section className="fixed flex flex-col h-[100px] justify-between right-8 top-8 animate-init-fade-in-move md:right-4 md:top-4 md:h-[84px]">
         <Link href="https://github.com/semnil5202" target="_blank">
           <SVGGithubLogo
             className="md:w-[36px] md:h-[36px]"
@@ -22,7 +22,7 @@ const LandingMain = () => {
             viewBox="0 0 40 40"
           />
         </Link>
-      </div>
+      </section>
       <section className="h-full flex items-center md:flex-col md:justify-center">
         <div className="w-2/5 mt-[-8vh] animate-init-fade-in-move lg:mt-[-12.5vh] md:w-full md:flex md:items-center md:h-[50%] md:mt-0">
           <div className="flex flex-col w-max mx-auto md:relative">

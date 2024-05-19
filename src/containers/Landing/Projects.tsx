@@ -11,7 +11,7 @@ const Projects = () => {
         </h2>
         <div className="w-[60px] h-[1px] bg-white mt-4 md:w-[40px] md:mt-2" />
       </div>
-      <article className="w-full h-[440px] md:h-[292px]">
+      <section className="w-full h-[440px] md:h-[292px]">
         <ProjectSwiper>
           {CARDS.map(({ id, src, title, description, slug }) => (
             <ProjectCard
@@ -23,7 +23,7 @@ const Projects = () => {
             />
           ))}
         </ProjectSwiper>
-      </article>
+      </section>
     </div>
   );
 };
