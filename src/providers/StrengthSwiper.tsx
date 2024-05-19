@@ -28,8 +28,8 @@ const StrengthSwiper = ({ children }: Props) => {
       mousewheel
       className="w-full h-max flex md:h-full"
     >
-      {children.map((child, idx) => (
-        <SwiperSlide key={idx}>{child}</SwiperSlide>
+      {children.map((strengthItem, idx) => (
+        <SwiperSlide key={idx}>{strengthItem}</SwiperSlide>
       ))}
     </Swiper>
   );

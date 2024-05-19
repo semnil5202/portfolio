@@ -2,11 +2,11 @@ import Image, { StaticImageData } from 'next/image';
 
 interface Props {
   currentPageIndex: number;
-  landing: StaticImageData;
+  landingImage: StaticImageData;
   slideLength: number;
 }
 
-const Background = ({ currentPageIndex, landing, slideLength }: Props) => {
+const Background = ({ currentPageIndex, landingImage, slideLength }: Props) => {
   const primaryColorWidth =
     currentPageIndex === 0 ? 'w-3/6 md:w-full md:h-[55%]' : 'w-full md:h-full';
   const landingWidth =
@@ -21,7 +21,7 @@ const Background = ({ currentPageIndex, landing, slideLength }: Props) => {
           className={`${landingWidth} h-full fixed right-0 z-[-1] animate-init-fade-in-move transition-all ease duration-700 md:top-0`}
         >
           <Image
-            src={landing}
+            src={landingImage}
             alt="프로젝트 소개 이미지"
             fill
             loading="lazy"

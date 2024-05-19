@@ -49,18 +49,17 @@ const ProjectSwiper = ({ children }: Props) => {
         clickable: true,
       }}
       grabCursor
-      nested
       className="w-full h-full"
       style={{ '--swiper-pagination-color': '#ffffff' } as {}}
     >
-      {children.map((child, idx) => (
+      {children.map((projectCard, idx) => (
         <SwiperSlide key={idx}>
           <div
             className={`${
               isIntoView && isFirstView && 'animate-slide-image-hint-move'
             }`}
           >
-            {child}
+            {projectCard}
           </div>
         </SwiperSlide>
       ))}
