@@ -1,7 +1,10 @@
+'use client';
+
 import ListItem from '@/components/ListItem';
+import useCurrentPageIndexStore from '@/store/currentPageIndex';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import { Mousewheel, Pagination } from 'swiper/modules';
+import { Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 interface Props {
@@ -14,19 +17,16 @@ interface Props {
     name: string;
     href: string;
   };
-  currentPageIndex: number;
   slideIndex: number;
 }
 
-const ActivitySwiperContents = ({
-  contents,
-  link,
-  currentPageIndex,
-  slideIndex,
-}: Props) => {
+const ActivitySwiperContents = ({ contents, link, slideIndex }: Props) => {
   const [viewTime, setViewTime] = useState<number>(0);
+  const projectCurrentPageIndex = useCurrentPageIndexStore(
+    (state) => state.projectCurrentPageIndex
+  );
 
-  const isIntoView = currentPageIndex === slideIndex;
+  const isIntoView = projectCurrentPageIndex === slideIndex;
   const isFirstView = viewTime === 1;
 
   useEffect(() => {
