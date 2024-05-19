@@ -9,7 +9,7 @@ export default function Home() {
       <MainFullPageSwiper>
         <LandingMain />
         <Strength />
-        <Projects currentpageindex={undefined as never} />
+        <Projects />
       </MainFullPageSwiper>
     </main>
   );
