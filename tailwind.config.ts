@@ -12,6 +12,7 @@ const config: Config = {
       screens: {
         md: { min: '1px', max: '767px' },
         lg: { min: '768px', max: '1139px' },
+        tall: { raw: '(max-height: 619px)' },
       },
       colors: {
         primary: '#2A392F',
