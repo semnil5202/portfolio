@@ -28,6 +28,7 @@ const ProjectFullPageSwiper = ({
     setProjectCurrentPageIndex,
     resetProjectContentSwiperViewTime,
     resetProjectImageSwiperViewTime,
+    setProjectTextToggle,
   } = useStore((state) => state);
 
   useEffect(() => {
@@ -35,11 +36,13 @@ const ProjectFullPageSwiper = ({
       setProjectCurrentPageIndex(0);
       resetProjectContentSwiperViewTime();
       resetProjectImageSwiperViewTime();
+      setProjectTextToggle(false);
     };
   }, [
     setProjectCurrentPageIndex,
     resetProjectContentSwiperViewTime,
     resetProjectImageSwiperViewTime,
+    setProjectTextToggle,
   ]);
 
   return (

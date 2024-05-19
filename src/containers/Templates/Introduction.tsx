@@ -64,7 +64,7 @@ const Introduction = ({
           <ListItem
             textColor="text-white"
             bgColor="bg-white"
-            mb="hidden md:flex md:mt-2"
+            mb="hidden md:flex"
             weight="semibold"
             size="lg"
             mediaText="md:font-medium md:text-[14px]"
