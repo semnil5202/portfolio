@@ -6,13 +6,13 @@ import ProjectFullPageSwiper from '@/providers/ProjectFullPageSwiper';
 const ProjectDetail = ({ params }: { params: { slug: SlugType } }) => {
   const landingImage = DETAIL_LANDING[params.slug];
   const slideLength = DETAILS[params.slug].length;
-  const navigations = DETAIL_NAV[params.slug];
+  const navigationImages = DETAIL_NAV[params.slug];
 
   return (
     <main className="relative w-screen h-dvh">
       <ProjectFullPageSwiper
         landingImage={landingImage}
-        navigationImages={navigations}
+        navigationImages={navigationImages}
         slideLength={slideLength}
       >
         {DETAILS[params.slug].map((slide, idx) => (

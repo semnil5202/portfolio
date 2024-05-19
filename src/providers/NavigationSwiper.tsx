@@ -18,6 +18,8 @@ const NavigationSwiper = ({ setThumbsSwiper, navigationImages }: Props) => {
     ? 'translate-x-[0%]'
     : 'translate-x-[-105%]';
 
+  console.log(isMouseEnter, setThumbsSwiper);
+
   const onTouchNavigation: TouchEventHandler = (event) => {
     const touch = event.touches[0]!;
 
