@@ -8,41 +8,22 @@ import ActivityTexts from './ActivityTexts';
 
 interface Props {
   slide: TemplateType;
-  currentPageIndex: number;
   slideIndex: number;
 }
 
-const TranslateTemplate = ({ slide, currentPageIndex, slideIndex }: Props) => {
+const TranslateTemplate = ({ slide, slideIndex }: Props) => {
   if (slide.template === 'title') return <Title {...slide} />;
   if (slide.template === 'separator') return <Separator {...slide} />;
   if (slide.template === 'introduction') return <Introduction {...slide} />;
   if (slide.template === 'activity') {
-    return (
-      <Activity
-        {...slide}
-        currentPageIndex={currentPageIndex}
-        slideIndex={slideIndex}
-      />
-    );
+    return <Activity {...slide} slideIndex={slideIndex} />;
   }
 
   if (slide.template === 'activity-texts') {
-    return (
-      <ActivityTexts
-        {...slide}
-        currentPageIndex={currentPageIndex}
-        slideIndex={slideIndex}
-      />
-    );
+    return <ActivityTexts {...slide} slideIndex={slideIndex} />;
   }
 
-  return (
-    <ActivityImages
-      {...slide}
-      currentPageIndex={currentPageIndex}
-      slideIndex={slideIndex}
-    />
-  );
+  return <ActivityImages {...slide} slideIndex={slideIndex} />;
 };
 
 export default TranslateTemplate;
