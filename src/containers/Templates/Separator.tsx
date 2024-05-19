@@ -43,7 +43,7 @@ const Separator = ({ type, heading, link, svg }: Props) => {
             viewBox="0 0 72 72"
           />
         </div>
-        <div className="w-[30%] h-[2px] bg-white mt-10 mr-4 lg:w-[25%] md:w-[15%] md:mt-5" />
+        <div className="w-[25%] h-[2px] bg-white mt-10 mr-4 lg:w-[20%] md:w-[15%] md:mt-5" />
       </Link>
     </div>
   );
