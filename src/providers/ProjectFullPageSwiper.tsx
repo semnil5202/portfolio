@@ -7,7 +7,7 @@ import { ReactElement, useEffect, useState } from 'react';
 import useStore from '@/store/store';
 import { StaticImageData } from 'next/image';
 import Background from '@/containers/Templates/Background';
-import NavigationSwiper from '@/providers/NavigationSwiper';
+import NavigationSwiper from '@/containers/Templates/components/NavigationSwiper';
 
 interface Props {
   landingImage: StaticImageData;
@@ -49,10 +49,6 @@ const ProjectFullPageSwiper = ({
         landingImage={landingImage}
         slideLength={slideLength}
       />
-      <NavigationSwiper
-        setThumbsSwiper={setThumbsSwiper}
-        navigationImages={navigationImages}
-      />
       <Swiper
         tag="section"
         speed={700}
@@ -80,6 +76,10 @@ const ProjectFullPageSwiper = ({
           </SwiperSlide>
         ))}
       </Swiper>
+      <NavigationSwiper
+        setThumbsSwiper={setThumbsSwiper}
+        navigationImages={navigationImages}
+      />
     </>
   );
 };
