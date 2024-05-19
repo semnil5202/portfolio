@@ -3,7 +3,7 @@
 import ListItem from '@/components/ListItem';
 import useStore from '@/store/store';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -21,19 +21,20 @@ interface Props {
 }
 
 const ActivitySwiperContents = ({ contents, link, slideIndex }: Props) => {
-  const [viewTime, setViewTime] = useState<number>(0);
-  const projectCurrentPageIndex = useStore(
-    (state) => state.projectCurrentPageIndex
-  );
+  const {
+    projectContentSwiperViewTime,
+    projectCurrentPageIndex,
+    increaseProjectContentSwiperViewTime,
+  } = useStore((state) => state);
 
   const isIntoView = projectCurrentPageIndex === slideIndex;
-  const isFirstView = viewTime === 1;
+  const isFirstView = projectContentSwiperViewTime === 1;
 
   useEffect(() => {
-    if (!isIntoView) return;
+    if (!isIntoView || innerWidth > 767) return;
 
-    setViewTime((prev) => prev + 1);
-  }, [isIntoView]);
+    increaseProjectContentSwiperViewTime(1);
+  }, [isIntoView, increaseProjectContentSwiperViewTime]);
 
   return (
     <Swiper

@@ -14,19 +14,20 @@ interface Props {
 }
 
 const ActivityImageSwiper = ({ images, heading, slideIndex }: Props) => {
-  const [viewTime, setViewTime] = useState<number>(0);
-  const projectCurrentPageIndex = useStore(
-    (state) => state.projectCurrentPageIndex
-  );
+  const {
+    projectCurrentPageIndex,
+    projectImageSwiperViewTime,
+    increaseProjectImageSwiperViewTime,
+  } = useStore((state) => state);
 
   const isIntoView = projectCurrentPageIndex === slideIndex;
-  const isFirstView = viewTime === 1;
+  const isFirstView = projectImageSwiperViewTime === 1;
 
   useEffect(() => {
     if (!isIntoView) return;
 
-    setViewTime((prev) => prev + 1);
-  }, [isIntoView]);
+    increaseProjectImageSwiperViewTime(1);
+  }, [isIntoView, increaseProjectImageSwiperViewTime]);
 
   return (
     <Swiper
