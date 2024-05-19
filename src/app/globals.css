@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.swiper-pagination-progressbar {
+  left: auto !important;
+  right: 0 !important;
+}

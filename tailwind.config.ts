@@ -67,10 +67,10 @@ const config: Config = {
         },
         navHintMove: {
           '25%': {
-            transform: 'translateX(-50%)',
+            transform: 'translateX(50%)',
           },
           '75%': {
-            transform: 'translateX(-50%)',
+            transform: 'translateX(50%)',
           },
         },
         slideImageHintMove: {

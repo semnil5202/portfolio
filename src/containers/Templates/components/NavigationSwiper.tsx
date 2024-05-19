@@ -16,9 +16,7 @@ const NavigationSwiper = ({ setThumbsSwiper, navigationImages }: Props) => {
   const [prevTouch, setPrevTouch] = useState<React.Touch | null>(null);
   const thumbTranslate = isMouseEnter
     ? 'translate-x-[0%]'
-    : 'translate-x-[-105%]';
-
-  console.log(isMouseEnter, setThumbsSwiper);
+    : 'translate-x-[105%]';
 
   const onTouchNavigation: TouchEventHandler = (event) => {
     const touch = event.touches[0]!;
@@ -30,11 +28,11 @@ const NavigationSwiper = ({ setThumbsSwiper, navigationImages }: Props) => {
     const otherDiff = touch.pageY - prevTouch.pageY;
 
     if (diff > 3 && Math.abs(otherDiff) < 3) {
-      setIsMouseEnter(true);
+      setIsMouseEnter(false);
       return;
     }
 
-    setIsMouseEnter(false);
+    setIsMouseEnter(true);
   };
 
   const onTouchEndNavigation: TouchEventHandler = () => {
@@ -43,7 +41,7 @@ const NavigationSwiper = ({ setThumbsSwiper, navigationImages }: Props) => {
 
   return (
     <div
-      className={`fixed top-0 left-0 w-[2%] h-full bg-transparent z-50 md:w-[5%]`}
+      className="fixed top-0 right-0 w-[2%] h-full bg-transparent z-50 md:w-[5%]"
       onMouseEnter={() => setIsMouseEnter(true)}
       onMouseLeave={() => setIsMouseEnter(false)}
       onTouchMove={onTouchNavigation}
@@ -58,7 +56,7 @@ const NavigationSwiper = ({ setThumbsSwiper, navigationImages }: Props) => {
         modules={[Thumbs, Mousewheel]}
         mousewheel
         className={`w-[15%] ${thumbTranslate} bg-white h-full animate-nav-hint-move transition-all ease duration-300`}
-        style={{ position: 'fixed', top: '0', left: '0' }}
+        style={{ position: 'fixed', top: '0', right: '0' }}
       >
         {navigationImages.map((image, idx) => (
           <SwiperSlide
