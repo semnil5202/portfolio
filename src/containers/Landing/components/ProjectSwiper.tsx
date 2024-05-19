@@ -1,7 +1,7 @@
 'use client';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Mousewheel } from 'swiper/modules';
+import { Pagination } from 'swiper/modules';
 
 import ProjectCard from './ProjectCard';
 import { useEffect, useState } from 'react';
@@ -41,11 +41,10 @@ const ProjectSwiper = ({ currentPageIndex }: Props) => {
           slidesPerView: 4,
         },
       }}
-      modules={[Pagination, Mousewheel]}
+      modules={[Pagination]}
       pagination={{
         clickable: true,
       }}
-      mousewheel
       grabCursor
       nested
       className="w-full h-full"
