@@ -3,29 +3,32 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 
-import ProjectCard from './ProjectCard';
-import { useEffect, useState } from 'react';
-import CARDS from '@/constants/cards';
+import { ReactElement, useEffect, useState } from 'react';
+import useCurrentPageIndexStore from '@/store/currentPageIndex';
 
 interface Props {
-  currentPageIndex: number;
+  children: ReactElement[];
 }
 
-let viewTimeWithRoute = 0;
 const PROJECT_SLIDE_INDEX = 2;
 
-const ProjectSwiper = ({ currentPageIndex }: Props) => {
+const ProjectSwiper = ({ children }: Props) => {
   const [viewTime, setViewTime] = useState<number>(0);
+  const {
+    mainCurrentPageIndex,
+    mainProjectSwiperViewTime,
+    increaseMainProjectSwiperViewTime,
+  } = useCurrentPageIndexStore((state) => state);
 
-  const isIntoView = currentPageIndex === PROJECT_SLIDE_INDEX;
-  const isFirstView = viewTime === 1 && viewTimeWithRoute === 1;
+  const isIntoView = mainCurrentPageIndex === PROJECT_SLIDE_INDEX;
+  const isFirstView = viewTime === 1 && mainProjectSwiperViewTime === 1;
 
   useEffect(() => {
     if (!isIntoView) return;
 
-    viewTimeWithRoute += 1;
+    increaseMainProjectSwiperViewTime(1);
     setViewTime((prev) => prev + 1);
-  }, [isIntoView]);
+  }, [isIntoView, increaseMainProjectSwiperViewTime]);
 
   return (
     <Swiper
@@ -50,19 +53,14 @@ const ProjectSwiper = ({ currentPageIndex }: Props) => {
       className="w-full h-full"
       style={{ '--swiper-pagination-color': '#ffffff' } as {}}
     >
-      {CARDS.map(({ id, src, title, description, slug }) => (
-        <SwiperSlide key={id}>
+      {children.map((child, idx) => (
+        <SwiperSlide key={idx}>
           <div
             className={`${
               isIntoView && isFirstView && 'animate-slide-image-hint-move'
             }`}
           >
-            <ProjectCard
-              src={src}
-              title={title}
-              description={description}
-              slug={slug}
-            />
+            {child}
           </div>
         </SwiperSlide>
       ))}

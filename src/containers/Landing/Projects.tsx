@@ -1,10 +1,8 @@
-import ProjectSwiper from './components/ProjectSwiper';
+import CARDS from '@/constants/cards';
+import ProjectSwiper from '../../providers/ProjectSwiper';
+import ProjectCard from './components/ProjectCard';
 
-interface Props {
-  currentPageIndex: number;
-}
-
-const Projects = ({ currentPageIndex }: Props) => {
+const Projects = () => {
   return (
     <div className="w-[1140px] h-full mx-auto flex flex-col items-center justify-center gap-10 lg:w-full md:w-full md:gap-5">
       <div className="flex flex-col items-center">
@@ -14,7 +12,17 @@ const Projects = ({ currentPageIndex }: Props) => {
         <div className="w-[60px] h-[1px] bg-white mt-4 md:w-[40px] md:mt-2" />
       </div>
       <article className="w-full h-[440px] md:h-[292px]">
-        <ProjectSwiper currentPageIndex={currentPageIndex} />
+        <ProjectSwiper>
+          {CARDS.map(({ id, src, title, description, slug }) => (
+            <ProjectCard
+              key={id}
+              src={src}
+              title={title}
+              description={description}
+              slug={slug}
+            />
+          ))}
+        </ProjectSwiper>
       </article>
     </div>
   );

@@ -23,6 +23,7 @@ const SkeletonImage = ({
       <Image
         src={image}
         alt={alt}
+        loading="lazy"
         placeholder={isBlur ? 'blur' : 'empty'}
         className={`${imageClassName} animate-pulse`}
         onLoad={(e) => e.currentTarget.classList.remove('animate-pulse')}

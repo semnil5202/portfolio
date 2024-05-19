@@ -1,8 +1,6 @@
-'use client';
-
-import Image, { StaticImageData } from 'next/image';
+import SkeletonImage from '@/components/SkeletonImage';
+import { StaticImageData } from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
 
 interface Props {
   src: StaticImageData;
@@ -12,32 +10,18 @@ interface Props {
 }
 
 const ProjectCard = ({ src, title, description, slug }: Props) => {
-  const [isFocus, setIsFocus] = useState<boolean>(false);
-
   return (
-    <Link
-      href={`/${slug}`}
-      className="flex justify-center"
-      onMouseEnter={() => setIsFocus(true)}
-      onMouseLeave={() => setIsFocus(false)}
-    >
+    <Link href={`/${slug}`} className="flex justify-center">
       <div className="w-[250px] flex flex-col items-center lg:w-[236px] md:w-[168px]">
-        <div className="w-[250px] h-[250px] rounded-xl overflow-hidden lg:w-[236px] lg:h-[236px] md:w-[168px] md:h-[168px] md:rounded-md">
-          <Image
-            src={src}
-            alt={title}
-            loading="lazy"
-            placeholder="blur"
-            className="animate-pulse bg-gray-500"
-            onLoad={(e) => e.currentTarget.classList.remove('animate-pulse')}
-          />
-        </div>
+        <SkeletonImage
+          image={src}
+          alt={`${title} 이미지`}
+          isBlur
+          imageClassName="bg-gray-500"
+          containerClassName="w-[250px] h-[250px] rounded-xl overflow-hidden lg:w-[236px] lg:h-[236px] md:w-[168px] md:h-[168px] md:rounded-md"
+        />
         <div>
-          <h4
-            className={`text-white text-xl font-semibold mt-4 ${
-              isFocus && 'underline underline-offset-4 decoration-1'
-            } md:text-[14px] md:mt-2 md:font-medium md:leading-normal`}
-          >
+          <h4 className="text-white text-xl font-semibold mt-4 md:text-[14px] md:mt-2 md:font-medium md:leading-normal">
             {title}
           </h4>
           <p className="text-white font-light mt-2 leading-relaxed md:text-[12px] md:mt-1">
