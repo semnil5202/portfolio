@@ -1,14 +1,14 @@
-import Image from 'next/image';
 import DynamicText from '../../components/DynamicText';
 import PNGPortfolioProfile from '../../../public/assets/portfolio-profile.png';
 import SVGGithubLogo from '../../../public/assets/icons/github-logo.svg';
 import SVGVelogLogo from '../../../public/assets/icons/velog-logo.svg';
 import ListItem from '@/components/ListItem';
 import Link from 'next/link';
+import SkeletonImage from '@/components/SkeletonImage';
 
 const LandingMain = () => {
   return (
-    <>
+    <div className="w-full h-full">
       <div className="fixed flex flex-col h-[100px] justify-between right-8 top-8 animate-init-fade-in-move md:right-4 md:top-4 md:h-[84px]">
         <Link href="https://github.com/semnil5202" target="_blank">
           <SVGGithubLogo
@@ -23,20 +23,16 @@ const LandingMain = () => {
           />
         </Link>
       </div>
-      <div className="h-full flex items-center md:flex-col md:justify-center">
-        <article className="w-2/5 mt-[-8vh] animate-init-fade-in-move lg:mt-[-12.5vh] md:w-full md:flex md:items-center md:h-[50%] md:mt-0">
+      <section className="h-full flex items-center md:flex-col md:justify-center">
+        <div className="w-2/5 mt-[-8vh] animate-init-fade-in-move lg:mt-[-12.5vh] md:w-full md:flex md:items-center md:h-[50%] md:mt-0">
           <div className="flex flex-col w-max mx-auto md:relative">
-            <div className="w-[300px] h-[300px] rounded-[50%] overflow-hidden lg:w-[240px] lg:h-[240px] md:fixed md:translate-y-[-55%] md:translate-x-[-75%] md:w-[55vw] md:h-[55vw] md:min-w-[200px] md:min-h-[200px] md:max-w-[300px] md:max-h-[300px]">
-              <Image
-                src={PNGPortfolioProfile}
-                alt="프로필 이미지"
-                placeholder="blur"
-                className="animate-pulse bg-gray-500"
-                onLoad={(e) =>
-                  e.currentTarget.classList.remove('animate-pulse')
-                }
-              />
-            </div>
+            <SkeletonImage
+              image={PNGPortfolioProfile}
+              alt="프로필 이미지"
+              isBlur
+              imageClassName="bg-gray-500"
+              containerClassName="w-[300px] h-[300px] rounded-[50%] overflow-hidden lg:w-[240px] lg:h-[240px] md:fixed md:translate-y-[-55%] md:translate-x-[-75%] md:w-[55vw] md:h-[55vw] md:min-w-[200px] md:min-h-[200px] md:max-w-[300px] md:max-h-[300px]"
+            />
 
             <ul className="w-max mx-auto mt-12 font-light md:fixed md:bg-white md:rounded-md md:translate-y-[20%] md:translate-x-[-20%] md:mt-3">
               <ListItem
@@ -65,9 +61,9 @@ const LandingMain = () => {
               </p>
             </ul>
           </div>
-        </article>
+        </div>
 
-        <article className="w-3/5 ml-[-1%] animate-init-fade-in-move lg:ml-0 md:w-full md:flex md:items-center md:h-[50%]">
+        <div className="w-3/5 ml-[-1%] animate-init-fade-in-move lg:ml-0 md:w-full md:flex md:items-center md:h-[50%]">
           <div className="w-min mx-auto md:w-[75%] md:max-w-[460px]">
             <div>
               <h2 className="text-5xl leading-snug w-max text-primary-dark font-bold lg:text-[32px] lg:leading-normal md:text-[20px] md:leading-normal md:text-white md:font-medium">
@@ -99,9 +95,9 @@ const LandingMain = () => {
               </div>
             </div>
           </div>
-        </article>
-      </div>
-    </>
+        </div>
+      </section>
+    </div>
   );
 };
 
