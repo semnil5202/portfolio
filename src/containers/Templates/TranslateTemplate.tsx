@@ -1,4 +1,3 @@
-import { StaticImageData } from 'next/image';
 import Activity from './Activity';
 import Separator from './Separator';
 import Introduction from './Introduction';

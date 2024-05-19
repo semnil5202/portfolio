@@ -59,7 +59,7 @@ const ActivitySwiperContents = ({
         { '--swiper-pagination-color': '#ffffff', paddingBottom: 40 } as {}
       }
     >
-      {contents.map(({ heading, descriptions }, idx) => (
+      {contents.map(({ heading, descriptions }) => (
         <SwiperSlide
           tag="ul"
           key={heading}
