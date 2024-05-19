@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 
-interface CurrentPageIndexStore {
+interface Store {
   mainCurrentPageIndex: number;
   mainProjectSwiperViewTime: number;
   projectCurrentPageIndex: number;
@@ -11,7 +11,7 @@ interface CurrentPageIndexStore {
   setProjectTextToggle: (newState: boolean) => void;
 }
 
-const useCurrentPageIndexStore = create<CurrentPageIndexStore>()((set) => ({
+const useStore = create<Store>()((set) => ({
   mainCurrentPageIndex: 0,
   mainProjectSwiperViewTime: 0,
   projectCurrentPageIndex: 0,
@@ -34,4 +34,4 @@ const useCurrentPageIndexStore = create<CurrentPageIndexStore>()((set) => ({
     })),
 }));
 
-export default useCurrentPageIndexStore;
+export default useStore;

@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Mousewheel, Pagination, Thumbs } from 'swiper/modules';
 
 import { ReactElement, useEffect, useLayoutEffect, useState } from 'react';
-import useCurrentPageIndexStore from '@/store/currentPageIndex';
+import useStore from '@/store/store';
 import { StaticImageData } from 'next/image';
 import Background from '@/containers/Templates/Background';
 import NavigationSwiper from '@/providers/NavigationSwiper';
@@ -23,8 +23,9 @@ const ProjectFullPageSwiper = ({
   children,
 }: Props) => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
-  const { projectCurrentPageIndex, setProjectCurrentPageIndex } =
-    useCurrentPageIndexStore((state) => state);
+  const { projectCurrentPageIndex, setProjectCurrentPageIndex } = useStore(
+    (state) => state
+  );
 
   useEffect(() => {
     return () => setProjectCurrentPageIndex(0);

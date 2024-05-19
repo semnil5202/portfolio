@@ -2,7 +2,7 @@
 
 import { ReactElement, useEffect, useState } from 'react';
 import SVGToggle from '../../../../public/assets/icons/toggle.svg';
-import useCurrentPageIndexStore from '@/store/currentPageIndex';
+import useStore from '@/store/store';
 
 interface Props {
   title: string;
@@ -19,7 +19,7 @@ const ActivityTextTitle = ({
 }: Props) => {
   const [viewTime, setViewTime] = useState<number>(0);
   const { projectTextToggle, projectCurrentPageIndex, setProjectTextToggle } =
-    useCurrentPageIndexStore((state) => state);
+    useStore((state) => state);
 
   const isIntoView = projectCurrentPageIndex === slideIndex;
   const isFirstView = viewTime === 1;

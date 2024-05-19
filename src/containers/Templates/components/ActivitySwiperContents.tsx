@@ -1,7 +1,7 @@
 'use client';
 
 import ListItem from '@/components/ListItem';
-import useCurrentPageIndexStore from '@/store/currentPageIndex';
+import useStore from '@/store/store';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { Pagination } from 'swiper/modules';
@@ -22,7 +22,7 @@ interface Props {
 
 const ActivitySwiperContents = ({ contents, link, slideIndex }: Props) => {
   const [viewTime, setViewTime] = useState<number>(0);
-  const projectCurrentPageIndex = useCurrentPageIndexStore(
+  const projectCurrentPageIndex = useStore(
     (state) => state.projectCurrentPageIndex
   );
 

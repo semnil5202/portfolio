@@ -5,7 +5,7 @@ import { Mousewheel } from 'swiper/modules';
 
 import { ReactElement, useEffect, useState } from 'react';
 import Background from '@/containers/Landing/Background';
-import useCurrentPageIndexStore from '@/store/currentPageIndex';
+import useStore from '@/store/store';
 
 interface Props {
   children: ReactElement[];
@@ -13,8 +13,9 @@ interface Props {
 
 const MainFullPageSwiper = ({ children }: Props) => {
   const [swiper, setSwiper] = useState(null);
-  const { mainCurrentPageIndex, setMainCurrentPageIndex } =
-    useCurrentPageIndexStore((state) => state);
+  const { mainCurrentPageIndex, setMainCurrentPageIndex } = useStore(
+    (state) => state
+  );
 
   useEffect(() => {
     if (!swiper) return;

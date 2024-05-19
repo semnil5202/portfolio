@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 
 import { ReactElement, useEffect, useState } from 'react';
-import useCurrentPageIndexStore from '@/store/currentPageIndex';
+import useStore from '@/store/store';
 
 interface Props {
   children: ReactElement[];
@@ -18,7 +18,7 @@ const ProjectSwiper = ({ children }: Props) => {
     mainCurrentPageIndex,
     mainProjectSwiperViewTime,
     increaseMainProjectSwiperViewTime,
-  } = useCurrentPageIndexStore((state) => state);
+  } = useStore((state) => state);
 
   const isIntoView = mainCurrentPageIndex === PROJECT_SLIDE_INDEX;
   const isFirstView = viewTime === 1 && mainProjectSwiperViewTime === 1;

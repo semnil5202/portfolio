@@ -5,7 +5,7 @@ import { Pagination } from 'swiper/modules';
 import { StaticImageData } from 'next/image';
 import SkeletonImage from '@/components/SkeletonImage';
 import { useEffect, useState } from 'react';
-import useCurrentPageIndexStore from '@/store/currentPageIndex';
+import useStore from '@/store/store';
 
 interface Props {
   heading: string;
@@ -15,7 +15,7 @@ interface Props {
 
 const ActivityImageSwiper = ({ images, heading, slideIndex }: Props) => {
   const [viewTime, setViewTime] = useState<number>(0);
-  const projectCurrentPageIndex = useCurrentPageIndexStore(
+  const projectCurrentPageIndex = useStore(
     (state) => state.projectCurrentPageIndex
   );
 
