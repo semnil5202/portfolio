@@ -14,7 +14,7 @@ interface Props {
 const MainFullPageSwiper = ({ children }: Props) => {
   const [swiper, setSwiper] = useState(null);
   const { mainCurrentPageIndex, setMainCurrentPageIndex } = useStore(
-    (state) => state
+    (state) => state,
   );
 
   useEffect(() => {
