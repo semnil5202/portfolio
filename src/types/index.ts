@@ -118,3 +118,8 @@ export interface Detail {
   'movie-list': TemplateType[];
   portfolio: TemplateType[];
 }
+
+export interface Experience {
+  date: string;
+  content: string;
+}
