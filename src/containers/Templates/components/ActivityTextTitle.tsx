@@ -33,7 +33,7 @@ const ActivityTextTitle = ({
     if (!isIntoView) return;
 
     setViewTime((prev) => prev + 1);
-  }, [isIntoView, setProjectTextToggle]);
+  }, [isIntoView]);
 
   return (
     <>
