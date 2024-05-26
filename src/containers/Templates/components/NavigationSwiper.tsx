@@ -5,6 +5,7 @@ import { Mousewheel, Thumbs } from 'swiper/modules';
 import { Dispatch, SetStateAction, TouchEventHandler, useState } from 'react';
 import { StaticImageData } from 'next/image';
 import SkeletonImage from '@/components/SkeletonImage';
+import useSwipeNavigation from '@/hooks/useSwipeNavigation';
 
 interface Props {
   setThumbsSwiper: Dispatch<SetStateAction<any>>;
@@ -13,31 +14,13 @@ interface Props {
 
 const NavigationSwiper = ({ setThumbsSwiper, navigationImages }: Props) => {
   const [isMouseEnter, setIsMouseEnter] = useState<boolean>(false);
-  const [prevTouch, setPrevTouch] = useState<React.Touch | null>(null);
   const thumbTranslate = isMouseEnter
     ? 'translate-x-[0%]'
     : 'translate-x-[105%]';
 
-  const onTouchNavigation: TouchEventHandler = (event) => {
-    const touch = event.touches[0]!;
-
-    setPrevTouch(touch);
-    if (!prevTouch) return;
-
-    const diff = touch.pageX - prevTouch.pageX;
-    const otherDiff = touch.pageY - prevTouch.pageY;
-
-    if (diff > 3 && Math.abs(otherDiff) < 3) {
-      setIsMouseEnter(false);
-      return;
-    }
-
-    setIsMouseEnter(true);
-  };
-
-  const onTouchEndNavigation: TouchEventHandler = () => {
-    setPrevTouch(null);
-  };
+  const { onTouchNavigation, onTouchEndNavigation } = useSwipeNavigation({
+    setState: setIsMouseEnter,
+  });
 
   return (
     <div
