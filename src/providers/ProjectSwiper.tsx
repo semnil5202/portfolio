@@ -53,9 +53,9 @@ const ProjectSwiper = ({ children }: Props) => {
       style={{ '--swiper-pagination-color': '#ffffff' } as {}}
     >
       {children.map((projectCard, idx) => (
-        <SwiperSlide key={idx}>
+        <SwiperSlide key={idx} style={{ marginRight: 0 }}>
           <div
-            className={`${
+            className={`flex justify-center ${
               isIntoView && isFirstView && 'animate-slide-image-hint-move'
             }`}
           >
