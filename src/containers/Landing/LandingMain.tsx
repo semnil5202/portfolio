@@ -25,7 +25,7 @@ const LandingMain = () => {
         </Link>
       </section>
       <section className="h-full flex items-center mt-[-2vh] md:flex-col md:justify-center">
-        <div className="w-2/5 animate-init-fade-in-move md:w-full md:flex md:items-center md:h-[50%] md:mt-0">
+        <div className="w-2/5 animate-init-fade-in-move xl:w-[45%] md:w-full md:flex md:items-center md:h-[50%] md:mt-0">
           <div className="flex flex-col w-max mx-auto md:relative">
             <SkeletonImage
               image={PNGPortfolioProfile}
@@ -43,7 +43,7 @@ const LandingMain = () => {
           </div>
         </div>
 
-        <div className="w-3/5 mt-[72px] animate-init-fade-in-move md:w-full md:flex md:items-center md:h-[50%]">
+        <div className="w-3/5 mt-[72px] animate-init-fade-in-move xl:w-[55%] xl:ml-[-5%] md:w-full md:flex md:items-center md:h-[50%]">
           <div className="w-min mx-auto md:w-[75%] md:max-w-[460px]">
             <div>
               <h2 className="text-5xl leading-snug w-max text-primary-dark font-bold lg:text-[32px] lg:leading-normal md:text-[20px] md:leading-normal md:text-white md:font-medium">
