@@ -20,6 +20,7 @@ import PNGTechJs from '../../public/assets/icons/tech-js.png';
 import PNGTechNext from '../../public/assets/icons/tech-next.png';
 import PNGTechTail from '../../public/assets/icons/tech-tail.png';
 import PNGTechSwiper from '../../public/assets/icons/tech-swiper.png';
+import PNGTechVercel from '../../public/assets/icons/tech-vercel.png';
 
 import PNGNavPa from '../../public/assets/navigations/pa.png';
 import PNGNavMa from '../../public/assets/navigations/ma.png';
@@ -677,7 +678,7 @@ const DETAILS: Detail = {
             heading: '배운 점',
             descriptions: [
               'Recoil Atom 개념에 대해서 이해하고 파생된 상태인 Selector를 활용해 보면서, 기존 React의 Context를 활용한 상태 관리 대비 Recoil의 장점에 대해서 이해할 수 있었습니다.',
-              '컴포넌트 내부에 Recoil의 state setter만 불러올 경우 리렌더링 최적화가 된다는 점을 깨닫고, React memo와 더불어 컴포넌트 리렌더링 최적화를 수행해 볼 수 있었습니다.',
+              '컴포넌트 내부에 Recoil의 State Setter만 불러올 경우 리렌더링 최적화가 된다는 점을 깨닫고, React memo와 더불어 컴포넌트 리렌더링 최적화를 수행해 볼 수 있었습니다.',
               'Atom Effect를 통해 Atom 상태가 업데이트 될 때, Local Storage 세팅과 같이 수행할 작업들을 명시할 수 있어, useEffect를 사용했을 때보다 컴포넌트 관심사 분리가 수월했습니다.',
             ],
           },
@@ -897,8 +898,10 @@ const DETAILS: Detail = {
       techs: [
         { image: PNGTechTs, name: 'TypeScript' },
         { image: PNGTechNext, name: 'Next.js' },
+        { image: PNGTechZustand, name: 'Zustand' },
         { image: PNGTechTail, name: 'Tailwind CSS' },
         { image: PNGTechSwiper, name: 'Swiper JS' },
+        { image: PNGTechVercel, name: 'Vercel' },
       ],
     },
     {
@@ -964,7 +967,7 @@ const DETAILS: Detail = {
         {
           heading: '해결 과정',
           descriptions: [
-            'React의 State를 통해 사용자의 현재 슬라이드 위치를 파악해 해당 페이지에 가려진 요소가 있고 최초 접속한 경우라면, 가려진 요소의 일부를 화면에 잠시 노출시키는 힌트 기능을 구현했습니다. 이를 통해 사용자가 가려진 요소를 인지하는데 도움이 되도록 했습니다.',
+            'Zustand의 Store를 활용해 사용자의 현재 슬라이드 위치를 파악해 해당 페이지에 가려진 요소가 있고 최초 접속한 경우라면, 가려진 요소의 일부를 화면에 잠시 노출시키는 힌트 기능을 구현했습니다. 이를 통해 사용자가 가려진 요소를 인지하는데 도움이 되도록 했습니다.',
           ],
         },
       ],
@@ -984,7 +987,7 @@ const DETAILS: Detail = {
         {
           heading: '해결 과정',
           descriptions: [
-            '메인 페이지는 Swiper를 통해 Full Screen Scroll 방식이 적용되어 있었기 때문에, Next.js에서 기본으로 제공하는 스크롤 복원 기능이 정상적으로 동작하지 않았습니다. 하나의 변수로 스크롤 복원 기능을 구현할 수 있어서 전역 상태는 다소 과하다고 판단해, Closure의 특성을 살려 컴포넌트 외부 변수와 React의 State를 결합해 스크롤 복원 기능을 구현했습니다.',
+            '메인 페이지는 Swiper를 통해 Full Screen Scroll 방식이 적용되어 있었기 때문에, Next.js에서 기본으로 제공하는 스크롤 복원 기능이 정상적으로 동작하지 않았습니다. Zustand의 Store를 활용해 전역 상태로 유저의 마지막 슬라이드 위치를 관리해 스크롤 복원 기능을 구현했습니다.',
           ],
         },
       ],
