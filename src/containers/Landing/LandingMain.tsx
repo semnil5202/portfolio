@@ -2,9 +2,10 @@ import DynamicText from '../../components/DynamicText';
 import PNGPortfolioProfile from '../../../public/assets/portfolio-profile.png';
 import SVGGithubLogo from '../../../public/assets/icons/github-logo.svg';
 import SVGVelogLogo from '../../../public/assets/icons/velog-logo.svg';
-import ListItem from '@/components/ListItem';
 import Link from 'next/link';
 import SkeletonImage from '@/components/SkeletonImage';
+import EXPERIENCES from '@/constants/experience';
+import ExperienceList from './components/ExperienceList';
 
 const LandingMain = () => {
   return (
@@ -23,8 +24,8 @@ const LandingMain = () => {
           />
         </Link>
       </section>
-      <section className="h-full flex items-center md:flex-col md:justify-center">
-        <div className="w-2/5 mt-[-8vh] animate-init-fade-in-move lg:mt-[-12.5vh] md:w-full md:flex md:items-center md:h-[50%] md:mt-0">
+      <section className="h-full flex items-center mt-[-2vh] md:flex-col md:justify-center">
+        <div className="w-2/5 animate-init-fade-in-move md:w-full md:flex md:items-center md:h-[50%] md:mt-0">
           <div className="flex flex-col w-max mx-auto md:relative">
             <SkeletonImage
               image={PNGPortfolioProfile}
@@ -35,35 +36,14 @@ const LandingMain = () => {
             />
 
             <ul className="w-max mx-auto mt-12 font-light md:fixed md:bg-white md:rounded-md md:translate-y-[20%] md:translate-x-[-20%] md:mt-3">
-              <ListItem
-                textColor="text-white"
-                bgColor="bg-white"
-                mb="md:px-1"
-                mediaText="md:text-dark md:text-[14px] md:font-medium"
-                mediaBullet="md:bg-dark"
-              >
-                23.02 - 23.11
-              </ListItem>
-              <p className="text-white mb-6 ml-3 mt-1 md:px-1 md:text-dark md:text-[14px] md:mt-0 md:font-medium md:mb-2">
-                우아한테크코스 웹 프론트엔드 5기
-              </p>
-              <ListItem
-                textColor="text-white"
-                bgColor="bg-white"
-                mb="md:px-1"
-                mediaText="md:text-dark md:text-[14px] md:font-medium"
-                mediaBullet="md:bg-dark"
-              >
-                17.02 - 23.02
-              </ListItem>
-              <p className="text-white ml-3 mt-1 md:px-1 md:text-dark md:text-[14px] md:mt-0 md:font-medium">
-                순천향대학교 정보보호학과
-              </p>
+              {EXPERIENCES.map(({ date, content }) => (
+                <ExperienceList key={date} date={date} content={content} />
+              ))}
             </ul>
           </div>
         </div>
 
-        <div className="w-3/5 ml-[-1%] animate-init-fade-in-move lg:ml-0 md:w-full md:flex md:items-center md:h-[50%]">
+        <div className="w-3/5 mt-[72px] animate-init-fade-in-move md:w-full md:flex md:items-center md:h-[50%]">
           <div className="w-min mx-auto md:w-[75%] md:max-w-[460px]">
             <div>
               <h2 className="text-5xl leading-snug w-max text-primary-dark font-bold lg:text-[32px] lg:leading-normal md:text-[20px] md:leading-normal md:text-white md:font-medium">
@@ -81,7 +61,7 @@ const LandingMain = () => {
               </h2>
             </div>
 
-            <div className="flex justify-between mt-24 md:mt-4">
+            <div className="flex justify-between mt-[98px] md:mt-4">
               <div className="w-[2px] h-[40px] bg-primary mt-[6px] lg:h-[64px] md:w-px md:bg-white md:h-[32px] md:mt-[4px]" />
               <div className="w-[94%] text-primary-dark leading-relaxed md:text-[14px] md:text-white md:font-extralight md:leading-normal">
                 <p className="mb-4 md:hidden">
