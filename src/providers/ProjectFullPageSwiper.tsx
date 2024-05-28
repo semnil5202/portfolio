@@ -7,7 +7,7 @@ import { ReactElement, useEffect, useState } from 'react';
 import useStore from '@/store/store';
 import { StaticImageData } from 'next/image';
 import Background from '@/containers/Templates/Background';
-import NavigationSwiper from '@/containers/Navigations/NavigationSwiper';
+import NavigationSwiper from '@/containers/Navigations/components/NavigationSwiper';
 
 interface Props {
   landingImage: StaticImageData;

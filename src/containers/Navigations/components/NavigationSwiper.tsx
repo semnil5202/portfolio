@@ -2,7 +2,7 @@
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Mousewheel, Thumbs } from 'swiper/modules';
-import { Dispatch, SetStateAction, TouchEventHandler, useState } from 'react';
+import { Dispatch, SetStateAction, useState } from 'react';
 import { StaticImageData } from 'next/image';
 import SkeletonImage from '@/components/SkeletonImage';
 import useSwipeNavigation from '@/hooks/useSwipeNavigation';
