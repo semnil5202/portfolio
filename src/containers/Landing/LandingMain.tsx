@@ -32,10 +32,10 @@ const LandingMain = () => {
               alt="프로필 이미지"
               isBlur
               imageClassName="bg-gray-500"
-              containerClassName="w-[300px] h-[300px] rounded-[50%] overflow-hidden lg:w-[240px] lg:h-[240px] md:fixed md:translate-y-[-55%] md:translate-x-[-75%] md:w-[55vw] md:h-[55vw] md:min-w-[200px] md:min-h-[200px] md:max-w-[300px] md:max-h-[300px]"
+              containerClassName="w-[300px] h-[300px] rounded-[50%] overflow-hidden lg:w-[240px] lg:h-[240px] md:fixed md:translate-y-[-40%] md:translate-x-[-75%] md:w-[55vw] md:h-[55vw] md:min-w-[200px] md:min-h-[200px] md:max-w-[300px] md:max-h-[300px]"
             />
 
-            <ul className="w-max mx-auto mt-12 font-light md:fixed md:bg-white md:rounded-md md:translate-y-[20%] md:translate-x-[-20%] md:mt-3">
+            <ul className="w-max mx-auto mt-12 font-light md:fixed md:bg-white md:rounded-md md:translate-y-[40%] md:translate-x-[-20%] md:mt-3">
               {EXPERIENCES.map(({ date, content }) => (
                 <ExperienceList key={date} date={date} content={content} />
               ))}
@@ -61,7 +61,7 @@ const LandingMain = () => {
               </h2>
             </div>
 
-            <div className="flex justify-between mt-[98px] md:mt-4">
+            <div className="flex justify-between mt-[98px] lg:mt-[52px] md:mt-4">
               <div className="w-[2px] h-[40px] bg-primary mt-[6px] lg:h-[64px] md:w-px md:bg-white md:h-[32px] md:mt-[4px]" />
               <div className="w-[94%] text-primary-dark leading-relaxed md:text-[14px] md:text-white md:font-extralight md:leading-normal">
                 <p className="mb-4 md:hidden">

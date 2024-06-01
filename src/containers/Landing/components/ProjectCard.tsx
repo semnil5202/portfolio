@@ -34,7 +34,7 @@ const ProjectCard = ({ src, title, description, slug }: Props) => {
         {isMouseEnter && (
           <div className="absolute w-[250px] h-[250px] flex justify-center items-center lg:w-[236px] lg:h-[236px] md:w-[168px] md:h-[168px]">
             <div className="absolute w-full h-full bg-black rounded-xl overflow-hidden opacity-75 md:rounded-md" />
-            <span className="text-white z-10">자세히 보기</span>
+            <span className="text-white z-10 md:text-[14px]">자세히 보기</span>
           </div>
         )}
         <SkeletonImage
