@@ -16,7 +16,7 @@ interface Props {
 const ActivityContents = ({ contents, link }: Props) => {
   return (
     <>
-      {contents.map(({ heading, descriptions }, idx) => (
+      {contents.map(({ heading, descriptions }) => (
         <div key={heading} className="mb-4 last:mb-0 lg:mb-2 md:mb-2">
           <p className="text-lg text-white font-semibold mb-2 md:text-[14px] md:leading-snug md:mb-[1px] md:font-medium">
             {heading}
