@@ -2,17 +2,15 @@
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Mousewheel, Thumbs } from 'swiper/modules';
-import { Dispatch, SetStateAction, useState } from 'react';
-import { StaticImageData } from 'next/image';
-import SkeletonImage from '@/components/SkeletonImage';
+import { Dispatch, ReactElement, SetStateAction, useState } from 'react';
 import useSwipeNavigation from '@/hooks/useSwipeNavigation';
 
 interface Props {
   setThumbsSwiper: Dispatch<SetStateAction<any>>;
-  navigationImages: StaticImageData[];
+  children: ReactElement[];
 }
 
-const NavigationSwiper = ({ setThumbsSwiper, navigationImages }: Props) => {
+const NavigationSwiper = ({ setThumbsSwiper, children }: Props) => {
   const [isMouseEnter, setIsMouseEnter] = useState<boolean>(false);
   const thumbTranslate = isMouseEnter
     ? 'translate-x-[0%]'
@@ -41,18 +39,14 @@ const NavigationSwiper = ({ setThumbsSwiper, navigationImages }: Props) => {
         className={`w-[15%] ${thumbTranslate} bg-white h-full animate-nav-hint-move transition-all ease duration-300`}
         style={{ position: 'fixed', top: '0', right: '0' }}
       >
-        {navigationImages.map((image, idx) => (
+        {children.map((slide, idx) => (
           <SwiperSlide
             key={idx}
             className="w-full h-full relative cursor-pointer"
             onTouchMove={onTouchNavigation}
             onTouchEnd={onTouchEndNavigation}
           >
-            <SkeletonImage
-              image={image}
-              alt={`${idx + 1}번째 슬라이드 이미지`}
-              imageClassName="bg-gray-500"
-            />
+            {slide}
             <div className="absolute top-2 left-2 w-4 h-4 rounded-full bg-white text-[12px] flex justify-center items-center">
               {idx + 1}
             </div>

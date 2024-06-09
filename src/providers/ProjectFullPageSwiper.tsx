@@ -11,14 +11,14 @@ import NavigationSwiper from '@/containers/Navigations/components/NavigationSwip
 
 interface Props {
   landingImage: StaticImageData;
-  navigationImages: StaticImageData[];
+  navigations: any;
   slideLength: number;
   children: ReactElement[];
 }
 
 const ProjectFullPageSwiper = ({
   landingImage,
-  navigationImages,
+  navigations,
   slideLength,
   children,
 }: Props) => {
@@ -52,6 +52,7 @@ const ProjectFullPageSwiper = ({
         landingImage={landingImage}
         slideLength={slideLength}
       />
+
       <Swiper
         tag="section"
         speed={700}
@@ -79,10 +80,10 @@ const ProjectFullPageSwiper = ({
           </SwiperSlide>
         ))}
       </Swiper>
-      <NavigationSwiper
-        setThumbsSwiper={setThumbsSwiper}
-        navigationImages={navigationImages}
-      />
+
+      <NavigationSwiper setThumbsSwiper={setThumbsSwiper}>
+        {navigations}
+      </NavigationSwiper>
     </>
   );
 };

@@ -1,18 +1,21 @@
 import TranslateTemplate from '../../containers/Templates/TranslateTemplate';
+import TranslateNavTemplate from '../../containers/Navigations/TranslateNavTemplate';
 import { SlugType } from '../../types';
-import DETAILS, { DETAIL_LANDING, DETAIL_NAV } from '@/constants/details';
+import DETAILS, { DETAIL_LANDING } from '@/constants/details';
 import ProjectFullPageSwiper from '@/providers/ProjectFullPageSwiper';
 
 const ProjectDetail = ({ params }: { params: { slug: SlugType } }) => {
   const landingImage = DETAIL_LANDING[params.slug];
   const slideLength = DETAILS[params.slug].length;
-  const navigationImages = DETAIL_NAV[params.slug];
+  const navigationDetails = DETAILS[params.slug].map((slide, idx) => (
+    <TranslateNavTemplate slide={slide} slideIndex={idx} />
+  ));
 
   return (
     <main className="relative w-screen h-dvh">
       <ProjectFullPageSwiper
         landingImage={landingImage}
-        navigationImages={navigationImages}
+        navigations={navigationDetails}
         slideLength={slideLength}
       >
         {DETAILS[params.slug].map((slide, idx) => (
