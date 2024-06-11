@@ -15,10 +15,8 @@ const NavSeparator = ({ type, heading, link, svg }: Props) => {
     return (
       <div className="relative w-full h-full flex justify-center items-center">
         <div className="flex flex-col items-center">
-          <p className="text-7xl text-white font-bold lg:text-6xl md:text-4xl md:font-medium">
-            {heading}
-          </p>
-          <div className="w-[30%] h-[2px] bg-white mt-10 lg:w-[25%] md:w-[20%] md:mt-5" />
+          <p className="text-[10px] text-white font-bold">{heading}</p>
+          <div className="w-[30%] h-[0.5px] bg-white mt-[6px]" />
         </div>
       </div>
     );
@@ -29,19 +27,14 @@ const NavSeparator = ({ type, heading, link, svg }: Props) => {
       <Link href={`/${link}`} className="flex flex-col items-center">
         <div className="flex items-center">
           {Svg && (
-            <div className="mr-4">
-              <Svg className="md:w-[36px] md:h-[36px]" viewBox="0 0 72 72" />
+            <div className="mr-1">
+              <Svg className="w-[12px] h-[12px]" viewBox="0 0 72 72" />
             </div>
           )}
-          <p className="text-7xl text-white font-bold mr-4 lg:text-6xl md:text-4xl md:font-medium">
-            {heading}
-          </p>
-          <SVGNextIcon
-            className="md:w-[36px] md:h-[36px]"
-            viewBox="0 0 72 72"
-          />
+          <p className="text-[10px] text-white font-bold mr-1">{heading}</p>
+          <SVGNextIcon className="w-[12px] h-[12px]" viewBox="0 0 72 72" />
         </div>
-        <div className="w-[25%] h-[2px] bg-white mt-10 mr-4 lg:w-[20%] md:w-[15%] md:mt-5" />
+        <div className="w-[25%] h-[0.5px] bg-white mt-[6px] mr-4" />
       </Link>
     </div>
   );
