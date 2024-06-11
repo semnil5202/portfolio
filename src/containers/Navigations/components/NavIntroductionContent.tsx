@@ -6,7 +6,11 @@ interface Props {
   isColumnLayout?: boolean;
 }
 
-const IntroductionContent = ({ heading, content, isColumnLayout }: Props) => {
+const NavIntroductionContent = ({
+  heading,
+  content,
+  isColumnLayout,
+}: Props) => {
   return (
     <div className="mb-8 lg:mb-4 md:mb-2">
       <ListItem
@@ -26,4 +30,4 @@ const IntroductionContent = ({ heading, content, isColumnLayout }: Props) => {
   );
 };
 
-export default IntroductionContent;
+export default NavIntroductionContent;

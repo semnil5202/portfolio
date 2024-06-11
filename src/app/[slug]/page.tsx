@@ -1,5 +1,5 @@
 import TranslateTemplate from '../../containers/Templates/TranslateTemplate';
-import TranslateNavTemplate from '../../containers/Navigations/TranslateNavTemplate';
+import TranslateNavTemplate from '../../containers/Navigations/NavTranslateTemplate';
 import { SlugType } from '../../types';
 import DETAILS, { DETAIL_LANDING } from '@/constants/details';
 import ProjectFullPageSwiper from '@/providers/ProjectFullPageSwiper';

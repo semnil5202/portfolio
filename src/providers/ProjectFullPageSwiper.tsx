@@ -11,7 +11,7 @@ import NavigationSwiper from '@/containers/Navigations/components/NavigationSwip
 
 interface Props {
   landingImage: StaticImageData;
-  navigations: any;
+  navigations: ReactElement[];
   slideLength: number;
   children: ReactElement[];
 }
@@ -81,7 +81,13 @@ const ProjectFullPageSwiper = ({
         ))}
       </Swiper>
 
-      <NavigationSwiper setThumbsSwiper={setThumbsSwiper}>
+      <NavigationSwiper
+        backgroundProps={{
+          landingImage,
+          slideLength,
+        }}
+        setThumbsSwiper={setThumbsSwiper}
+      >
         {navigations}
       </NavigationSwiper>
     </>

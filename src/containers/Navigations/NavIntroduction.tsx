@@ -1,8 +1,8 @@
 import ListItem from '@/components/ListItem';
 import { StaticImageData } from 'next/image';
-import Tech from './components/Tech';
-import TemplateLayout from './components/TemplateLayout';
-import IntroductionContent from './components/IntroductionContent';
+import NavTech from './components/NavTech';
+import NavTemplateLayout from './components/NavTemplateLayout';
+import NavIntroductionContent from './components/NavIntroductionContent';
 
 interface Props {
   heading: string;
@@ -18,7 +18,7 @@ interface Props {
   }[];
 }
 
-const Introduction = ({
+const NavIntroduction = ({
   heading,
   intro,
   value,
@@ -32,28 +32,33 @@ const Introduction = ({
   const bottomContainer = isEnough ? 'flex flex-col' : 'flex justify-between';
 
   return (
-    <TemplateLayout heading={heading}>
+    <NavTemplateLayout heading={heading}>
       <section className="w-full max-w-[1140px] h-[72%] flex lg:h-[80%] lg:pt-3 md:h-[84%] md:flex md:flex-col">
         <ul className="w-[50%] h-full flex flex-col pr-10 lg:w-[55%] lg:pr-5 md:w-full md:h-max md:pr-0">
-          <IntroductionContent heading="설명" content={intro} />
-          {value && <IntroductionContent heading="핵심 가치" content={value} />}
+          <NavIntroductionContent heading="설명" content={intro} />
+          {value && (
+            <NavIntroductionContent heading="핵심 가치" content={value} />
+          )}
           {contribution && (
-            <IntroductionContent heading="기대 효과" content={contribution} />
+            <NavIntroductionContent
+              heading="기대 효과"
+              content={contribution}
+            />
           )}
           <div className={`${bottomContainer}`}>
             {organization && (
-              <IntroductionContent
+              <NavIntroductionContent
                 heading="소속"
                 content={organization}
                 isColumnLayout={isEnough}
               />
             )}
-            <IntroductionContent
+            <NavIntroductionContent
               heading="기간"
               content={date}
               isColumnLayout={isEnough}
             />
-            <IntroductionContent
+            <NavIntroductionContent
               heading="인원"
               content={member}
               isColumnLayout={isEnough}
@@ -73,13 +78,13 @@ const Introduction = ({
           </ListItem>
           <ul className="flex max-w-[464px] h-max mx-auto items-center flex-wrap gap-2 pl-10 lg:max-w-[312px] lg:pl-5 lg:gap-1 md:max-w-full md:mx-0 md:ml-3 md:pl-0 md:gap-1">
             {techs.map(({ image, name }) => (
-              <Tech key={name} image={image} name={name} />
+              <NavTech key={name} image={image} name={name} />
             ))}
           </ul>
         </ul>
       </section>
-    </TemplateLayout>
+    </NavTemplateLayout>
   );
 };
 
-export default Introduction;
+export default NavIntroduction;

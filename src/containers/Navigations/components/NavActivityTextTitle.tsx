@@ -11,7 +11,7 @@ interface Props {
   children: ReactElement;
 }
 
-const ActivityTextTitle = ({
+const NavActivityTextTitle = ({
   title,
   slideIndex,
   isNotifyToggle,
@@ -57,4 +57,4 @@ const ActivityTextTitle = ({
   );
 };
 
-export default ActivityTextTitle;
+export default NavActivityTextTitle;

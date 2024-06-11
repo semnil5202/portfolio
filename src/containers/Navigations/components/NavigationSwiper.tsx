@@ -4,14 +4,26 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Mousewheel, Thumbs } from 'swiper/modules';
 import { Dispatch, ReactElement, SetStateAction, useState } from 'react';
 import useSwipeNavigation from '@/hooks/useSwipeNavigation';
+import { StaticImageData } from 'next/image';
+import NavBackground from '../NavBackground';
+
+interface BackgroundProps {
+  landingImage: StaticImageData;
+  slideLength: number;
+}
 
 interface Props {
+  backgroundProps: BackgroundProps;
   setThumbsSwiper: Dispatch<SetStateAction<any>>;
   children: ReactElement[];
 }
 
-const NavigationSwiper = ({ setThumbsSwiper, children }: Props) => {
-  const [isMouseEnter, setIsMouseEnter] = useState<boolean>(false);
+const NavigationSwiper = ({
+  backgroundProps,
+  setThumbsSwiper,
+  children,
+}: Props) => {
+  const [isMouseEnter, setIsMouseEnter] = useState<boolean>(true);
   const thumbTranslate = isMouseEnter
     ? 'translate-x-[0%]'
     : 'translate-x-[105%]';
@@ -23,8 +35,8 @@ const NavigationSwiper = ({ setThumbsSwiper, children }: Props) => {
   return (
     <div
       className="fixed top-0 right-0 w-[2%] h-full bg-transparent z-50 md:w-[5%]"
-      onMouseEnter={() => setIsMouseEnter(true)}
-      onMouseLeave={() => setIsMouseEnter(false)}
+      // onMouseEnter={() => setIsMouseEnter(true)}
+      // onMouseLeave={() => setIsMouseEnter(false)}
       onTouchMove={onTouchNavigation}
       onTouchEnd={onTouchEndNavigation}
     >
@@ -46,6 +58,11 @@ const NavigationSwiper = ({ setThumbsSwiper, children }: Props) => {
             onTouchMove={onTouchNavigation}
             onTouchEnd={onTouchEndNavigation}
           >
+            <NavBackground
+              currentPageIndex={idx}
+              landingImage={backgroundProps.landingImage}
+              slideLength={backgroundProps.slideLength}
+            />
             {slide}
             <div className="absolute top-2 left-2 w-4 h-4 rounded-full bg-white text-[12px] flex justify-center items-center">
               {idx + 1}

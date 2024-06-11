@@ -13,7 +13,7 @@ interface Props {
   };
 }
 
-const ActivityContents = ({ contents, link }: Props) => {
+const NavActivityContents = ({ contents, link }: Props) => {
   return (
     <>
       {contents.map(({ heading, descriptions }) => (
@@ -62,4 +62,4 @@ const ActivityContents = ({ contents, link }: Props) => {
   );
 };
 
-export default ActivityContents;
+export default NavActivityContents;

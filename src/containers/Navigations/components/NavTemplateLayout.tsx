@@ -6,7 +6,7 @@ interface Props {
   children: ReactNode;
 }
 
-const TemplateLayout = ({ heading, subHeading, children }: Props) => {
+const NavTemplateLayout = ({ heading, subHeading, children }: Props) => {
   return (
     <>
       <section className="w-full h-full px-[8%] pb-[4%] flex flex-col items-center lg:px-[4%] md:px-[6%] md:pb-[1%]">
@@ -29,4 +29,4 @@ const TemplateLayout = ({ heading, subHeading, children }: Props) => {
   );
 };
 
-export default TemplateLayout;
+export default NavTemplateLayout;

@@ -8,7 +8,7 @@ interface Props {
   svg?: React.FC<React.SVGProps<SVGSVGElement>>;
 }
 
-const Separator = ({ type, heading, link, svg }: Props) => {
+const NavSeparator = ({ type, heading, link, svg }: Props) => {
   const Svg = svg;
 
   if (type === 'separate') {
@@ -47,4 +47,4 @@ const Separator = ({ type, heading, link, svg }: Props) => {
   );
 };
 
-export default Separator;
+export default NavSeparator;

@@ -1,6 +1,6 @@
-import TemplateLayout from './components/TemplateLayout';
-import ActivityContents from './components/ActivityContents';
-import ActivityTextTitle from './components/ActivityTextTitle';
+import NavTemplateLayout from './components/NavTemplateLayout';
+import NavActivityContents from './components/NavActivityContents';
+import NavActivityTextTitle from './components/NavActivityTextTitle';
 
 interface Props {
   heading: string;
@@ -32,7 +32,7 @@ interface Props {
   slideIndex: number;
 }
 
-const ActivityTexts = ({
+const NavActivityTexts = ({
   heading,
   subHeading,
   first,
@@ -40,25 +40,28 @@ const ActivityTexts = ({
   slideIndex,
 }: Props) => {
   return (
-    <TemplateLayout heading={heading} subHeading={subHeading}>
+    <NavTemplateLayout heading={heading} subHeading={subHeading}>
       <section className="w-full max-w-[1140px] h-[74%] flex pt-10 lg:h-[80%] lg:pt-6 md:h-[84%] md:pt-4 md:flex-col">
         <div className="w-[50%] h-full flex flex-col pr-10 lg:pr-5 md:w-full md:h-max md:pr-0">
-          <ActivityTextTitle title={first.title} slideIndex={slideIndex}>
-            <ActivityContents contents={first.contents} link={first.link} />
-          </ActivityTextTitle>
+          <NavActivityTextTitle title={first.title} slideIndex={slideIndex}>
+            <NavActivityContents contents={first.contents} link={first.link} />
+          </NavActivityTextTitle>
         </div>
         <div className="w-[50%] h-full flex flex-col pl-10 lg:pl-5 md:w-full md:pl-0 md:mt-2">
-          <ActivityTextTitle
+          <NavActivityTextTitle
             title={second.title}
             slideIndex={slideIndex}
             isNotifyToggle
           >
-            <ActivityContents contents={second.contents} link={second.link} />
-          </ActivityTextTitle>
+            <NavActivityContents
+              contents={second.contents}
+              link={second.link}
+            />
+          </NavActivityTextTitle>
         </div>
       </section>
-    </TemplateLayout>
+    </NavTemplateLayout>
   );
 };
 
-export default ActivityTexts;
+export default NavActivityTexts;

@@ -6,7 +6,11 @@ interface Props {
   slideLength: number;
 }
 
-const Background = ({ currentPageIndex, landingImage, slideLength }: Props) => {
+const NavBackground = ({
+  currentPageIndex,
+  landingImage,
+  slideLength,
+}: Props) => {
   const primaryColorWidth =
     currentPageIndex === 0 ? 'w-3/6 md:w-full md:h-[55%]' : 'w-full md:h-full';
   const landingWidth =
@@ -17,9 +21,7 @@ const Background = ({ currentPageIndex, landingImage, slideLength }: Props) => {
   return (
     <>
       <section className="w-full h-full fixed md:flex md:flex-col-reverse">
-        <div
-          className={`${landingWidth} h-full fixed right-0 z-[-1] animate-init-fade-in-move transition-all ease duration-700 md:top-0`}
-        >
+        <div className={`${landingWidth} h-full fixed right-0 z-[-1] md:top-0`}>
           <Image
             src={landingImage}
             alt="프로젝트 소개 이미지"
@@ -30,12 +32,10 @@ const Background = ({ currentPageIndex, landingImage, slideLength }: Props) => {
             onLoad={(e) => e.currentTarget.classList.remove('animate-pulse')}
           />
         </div>
-        <div
-          className={`${primaryColorWidth} h-full ${bgColor} animate-init-background transition-all ease duration-700`}
-        />
+        <div className={`${primaryColorWidth} h-full ${bgColor}`} />
       </section>
     </>
   );
 };
 
-export default Background;
+export default NavBackground;

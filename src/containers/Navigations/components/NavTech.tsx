@@ -6,7 +6,7 @@ interface Props {
   name: string;
 }
 
-const Tech = ({ image, name }: Props) => {
+const NavTech = ({ image, name }: Props) => {
   return (
     <li className="flex w-[100px] h-[174px] flex-col items-center lg:w-[92px] lg:h-[148px] md:w-max md:h-max">
       <SkeletonImage
@@ -22,4 +22,4 @@ const Tech = ({ image, name }: Props) => {
   );
 };
 
-export default Tech;
+export default NavTech;
