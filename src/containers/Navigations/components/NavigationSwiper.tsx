@@ -55,8 +55,6 @@ const NavigationSwiper = ({
           <SwiperSlide
             key={idx}
             className="w-full h-full relative cursor-pointer"
-            onTouchMove={onTouchNavigation}
-            onTouchEnd={onTouchEndNavigation}
           >
             <NavBackground
               currentPageIndex={idx}
