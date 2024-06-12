@@ -11,16 +11,16 @@ import NavigationSwiper from '@/containers/Navigations/components/NavigationSwip
 
 interface Props {
   landingImage: StaticImageData;
-  navigations: ReactElement[];
   slideLength: number;
-  children: ReactElement[];
+  navigations: ReactElement[];
+  projects: ReactElement[];
 }
 
 const ProjectFullPageSwiper = ({
   landingImage,
   navigations,
   slideLength,
-  children,
+  projects,
 }: Props) => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const {
@@ -74,7 +74,7 @@ const ProjectFullPageSwiper = ({
           } as {}
         }
       >
-        {children.map((page, idx) => (
+        {projects.map((page, idx) => (
           <SwiperSlide tag="article" className="overflow-hidden" key={idx}>
             {page}
           </SwiperSlide>
