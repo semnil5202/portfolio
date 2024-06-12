@@ -34,7 +34,7 @@ const NavigationSwiper = ({
 
   return (
     <div
-      className="fixed top-0 right-0 w-[2%] h-full bg-transparent z-50 md:w-[5%]"
+      className="fixed top-0 right-0 w-[2%] h-full bg-transparent z-50 md:w-[8%]"
       // onMouseEnter={() => setIsMouseEnter(true)}
       // onMouseLeave={() => setIsMouseEnter(false)}
       onTouchMove={onTouchNavigation}
@@ -42,13 +42,14 @@ const NavigationSwiper = ({
     >
       <Swiper
         onSwiper={setThumbsSwiper}
-        speed={75}
+        speed={60}
         direction="vertical"
         slidesPerView={6}
+        spaceBetween={20}
         watchSlidesProgress={true}
         modules={[Thumbs, Mousewheel]}
         mousewheel
-        className={`w-[15%] ${thumbTranslate} bg-white h-full animate-nav-hint-move transition-all ease duration-300`}
+        className={`w-[15%] ${thumbTranslate} bg-white h-full animate-nav-hint-move transition-all ease duration-300 md:w-[35%]`}
         style={{ position: 'fixed', top: '0', right: '0' }}
       >
         {children.map((slide, idx) => (

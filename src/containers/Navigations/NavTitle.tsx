@@ -1,4 +1,5 @@
 import NavLinkIcon from './components/NavLinkIcon';
+import NavMediaTitle from './components/NavMediaTitle';
 
 interface Props {
   title: string;
@@ -13,8 +14,9 @@ interface Props {
 const NavTitle = ({ title, description, links }: Props) => {
   return (
     <div className="relative w-full h-full">
-      <div className="w-1/2 h-full flex flex-col items-center justify-center">
-        <div className="mt-[-4px] ml-[-4px] max-w-[75%]">
+      <NavMediaTitle>프로젝트 명</NavMediaTitle>
+      <div className="w-1/2 h-full flex flex-col items-center justify-center md:hidden">
+        <div className="mt-[-16px] ml-[-4px] max-w-[75%]">
           <h1 className="text-[8px] text-white font-bold">{title}</h1>
           <div className="flex mt-1">
             <div className="w-[0.5px] h-[2px] bg-white mt-[0.5px] mr-[1px]" />

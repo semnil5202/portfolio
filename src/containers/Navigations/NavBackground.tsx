@@ -19,7 +19,7 @@ const NavBackground = ({
   return (
     <>
       <section className="w-full h-full fixed">
-        <div className={`${landingWidth} h-full fixed right-0 z-[-1]`}>
+        <div className={`${landingWidth} h-full fixed right-0 z-[-1] md:w-0`}>
           <Image
             src={landingImage}
             alt="프로젝트 소개 이미지"
@@ -30,7 +30,9 @@ const NavBackground = ({
             onLoad={(e) => e.currentTarget.classList.remove('animate-pulse')}
           />
         </div>
-        <div className={`${primaryColorWidth} h-full ${bgColor}`} />
+        <div
+          className={`${primaryColorWidth} h-full ${bgColor} md:w-full md:bg-primary`}
+        />
       </section>
     </>
   );

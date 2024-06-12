@@ -8,14 +8,14 @@ interface Props {
 
 const NavTech = ({ image, name }: Props) => {
   return (
-    <li className="flex w-[10px] h-[22px] flex-col items-center">
+    <li className="flex w-[10px] h-[20px] flex-col items-center">
       <SkeletonImage
         image={image}
         alt={name}
         imageClassName="bg-gray-500"
         containerClassName="w-[10px] h-[10px] rounded-[1px] overflow-hidden"
       />
-      <p className="text-white text-[3px] text-center font-extralight mt-[2px]">
+      <p className="text-white text-[3px] text-center font-extralight leading-tight mt-px">
         {name}
       </p>
     </li>
