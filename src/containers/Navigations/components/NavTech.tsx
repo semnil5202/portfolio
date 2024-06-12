@@ -15,7 +15,7 @@ const NavTech = ({ image, name }: Props) => {
         imageClassName="bg-gray-500"
         containerClassName="w-[10px] h-[10px] rounded-[1px] overflow-hidden"
       />
-      <p className="text-white text-[3px] text-center font-extralight leading-tight mt-px">
+      <p className="text-white text-[2px] text-center font-extralight leading-tight mt-px">
         {name}
       </p>
     </li>
