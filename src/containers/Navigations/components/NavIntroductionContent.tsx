@@ -3,27 +3,22 @@ import ListItem from '@/components/ListItem';
 interface Props {
   heading: string;
   content: string;
-  isColumnLayout?: boolean;
 }
 
-const NavIntroductionContent = ({
-  heading,
-  content,
-  isColumnLayout,
-}: Props) => {
+const NavIntroductionContent = ({ heading, content }: Props) => {
   return (
-    <div className="mb-8 lg:mb-4 md:mb-2">
+    <div className="mb-1">
       <ListItem
         textColor="text-white"
         bgColor="bg-white"
-        mb="mb-2 md:mb-0"
+        mb="gap-1 items-center"
         weight="semibold"
-        size="lg"
-        mediaText="md:font-medium md:text-[14px]"
+        size="[2px]"
+        mediaBullet="min-w-px min-h-px mt-0"
       >
         {heading}
       </ListItem>
-      <p className="text-white font-extralight ml-3 leading-relaxed md:text-[12px] md:leading-normal">
+      <p className="text-white text-[2px] font-extralight ml-1 leading-relaxed">
         {content}
       </p>
     </div>

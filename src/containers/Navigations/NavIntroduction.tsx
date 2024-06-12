@@ -33,8 +33,8 @@ const NavIntroduction = ({
 
   return (
     <NavTemplateLayout heading={heading}>
-      <section className="w-full max-w-[1140px] h-[72%] flex lg:h-[80%] lg:pt-3 md:h-[84%] md:flex md:flex-col">
-        <ul className="w-[50%] h-full flex flex-col pr-10 lg:w-[55%] lg:pr-5 md:w-full md:h-max md:pr-0">
+      <section className="w-full max-w-[1140px] h-[80%] flex">
+        <ul className="w-[50%] h-full flex flex-col pr-[2px]">
           <NavIntroductionContent heading="설명" content={intro} />
           {value && (
             <NavIntroductionContent heading="핵심 가치" content={value} />
@@ -47,36 +47,24 @@ const NavIntroduction = ({
           )}
           <div className={`${bottomContainer}`}>
             {organization && (
-              <NavIntroductionContent
-                heading="소속"
-                content={organization}
-                isColumnLayout={isEnough}
-              />
+              <NavIntroductionContent heading="소속" content={organization} />
             )}
-            <NavIntroductionContent
-              heading="기간"
-              content={date}
-              isColumnLayout={isEnough}
-            />
-            <NavIntroductionContent
-              heading="인원"
-              content={member}
-              isColumnLayout={isEnough}
-            />
+            <NavIntroductionContent heading="기간" content={date} />
+            <NavIntroductionContent heading="인원" content={member} />
           </div>
         </ul>
-        <ul className="w-[50%] h-full lg:w-[45%] md:w-full">
+        <ul className="w-[50%] h-full">
           <ListItem
             textColor="text-white"
             bgColor="bg-white"
-            mb="hidden md:flex"
+            mb="hidden"
             weight="semibold"
             size="lg"
-            mediaText="md:font-medium md:text-[14px]"
+            mediaText=""
           >
             기술 스택
           </ListItem>
-          <ul className="flex max-w-[464px] h-max mx-auto items-center flex-wrap gap-2 pl-10 lg:max-w-[312px] lg:pl-5 lg:gap-1 md:max-w-full md:mx-0 md:ml-3 md:pl-0 md:gap-1">
+          <ul className="flex max-w-[50px] h-max mx-auto items-center flex-wrap gap-[2px] pl-[2px]">
             {techs.map(({ image, name }) => (
               <NavTech key={name} image={image} name={name} />
             ))}
