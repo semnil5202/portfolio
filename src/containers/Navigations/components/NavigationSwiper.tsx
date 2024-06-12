@@ -23,7 +23,7 @@ const NavigationSwiper = ({
   setThumbsSwiper,
   children,
 }: Props) => {
-  const [isMouseEnter, setIsMouseEnter] = useState<boolean>(true);
+  const [isMouseEnter, setIsMouseEnter] = useState<boolean>(false);
   const thumbTranslate = isMouseEnter
     ? 'translate-x-[0%]'
     : 'translate-x-[105%]';
@@ -35,8 +35,8 @@ const NavigationSwiper = ({
   return (
     <div
       className="fixed top-0 right-0 w-[2%] h-full bg-transparent z-50 md:w-[8%]"
-      // onMouseEnter={() => setIsMouseEnter(true)}
-      // onMouseLeave={() => setIsMouseEnter(false)}
+      onMouseEnter={() => setIsMouseEnter(true)}
+      onMouseLeave={() => setIsMouseEnter(false)}
       onTouchMove={onTouchNavigation}
       onTouchEnd={onTouchEndNavigation}
     >

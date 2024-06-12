@@ -16,9 +16,9 @@ const Background = ({ currentPageIndex, landingImage, slideLength }: Props) => {
 
   return (
     <>
-      <section className="w-full h-full fixed md:flex md:flex-col-reverse">
+      <section className="w-full h-full absolute md:flex md:flex-col-reverse">
         <div
-          className={`${landingWidth} h-full fixed right-0 z-[-1] animate-init-fade-in-move transition-all ease duration-700 md:top-0`}
+          className={`${landingWidth} h-full absolute right-0 z-[-1] animate-init-fade-in-move transition-all ease duration-700 md:top-0`}
         >
           <Image
             src={landingImage}
