@@ -1,3 +1,4 @@
+import { transform } from 'next/dist/build/swc';
 import type { Config } from 'tailwindcss';
 
 const config: Config = {
@@ -14,12 +15,13 @@ const config: Config = {
         lg: { min: '768px', max: '1139px' },
         xl: { min: '1600px' },
         tall: { raw: '(max-height: 619px)' },
+        'limit-width': { raw: '(max-width: 343px)' },
+        'limit-height': { raw: '(max-height: 543px)' },
       },
       colors: {
         primary: '#2A392F',
         'primary-dark': '#2C3533',
         dark: '#191F1E',
-        link: '#BFBFBF',
       },
       height: {
         'swiper-max': 'max-content !important',
@@ -83,6 +85,17 @@ const config: Config = {
             transform: 'translateX(-25%)',
           },
         },
+        newTab: {
+          '0%': {
+            transform: 'scale(0)',
+          },
+          '35%': {
+            transform: 'scale(1)',
+          },
+          '100%': {
+            transform: 'scale(1)',
+          },
+        },
         notifyToggle: {
           '0%': {
             opacity: '1',
@@ -102,8 +115,7 @@ const config: Config = {
         flickering: 'flickering 1s infinite step-start',
         'nav-hint-move': 'navHintMove 1.5s ease 3000ms',
         'slide-image-hint-move': 'slideImageHintMove 1.5s ease 1500ms',
-        'rotate-smart-phone': 'rotateSmartPhone 4s infinite ease',
-        'new-tab-smart-phone': 'newTabSmartPhone 4s infinite ease',
+        'new-tab': 'newTab 4s infinite ease',
         'notify-toggle': 'notifyToggle 1s 2 linear 1500ms',
       },
     },
