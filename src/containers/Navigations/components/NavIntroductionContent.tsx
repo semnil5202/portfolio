@@ -1,4 +1,4 @@
-import ListItem from '@/components/ListItem';
+import NavListItem from './NavListItem';
 
 interface Props {
   heading: string;
@@ -8,16 +8,9 @@ interface Props {
 const NavIntroductionContent = ({ heading, content }: Props) => {
   return (
     <div className="mb-1">
-      <ListItem
-        textColor="text-white"
-        bgColor="bg-white"
-        mb="gap-1 items-center"
-        weight="semibold"
-        size="[2px]"
-        mediaBullet="min-w-px min-h-px mt-0"
-      >
+      <NavListItem fontWeight="font-semibold" fontSize="text-[2px]">
         {heading}
-      </ListItem>
+      </NavListItem>
       <p className="text-white text-[2px] font-extralight ml-1 leading-relaxed">
         {content}
       </p>
