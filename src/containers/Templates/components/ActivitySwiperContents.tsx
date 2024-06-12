@@ -104,7 +104,7 @@ const ActivitySwiperContents = ({ contents, link, slideIndex }: Props) => {
             <Link
               href={link.href}
               target="_blank"
-              className="underline underline-offset-4 text-link hover:text-white"
+              className="underline underline-offset-4 text-gray-400 hover:text-white"
             >
               {link.name}
             </Link>

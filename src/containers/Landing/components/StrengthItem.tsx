@@ -32,7 +32,7 @@ const StrengthItem = ({ image, alt, contents }: Props) => {
             <Link
               href={link.href}
               target="_blank"
-              className="text-link underline underline-offset-4 hover:text-white"
+              className="text-gray-400 underline underline-offset-4 hover:text-white"
             >
               {link.name}
             </Link>

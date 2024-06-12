@@ -37,7 +37,7 @@ const NavActivityContents = ({ contents, link }: Props) => {
             {link.heading}
           </p>
           <NavListItem fontWeight="font-extralight" fontSize="text-[2px]">
-            <p className="underline text-link">{link.name}</p>
+            <p className="underline text-gray-400">{link.name}</p>
           </NavListItem>
         </div>
       )}
