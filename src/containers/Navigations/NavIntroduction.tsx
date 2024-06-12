@@ -34,7 +34,7 @@ const NavIntroduction = ({
 
   return (
     <>
-      <NavMediaTitle>프로젝트 개요</NavMediaTitle>
+      <NavMediaTitle>{heading}</NavMediaTitle>
       <NavTemplateLayout heading={heading}>
         <section className="w-full max-w-[1140px] h-[80%] flex">
           <ul className="w-[50%] h-full flex flex-col pr-[2px]">

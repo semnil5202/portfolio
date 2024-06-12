@@ -14,7 +14,7 @@ interface Props {
 const NavTitle = ({ title, description, links }: Props) => {
   return (
     <div className="relative w-full h-full">
-      <NavMediaTitle>프로젝트 명</NavMediaTitle>
+      <NavMediaTitle>{title}</NavMediaTitle>
       <div className="w-1/2 h-full flex flex-col items-center justify-center md:hidden">
         <div className="mt-[-16px] ml-[-4px] max-w-[75%]">
           <h1 className="text-[8px] text-white font-bold">{title}</h1>

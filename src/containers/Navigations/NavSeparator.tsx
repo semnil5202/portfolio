@@ -8,13 +8,13 @@ interface Props {
   svg?: React.FC<React.SVGProps<SVGSVGElement>>;
 }
 
-const NavSeparator = ({ type, heading, link, svg }: Props) => {
+const NavSeparator = ({ type, heading, svg }: Props) => {
   const Svg = svg;
 
   if (type === 'separate') {
     return (
       <>
-        <NavMediaTitle>프로젝트 활동</NavMediaTitle>
+        <NavMediaTitle>{heading}</NavMediaTitle>
         <div className="relative w-full h-full flex justify-center items-center md:hidden">
           <div className="flex flex-col items-center">
             <p className="text-[8px] text-white font-bold">{heading}</p>
