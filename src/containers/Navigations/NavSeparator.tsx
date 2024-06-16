@@ -39,7 +39,7 @@ const NavSeparator = ({ type, heading, svg }: Props) => {
             <p className="text-[8px] text-white font-bold mr-1">{heading}</p>
             <SVGNextIcon className="w-[10px] h-[10px]" viewBox="0 0 72 72" />
           </div>
-          <div className="w-[25%] h-[0.5px] bg-white mt-[4px] mr-4" />
+          <div className="w-[25%] h-[0.5px] bg-white mt-[4px]" />
         </div>
       </div>
     </>
