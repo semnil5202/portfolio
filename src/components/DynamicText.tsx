@@ -70,6 +70,10 @@ export default function DynamicText({ texts }: Props) {
         }
       }, delayTime.current);
     }
+
+    return () => {
+      if (timerId.current) clearTimeout(timerId.current);
+    };
   }, [currentText, texts, isTyping, dynamicTexts, isEnd]);
 
   return (
