@@ -2,7 +2,7 @@ import { Experience } from '@/types';
 
 const EXPERIENCES: Experience[] = [
   {
-    date: '24.06 - 현재',
+    date: '24.06 - 24.09',
     content: '디프만 웹 프론트엔드 15기',
   },
   {
